@@ -1,0 +1,237 @@
+.cta {
+	background-color: var(--primary-dark);
+	color: white;
+	display: flex;
+
+	@include respond-to($max-tablet) {
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+
+	&.bg-img {
+		background-size: 70% 100%;
+		background-repeat: no-repeat;
+		background-position: right center;
+	}
+
+	.col {
+		&.--text {
+			flex-basis: 80%;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+			}
+
+			h3 {
+				font-size: betterClamp(33,40);
+				font-weight: 500;
+				margin: 20px 0;
+
+				@include respond-to($max-tablet) {
+					font-size: toRem(26);
+				}
+			}
+
+			p {
+				font-size: betterClamp(16,21);
+				line-height: betterClamp(24,26);
+				font-weight: 300;
+
+				@include respond-to($phone-plus) {
+					margin-top: 2em;
+				}
+
+				@include respond-to($max-tablet) {
+					margin-bottom: 3em;
+				}
+			}
+		}
+
+		&.--button {
+			flex-basis: 60%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			@include respond-to($max-tablet) {
+				flex-basis: 70%;
+				justify-content: center;
+			}
+		}
+	}
+
+	&#campania {
+		@include respond-to($max-tablet) {
+			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/homepage/cta-bg-campania-mobile.jpg");
+			background-size: 100% 100% !important;
+		}
+
+		@include respond-to($min-tablet) {
+			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/homepage/cta-bg.jpg");
+		}
+	}
+
+	&#download-app {
+		padding: 0 9.5%;
+		background-image: linear-gradient(90deg, $secondary 0%, #01112C 100%);
+
+		@include respond-to($phone-plus) {
+			padding: 32px 15px 0px;
+			background-image: linear-gradient(180deg, $secondary 0%, col-alpha('primary', 0.1) 140%);
+		}
+
+		@include respond-to($mid-tablet) {
+			padding: 32px 15px 0px;
+		}
+
+		@include respond-to($tablet-pro) {
+			padding: 32px 22px 0px;
+		}
+
+		@include respond-to($mini-desktop) {
+			padding: 0 6.5%;
+		}
+
+		.col {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include respond-to($phone-plus) {
+				justify-content: center;
+			}
+
+			&:first-child {
+				align-items: flex-end;
+
+				@include respond-to($phone-plus) {
+					order: 3;
+					margin-top: 3em;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 25%;
+				}
+
+				@include respond-to($min-tablet) {
+					background-image: url("../../img/homepage/mobile-app.png");
+					flex-basis: 37%;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					margin-top: 2em;
+				}
+
+				img {
+					@include respond-to($phone-plus) {
+						width: 85%;
+					}
+
+					@include respond-to($mid-tablet) {
+						width: 100%;
+					}
+
+					@include respond-to($min-tablet) {
+						display: none;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				@include respond-to($mid-tablet) {
+					padding: 0 5% 2em;
+					flex-basis: 50%;
+					align-content: center;
+				}
+
+				@include respond-to($min-tablet) {
+					padding: 3.5em 7% 3em;
+					flex-basis: 75%;
+					align-content: center;
+				}
+
+				h2 {
+					@include respond-to($phone-plus) {
+						color: var(--primary-dark);
+					}
+
+					@include respond-to($min-tablet) {
+						font-size: toRem(50);
+					}
+				}
+
+				h2, p {
+					width: 100%;
+
+					@include respond-to($min-phone) {
+						text-align: left;
+						margin-bottom: 0;
+					}
+				}
+
+				.download {
+					display: flex;
+					justify-content: space-evenly;
+					margin-top: 2em;
+					align-items: center;
+
+					@include respond-to($min-phone) {
+						display: none;
+					}
+
+					a, img {
+						width: 85%;
+					}
+				}
+			}
+
+			&:last-child {
+				align-items: center;
+				justify-content: center;
+				align-content: space-evenly;
+				flex-basis: 26%;
+
+				@include respond-to($phone-plus) {
+					display: none;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 20%;
+				}
+
+				img {
+					max-width: 185px;
+
+					@include respond-to($mid-tablet) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	&#newsletter {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 65px;
+
+		@include respond-to($max-tablet) {
+			padding: 35px 15px !important;
+		}
+
+		h2 {
+			font-weight: 400;
+			width: 100%;
+		}
+	}
+
+	&#add-services {
+		@include respond-to($max-tablet) {
+			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/fidelity/cta-servizi-bg-mobile.png");
+			background-size: 100% 100% !important;
+		}
+
+		@include respond-to($min-tablet) {
+			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 140%), url("../../img/fidelity/servizi-bg-cta.png");
+		}
+	}
+}

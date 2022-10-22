@@ -1,0 +1,24 @@
+@import "~slick-carousel/slick/slick";
+
+@import "globals/variables";
+@import "globals/mixins";
+@import "globals/typography";
+@import "globals/global";
+
+@import "components/icons";
+@import "components/buttons";
+@import "components/menu";
+@import "components/timepicker";
+@import "components/tabs";
+@import "components/slick";
+@import "components/forms";
+@import "components/breadcrumbs";
+@import "components/page-title";
+
+@import "sections/cta";
+
+@import "layouts/header";
+@import "layouts/footer";
+
+@import "templates/homepage";
+@import "templates/fidelity";

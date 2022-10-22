@@ -1,0 +1,165 @@
+/* global elements */
+*  {
+	box-sizing: border-box;
+}
+
+body, html {
+	font-family: 'Euclid Circular B';
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color: var(--primary-dark);
+}
+
+/* global classes */
+
+/**
+ * Add the correct
+ * display in IE 10-
+ */
+
+ [hidden] {
+	display: none;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.row {
+	display: flex;
+
+	&.center-content {
+		justify-content: center;
+	}
+
+	&.between-content {
+		justify-content: space-between;
+	}
+
+	&.around-content {
+		justify-content: space-around;
+	}
+
+	&.wrap {
+		flex-wrap: wrap;
+
+		&.--half {
+			.col {
+				flex-basis: calc(95% / 2);
+			}
+		}
+
+		&.--third {
+			.col {
+				flex-basis: calc(95% / 3);
+			}
+		}
+
+		&.--fourth {
+			.col {
+				flex-basis: calc(95% / 4);
+			}
+		}
+
+		&.--fifth {
+			.col {
+				flex-basis: calc(95% / 5);
+			}
+		}
+
+		&.--sixth {
+			.col {
+				flex-basis: calc(95% / 6);
+			}
+		}
+	}
+}
+
+.vw-regular {
+	padding: 60px 9.5%;
+
+	@include respond-to($phone-plus) {
+		padding: 60px 15px;
+	}
+}
+
+.vw-narrow {
+	justify-content: space-evenly;
+}
+
+/** global elements **/
+
+.line-divider {
+	height: 1px;
+	background-color: #E1E1E1;
+	margin-top: 25px;
+}
+
+.item-icon {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.img-wrap {
+		background-color: var(--light-blue);
+		padding: 30px;
+		border-radius: 50%;
+		min-width: 150px;
+		min-height: 150px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include respond-to($mini-desktop) {
+			min-width: 145px;
+			min-height: 100px;
+		}
+
+		img {
+			width: 100%;
+			max-height: 75px;
+		}
+	}
+
+	.title {
+		font-weight: 500;
+		flex-basis: 100%;
+		text-align: center;
+	}
+}
+
+ol {
+	padding-left: 20px;
+
+	li {
+		padding: 7px 0;
+
+		&::marker {
+			color: var(--secondary);
+		}
+
+		> div {
+			display: flex;
+			align-items: center;
+			margin-top: 5px;
+
+			img {
+				max-height: 40px;
+
+				@include respond-to($phone) {
+					max-height: 33px;
+				}
+
+				&:first-child {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,452 @@
+section#all-services {
+	padding: 0 10%;
+
+	@include respond-to($phone) {
+		padding: 40px 15px 0;
+	}
+
+	@include respond-to($mid-tablet) {
+		padding: 0 5%;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 0 betterClamp(16,85,1024,1280);
+	}
+
+	h2 {
+		@include respond-to($phone-plus) {
+			font-size: toRem(30);
+			margin: 0 auto 64px;
+		}
+
+		@include respond-to($mid-tablet) {
+			margin: 64px auto;
+		}
+	}
+
+	.item {
+		flex-basis: calc(100% / 5);
+
+		@include respond-to($phone) {
+			flex-basis: calc(75% / 2);
+		}
+
+		@include respond-to($mid-tablet) {
+			flex-basis: calc(85% / 3);
+		}
+
+		.title {
+			font-size: toRem(18);
+
+			@include respond-to($phone) {
+				font-size: toRem(14);
+				padding: 0 0 2rem;
+			}
+
+			@include respond-to($min-tablet) {
+				padding: 0 20%;
+			}
+		}
+	}
+}
+
+section#status {
+	margin: 6em 0;
+
+	@include respond-to($phone-plus) {
+		margin: 3em 15px;
+	}
+
+	.row {
+		width: 65%;
+		margin: 64px auto;
+		justify-content: space-evenly;
+
+		@include respond-to($phone-plus) {
+			width: 100%;
+		}
+
+		@include respond-to($mid-tablet) {
+			width: 80%;
+		}
+	}
+
+	.item.status {
+		flex-basis: calc(85% / 3);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-start;
+		padding: 32px 32px 55px;
+
+		@include respond-to($phone-plus) {
+			flex-basis: 100%;
+			margin-bottom: 24px;
+			padding: 32px 16px;
+			flex-wrap: nowrap;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+		@include respond-to($mini-desktop) {
+			flex-basis: calc(93% / 3);
+		}
+
+		img {
+			@include respond-to($phone-plus) {
+				flex-basis: 25%;
+				width: 50%;
+				margin-right: 20px;
+			}
+		}
+
+		> div {
+			@include respond-to($phone-plus) {
+				flex-basis: 70%;
+			}
+
+			@include respond-to($min-tablet) {
+				width: 100%;
+			}
+		}
+
+		h3 {
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: toRem(24);
+			width: 100%;
+			text-align: center;
+
+			@include respond-to($phone-plus) {
+				margin: 0 0 10px;
+				text-align: left;
+			}
+		}
+
+		.feature {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+
+			@include respond-to($phone-plus) {
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				text-align: left;
+			}
+
+			&:not(:first-of-type) {
+				margin-top: 20px;
+
+				@include respond-to($phone) {
+					margin-top: 16px;
+				}
+			}
+
+			p {
+				margin: 0;
+				
+				@include respond-to($phone) {
+					font-size: toRem(14);
+				}
+
+				@include respond-to($min-tablet) {
+					width: 100%;
+				}
+
+				&:last-child {
+
+					@include respond-to($phone) {
+						margin-top: 8px;
+					}
+				}
+			}
+
+			.numb {
+				font-size: toRem(30);
+				font-weight: 500;
+				width: 100%;
+
+				@include respond-to($phone-plus) {
+					font-size: toRem(22);
+					width: auto;
+					margin-right: 7px;
+				}
+			}
+		}
+
+		&#status-standard {
+			background-color: #F4FAFF;
+
+			h3 {
+				color: var(--status-standard);
+			}
+		}
+
+		&#status-executive {
+			background-color: #FFF7F3;
+
+			h3 {
+				color: var(--status-executive);
+			}
+		}
+
+		&#status-privilege {
+			background-color: #F0FFFD;
+
+			h3 {
+				color: var(--status-privilege);
+			}
+		}
+	}
+}
+
+section#howto {
+	margin: 0 0 100px;
+
+	strong {
+		font-weight: 400;
+		color: var(--secondary);
+	}
+
+	.desk-tabs-title {
+		width: 100%;
+		border-bottom: 2px solid #E1E1E1;
+		padding: 0 13%;
+		justify-content: space-between;
+		margin-bottom: 32px;
+
+		@include respond-to($mid-tablet) {
+			padding: 0 5%;
+		}
+
+		@include respond-to($mini-desktop) {
+			padding: 0 betterClamp(16,105,1024,1280);
+		}
+
+		@include respond-to($small-desktop) {
+			padding: 0 10%;
+		}
+
+		li {
+			flex-basis: calc(80% / 4);
+			display: flex;
+			justify-content: center;
+			margin-bottom: -3px;
+
+			@include respond-to($mini-desktop) {
+				font-size: toRem(20);
+			}
+
+			&.active {
+				border-bottom: 4px solid var(--secondary);
+			}
+
+			&:not(.active) {
+				border-bottom: 0 !important;
+			}
+		}
+	}
+
+	.tabs-v2-content {
+		padding: 0 13%;
+		margin: 0 0 64px;
+
+		@include respond-to($phone-plus) {
+			padding: 0 15px;
+		}
+
+		@include respond-to($mid-tablet) {
+			padding: 0 5%;
+		}
+
+		@include respond-to($mini-desktop) {
+			padding: 0 betterClamp(16,105,1024,1280);
+		}
+
+		@include respond-to($small-desktop) {
+			padding: 0 10%;
+		}
+
+		.content {
+			justify-content: space-between;
+			color: col-alpha('primary', 0.8);
+
+			@include respond-to($min-tablet) {
+				line-height: toRem(30);
+			}
+
+			.row {
+				margin: 0 -15px;
+			}
+
+			.col {
+				padding: 0 15px;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					margin-top: 32px;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 46%;
+				}
+
+				img {
+					max-width: 100%;
+				}
+			}
+
+			> h3 {
+				margin: 64px 0 40px;
+
+				@include respond-to($phone-plus) {
+					margin: 64px 0 10px;
+				}
+			}
+
+			> p {
+				width: 70%;
+				margin-top: 0;
+
+				@include respond-to($phone-plus) {
+					width: 100%;
+					margin-top: 32px;
+				}
+			}
+		}
+
+		h3 {
+			font-size: toRem(22);
+			text-transform: uppercase;
+			color: var(--secondary);
+			display: flex;
+			align-items: flex-end;
+
+			img {
+				margin-right: 15px;
+				max-height: 38px;
+			}
+		}
+
+		&#sconti {
+			.row {
+
+				.col {
+					margin-bottom: 40px;
+
+					@include respond-to($phone-plus) {
+						margin-bottom: 0;
+					}
+	
+					.inner {
+						padding: 20px;
+						display: flex;
+						align-items: flex-start;
+						border: 1px solid #E1E1E1;
+						border-radius: $radius $radius 0 0;
+						min-height: 9.6em;
+
+						img.logo {
+							margin-right: 16px;
+						}
+
+						.cat {
+							font-size: toRem(13);
+							line-height: toRem(13);
+						}
+
+						p {
+							margin: 0;
+						}
+
+						.title {
+							font-size: toRem(18);
+							font-weight: 500;
+							margin: 0 0 10px;
+						}
+
+						.punti {
+							margin: 0;
+							font-size: toRem(22);
+							color: var(--secondary);
+							font-weight: 500;
+							margin: -2px 0 0;
+						}
+					}
+
+					.type {
+						color: white;
+						border-radius: 0 0 12px 12px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						text-transform: uppercase;
+						padding: 10px 0;
+						font-weight: 500;
+						max-height: 50px;
+
+						&::before {
+							display: flex;
+							width: 8%;
+							margin-right: 25px;
+							justify-content: center;
+							transform: scale(0.3);
+						}
+
+						&.privilege {
+							background-color: var(--status-privilege);
+							border-color: var(--status-privilege);
+
+							&::before {
+								content: url("data:image/svg+xml,%3Csvg width='124' height='124' viewBox='0 0 124 124' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_67_11502)'%3E%3Cpath d='M37.189 5.27604C57.3999 -3.83616 82.4525 -0.989101 99.9691 12.6511C112.692 22.2297 121.33 36.9315 123.687 52.6627C121.982 53.9335 119.698 55.164 119.577 57.5607C118.99 60.1504 121.097 62.0082 122.722 63.6489C118.242 70.6539 113.802 77.6912 109.234 84.6319C105.044 70.7344 100.918 56.8207 96.8326 42.891C98.3204 41.7973 100.331 40.9608 100.894 39.0145C102.157 35.8136 99.5429 31.8647 96.0846 31.8808C92.7228 31.5671 89.7712 34.9611 90.5352 38.2505C90.7926 40.607 93.0928 41.7329 94.8299 42.9393C90.6478 56.676 86.7472 70.4931 82.4846 84.2056C81.5919 83.3772 80.8359 82.4202 80.2006 81.3907C76.4929 75.4231 72.6486 69.5521 68.8766 63.6247C70.3243 62.1529 72.2465 60.657 72.1258 58.3488C72.2706 54.7779 68.3539 51.9309 65.0001 53.2257C61.6223 54.1747 60.3676 58.6786 62.3541 61.4372C63.4158 63.11 65.539 63.3674 67.244 64.0429C66.7936 73.0747 66.4639 82.1065 65.9411 91.1302C57.3356 78.6965 48.8346 66.1823 40.3336 53.6761C41.5239 51.7539 43.1485 49.5342 42.103 47.1697C41.1057 43.8722 36.6582 42.4648 33.9318 44.5478C31.2375 46.3333 30.9158 50.6119 33.2642 52.8075C34.6637 54.3597 36.8995 54.1426 38.7814 54.4482C46.1565 77.6268 53.5476 100.805 60.8743 124C48.4968 123.469 36.2078 119.553 26.1546 112.242C14.9996 104.264 6.63537 92.4975 2.80712 79.3318C-1.1096 66.0455 -0.393818 51.4403 4.86601 38.6285C10.7692 23.8785 22.6481 11.6699 37.189 5.27604Z' fill='#{url-friendly-colour($white)}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_67_11502'%3E%3Crect width='123.373' height='124' fill='#{url-friendly-colour($status-privilege)}' transform='translate(0.31366)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+							}
+						}
+
+						&.executive {
+							background-color: var(--status-executive);
+							border-color: var(--status-executive);
+
+							&::before {
+								content: url("data:image/svg+xml,%3Csvg width='132' height='126' viewBox='0 0 132 126' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_67_11496)'%3E%3Cpath d='M52.2179 1.10859C66.4377 -1.52196 81.5923 0.50472 94.3562 7.42023C108.377 14.799 119.305 27.6291 124.591 42.552C123.077 44.4877 121.414 46.4317 120.695 48.8306C119.826 51.6431 120.289 54.6211 120.72 57.4667C121.969 65.1019 123.11 72.7619 124.293 80.4136C120.447 80.4054 116.608 80.4054 112.77 80.4136C113.366 75.5744 114.606 70.8014 114.689 65.9126C114.673 61.1561 111.331 57.4419 107.732 54.7617C104.316 57.2764 101.09 60.668 100.792 65.135C100.585 70.2885 102.066 75.318 102.661 80.4054C99.4022 80.4136 96.1512 80.4054 92.9003 80.4219C94.2735 71.1323 95.7707 61.8592 97.1853 52.5779C98.0125 48.2681 96.7882 43.4951 93.4463 40.5254C89.914 37.4316 86.0261 34.7762 82.3037 31.9223C78.6557 34.9665 74.6354 37.5557 71.1115 40.7404C67.6702 43.9252 66.7686 48.9547 67.7033 53.3968C69.1427 62.3969 70.5076 71.4053 71.9139 80.4054C68.6381 80.4385 65.3623 80.3971 62.0865 80.3557C62.7731 75.2518 64.229 70.181 63.9809 64.9944C63.4597 60.8997 60.7713 56.6064 56.8172 55.1919C52.5488 57.6073 49.637 62.5127 50.1333 67.476C50.489 71.8189 51.4403 76.079 52.0359 80.3888C48.1728 80.4385 44.3097 80.4136 40.4549 80.3557C41.795 72.2159 42.9944 64.0431 44.2932 55.895C45.0046 52.0981 44.5082 47.9041 42.0183 44.8269C39.6194 41.9151 36.3105 39.9711 33.3905 37.6384C33.3822 61.0403 33.3739 84.4422 33.3987 107.844C59.0507 107.844 84.7109 107.786 110.371 107.869C106.855 110.764 103.836 115.703 98.757 115.454C76.9764 115.397 55.1959 115.438 33.407 115.43C33.3905 116.761 33.3739 118.093 33.3574 119.433C19.9317 111.922 9.31026 99.5223 4.23116 84.9799C-3.83419 62.7609 1.76606 36.2983 18.4179 19.4562C27.4345 10.0508 39.4209 3.55714 52.2179 1.10859Z' fill='#{url-friendly-colour($white)}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_67_11496'%3E%3Crect width='130.817' height='126' fill='#{url-friendly-colour($status-executive)}' transform='translate(0.59137)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&#status-gold {
+			.col {
+				@include respond-to($min-tablet) {
+					flex-basis: 49%;
+				}
+			}
+		}
+	}
+
+	> .row {
+		align-items: center;
+
+		@include respond-to($phone-plus) {
+			flex-wrap: wrap;
+			margin-top: 80px;
+		}
+
+		a {
+			@include respond-to($phone-plus) {
+				flex-basis: 75%;
+				text-align: center;
+			}
+		}
+
+		.button:nth-last-child(2) {
+			margin: 0 15px 0 30px;
+
+			@include respond-to($phone-plus) {
+				margin: 15px 0;
+			}
+		}
+	}
+}

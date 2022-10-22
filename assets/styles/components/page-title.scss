@@ -1,0 +1,87 @@
+#pagetitle {
+	padding: 64px 10%;
+
+	@include respond-to($max-tablet) {
+		background-color: var(--primary-dark);
+		color: rgba(255,255,255,0.8);
+		padding: 40px 15px;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 64px betterClamp(16,85,1024,1280);
+		background-position: right top;
+	}
+
+	@include respond-to($min-tablet) {
+		background-size: contain;
+		background-position: right center;
+		background-repeat: no-repeat;
+	}
+
+	&.fidelity {
+		@include respond-to($min-tablet) {
+			background-image: linear-gradient(90deg, rgba(255,255,255,1) -100%, rgba(1,17,44,0) 60%), url("../../img/fidelity/fidelity-main.png");
+		}
+	}
+
+	.page-description {
+		@include respond-to($max-tablet) {
+			line-height: toRem(26);
+		}
+	}
+
+	.col {
+		@include respond-to($mini-desktop) {
+			width: 55%;
+		}
+
+		@include respond-to($min-desktop) {
+			width: 50%;
+		}
+	}
+
+	.row.buttons {
+		margin-top: 50px;
+		width: 80%;
+
+		@include respond-to($phone-plus) {
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.button {
+			flex-basis: 46%;
+			max-width: 50%;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 80%;
+				max-width: 80%;
+			}
+
+			&:first-child {
+				@include respond-to($phone-plus) {
+					margin-bottom: 10px;
+				}
+
+				@include respond-to($min-phone) {
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+
+	.button.secondary {
+		color: var(--primary-dark);
+
+		@include respond-to($max-tablet) {
+			color: white;
+		}
+	}
+
+	.button.border-only {
+		@include respond-to($max-tablet) {
+			color: white;
+		}
+	}
+}

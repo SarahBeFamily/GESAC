@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on
+	RewriteBase /gesac
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	#RewriteRule ^([^\.]+)$ /$1.php [NC]
+	#RewriteRule ^([^\.]+)/([^\.]+)$ /$1/?template=$2 [L]
+	RewriteRule (.+) ?template=$1 [QSA]
+
+</IfModule>

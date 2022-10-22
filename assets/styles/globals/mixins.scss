@@ -1,0 +1,89 @@
+@use "sass:math";
+
+@mixin fface($path, $family, $type: '', $weight: 400, $svg: '', $style: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$path}#{$type}.eot');
+		src: url('#{$path}#{$type}.eot?#iefix') format('embedded-opentype'),
+		url('#{$path}#{$type}.woff2') format('woff2'),
+		url('#{$path}#{$type}.woff') format('woff'),
+		url('#{$path}#{$type}.ttf') format('truetype'),
+		url('#{$path}#{$type}.svg##{$svg}') format('svg');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+// Convent px to rem units
+@function toRem($value) {
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+}
+
+/// Get scalable values for resposive
+@function betterClamp($minSize, $maxSize, $minWidth: 1024, $maxWidth: 1920) {
+    // source: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+    // convert to rem
+    $minSize: math.div($minSize, 16);
+    $maxSize: math.div($maxSize, 16);
+    $maxWidth: math.div($maxWidth, 16);
+    $minWidth: math.div($minWidth, 16);
+    // do calculations
+    $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+    $yAxisIntersection: -$minWidth * $slope + $minSize;
+    // output as rem
+    $minSize: $minSize * 1rem;
+    $maxSize: $maxSize * 1rem;
+    @return clamp(
+        #{$minSize},
+        #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+        #{$maxSize}
+    );
+}
+
+/// Convert colours in svg dataurl
+@function url-friendly-colour($colour) {
+    @return '%23' + str-slice('#{$colour}', 2, -1);
+}
+
+// Get RGBA colour with var opacity
+@function col-alpha($color, $alpha) {
+    @if ($color == 'primary') {
+        @return rgba(1, 17, 44, $alpha);
+    }
+
+    @if ($color == 'secondary') {
+        @return rgba(12, 153, 193, $alpha);
+    }
+
+    @else {
+        @return rgba(255, 255, 255, $alpha);
+    }
+}
+
+
+/// Media Queries
+/// @include respond-to($desktop-wide1) { //code }
+$not-mobile: '(min-width: 640px)';
+$small-phone: '(max-width: 320px)';
+$phone: '(max-width: 639px)';
+$phone-plus: '(max-width: 767px)';
+$min-phone: '(min-width: 768px)';
+$mid-tablet: '(min-width: 640px) and (max-width: 1023px)';
+$tablet: '(min-width: 768px) and (max-width: 1023px) and (orientation: portrait)';
+$tablet-pro: '(min-width: 1024px) and (max-width: 1366px) and (orientation: portrait)';
+$min-tablet: '(min-width: 1024px)';
+$max-tablet: '(max-width: 1023px)';
+$mini-desktop: '(min-width: 1024px) and (max-width: 1280px)';
+$max-mini-desktop: '(max-width: 1280px)';
+$min-desktop: '(min-width: 1281px)';
+$small-desktop: '(min-width: 1281px) and (max-width: 1440px)';
+$desktop: '(min-width: 1441px) and (max-width: 1919px)';
+$max-desktop: '(max-width: 1919px)';
+$retina1: '(min-width: 1919px) and (min-resolution: 1.25dppx)';
+$retina2: '(min-width: 1919px) and (min-resolution: 2dppx)';
+@mixin respond-to($media) {
+	@media only screen and #{$media} {
+		@content;
+	}
+}

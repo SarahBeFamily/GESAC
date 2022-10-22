@@ -1,0 +1,32 @@
+.button {
+	padding: 16px 12px;
+	border-radius: 6px;
+	font-family: inherit;
+	font-size: toRem(14);
+	text-align: center;
+	text-decoration: none;
+
+	&.secondary {
+		background-color: var(--secondary);
+		border: 2px solid var(--secondary);
+		color: white;
+		padding: 15px 25px;
+		
+		&:not(input) {
+			min-width: 15%;
+		}
+	}
+
+	&.border-only {
+		background-color: transparent !important;
+		color: var(--primary-dark);
+		font-weight: 500;
+	}
+
+	&.arrow {
+		&::after {
+			content: url("data:image/svg+xml,%3Csvg width='8' height='10' viewBox='0 0 8 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.82913 4.957L0.876133 1.523L2.35413 0L7.21413 4.939L2.34013 10L0.786133 8.4L3.82913 4.957Z' fill='#{url-friendly-colour($white)}'/%3E%3C/svg%3E ");
+			margin-left: 10px;
+		}
+	}
+}

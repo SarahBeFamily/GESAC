@@ -1,0 +1,24 @@
+.breadcrumbs {
+	color: col-alpha('primary', 0.4);
+
+	@include respond-to($max-tablet) {
+		font-size: toRem(12);
+		color: rgba(255,255,255,0.4);
+	}
+
+	a {
+		&:any-link {
+			color: col-alpha('primary', 0.4);
+			text-decoration: none;
+
+			@include respond-to($max-tablet) {
+				color: rgba(255,255,255,0.4);
+			}
+		}
+
+		&.current {
+			color: var(--secondary);
+			font-weight: 500;
+		}
+	}
+}
