@@ -24,6 +24,16 @@
 		}
 	}
 
+	&.dark-mode {
+		background-color: var(--primary-dark);
+		padding: 50px 10%;
+
+		h1 {
+			color: white !important;
+			margin-bottom: 0;
+		}
+	}
+
 	.page-description {
 		@include respond-to($max-tablet) {
 			line-height: toRem(26);

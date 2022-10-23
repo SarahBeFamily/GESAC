@@ -1,0 +1,506 @@
+section#eshop-services {
+	width: 70%;
+	margin: 5em auto;
+
+	.tabs-v2 {
+		
+		> .tabs > .desk-tabs-title {
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 100%;
+			margin: 32px auto 80px;
+
+			li {
+				flex-basis: calc(95% / 3);
+				border-bottom: 0;
+
+				&:not(.active) {
+					opacity: 1;
+				}
+
+				&.active {
+					.img-wrap {
+						background-color: #BCCFFF;
+					}
+				}
+			}
+		}
+
+		&-content {
+			margin: 32px 0;
+
+			h3 {
+				display: flex;
+				align-items: flex-end;
+				font-size: toRem(40);
+				font-weight: 500;
+
+				img {
+					max-width: 60px;
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+
+	.tabs-v3 {
+		
+		.internal-login {
+			display: flex;
+
+			input, a {
+				flex-basis: calc(98% / 4);
+			}
+
+			input {
+				margin-right: 10px;
+			}
+		}
+
+		.link.pass-recovery {
+			width: 100%;
+			display: block;
+			margin: 27px 0;
+			text-decoration: none;
+		}
+	}
+
+	#lightbox-map {
+		font-size: toRem(22);
+		padding: 20px;
+		margin-bottom: 3em;
+	}
+
+	#choose-parking,
+	#goldcard,
+	.buy-service {
+		.header {
+			align-items: center;
+			margin-bottom: 4em;
+
+			h2 {
+				text-align: left;
+				margin: 0;
+			}
+
+			#orderby {
+				border: 0;
+				background-color: var(--light-gray);
+				border-radius: 6px;
+				padding: 10px 20px;
+				font-size: toRem(14);
+			}
+		}
+
+		> .row {
+			.col:first-child {
+				flex-basis: 73%;
+			}
+
+			.col.cart {
+				flex-basis: 22%;
+				margin-top: 45px;
+
+				> h2,h3,h4 {
+					font-size: 22px;
+					justify-content: center;
+					color: var(--secondary);
+					font-weight: 500;
+				}
+
+				.cart {
+					text-align: center;
+
+					.remove-item {
+						text-align: right;
+						margin-right: -25px;
+						margin-top: 10px;
+						margin-bottom: -10px;
+					}
+
+					.item {
+						border-width: 0 1px;
+						border-style: solid;
+						border-color: var(--medium-gray);
+						padding: 0 40px 20px;
+
+						&:first-child {
+							border-radius: 6px 6px 0 0;
+							border-width: 1px 1px 0;
+						}
+
+						p {
+							line-height: toRem(18);
+
+							&:first-of-type {
+								margin-bottom: 0;
+							}
+
+							&:last-of-type {
+								margin-top: 0;
+							}
+						}
+
+						.actual-price {
+							font-size: toRem(22);
+						}
+					}
+
+					h2,h3,h4 {
+						margin: 0;
+						font-weight: 500;
+						font-size: 1rem;
+						color: var(--secondary);
+					}
+
+					p {
+						font-size: toRem(12);
+					}
+
+					.total {
+						background-color: var(--light-gray);
+						padding: 20px;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						border: 1px solid var(--light-gray);
+
+						.actual-price {
+							font-size: toRem(26);
+						}
+
+						.button {
+							width: 100%;
+							margin-top: 16px;
+						}
+					}
+				}
+
+				.cart-empty {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 32px 20px;
+					background-color: var(--light-gray);
+					border-radius: 6px;
+				}
+			}
+		}
+
+		.standard-price {
+			width: 100%;
+			font-size: toRem(22);
+			color: col-alpha('primary', 0.3);
+			text-decoration: line-through;
+		}
+
+		.actual-price {
+			width: 100%;
+			color: var(--secondary);
+			font-weight: 500;
+			font-size: toRem(30);
+		}
+
+		.parking,
+		.service,
+		.service-item,
+		.ticket {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 60px;
+			
+			.logo {
+				flex-basis: 10%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.content {
+				flex-basis: 60%;
+				padding: 0 5px 0 20px;
+
+				h2,h3,h4 {
+					margin: 0;
+					font-size: toRem(22);
+					font-weight: 500;
+				}
+
+				.offer-type {
+					font-size: toRem(14);
+					line-height: toRem(30);
+				}
+
+				ul {
+					margin: 13px 0;
+
+					li {
+						padding: 5px 0;
+						list-style: disc;
+					}
+				}
+			}
+
+			.add-to-cart {
+				flex-basis: 27%;
+				background-color: var(--light-gray);
+				display: flex;
+				flex-wrap: wrap;
+				align-content: space-between;
+				padding: 20px;
+				justify-content: center;
+				text-align: center;
+				border-radius: 6px;
+				height: 100%;
+
+				.button {
+					padding: 7px 20px;
+				}
+			}
+		}
+
+		.service {
+			&.open {
+				background-color: var(--light-gray);
+				padding: 45px 20px;
+
+				.add-to-cart {
+					background-color: white;
+					padding: 14px;
+					height: 100%;
+				}
+			}
+
+			.quantity {
+				margin: 0;
+			}
+		}
+
+		.altri-servizi {
+			&.open {
+				background-color: var(--light-gray);
+
+				> .button {
+					border-bottom: 0;
+					border-top: 1px solid var(--medium-gray);
+
+					&::after {
+						transform: rotate(180deg) translateY(-5px);
+					}
+				}
+			}
+
+			&:not(.open) {
+				margin-bottom: 40px;
+			}
+
+			> .button {
+				font-size: 18px;
+				text-transform: uppercase;
+				border-bottom: 1px solid var(--medium-gray);
+				color: var(--primary-dark);
+				font-weight: 500;
+				width: 100%;
+				display: flex;
+				padding: 32px 20px;
+				cursor: pointer;
+
+				&::after {
+					content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
+					margin-left: 15px;
+					transform: translateY(-3px);
+				}
+			}
+		}
+
+		.ticket {
+			border-bottom: 1px solid var(--medium-gray);
+			padding-bottom: 50px;
+			margin-bottom: 35px !important;
+		}
+
+		.service-item:first-of-type {
+			margin-top: 116px;
+		}
+	}
+
+	#goldcard {
+		.add-to-cart {
+			max-height: 8.5em;
+		}
+
+		.cart {
+			h4 {
+				margin-bottom: 15px !important;
+			}
+		}
+	}
+
+	.buy-service {
+		.col:first-child {
+			margin-top: 116px;
+		}
+	}
+
+	.parking-help {
+		background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 40%), url("../../img/eshop/parking-cta-bg.png");
+		color: white;
+		border-radius: 40px;
+		background-size: contain;
+		background-position: right center;
+		background-repeat: no-repeat;
+		min-height: 15em;
+		display: flex;
+		align-items: center;
+		padding: 20px 35px;
+		margin: 64px -55px;
+
+		h2 {
+			display: flex;
+			align-items: center;
+
+			.icon {
+				width: 50px;
+			}
+		}
+
+		.row > div {
+			display: flex;
+			align-items: center;
+			margin-right: 40px;
+
+			p {
+				margin: 0 0 0 15px;
+			}
+		}
+	}
+
+	#userdata {
+		list-style: none;
+		padding: 0;
+		margin: 16px 0 32px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px;
+			border-bottom: 1px solid var(--medium-gray);
+			flex-basis: calc(98% / 2);
+			color: col-alpha('primary', 0.5);
+			font-size: 1rem;
+
+			.value {
+				font-weight: 500;
+				color: var(--secondary);
+			}
+		}
+	}
+
+	.dati > .row .button {
+		width: 49%;
+	}
+
+	.riepilogo-ordine {
+		margin-top: 3em;
+
+		.item {
+			padding: 16px 0;
+			margin: 16px 0;
+			border-bottom: 1px solid var(--secondary);
+			display: flex;
+			align-items: center;
+
+			.logo {
+				max-width: 65px;
+				margin-right: 15px;
+			}
+
+			.description {
+				flex-basis: 80%;
+
+				h4 {
+					margin: 0 0 5px;
+				}
+
+				p {
+					margin: 0;
+				}
+			}
+
+			.edit-btn {
+				flex-basis: 30%;
+			}
+
+			.quantity {
+				flex-basis: 30%;
+
+				@include respond-to($max-tablet) {
+					width: 130px;
+				}
+			}
+
+			.remove-item {
+				justify-content: center;
+				display: flex;
+			}
+
+			.item-price {
+				color: var(--secondary);
+				font-weight: 500;
+				font-size: toRem(22);
+				flex-basis: 12%;
+			}
+
+			.button {
+				padding: 10px 25px;
+				margin-right: 5%;
+			}
+		}
+
+		.resume-total {
+			background-color: var(--secondary);
+			color: white;
+			text-align: right;
+			padding: 20px;
+			border-radius: 6px;
+		}
+	}
+
+	.checkout {
+		margin-top: 16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-basis: 100%;
+
+		> a, input {
+			flex-basis: calc(98% / 2);
+		}
+	}
+}
+
+.quantity {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	margin: 20px 0;
+
+	.minus, .plus {
+		display: flex;
+		cursor: pointer;
+		padding: 15px 10px;
+	}
+
+	.qty {
+		background-color: col-alpha('primary', 0.1);
+		padding: 7px 20px;
+		border-radius: 6px;
+		font-size: 26px;
+	}
+}

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+require('dragon-lightbox/dist/dragon-lightbox.min');
 require('slick-carousel');
 require('timepicker/jquery.timepicker.min');
 
@@ -10,6 +11,25 @@ $(function() {
 	if ($(window).width() < 640) {
 		$('.tabs-v2-content:not(.starter, .hidden)').addClass('hidden');
 	}
+
+	// General button open to close et viceversa
+	$('.btn-open-close').on('click', function() {
+		if (! $(this).hasClass('open'))
+			$(this).addClass('open').removeClass('close');
+		else
+			$(this).removeClass('open').addClass('close');
+
+		// Button "servizi" in Eshop Parking Tab
+		if ($(this).parent().hasClass('altri-servizi')) {
+			if ($(this).hasClass('open')) {
+				$(this).parent().addClass('open');
+				$(this).parent().find('.service').addClass('open').removeClass('hidden');
+			} else {
+				$(this).parent().removeClass('open');
+				$(this).parent().find('.service').removeClass('open').addClass('hidden');
+			}
+		}
+	});
 
 	// Menù tab
 	$('#primary-menu-tab').on('click', '.menu-tabs li', function() {
@@ -65,21 +85,49 @@ $(function() {
 		$(tab).removeClass('hidden').siblings('.main-tabs-content div').addClass('hidden');
 	});
 
-	// Tabs v2 Desktop & Mobile
-	$('.desk-tabs-title, .tabs').on('click', '> li', function() {
-		let $this = $(this);
-		let tab = $this.attr('data-menu-tab');
+	// Tabs v2 / v3 Desktop & Mobile
+	$('.desk-tabs-title, ul.tabs').on('click', '> li', function() {
+		let $this = $(this),
+			tab = $this.attr('data-menu-tab'),
+			tab_v2 = $this.parent().hasClass('v2'),
+			tab_v3 = $this.parent().hasClass('v3');
 
 		if ($this.parent('.tabs').length > 0 && $this.hasClass('active')) {
-			console.log('mobile');
 			$this.removeClass('active');
-			$(tab).addClass('hidden');
+			$this.parents('ul').find(tab).addClass('hidden');
 		} else if (! $this.hasClass('active')) {
 			
 			$this.addClass('active').siblings().removeClass('active');
-			$(tab).removeClass('hidden');
-			$(`.tabs-v2-content:not(${tab})`).addClass('hidden');
+			$this.parents('ul').find(tab).removeClass('hidden');
+
+			if (tab_v2) {
+				$this.parents('ul').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
+				$this.parents('ul').find('.desk-tabs-title.v2').addClass('hidden');
+				$('#show-all-services').removeClass('hidden open');
+				$('.cta#vantaggi').addClass('hidden');
+			} else if (tab_v3) {
+				console.log($(this));
+				$this.parents('ul').find(`.tabs-v3-content:not(${tab})`).addClass('hidden');
+			}
 		}
+	});
+
+	// Eshop #show-all-services action
+	$('#show-all-services').on('click', function() {
+		let open = $(this).hasClass('open');
+
+		if (open) {
+			$(this).removeClass('open');
+
+			// Desktop
+			$(this).parent().find('.tabs > .desk-tabs-title.v2').addClass('hidden');
+		} else {
+			$(this).addClass('open');
+
+			// Desktop
+			$(this).parent().find('.tabs > .desk-tabs-title.v2').removeClass('hidden');
+		}
+		
 	});
 
 
@@ -271,4 +319,31 @@ $(function() {
 			},
 		],
 	});
+
+	/**
+	 * Show an hidden wrapper of fields on checking a checkbox field
+	 * @param {jquery element} el
+	 * @param {string} form_id 
+	 * @param {string} field_class 
+	 */
+	function checkbox_show_content(el, form_id, field_class) {
+		el.on('change', function() {
+			let fields = $(this).parents('form#'+form_id).find('.'+field_class);
+			if ($(this).is(':checked')) {
+				fields.removeClass('hidden');
+			} else {
+				fields.addClass('hidden');
+			}
+		});
+	}
+
+	// Form eshop show login
+	checkbox_show_content($('.already-member'), 'fidelity-login-eshop', 'already-member-fields');
+
+	// Form eshop show request invoice
+	checkbox_show_content($('.invoice'), 'insert-data', 'invoice-fields');
+
+	// Form eshop show request shipping address fields
+	checkbox_show_content($('.shipping'), 'insert-data', 'shipping-fields');
+
 });

@@ -6,6 +6,16 @@
 		color: rgba(255,255,255,0.4);
 	}
 
+	&.dark {
+		color: rgba(255,255,255,0.4);
+		
+		a {
+			&:any-link {
+				color: rgba(255,255,255,0.4);
+			}
+		}
+	}
+
 	a {
 		&:any-link {
 			color: col-alpha('primary', 0.4);

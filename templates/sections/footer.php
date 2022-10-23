@@ -89,11 +89,11 @@
 
 	<div id="copy">
 		<div id="social">
-			<a href="#"><img src="<?php echo img_path('footer/footer_facebook-fill.svg'); ?>" alt=""></a>
-			<a href="#"><img src="<?php echo img_path('footer/footer_youtube-fill.svg'); ?>" alt=""></a>
-			<a href="#"><img src="<?php echo img_path('footer/footer_twitter-fill.svg'); ?>" alt=""></a>
-			<a href="#"><img src="<?php echo img_path('footer/footer_instagram-fill.svg'); ?>" alt=""></a>
-			<a href="#"><img src="<?php echo img_path('footer/footer_linkedin-fill.svg'); ?>" alt=""></a>
+			<a href="#"><img src="<?php echo img_path('icons/icon-facebook-fill.svg'); ?>" alt=""></a>
+			<a href="#"><img src="<?php echo img_path('icons/icon-youtube-fill.svg'); ?>" alt=""></a>
+			<a href="#"><img src="<?php echo img_path('icons/icon-twitter-fill.svg'); ?>" alt=""></a>
+			<a href="#"><img src="<?php echo img_path('icons/icon-instagram-fill.svg'); ?>" alt=""></a>
+			<a href="#"><img src="<?php echo img_path('icons/icon-linkedin-fill.svg'); ?>" alt=""></a>
 		</div>
 
 		<div id="copy-menu">

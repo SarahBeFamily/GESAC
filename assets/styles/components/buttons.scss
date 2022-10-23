@@ -6,6 +6,12 @@
 	text-align: center;
 	text-decoration: none;
 
+	&.w-icon {
+		display: flex;
+		// align-items: center;
+		justify-content: center;
+	}
+
 	&.secondary {
 		background-color: var(--secondary);
 		border: 2px solid var(--secondary);
@@ -21,6 +27,10 @@
 		background-color: transparent !important;
 		color: var(--primary-dark);
 		font-weight: 500;
+
+		&.w-icon {
+			color: var(--secondary);
+		}
 	}
 
 	&.arrow {
@@ -29,4 +39,36 @@
 			margin-left: 10px;
 		}
 	}
+
+	&-accordion {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-decoration: none;
+		color: var(--primary-dark);
+		font-size: 40px;
+		border-bottom: 1px solid var(--medium-gray);
+		padding: 0 20px 32px;
+		font-weight: 500;
+		cursor: pointer;
+
+		&::after {
+			content: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
+			transform: translateY(-3px);
+		}
+
+		&.open {
+			&::after {
+				transform: rotate(180deg) translateY(-5px);
+			}
+		}
+	}
+
+	&.w-icon:not(.border-only) {
+		$icon-color: white;
+	}
+}
+
+.w-icon span {
+	margin: 0 10px;
 }

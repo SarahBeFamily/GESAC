@@ -208,34 +208,13 @@ header {
 						margin: 25px 0;
 					}
 
-					.social-login > a:any-link {
+					.social-login {
 						display: block;
-						width: 100%;
-						background-color: white;
-						border-radius: 6px;
-						text-decoration: none;
-						color: var(--primary-dark);
-						text-align: left;
-						font-size: toRem(14);
-						padding: 21px 20px;
-						margin-top: 12px;
-
-						span {
-							float: left;
-							transform: translate(-10%, -20%);
-							margin-right: 8px;
-						}
-
-						.google-icon {
-							content: url("../../img/header/Google.svg");
-						}
-
-						.facebook-icon {
-							content: url("../../img/header/Facebook.svg");
-						}
-
-						.instagram-icon {
-							content: url("../../img/header/Instagram.svg");
+						
+						> a:any-link {
+							padding: 21px 20px;
+							margin-right: 0;
+							width: 100%;
 						}
 					}
 				}
@@ -281,6 +260,10 @@ header {
 					content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='%232D4F88'/%3E%3C/svg%3E");
 					margin-left: 10px;
 				}
+			}
+
+			img {
+				width: auto;
 			}
 		}
 	}

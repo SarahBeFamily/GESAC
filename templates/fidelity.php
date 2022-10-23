@@ -34,7 +34,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('fidelity/Notifiche.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Notifiche.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Notifiche push sul tuo volo</p>
@@ -44,7 +44,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('homepage/Wifi.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Wifi.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Banda Wifi dedicata</p>
@@ -54,7 +54,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('fidelity/FAST-Track.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/FAST-Track.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">FAST Track</p>
@@ -64,7 +64,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('fidelity/Parcheggi.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Parcheggi.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Parcheggio</p>
@@ -74,7 +74,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('fidelity/Gourmet.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Gourmet.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Selezione gourmet</p>
@@ -164,7 +164,7 @@
 				<div class="content row wrap --half">
 					
 					<div class="col">
-						<h3><img src="<?php echo img_path('fidelity/smartphone.svg'); ?>" alt="">Smartphone</h3>
+						<h3><img src="<?php echo img_path('icons/smartphone.svg'); ?>" alt="">Smartphone</h3>
 
 						<ol>
 							<li>Accedi allo store del tuo dispositivo Installa l’App
@@ -183,7 +183,7 @@
 					</div>
 
 					<div class="col">
-						<h3><img src="<?php echo img_path('fidelity/desktop.svg'); ?>" alt="">Computer</h3>
+						<h3><img src="<?php echo img_path('icons/desktop.svg'); ?>" alt="">Computer</h3>
 
 						<p>
 							Puoi iscriverti al programma fedeltà “FlyYou” anche dal <a href="#" class="link">sito dell’Aeroporto 
@@ -219,7 +219,7 @@
 					<div class="row wrap --third between-content">
 
 						<div class="col">
-							<h3><img src="<?php echo img_path('fidelity/punti.svg'); ?>" alt="">Come utilizzo i punti</h3>
+							<h3><img src="<?php echo img_path('icons/icon-sconti.svg'); ?>" alt="">Come utilizzo i punti</h3>
 
 							<p>
 								I punti saranno caricati sulla tua card virtuale disponibile sull’App del tuo smartphone.
@@ -229,7 +229,7 @@
 						</div>
 
 						<div class="col">
-							<h3><img src="<?php echo img_path('fidelity/plane-stroke.svg'); ?>" alt="">Punti Volo</h3>
+							<h3><img src="<?php echo img_path('icons/icon-plane-stroke.svg'); ?>" alt="">Punti Volo</h3>
 
 							<div>
 								Per caricare i punti Volo dovrai utilizzare la funzione “MyFlight” dal menù dell’App Aeroporto di Napoli che ti consente di registrare il codice BARCODE delle tue carte d’imbarco.
@@ -243,7 +243,7 @@
 						</div>
 
 						<div class="col">
-							<h3><img src="<?php echo img_path('fidelity/parking-2.svg'); ?>" alt="">Punti Parking</h3>
+							<h3><img src="<?php echo img_path('icons/icon-parking-2.svg'); ?>" alt="">Punti Parking</h3>
 
 							<div>
 								Recati presso le casse automatiche
@@ -270,7 +270,7 @@
 			<div class="tabs-v2-content hidden" id="sconti">
 				<div class="content">
 
-					<h3><img src="<?php echo img_path('fidelity/posate.svg'); ?>" alt="">Food e Beverage</h3>
+					<h3><img src="<?php echo img_path('icons/icon-posate.svg'); ?>" alt="">Food e Beverage</h3>
 
 					<div class="row wrap --third between-content">
 
@@ -392,7 +392,7 @@
 					<div class="row wrap">
 
 						<div class="col">
-							<h3><img src="<?php echo img_path('fidelity/carta.svg'); ?>" alt="">Carta Gold</h3>
+							<h3><img src="<?php echo img_path('icons/icon-carta.svg'); ?>" alt="">Carta Gold</h3>
 
 							<ol>
 								<li>Accesso gratuito illimitato al Fast Track</li>

@@ -178,7 +178,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('homepage/FidelityCard.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/FidelityCard.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Fidelity card</p>
@@ -188,7 +188,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('homepage/bagagli.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Bagagli.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Custodia Bagagli</p>
@@ -198,7 +198,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('homepage/Wifi.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Wifi.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Internet e Wifi</p>
@@ -208,7 +208,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('homepage/assistenze-speciali.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Assistenze-Speciali.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Assistenze speciali</p>
@@ -218,7 +218,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('homepage/info.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/Info.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Guida ai servizi</p>
@@ -228,7 +228,7 @@
 		<div class="item">
 			<div class="item-icon">
 				<div class="img-wrap">
-					<img src="<?php echo img_path('homepage/FidelityCard.svg'); ?>" alt="">
+					<img src="<?php echo img_path('icons/FidelityCard.svg'); ?>" alt="">
 				</div>
 
 				<p class="title">Fidelity card</p>

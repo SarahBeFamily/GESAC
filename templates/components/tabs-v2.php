@@ -1,8 +1,8 @@
 <div class="tabs-v2">
 
-	<ul class="tabs">
+	<ul class="tabs v2">
 		<!-- DESKTOP TAB TITLES -->
-		<div class="desk-tabs-title">
+		<div class="desk-tabs-title v2">
 			<li class="active" data-menu-tab="#in-partenza"><a>In Partenza</a></li>
 			<li data-menu-tab="#in-arrivo"><a>In Arrivo</a></li>
 			<li data-menu-tab="#voglio-partire"><a>Voglio partire</a></li>

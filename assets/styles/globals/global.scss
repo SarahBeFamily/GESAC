@@ -16,6 +16,10 @@ body {
 	color: var(--primary-dark);
 }
 
+img {
+	width: 100%;
+}
+
 /* global classes */
 
 /**
@@ -31,6 +35,25 @@ body {
 	display: none !important;
 }
 
+.center-content {
+	width: 70%;
+	margin: 32px auto;
+}
+
+.color {
+	&-primary {
+		color: var(--primary-dark);
+	}
+
+	&-gesac {
+		color: var(--primary-gesac);
+	}
+
+	&-secondary {
+		color: var(--secondary);
+	}
+}
+
 .row {
 	display: flex;
 
@@ -44,6 +67,10 @@ body {
 
 	&.around-content {
 		justify-content: space-around;
+	}
+
+	&.end-content {
+		justify-content: flex-end;
 	}
 
 	&.wrap {
@@ -101,6 +128,45 @@ body {
 	margin-top: 25px;
 }
 
+/** social login **/
+
+.social-login {
+	display: flex;
+
+	> a:any-link {
+		display: block;
+		background-color: white;
+		border-radius: 6px;
+		text-decoration: none;
+		color: var(--primary-dark);
+		text-align: left;
+		font-size: toRem(14);
+		padding: 21px 20px 13px;
+		margin-top: 12px;
+		margin-right: 10px;
+
+		span {
+			float: left;
+			transform: translate(-10%, -20%);
+			margin-right: 8px;
+		}
+
+		.google-icon {
+			content: url("../../img/header/Google.svg");
+		}
+
+		.facebook-icon {
+			content: url("../../img/header/Facebook.svg");
+		}
+
+		.instagram-icon {
+			content: url("../../img/header/Instagram.svg");
+		}
+	}
+}
+
+/** special items with icons **/
+
 .item-icon {
 	display: flex;
 	flex-wrap: wrap;
@@ -133,6 +199,8 @@ body {
 		text-align: center;
 	}
 }
+
+/** ordered lists **/
 
 ol {
 	padding-left: 20px;

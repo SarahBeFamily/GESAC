@@ -42,6 +42,6 @@ function img_path($img) {
  * @param boolean $include
  * @return void
  */
-function get_component($el, $var, $include = true) {
+function get_component($el, $var, $var2, $include = true) {
 	include 'templates/components/'.$el.'.php';
 }

@@ -48,6 +48,10 @@ h2 {
 	}
 }
 
+h3, h4 {
+	font-weight: 500;
+}
+
 .cta-link {
 	width: 100%;
 	text-align: center;
@@ -86,5 +90,16 @@ a.link {
 				margin-left: 10px;
 			}
 		}
+	}
+
+	&.w-icon {
+		display: flex;
+		align-items: center;
+		font-size: 18px;
+		padding: 20px 35px;
+	}
+
+	&.white {
+		color: white !important;
 	}
 }
