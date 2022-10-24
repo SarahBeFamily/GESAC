@@ -35,6 +35,12 @@ img {
 	display: none !important;
 }
 
+.mobile-hidden {
+	@include respond-to($phone-plus) {
+		display: none !important;
+	}
+}
+
 .center-content {
 	width: 70%;
 	margin: 32px auto;

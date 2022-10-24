@@ -35,6 +35,12 @@ footer {
 				display: block;
 				width: 100%;
 			}
+
+			img {
+				@include respond-to($max-tablet) {
+					width: 60%;
+				}
+			}
 		}
 
 		#inner-menu {

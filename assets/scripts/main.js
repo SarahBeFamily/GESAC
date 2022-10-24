@@ -97,14 +97,19 @@ $(function() {
 			$this.parents('ul').find(tab).addClass('hidden');
 		} else if (! $this.hasClass('active')) {
 			
-			$this.addClass('active').siblings().removeClass('active');
+			if (! $this.hasClass('mobile-only')) {
+				$this.addClass('active').siblings().removeClass('active');
+			}
+			
 			$this.parents('ul').find(tab).removeClass('hidden');
 
 			if (tab_v2) {
 				$this.parents('ul.v2').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
 				$this.parents('ul.v2').find('.desk-tabs-title.v2').addClass('hidden');
-				$this.addClass('hidden');
+				
+				$this.parents('ul.v2').find('li.mobile-only').addClass('hidden');
 				$('#show-all-services').removeClass('hidden open');
+				$('#parking-help').removeClass('hidden');
 				$('.cta#vantaggi').addClass('hidden');
 			} else if (tab_v3) {
 				console.log($(this));
@@ -121,17 +126,28 @@ $(function() {
 			$(this).removeClass('open');
 
 			// Desktop
-			$(this).parent().find('.tabs > .desk-tabs-title.v2, .tabs.v2 > li').addClass('hidden');
-			// $(this).parent().find('.tabs.v2 > li').addClass('hidden');
+			$(this).parent().find('.tabs.v2 > .desk-tabs-title.v2, .tabs.v2 > li').addClass('hidden');
+			
+			// Mobile
+			$(this).parent().find('.tabs.v2 > li').addClass('hidden');
 		} else {
 			$(this).addClass('open');
 
 			// Desktop
-			$(this).parent().find('.tabs > .desk-tabs-title.v2, .tabs.v2 > li').removeClass('hidden');
-			$(this).parent().find('.tabs > .tabs-v2-content').addClass('hidden');
+			$(this).parent().find('.tabs.v2 > .desk-tabs-title.v2, .tabs.v2 > li').removeClass('hidden');
+			$(this).parent().find('.tabs.v2 > .tabs-v2-content').addClass('hidden');
+
+			// Mobile
+			$(this).parent().find('.tabs.v2 > li').removeClass('hidden');
 		}
 		
 	});
+
+	// Action on "Dettagli contenuto" button accordion on Eshop template in single product content
+	$('.button-accordion').on('click', function() {
+		$(this).toggleClass('open');
+		$(this).siblings('.description').toggleClass('mobile-hidden open');
+	})
 
 
 	// Timepicker config

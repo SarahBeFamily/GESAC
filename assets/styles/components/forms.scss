@@ -118,9 +118,9 @@ input {
 		min-width: 140px;
 	}
 
-	// &[type="submit"] {
-	// 	-webkit-appearance: none;
-	// }
+	&[type="submit"] {
+		-webkit-appearance: none;
+	}
 
 	&[type="checkbox"] {
 		padding: 0 !important;
@@ -366,6 +366,16 @@ form#search-parking {
 				max-width: 125px;
 			}
 		}
+
+		&.submit {
+			@include respond-to($max-tablet) {
+				background-image: none !important;
+				font-size: 1rem !important;
+				padding: 17px !important;
+				margin-bottom: 12px !important;
+			}
+		}
+	
 	}
 }
 
@@ -455,6 +465,26 @@ form#search-parking {
 }
 
 /**
+ * Form login:
+ *	- Eshop
+*/
+form#fidelity-login-eshop {
+	label {
+		@include respond-to($phone-plus) {
+			font-size: toRem(14);
+		}
+
+		input {
+			@include respond-to($phone-plus) {
+				float: left;
+				margin-bottom: 30px;
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+/**
  * Form quantity:
  *	- Eshop
 */
@@ -467,6 +497,7 @@ form#quantity {
 
 		@include respond-to($phone-plus) {
 			flex-basis: 100%;
+			margin: 0 !important;
 		}
 	}
 }
@@ -486,8 +517,9 @@ form#insert-data {
 		background-color: white;
 
 		@include respond-to($phone-plus) {
-			flex-basis: 100%;
+			flex-basis: 100% !important;
 			max-width: 100% !important;
+			margin-bottom: 0;
 		}
 
 		@include respond-to($min-tablet) {
@@ -499,9 +531,17 @@ form#insert-data {
 			width: 16% !important;
 
 			@include respond-to($phone-plus) {
-				flex-basis: 100%;
+				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
+		}
+	}
+
+	select {
+		@include respond-to($phone-plus) {
+			border-radius: 6px;
+			margin-top: 12px;
+			padding: 20px 9px;
 		}
 	}
 
@@ -515,7 +555,7 @@ form#insert-data {
 			flex-basis: calc(98% / 3);
 
 			@include respond-to($phone-plus) {
-				flex-basis: 100%;
+				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
 		}
@@ -524,7 +564,7 @@ form#insert-data {
 			flex-basis: 100% !important;
 
 			@include respond-to($phone-plus) {
-				flex-basis: 100%;
+				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
 		}
@@ -533,7 +573,7 @@ form#insert-data {
 			flex-basis: calc(98% / 2) !important;
 
 			@include respond-to($phone-plus) {
-				flex-basis: 100%;
+				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
 		}
@@ -545,7 +585,7 @@ form#insert-data {
 				flex-basis: calc(99.5% / 1.5) !important;
 
 				@include respond-to($phone-plus) {
-					flex-basis: 100%;
+					flex-basis: 100% !important;
 					max-width: 100% !important;
 				}
 			}
@@ -553,6 +593,10 @@ form#insert-data {
 	}
 
 	.data-footer {
+		@include respond-to($phone-plus) {
+			flex-wrap: wrap;
+		}
+
 		> div {
 			flex-basis: 40%;
 
@@ -577,6 +621,12 @@ form#insert-data {
 			margin: 32px 0 45px;
 			font-size: toRem(14);
 
+			label:not(:first-child) input {
+				@include respond-to($phone-plus) {
+					margin-bottom: 70px;
+				}
+			}
+
 			input {
 				display: block;
 				float: left;
@@ -591,6 +641,10 @@ form#insert-data {
 		justify-content: space-between;
 		align-items: center;
 		flex-basis: 100%;
+
+		@include respond-to($phone-plus) {
+			flex-wrap: wrap;
+		}
 
 		> a, input {
 			flex-basis: calc(98% / 2);

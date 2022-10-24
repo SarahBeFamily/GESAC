@@ -312,7 +312,7 @@
 				flex-basis: calc(99% / 2) !important;
 
 				@include respond-to($phone-plus) {
-					flex-basis: 100%;
+					flex-basis: 100% !important;
 					max-width: 100% !important;
 				}
 

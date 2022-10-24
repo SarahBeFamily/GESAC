@@ -52,9 +52,18 @@ section#eshop-services {
 					display: none;
 				}
 
-				&::after {
-					content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
-					transform: rotate(-90deg) translateY(-6px);
+				&:not(.active)::after {
+					@include respond-to($max-tablet) {
+						content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
+						transform: rotate(-90deg) translateY(-6px);
+					}
+				}
+
+				&.active {
+					@include respond-to($max-tablet) {
+						background-color: rgba(2,73,148,0.15);
+						border-top: 1px solid rgba(1,17,44,0.3);
+					}
 				}
 			}
 		}
@@ -112,6 +121,13 @@ section#eshop-services {
 
 			input {
 				margin-right: 10px;
+			}
+
+			.button.secondary:not(input) {
+	
+				@include respond-to($max-tablet) {
+					margin-top: 12px;
+				}
 			}
 		}
 
@@ -195,6 +211,7 @@ section#eshop-services {
 
 				@include respond-to($phone-plus) {
 					flex-basis: 100%;
+					margin: 15px;
 				}
 
 				> h2,h3,h4 {
@@ -307,6 +324,13 @@ section#eshop-services {
 
 			@include respond-to($phone-plus) {
 				flex-wrap: wrap;
+				margin-bottom: 0;
+			}
+
+			&:not(:first-of-type) {
+				@include respond-to($phone-plus) {
+					margin-top: 30px;
+				}
 			}
 
 			.inner-info {
@@ -334,6 +358,7 @@ section#eshop-services {
 
 						@include respond-to($phone-plus) {
 							width: 65px !important;
+							margin-right: 12px;
 						}
 					}
 				}
@@ -344,7 +369,7 @@ section#eshop-services {
 	
 					@include respond-to($phone-plus) {
 						flex-basis: 100%;
-						padding: 15px;
+						padding: 0;
 					}
 	
 					ul {
@@ -383,10 +408,15 @@ section#eshop-services {
 
 					@include respond-to($phone-plus) {
 						flex-basis: 100%;
-						background-color: var(--light-gray);
 						margin: 0 15px;
-						padding: 5px !important;
+						padding: 15px !important;
 						font-size: toRem(14);
+					}
+
+					&.open {
+						@include respond-to($phone-plus) {
+							background-color: var(--light-gray);
+						}
 					}
 
 					ul {
@@ -448,7 +478,15 @@ section#eshop-services {
 		.service {
 			&.open {
 				background-color: var(--light-gray);
-				padding: 45px 20px;
+
+				@include respond-to($max-tablet) {
+					margin: 0 15px 40px;
+					padding-top: 20px;
+				}
+
+				@include respond-to($min-tablet) {
+					padding: 45px 20px;
+				}
 
 				.add-to-cart {
 					background-color: white;
@@ -464,11 +502,38 @@ section#eshop-services {
 
 		.altri-servizi {
 			&.open {
-				background-color: var(--light-gray);
+				@include respond-to($min-tablet) {
+					background-color: var(--light-gray);
+				}
+
+				.header {
+					@include respond-to($max-tablet) {
+						align-items: flex-end;
+					}
+				}
+
+				.description {
+					@include respond-to($max-tablet) {
+						padding: 7px 0 0 !important;
+						background-color: var(--light-gray);
+					}
+				}
 
 				> .button {
-					border-bottom: 0;
-					border-top: 1px solid var(--medium-gray);
+					@include respond-to($max-tablet) {
+						font-size: 1rem;
+						padding: 12px 20px !important;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						text-transform: inherit;
+						font-weight: 400;
+					}
+
+					@include respond-to($min-tablet) {
+						border-bottom: 0;
+						border-top: 1px solid var(--medium-gray);
+					}
 
 					&::after {
 						transform: rotate(180deg) translateY(-5px);
@@ -477,7 +542,9 @@ section#eshop-services {
 			}
 
 			&:not(.open) {
-				margin-bottom: 40px;
+				@include respond-to($min-tablet) {
+					margin-bottom: 40px;
+				}
 			}
 
 			img {
@@ -495,6 +562,16 @@ section#eshop-services {
 				padding: 32px 20px;
 				cursor: pointer;
 
+				@include respond-to($max-tablet) {
+					font-size: 1rem;
+					font-weight: 400;
+					padding: 12px 20px !important;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					text-transform: inherit;
+				}
+
 				&::after {
 					content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
 					margin-left: 15px;
@@ -504,9 +581,12 @@ section#eshop-services {
 		}
 
 		.ticket {
-			border-bottom: 1px solid var(--medium-gray);
 			padding-bottom: 50px;
 			margin-bottom: 35px !important;
+
+			@include respond-to($min-tablet) {
+				border-bottom: 1px solid var(--medium-gray);
+			}
 		}
 
 		.service-item:first-of-type {
@@ -538,38 +618,9 @@ section#eshop-services {
 	.buy-service {
 		.col:first-child {
 			margin-top: 116px;
-		}
-	}
 
-	.parking-help {
-		background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 40%), url("../../img/eshop/parking-cta-bg.png");
-		color: white;
-		border-radius: 40px;
-		background-size: contain;
-		background-position: right center;
-		background-repeat: no-repeat;
-		min-height: 15em;
-		display: flex;
-		align-items: center;
-		padding: 20px 35px;
-		margin: 64px -55px;
-
-		h2 {
-			display: flex;
-			align-items: center;
-
-			.icon {
-				width: 50px;
-			}
-		}
-
-		.row > div {
-			display: flex;
-			align-items: center;
-			margin-right: 40px;
-
-			p {
-				margin: 0 0 0 15px;
+			@include respond-to($max-tablet) {
+				margin-top: 50px;
 			}
 		}
 	}
@@ -693,6 +744,10 @@ section#eshop-services {
 		display: flex;
 		cursor: pointer;
 		padding: 15px 10px;
+
+		img {
+			max-width: 25px;
+		}
 	}
 
 	.qty {
@@ -700,5 +755,89 @@ section#eshop-services {
 		padding: 7px 20px;
 		border-radius: 6px;
 		font-size: 26px;
+	}
+}
+
+#parking-help {
+	color: white;
+	border-radius: 40px;
+	background-size: contain;
+	background-position: right center;
+	background-repeat: no-repeat;
+	min-height: 15em;
+	display: flex;
+	align-items: center;
+	padding: 20px 35px;
+	margin: 64px -55px;
+
+	@include respond-to($max-tablet) {
+		background-color: var(--primary-dark);
+		margin: 80px 15px !important;
+		border-radius: 12px;
+		justify-content: center;
+		padding: 0;
+	}
+
+	@include respond-to($min-tablet) {
+		background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 40%), url("../../img/eshop/parking-cta-bg.png");
+	}
+
+	h2 {
+		display: flex;
+		align-items: center;
+
+		@include respond-to($max-tablet) {
+			flex-wrap: wrap;
+			font-size: toRem(22);
+			font-weight: 600;
+			padding: 10px 10px 25px;
+		}
+
+		.icon {
+			width: 50px;
+
+			@include respond-to($max-tablet) {
+				margin: 15px auto;
+				width: 50px !important;
+			}
+		}
+	}
+
+	.row {
+		@include respond-to($max-tablet) {
+			flex-wrap: wrap;
+		}
+
+		> div {
+			display: flex;
+
+			@include respond-to($max-tablet) {
+				flex-basis: 100%;
+				border-top: 1px solid rgba(255,255,255, 0.3);
+				align-items: center;
+				padding: 7px 15px;
+			}
+
+			@include respond-to($min-tablet) {
+				align-items: center;
+				margin-right: 40px;
+			}
+
+			&:last-child {
+				@include respond-to($max-tablet) {
+					padding-bottom: 25px;
+				}	
+			}
+
+			p {
+				margin: 0 0 0 15px;
+
+				.orari {
+					@include respond-to($max-tablet) {
+						font-size: toRem(13);
+					}
+				}
+			}
+		}
 	}
 }
