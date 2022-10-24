@@ -325,7 +325,6 @@ section#eshop-services {
 					@include respond-to($phone-plus) {
 						flex-basis: 100%;
 						display: flex;
-						order: 1;
 					}
 	
 					img {
@@ -346,7 +345,6 @@ section#eshop-services {
 					@include respond-to($phone-plus) {
 						flex-basis: 100%;
 						padding: 15px;
-						order: 3 !important;
 					}
 	
 					ul {
@@ -415,9 +413,9 @@ section#eshop-services {
 
 				@include respond-to($phone-plus) {
 					flex-basis: 100%;
-					order: 2 !important;
 					margin: 20px;
 					border-radius: 0;
+					height: auto;
 				}
 
 				.button {

@@ -108,7 +108,7 @@
 
 						<h3><img src="<?php echo img_path('icons/Parcheggi.svg'); ?>" alt="">Parcheggi</h3>
 						<!-- PARCHEGGIO CONTENT TAB V3 -->
-						<?php 
+						<?php
 						/**
 						 * Retrieve tabs-v3 component with form eshop parking component inside for step 1
 						 */
@@ -147,6 +147,18 @@
 											<p class="availability ok"><span class="val">49</span> Posti disponibili</p>
 										</div>
 
+										<!-- ADD TO CART SECTION MOBILE ONLY -->
+										<div class="add-to-cart mobile-only">
+											<span class="standard-price">9,00€</span>
+
+											online
+
+											<span class="actual-price">6,00€</span>
+
+											<a href="#" class="button secondary">Aggiungi al carrello</a>
+										</div>
+										<!-- / ADD TO CART SECTION MOBILE ONLY -->
+
 										<div class="content">
 											<a class="button-accordion mobile-only">Dettagli contenuto</a>
 											<div class="description">
@@ -161,9 +173,116 @@
 										</div>
 									</div>
 
-									<div class="add-to-cart">
+									<div class="add-to-cart no-mobile">
 										<span class="standard-price">9,00€</span>
 
+										online
+
+										<span class="actual-price">6,00€</span>
+
+										<a href="#" class="button secondary">Aggiungi al carrello</a>
+									</div>
+								</div>
+								<!-- / SINGLE PARKING FOUND ENDS -->
+
+								<!-- OTHER SERVICES ROW -->
+								<div class="altri-servizi">
+									<a class="button btn-open-close close" role="button">Altri Servizi</a>
+
+									<div class="service hidden">
+
+										<div class="inner-info">
+											<div class="header">
+												<img src="<?php echo img_path('eshop/image-10.png'); ?>" alt="">
+												<h4>Fast Track</h4>
+											</div>
+
+											<!-- ADD TO CART SECTION MOBILE ONLY -->
+											<div class="add-to-cart mobile-only">
+												<span class="standard-price">9,00€</span>
+
+												online
+
+												<span class="actual-price">6,00€</span>
+
+												<a href="#" class="button secondary">Aggiungi al carrello</a>
+											</div>
+											<!-- / ADD TO CART SECTION MOBILE ONLY -->
+
+											<div class="content">
+												<div class="description">
+													<p>
+														Fast Track è il servizio che ti permette di accedere più VELOCEMENTE AI CONTROLLI di sicurezza e all'area imbarchi. Risparmia il 20%!
+													</p>
+
+													<ul>
+														<li>Il Ticket è valido fino a 6 mesi dalla data di prenotazione on line.</li>
+														<li>Non rimborsabile</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="add-to-cart">
+											<span class="actual-price">7,00€</span>
+
+											<div class="quantity">
+												<div class="minus">
+													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
+												</div>
+
+												<div class="qty">1</div>
+
+												<div class="plus">
+													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
+												</div>
+											</div>
+
+											<a href="#" class="button secondary">Aggiungi al carrello</a>
+										</div>
+									</div>
+								</div>
+								<!-- / OTHER SERVICES ROW -->
+
+								<!-- SINGLE PARKING FOUND STARTS -->
+								<div class="parking">
+									<div class="inner-info">
+										<div class="header">
+											<img src="<?php echo img_path('eshop/image-8.png'); ?>" alt="">
+											<h4>Capodichino Parking (Ultra Low Cost)</h4>
+											<span class="offer-type">TARIFFA SCONTATA NON CANCELLABILE E NON MODIFICABILE.</span>
+
+											<p class="availability ok"><span class="val">49</span> Posti disponibili</p>
+										</div>
+
+										<!-- ADD TO CART SECTION MOBILE ONLY -->
+										<div class="add-to-cart mobile-only">
+											<span class="standard-price">9,00€</span>
+
+											online
+
+											<span class="actual-price">6,00€</span>
+
+											<a href="#" class="button secondary">Aggiungi al carrello</a>
+										</div>
+										<!-- / ADD TO CART SECTION MOBILE ONLY -->
+
+										<div class="content">
+											<a class="button-accordion mobile-only">Dettagli contenuto</a>
+											<div class="description">
+												<ul>
+													<li>Navetta gratuita dedicata.</li>
+													<li>Il parcheggio apre alle 4:30 del mattino.</li>
+													<li>13 minuti dal terminal.</li>
+												</ul>
+
+												<a href="#" class="link">“Se ti registri al  nostro programma fidelity, guadagni xxpt”</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="add-to-cart no-mobile">
+										<span class="standard-price">9,00€</span>
 										online
 
 										<span class="actual-price">6,00€</span>
@@ -231,88 +350,17 @@
 											<p class="availability ok"><span class="val">49</span> Posti disponibili</p>
 										</div>
 
-										<div class="content">
-											<a class="button-accordion mobile-only">Dettagli contenuto</a>
-											<div class="description">
-												<ul>
-													<li>Navetta gratuita dedicata.</li>
-													<li>Il parcheggio apre alle 4:30 del mattino.</li>
-													<li>13 minuti dal terminal.</li>
-												</ul>
+										<!-- ADD TO CART SECTION MOBILE ONLY -->
+										<div class="add-to-cart mobile-only">
+											<span class="standard-price">9,00€</span>
 
-												<a href="#" class="link">“Se ti registri al  nostro programma fidelity, guadagni xxpt”</a>
-											</div>
-										</div>
-									</div>
+											online
 
-									<div class="add-to-cart">
-										<span class="standard-price">9,00€</span>
-										online
-
-										<span class="actual-price">6,00€</span>
-
-										<a href="#" class="button secondary">Aggiungi al carrello</a>
-									</div>
-								</div>
-								<!-- / SINGLE PARKING FOUND ENDS -->
-
-								<!-- OTHER SERVICES ROW -->
-								<div class="altri-servizi">
-									<a class="button btn-open-close close" role="button">Altri Servizi</a>
-
-									<div class="service hidden">
-
-										<div class="inner-info">
-											<div class="header">
-												<img src="<?php echo img_path('eshop/image-10.png'); ?>" alt="">
-												<h4>Fast Track</h4>
-											</div>
-
-											<div class="content">
-												<div class="description">
-													<p>
-														Fast Track è il servizio che ti permette di accedere più VELOCEMENTE AI CONTROLLI di sicurezza e all'area imbarchi. Risparmia il 20%!
-													</p>
-
-													<ul>
-														<li>Il Ticket è valido fino a 6 mesi dalla data di prenotazione on line.</li>
-														<li>Non rimborsabile</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-
-										<div class="add-to-cart">
-											<span class="actual-price">7,00€</span>
-
-											<div class="quantity">
-												<div class="minus">
-													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-												</div>
-
-												<div class="qty">1</div>
-
-												<div class="plus">
-													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-												</div>
-											</div>
+											<span class="actual-price">6,00€</span>
 
 											<a href="#" class="button secondary">Aggiungi al carrello</a>
 										</div>
-									</div>
-								</div>
-								<!-- / OTHER SERVICES ROW -->
-
-								<!-- SINGLE PARKING FOUND STARTS -->
-								<div class="parking">
-									<div class="inner-info">
-										<div class="header">
-											<img src="<?php echo img_path('eshop/image-8.png'); ?>" alt="">
-											<h4>Capodichino Parking (Ultra Low Cost)</h4>
-											<span class="offer-type">TARIFFA SCONTATA NON CANCELLABILE E NON MODIFICABILE.</span>
-
-											<p class="availability ok"><span class="val">49</span> Posti disponibili</p>
-										</div>
+										<!-- / ADD TO CART SECTION MOBILE ONLY -->
 
 										<div class="content">
 											<a class="button-accordion mobile-only">Dettagli contenuto</a>
@@ -328,7 +376,7 @@
 										</div>
 									</div>
 
-									<div class="add-to-cart">
+									<div class="add-to-cart no-mobile">
 										<span class="standard-price">9,00€</span>
 										online
 
@@ -459,7 +507,7 @@
 						<h3><img src="<?php echo img_path('icons/FAST-Track.svg'); ?>" alt="">FAST Track</h3>
 
 						<!-- FAST TRACK CONTENT TAB V3 -->
-						<?php 
+						<?php
 						/**
 						 * Retrieve tabs-v3 component with form eshop parking quantity component inside for step 1
 						 */
@@ -467,7 +515,7 @@
 					</div>
 
 					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <span class="icon icon-edit"></span></a>
-				
+
 					<div class="buy-service">
 
 						<div class="row between-content">
@@ -485,7 +533,7 @@
 
 										<div class="description">
 											FAST Track è il servizio che ti permette di accedere più VELOCEMENTE AI CONTROLLI di sicurezza e all'area imbarchi. Risparmia il 20%!
-											
+
 											<ul>
 												<li>Il Ticket è valido fino a 6 mesi dalla data di prenotazione on line.</li>
 												<li>Non rimborsabile</li>
@@ -581,7 +629,7 @@
 						<h3><img src="<?php echo img_path('icons/Gold-Card.svg'); ?>" alt="">Gold Card</h3>
 
 						<!-- GOLD CARD CONTENT TAB V3 -->
-						<?php 
+						<?php
 						/**
 						 * Retrieve tabs-v3 component with form eshop parking quantity component inside for step 1
 						 */
@@ -589,7 +637,7 @@
 					</div>
 
 					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <span class="icon icon-edit"></span></a>
-				
+
 					<div id="goldcard">
 						<div class="row between-content">
 
@@ -680,7 +728,7 @@
 						<h3><img src="<?php echo img_path('icons/Bus-Ticket.svg'); ?>" alt="">Bus Ticket</h3>
 
 						<!--BUS TICKET CONTENT TAB V3 -->
-						<?php 
+						<?php
 						/**
 						 * Retrieve tabs-v3 component with form eshop parking quantity component inside for step 1
 						 */
@@ -706,6 +754,26 @@
 											<span class="offer-type">NON RIMBORSABILE</span>
 										</div>
 
+										<!-- ADD TO CART SECTION MOBILE ONLY -->
+										<div class="add-to-cart">
+											<span class="actual-price">5,00€</span>
+
+											<div class="quantity">
+												<div class="minus">
+													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
+												</div>
+
+												<div class="qty">1</div>
+
+												<div class="plus">
+													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
+												</div>
+											</div>
+
+											<a href="#" class="button secondary">Aggiungi al carrello</a>
+										</div>
+										<!-- / ADD TO CART SECTION MOBILE ONLY -->
+
 										<div class="content">
 											<div class="description">
 												<ul>
@@ -718,7 +786,7 @@
 										</div>
 									</div>
 
-									<div class="add-to-cart">
+									<div class="add-to-cart no-mobile">
 										<span class="actual-price">5,00€</span>
 
 										<div class="quantity">
@@ -749,6 +817,26 @@
 											<span class="offer-type">NON RIMBORSABILE</span>
 										</div>
 
+										<!-- ADD TO CART SECTION MOBILE ONLY -->
+										<div class="add-to-cart">
+											<span class="actual-price">5,00€</span>
+
+											<div class="quantity">
+												<div class="minus">
+													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
+												</div>
+
+												<div class="qty">1</div>
+
+												<div class="plus">
+													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
+												</div>
+											</div>
+
+											<a href="#" class="button secondary">Aggiungi al carrello</a>
+										</div>
+										<!-- / ADD TO CART SECTION MOBILE ONLY -->
+
 										<div class="content">
 											<div class="description">
 												<ul>
@@ -761,7 +849,7 @@
 										</div>
 									</div>
 
-									<div class="add-to-cart">
+									<div class="add-to-cart no-mobile">
 										<span class="actual-price">5,00€</span>
 
 										<div class="quantity">
@@ -848,7 +936,7 @@
 					<h3><img src="<?php echo img_path('icons/Prodotti-Tipici.svg'); ?>" alt="">Prodotti tipici</h3>
 
 						<!--PRODOTTI TIPICI CONTENT TAB V3 -->
-						<?php 
+						<?php
 						/**
 						 * Retrieve tabs-v3 component with form eshop parking quantity component inside for step 1
 						 */
@@ -876,7 +964,7 @@
 						<h3><img src="<?php echo img_path('icons/Sala-Vip.svg'); ?>" alt="">Sala VIP</h3>
 
 						<!--SALA VIP CONTENT TAB V3 -->
-						<?php 
+						<?php
 						/**
 						 * Retrieve tabs-v3 component with form eshop parking quantity component inside for step 1
 						 */

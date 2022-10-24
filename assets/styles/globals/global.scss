@@ -126,6 +126,12 @@ img {
 	}
 }
 
+.no-mobile {
+	@include respond-to($max-tablet) {
+		display: none !important;
+	}
+}
+
 /** global elements **/
 
 .line-divider {
