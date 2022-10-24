@@ -833,7 +833,11 @@ section#eshop-services {
 				justify-content: center;
 				display: flex;
 
-				@include respond-to($max-tablet) {
+				@include respond-to($phone) {
+					order: 3;
+				}
+
+				@include respond-to($mid-tablet) {
 					width: 130px;
 					order: 3;
 				}
