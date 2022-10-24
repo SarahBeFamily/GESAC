@@ -16,9 +16,6 @@ body {
 	color: var(--primary-dark);
 }
 
-img {
-	width: 100%;
-}
 
 /* global classes */
 
@@ -36,7 +33,7 @@ img {
 }
 
 .mobile-hidden {
-	@include respond-to($phone-plus) {
+	@include respond-to($phone) {
 		display: none !important;
 	}
 }
@@ -127,13 +124,13 @@ img {
 }
 
 .mobile-only {
-	@include respond-to($min-tablet) {
+	@include respond-to($not-mobile) {
 		display: none !important;
 	}
 }
 
 .no-mobile {
-	@include respond-to($max-tablet) {
+	@include respond-to($phone) {
 		display: none !important;
 	}
 }
@@ -199,26 +196,14 @@ img {
 	flex-wrap: wrap;
 	justify-content: center;
 
-	@include respond-to($max-tablet) {
-		flex-wrap: nowrap;
-	}
-
 	.img-wrap {
-		@include respond-to($max-tablet) {
-			width: 40px;
-			height: 40px;
-			display: flex;
-			align-items: center;
-		}
-
-		@include respond-to($min-tablet) {
-			background-color: var(--light-blue);
-			padding: 30px;
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
+		background-color: var(--light-blue);
+		padding: 30px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 145px;
 
 		@include respond-to($mini-desktop) {
 			min-width: 145px;
@@ -240,14 +225,6 @@ img {
 		font-weight: 500;
 		flex-basis: 100%;
 		text-align: center;
-
-		@include respond-to($max-tablet) {
-			margin: 0;
-			align-items: center;
-			display: flex;
-			margin-left: 15px;
-			font-size: toRem(18);
-		}
 	}
 }
 

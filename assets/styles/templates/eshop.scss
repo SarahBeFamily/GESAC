@@ -1,15 +1,83 @@
 section#eshop-services {
 
-	@include respond-to($max-tablet) {
+	@include respond-to($phone) {
 		margin: 0 auto;
 	}
 
-	@include respond-to($min-tablet) {
-		margin: 5em auto;
+	@include respond-to($mid-tablet) {
+		margin: 2em auto;
+		width: 95%;
+	}
+
+	@include respond-to($mini-desktop) {
+		margin: 3em auto;
+		width: 90%;
 	}
 
 	@include respond-to($min-desktop) {
-		width: 75%;
+		width: 75% !important;
+		margin: 3em auto;
+	}
+
+	/** icons custom
+	 * differs in mobile style form general big icons across the templates
+	 */
+
+	 .item-icon {
+		@include respond-to($phone) {
+			flex-wrap: nowrap;
+		}
+	
+		.img-wrap {
+			@include respond-to($phone) {
+				width: 40px !important;
+				height: 40px !important;
+				display: flex;
+				align-items: center;
+				background-color: transparent;
+				padding: 0;
+				border-radius: 0;
+				min-width: auto !important;
+			}
+	
+			@include respond-to($min-tablet) {
+				background-color: var(--light-blue);
+				padding: 30px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+	
+			@include respond-to($mini-desktop) {
+				min-width: 145px;
+				min-height: 100px;
+			}
+	
+			@include respond-to($min-desktop) {
+				min-width: 150px;
+				min-height: 150px;
+			}
+	
+			img {
+				width: 100%;
+				max-height: 75px;
+
+				@include respond-to($phone) {
+					width: 40px;
+				}
+			}
+		}
+	
+		.title {
+			@include respond-to($phone) {
+				margin: 0;
+				align-items: center;
+				display: flex;
+				margin-left: 15px;
+				font-size: toRem(18);
+			}
+		}
 	}
 
 	.tabs-v2 {
@@ -137,6 +205,26 @@ section#eshop-services {
 			margin: 27px 0;
 			text-decoration: none;
 		}
+
+		input.submit {
+			@include respond-to($max-tablet) {
+				background-image: none !important;
+				font-size: 1rem !important;
+				padding: 17px !important;
+				margin-bottom: 12px !important;
+			}
+
+			@include respond-to($min-tablet) {
+				margin-right: 0;
+			}
+		}
+
+		input.drop {
+			@include respond-to($max-tablet) {
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+		}
 	}
 
 	#lightbox-map {
@@ -153,6 +241,12 @@ section#eshop-services {
 			@include respond-to($phone) {
 				font-size: toRem(14);
 			}
+		}
+	}
+
+	form#search-parking {
+		input {
+			margin-right: 0;
 		}
 	}
 
@@ -193,14 +287,14 @@ section#eshop-services {
 
 		> .row {
 
-			@include respond-to($phone-plus) {
+			@include respond-to($max-tablet) {
 				flex-wrap: wrap;
 			}
 
 			.col:first-child {
 				flex-basis: 73%;
 
-				@include respond-to($phone-plus) {
+				@include respond-to($max-tablet) {
 					flex-basis: 100%;
 				}
 			}
@@ -212,6 +306,10 @@ section#eshop-services {
 				@include respond-to($phone-plus) {
 					flex-basis: 100%;
 					margin: 15px;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 40%;
 				}
 
 				> h2,h3,h4 {
@@ -562,7 +660,7 @@ section#eshop-services {
 				padding: 32px 20px;
 				cursor: pointer;
 
-				@include respond-to($max-tablet) {
+				@include respond-to($phone) {
 					font-size: 1rem;
 					font-weight: 400;
 					padding: 12px 20px !important;
@@ -643,6 +741,10 @@ section#eshop-services {
 			color: col-alpha('primary', 0.5);
 			font-size: 1rem;
 
+			@include respond-to($max-tablet) {
+				flex-basis: 100%;			  
+			}
+
 			.value {
 				font-weight: 500;
 				color: var(--secondary);
@@ -652,6 +754,10 @@ section#eshop-services {
 
 	.dati > .row .button {
 		width: 49%;
+
+		@include respond-to($max-tablet) {
+			width: 100%;
+		}
 	}
 
 	.riepilogo-ordine {
@@ -664,13 +770,33 @@ section#eshop-services {
 			display: flex;
 			align-items: center;
 
+			@include respond-to($max-tablet) {
+				align-items: flex-start;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
 			.logo {
 				max-width: 65px;
 				margin-right: 15px;
+
+				@include respond-to($max-tablet) {
+					max-width: 50px;
+					margin-right: 10px;
+				}
+
+				img {
+					width: 100%;
+				}
 			}
 
 			.description {
 				flex-basis: 80%;
+
+				@include respond-to($max-tablet) {
+					flex-basis: 60%;
+					margin-bottom: 20px;
+				}
 
 				h4 {
 					margin: 0 0 5px;
@@ -678,11 +804,19 @@ section#eshop-services {
 
 				p {
 					margin: 0;
+
+					@include respond-to($max-tablet) {
+						font-size: toRem(14);
+					}
 				}
 			}
 
 			.edit-btn {
 				flex-basis: 30%;
+
+				@include respond-to($max-tablet) {
+					order: 4;
+				}
 			}
 
 			.quantity {
@@ -690,12 +824,19 @@ section#eshop-services {
 
 				@include respond-to($max-tablet) {
 					width: 130px;
+					order: 4;
+					margin: 0;
 				}
 			}
 
 			.remove-item {
 				justify-content: center;
 				display: flex;
+
+				@include respond-to($max-tablet) {
+					width: 130px;
+					order: 3;
+				}
 			}
 
 			.item-price {
@@ -703,6 +844,13 @@ section#eshop-services {
 				font-weight: 500;
 				font-size: toRem(22);
 				flex-basis: 12%;
+			}
+
+			p.item-price {
+				@include respond-to($max-tablet) {
+					order: 5;
+					margin: 8px 0 0;
+				}
 			}
 
 			.button {
@@ -770,7 +918,7 @@ section#eshop-services {
 	padding: 20px 35px;
 	margin: 64px -55px;
 
-	@include respond-to($max-tablet) {
+	@include respond-to($phone) {
 		background-color: var(--primary-dark);
 		margin: 80px 15px !important;
 		border-radius: 12px;
@@ -778,7 +926,11 @@ section#eshop-services {
 		padding: 0;
 	}
 
-	@include respond-to($min-tablet) {
+	@include respond-to($mid-tablet) {
+		margin: 64px 5px;
+	}
+
+	@include respond-to($not-mobile) {
 		background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 40%), url("../../img/eshop/parking-cta-bg.png");
 	}
 
@@ -786,12 +938,16 @@ section#eshop-services {
 		display: flex;
 		align-items: center;
 
-		@include respond-to($max-tablet) {
+		@include respond-to($phone) {
 			flex-wrap: wrap;
 			font-size: toRem(22);
 			font-weight: 600;
 			padding: 10px 10px 25px;
 		}
+
+		@include respond-to($mid-tablet) {
+			margin-top: 0;
+		}	
 
 		.icon {
 			width: 50px;
@@ -804,27 +960,27 @@ section#eshop-services {
 	}
 
 	.row {
-		@include respond-to($max-tablet) {
+		@include respond-to($phone) {
 			flex-wrap: wrap;
 		}
 
 		> div {
 			display: flex;
 
-			@include respond-to($max-tablet) {
+			@include respond-to($phone) {
 				flex-basis: 100%;
 				border-top: 1px solid rgba(255,255,255, 0.3);
 				align-items: center;
 				padding: 7px 15px;
 			}
 
-			@include respond-to($min-tablet) {
+			@include respond-to($not-mobile) {
 				align-items: center;
 				margin-right: 40px;
 			}
 
 			&:last-child {
-				@include respond-to($max-tablet) {
+				@include respond-to($phone) {
 					padding-bottom: 25px;
 				}	
 			}
@@ -833,7 +989,7 @@ section#eshop-services {
 				margin: 0 0 0 15px;
 
 				.orari {
-					@include respond-to($max-tablet) {
+					@include respond-to($phone) {
 						font-size: toRem(13);
 					}
 				}

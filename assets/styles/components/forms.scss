@@ -34,9 +34,13 @@ input {
 		&:not(:first-child) {
 			margin-right: 10px;
 
-			@include respond-to($max-tablet) {
+			@include respond-to($phone) {
 				margin-right: 0;
 				margin-top: 12px;
+			}
+
+			@include respond-to($mid-tablet) {
+				margin-right: 0;
 			}
 		}
 	}
@@ -118,7 +122,7 @@ input {
 		min-width: 140px;
 	}
 
-	&[type="submit"] {
+	&[type="submit"], select {
 		-webkit-appearance: none;
 	}
 
@@ -334,6 +338,7 @@ form#search-flight {
 /**
  * Form search parking:
  *	- Homepage
+ *	- Eshop
 */
 
 form#search-parking {
@@ -366,16 +371,6 @@ form#search-parking {
 				max-width: 125px;
 			}
 		}
-
-		&.submit {
-			@include respond-to($max-tablet) {
-				background-image: none !important;
-				font-size: 1rem !important;
-				padding: 17px !important;
-				margin-bottom: 12px !important;
-			}
-		}
-	
 	}
 }
 
@@ -495,8 +490,13 @@ form#quantity {
 		flex-basis: 49.5%;
 		max-width: 100%;
 
-		@include respond-to($phone-plus) {
+		@include respond-to($phone) {
 			flex-basis: 100%;
+			margin: 0 !important;
+		}
+
+		@include respond-to($mid-tablet) {
+			flex-basis: 85%;
 			margin: 0 !important;
 		}
 	}
@@ -511,18 +511,23 @@ form#insert-data {
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	input:not([type="submit"]), select {
+	input:not([type="submit"]) {
 		flex-basis: calc(98% / 3);
 		margin-bottom: 12px;
 		background-color: white;
 
-		@include respond-to($phone-plus) {
+		@include respond-to($phone) {
 			flex-basis: 100% !important;
 			max-width: 100% !important;
 			margin-bottom: 0;
 		}
 
-		@include respond-to($min-tablet) {
+		@include respond-to($mid-tablet) {
+			flex-basis: 33% !important;
+			max-width: 32.6% !important;
+		}
+
+		@include respond-to($not-mobile) {
 			margin-right: 0;
 		}
 
@@ -530,7 +535,7 @@ form#insert-data {
 			flex-basis: 16% !important;
 			width: 16% !important;
 
-			@include respond-to($phone-plus) {
+			@include respond-to($phone) {
 				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
@@ -538,10 +543,19 @@ form#insert-data {
 	}
 
 	select {
-		@include respond-to($phone-plus) {
+		margin-bottom: 12px;
+		background-color: white;
+		flex-basis: calc(98% / 3);
+
+		@include respond-to($phone) {
 			border-radius: 6px;
 			margin-top: 12px;
 			padding: 20px 9px;
+		}
+
+		@include respond-to($mid-tablet) {
+			flex-basis: 32.667%;
+			max-width: 32%;
 		}
 	}
 
@@ -554,7 +568,7 @@ form#insert-data {
 		> input, select {
 			flex-basis: calc(98% / 3);
 
-			@include respond-to($phone-plus) {
+			@include respond-to($phone) {
 				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
@@ -563,7 +577,7 @@ form#insert-data {
 		#azienda {
 			flex-basis: 100% !important;
 
-			@include respond-to($phone-plus) {
+			@include respond-to($phone) {
 				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
@@ -572,7 +586,7 @@ form#insert-data {
 		#email-pec, #destinatario {
 			flex-basis: calc(98% / 2) !important;
 
-			@include respond-to($phone-plus) {
+			@include respond-to($phone) {
 				flex-basis: 100% !important;
 				max-width: 100% !important;
 			}
@@ -581,26 +595,32 @@ form#insert-data {
 		.shipping-fields {
 			@extend .invoice-fields;
 
-			#indirizzo-spedizione {
+			#indirizzo-spedizione,
+			#numero-spedizione {
 				flex-basis: calc(99.5% / 1.5) !important;
 
-				@include respond-to($phone-plus) {
+				@include respond-to($phone) {
 					flex-basis: 100% !important;
 					max-width: 100% !important;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 49.333% !important;
+					max-width: 50% !important;
 				}
 			}
 		}
 	}
 
 	.data-footer {
-		@include respond-to($phone-plus) {
+		@include respond-to($phone) {
 			flex-wrap: wrap;
 		}
 
 		> div {
 			flex-basis: 40%;
 
-			@include respond-to($phone-plus) {
+			@include respond-to($phone) {
 				flex-basis: 100%;
 			}
 		}
@@ -622,7 +642,7 @@ form#insert-data {
 			font-size: toRem(14);
 
 			label:not(:first-child) input {
-				@include respond-to($phone-plus) {
+				@include respond-to($phone) {
 					margin-bottom: 70px;
 				}
 			}
@@ -642,14 +662,14 @@ form#insert-data {
 		align-items: center;
 		flex-basis: 100%;
 
-		@include respond-to($phone-plus) {
+		@include respond-to($phone) {
 			flex-wrap: wrap;
 		}
 
 		> a, input {
 			flex-basis: calc(98% / 2);
 
-			@include respond-to($phone-plus) {
+			@include respond-to($phone) {
 				flex-basis: 100%;
 			}
 		}

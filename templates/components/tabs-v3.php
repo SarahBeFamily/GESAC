@@ -174,7 +174,7 @@ if ($include != true)
 							<span class="icon icon-trash-can"></span>
 						</div>
 											
-						<span class="item-price">6,00€</span>
+						<p class="item-price">6,00€</p>
 					</div>
 					<!-- / ORDER ITEM -->
 
@@ -207,7 +207,7 @@ if ($include != true)
 							<span class="icon icon-trash-can"></span>
 						</div>
 
-						<span class="item-price">7,00€</span>						
+						<p class="item-price">7,00€</p>			
 					</div>
 					<!-- / ORDER ITEM -->
 

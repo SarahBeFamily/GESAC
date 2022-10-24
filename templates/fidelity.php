@@ -146,9 +146,9 @@
 <section id="howto">
 	<div class="tabs-v2">
 
-	<ul class="tabs">
+	<ul class="tabs v2-b">
 		<!-- DESKTOP TAB TITLES -->
-		<div class="desk-tabs-title">
+		<div class="desk-tabs-title v2-b">
 			<li class="active" data-menu-tab="#come-iscriversi"><a>Come iscriversi</a></li>
 			<li data-menu-tab="#come-funziona"><a>Come funziona</a></li>
 			<li data-menu-tab="#sconti"><a>Sconti e Vantaggi</a></li>
@@ -159,12 +159,12 @@
 		<li data-menu-tab="#come-iscriversi"><a>Come iscriversi</a></li>
 
 			<!-- PARTENZA CONTENT MOBILE & DESKTOP -->
-			<div class="tabs-v2-content" id="come-iscriversi">
+			<div class="tabs-v2-content v2-b" id="come-iscriversi">
 
 				<div class="content row wrap --half">
 					
 					<div class="col">
-						<h3><img src="<?php echo img_path('icons/smartphone.svg'); ?>" alt="">Smartphone</h3>
+						<h3><img src="<?php echo img_path('icons/icon-smartphone.svg'); ?>" alt="">Smartphone</h3>
 
 						<ol>
 							<li>Accedi allo store del tuo dispositivo Installa l’App
@@ -183,7 +183,7 @@
 					</div>
 
 					<div class="col">
-						<h3><img src="<?php echo img_path('icons/desktop.svg'); ?>" alt="">Computer</h3>
+						<h3><img src="<?php echo img_path('icons/icon-desktop.svg'); ?>" alt="">Computer</h3>
 
 						<p>
 							Puoi iscriverti al programma fedeltà “FlyYou” anche dal <a href="#" class="link">sito dell’Aeroporto 
@@ -208,7 +208,7 @@
 		<li data-menu-tab="#come-funziona"><a>Come funziona</a></li>
 
 			<!-- ARRIVO CONTENT MOBILE & DESKTOP -->
-			<div class="tabs-v2-content hidden" id="come-funziona">
+			<div class="tabs-v2-content v2-b hidden" id="come-funziona">
 				<div class="content">
 					<p>
 						“FlyYou” prevede la possibilità di accumulare punti Parking effettuando <strong>soste ai parcheggi ufficiali</strong> dell’Aeroporto di Napoli oppure punti Volo <strong>acquistando biglietti aerei</strong> con partenza <strong>da Napoli</strong>.
@@ -267,7 +267,7 @@
 		<li data-menu-tab="#sconti"><a>Sconti e Vantaggi</a></li>
 
 			<!-- PARTIRE CONTENT MOBILE & DESKTOP -->
-			<div class="tabs-v2-content hidden" id="sconti">
+			<div class="tabs-v2-content v2-b hidden" id="sconti">
 				<div class="content">
 
 					<h3><img src="<?php echo img_path('icons/icon-posate.svg'); ?>" alt="">Food e Beverage</h3>
@@ -386,7 +386,7 @@
 		<li data-menu-tab="#status-gold"><a>Scopri lo status Gold</a></li>
 
 			<!-- PARTIRE CONTENT MOBILE & DESKTOP -->
-			<div class="tabs-v2-content hidden" id="status-gold">
+			<div class="tabs-v2-content v2-b hidden" id="status-gold">
 
 				<div class="content">
 					<div class="row wrap">

@@ -247,7 +247,7 @@
 		}
 
 		.row {
-			@include respond-to($max-tablet) {
+			@include respond-to($phone) {
 				flex-wrap: wrap;
 			}
 
@@ -298,13 +298,17 @@
 						display: none;
 					}
 				}
+
+				img {
+					width: 100%;
+				}
 			}
 		}
 	}
 
 	&#benbo {
 
-		@include respond-to($max-tablet) {
+		@include respond-to($phone) {
 			background-image: linear-gradient(0deg,rgba(1,17,44,0) 0%, #FFFFFF 100%), url("../../img/eshop/cta-bg-metro-mobile.png");
 			background-size: contain;
 			background-position: bottom;
@@ -312,7 +316,11 @@
 			padding: 32px 15px;
 		}
 
-		@include respond-to($min-tablet) {
+		@include respond-to($mid-tablet) {
+			padding: 20px 10% !important;
+		}
+
+		@include respond-to($not-mobile) {
 			background-image: linear-gradient(-90deg,rgba(1,17,44,0) 0%, #FFFFFF 100%), url("../../img/eshop/cta-bg-metro.jpg");
 			background-size: contain;
 			background-repeat: no-repeat;

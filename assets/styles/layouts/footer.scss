@@ -38,7 +38,7 @@ footer {
 
 			img {
 				@include respond-to($max-tablet) {
-					width: 60%;
+					width: 150px
 				}
 			}
 		}

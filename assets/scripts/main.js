@@ -90,6 +90,7 @@ $(function() {
 		let $this = $(this),
 			tab = $this.attr('data-menu-tab'),
 			tab_v2 = $this.parent().hasClass('v2'),
+			tab_fidelity = $this.parent().hasClass('v2-b'),
 			tab_v3 = $this.parent().hasClass('v3');
 
 		if ($this.parent('.tabs').length > 0 && $this.hasClass('active')) {
@@ -111,8 +112,10 @@ $(function() {
 				$('#show-all-services').removeClass('hidden open');
 				$('#parking-help').removeClass('hidden');
 				$('.cta#vantaggi').addClass('hidden');
+			} else if (tab_fidelity) {
+				$this.parents('ul.v2-b').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
+
 			} else if (tab_v3) {
-				console.log($(this));
 				$this.parents('ul.v3').find(`.tabs-v3-content:not(${tab})`).addClass('hidden');
 			}
 		}

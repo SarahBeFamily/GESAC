@@ -273,10 +273,15 @@
 		border-radius: 0 $radius $radius $radius;
 		padding: 32px;
 
-		@include respond-to($max-tablet) {
+		@include respond-to($phone) {
 			border-radius: 0;
 			padding: 0 15px 15px;
 			margin: 0 10px 15px;
+		}
+
+		@include respond-to($mid-tablet) {
+			margin: 0;
+			padding: 15px;
 		}
 
 		.input-wrapper, input:not([type="submit"]) {
