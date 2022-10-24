@@ -28,9 +28,17 @@
 		background-color: var(--primary-dark);
 		padding: 50px 10%;
 
+		@include respond-to($max-tablet) {
+			padding: 30px 5%;
+		}
+
 		h1 {
 			color: white !important;
 			margin-bottom: 0;
+
+			@include respond-to($max-tablet) {
+				font-size: toRem(35);
+			}
 		}
 	}
 

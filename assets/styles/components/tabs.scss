@@ -242,28 +242,27 @@
 		}
 
 		> li {
+			font-size: 17px;
+			margin: 10px 10px 0;
+			background-color: var(--light-gray);
+			padding: 12px 12px 10px;
+
 			@include respond-to($not-mobile) {
 				display: none;
 			}
 
-			&.active {
-				> a::after {
-					transform: rotate(180deg) translateY(-5px);
-				}
+			&:not(.active) {
+				display: none;
 			}
 
 			> a {
 				@include respond-to($phone-plus) {
 					display: flex;
-					align-items: center;
-					justify-content: space-between;
+					align-items: flex-end;
 				}
 
-				&::after {
-					@include respond-to($phone) {
-						content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
-						transform: translateY(-3px);
-					}
+				.step {
+					margin-right: 8px;
 				}
 			}
 		}
@@ -273,6 +272,12 @@
 		background-color: var(--light-gray);
 		border-radius: 0 $radius $radius $radius;
 		padding: 32px;
+
+		@include respond-to($max-tablet) {
+			border-radius: 0;
+			padding: 0 15px 15px;
+			margin: 0 10px 15px;
+		}
 
 		.input-wrapper, input:not([type="submit"]) {
 			background-color: white !important;
@@ -285,10 +290,35 @@
 				margin-right: 0;
 				flex-basis: calc(97% / 4);
 				margin-bottom: 12px;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					max-width: 100% !important;
+					margin-bottom: 0;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: calc(97% / 2);
+				}
+
+				.drop {
+					@include respond-to($phone-plus) {
+						max-width: 100% !important;
+					}
+				}
 			}
 
 			> input {
 				flex-basis: calc(99% / 2) !important;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					max-width: 100% !important;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: calc(97% / 2);
+				}
 			}
 		}
 	}

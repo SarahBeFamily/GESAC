@@ -101,13 +101,14 @@ $(function() {
 			$this.parents('ul').find(tab).removeClass('hidden');
 
 			if (tab_v2) {
-				$this.parents('ul').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
-				$this.parents('ul').find('.desk-tabs-title.v2').addClass('hidden');
+				$this.parents('ul.v2').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
+				$this.parents('ul.v2').find('.desk-tabs-title.v2').addClass('hidden');
+				$this.addClass('hidden');
 				$('#show-all-services').removeClass('hidden open');
 				$('.cta#vantaggi').addClass('hidden');
 			} else if (tab_v3) {
 				console.log($(this));
-				$this.parents('ul').find(`.tabs-v3-content:not(${tab})`).addClass('hidden');
+				$this.parents('ul.v3').find(`.tabs-v3-content:not(${tab})`).addClass('hidden');
 			}
 		}
 	});
@@ -120,12 +121,14 @@ $(function() {
 			$(this).removeClass('open');
 
 			// Desktop
-			$(this).parent().find('.tabs > .desk-tabs-title.v2').addClass('hidden');
+			$(this).parent().find('.tabs > .desk-tabs-title.v2, .tabs.v2 > li').addClass('hidden');
+			// $(this).parent().find('.tabs.v2 > li').addClass('hidden');
 		} else {
 			$(this).addClass('open');
 
 			// Desktop
-			$(this).parent().find('.tabs > .desk-tabs-title.v2').removeClass('hidden');
+			$(this).parent().find('.tabs > .desk-tabs-title.v2, .tabs.v2 > li').removeClass('hidden');
+			$(this).parent().find('.tabs > .tabs-v2-content').addClass('hidden');
 		}
 		
 	});

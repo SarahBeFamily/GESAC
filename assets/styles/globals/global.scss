@@ -120,6 +120,12 @@ img {
 	justify-content: space-evenly;
 }
 
+.mobile-only {
+	@include respond-to($min-tablet) {
+		display: none !important;
+	}
+}
+
 /** global elements **/
 
 .line-divider {
@@ -133,6 +139,10 @@ img {
 .social-login {
 	display: flex;
 
+	@include respond-to($phone-plus) {
+		flex-wrap: wrap;
+	}
+
 	> a:any-link {
 		display: block;
 		background-color: white;
@@ -144,6 +154,11 @@ img {
 		padding: 21px 20px 13px;
 		margin-top: 12px;
 		margin-right: 10px;
+
+		@include respond-to($phone-plus) {
+			width: 100%;
+			margin-right: 0!important;
+		}
 
 		span {
 			float: left;
@@ -172,19 +187,35 @@ img {
 	flex-wrap: wrap;
 	justify-content: center;
 
+	@include respond-to($max-tablet) {
+		flex-wrap: nowrap;
+	}
+
 	.img-wrap {
-		background-color: var(--light-blue);
-		padding: 30px;
-		border-radius: 50%;
-		min-width: 150px;
-		min-height: 150px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include respond-to($max-tablet) {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+		}
+
+		@include respond-to($min-tablet) {
+			background-color: var(--light-blue);
+			padding: 30px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
 		@include respond-to($mini-desktop) {
 			min-width: 145px;
 			min-height: 100px;
+		}
+
+		@include respond-to($min-desktop) {
+			min-width: 150px;
+			min-height: 150px;
 		}
 
 		img {
@@ -197,6 +228,14 @@ img {
 		font-weight: 500;
 		flex-basis: 100%;
 		text-align: center;
+
+		@include respond-to($max-tablet) {
+			margin: 0;
+			align-items: center;
+			display: flex;
+			margin-left: 15px;
+			font-size: toRem(18);
+		}
 	}
 }
 

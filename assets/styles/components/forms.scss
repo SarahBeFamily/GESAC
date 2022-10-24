@@ -464,6 +464,10 @@ form#quantity {
 	input {
 		flex-basis: 49.5%;
 		max-width: 100%;
+
+		@include respond-to($phone-plus) {
+			flex-basis: 100%;
+		}
 	}
 }
 
@@ -481,6 +485,11 @@ form#insert-data {
 		margin-bottom: 12px;
 		background-color: white;
 
+		@include respond-to($phone-plus) {
+			flex-basis: 100%;
+			max-width: 100% !important;
+		}
+
 		@include respond-to($min-tablet) {
 			margin-right: 0;
 		}
@@ -488,6 +497,11 @@ form#insert-data {
 		&#cap, &#citta {
 			flex-basis: 16% !important;
 			width: 16% !important;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+				max-width: 100% !important;
+			}
 		}
 	}
 
@@ -499,14 +513,29 @@ form#insert-data {
 
 		> input, select {
 			flex-basis: calc(98% / 3);
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+				max-width: 100% !important;
+			}
 		}
 
 		#azienda {
 			flex-basis: 100% !important;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+				max-width: 100% !important;
+			}
 		}
 
 		#email-pec, #destinatario {
 			flex-basis: calc(98% / 2) !important;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+				max-width: 100% !important;
+			}
 		}
 
 		.shipping-fields {
@@ -514,6 +543,11 @@ form#insert-data {
 
 			#indirizzo-spedizione {
 				flex-basis: calc(99.5% / 1.5) !important;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					max-width: 100% !important;
+				}
 			}
 		}
 	}
@@ -521,6 +555,10 @@ form#insert-data {
 	.data-footer {
 		> div {
 			flex-basis: 40%;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+			}
 		}
 
 		.data-info {
@@ -556,6 +594,10 @@ form#insert-data {
 
 		> a, input {
 			flex-basis: calc(98% / 2);
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+			}
 		}
 	}
 }

@@ -95,8 +95,14 @@ a.link {
 	&.w-icon {
 		display: flex;
 		align-items: center;
-		font-size: 18px;
+		font-size: toRem(18);
 		padding: 20px 35px;
+
+		@include respond-to($phone-plus) {
+			font-size: toRem(14);
+			padding: 20px 15px;
+			justify-content: center;
+		}
 	}
 
 	&.white {

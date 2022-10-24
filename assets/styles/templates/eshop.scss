@@ -1,27 +1,60 @@
 section#eshop-services {
-	width: 70%;
-	margin: 5em auto;
+
+	@include respond-to($max-tablet) {
+		margin: 0 auto;
+	}
+
+	@include respond-to($min-tablet) {
+		margin: 5em auto;
+	}
+
+	@include respond-to($min-desktop) {
+		width: 75%;
+	}
 
 	.tabs-v2 {
 		
-		> .tabs > .desk-tabs-title {
-			flex-wrap: wrap;
-			justify-content: space-between;
-			width: 100%;
-			margin: 32px auto 80px;
+		> .tabs {
+			@include respond-to($max-tablet) {
+				margin: 0;
+			}
 
-			li {
-				flex-basis: calc(95% / 3);
-				border-bottom: 0;
+			> .desk-tabs-title {
+				flex-wrap: wrap;
+				justify-content: space-between;
+				width: 100%;
+				margin: 32px auto 80px;
 
-				&:not(.active) {
-					opacity: 1;
+				li {
+					flex-basis: calc(95% / 3);
+					border-bottom: 0;
+
+					&:not(.active) {
+						opacity: 1;
+					}
+
+					&.active {
+						.img-wrap {
+							background-color: #BCCFFF;
+						}
+					}
+				}
+			}
+
+			/* mobile */
+			> li {
+				padding: 10px 20px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include respond-to($min-tablet) {
+					display: none;
 				}
 
-				&.active {
-					.img-wrap {
-						background-color: #BCCFFF;
-					}
+				&::after {
+					content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
+					transform: rotate(-90deg) translateY(-6px);
 				}
 			}
 		}
@@ -29,15 +62,30 @@ section#eshop-services {
 		&-content {
 			margin: 32px 0;
 
+			@include respond-to($max-tablet) {
+				margin: 15px 0;
+			}
+
 			h3 {
 				display: flex;
 				align-items: flex-end;
 				font-size: toRem(40);
 				font-weight: 500;
 
+				@include respond-to($max-tablet) {
+					align-items: center;
+					font-size: toRem(20);
+					margin: 0 30px 13px;
+				}
+
 				img {
 					max-width: 60px;
 					margin-right: 30px;
+
+					@include respond-to($max-tablet) {
+						max-width: 35px;
+						margin-right: 13px;
+					}
 				}
 			}
 		}
@@ -48,8 +96,18 @@ section#eshop-services {
 		.internal-login {
 			display: flex;
 
+			@include respond-to($phone-plus) {
+				flex-wrap: wrap;
+			}
+
 			input, a {
 				flex-basis: calc(98% / 4);
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					max-width: 100% !important;
+					margin-right: 0 !important;
+				}
 			}
 
 			input {
@@ -69,6 +127,17 @@ section#eshop-services {
 		font-size: toRem(22);
 		padding: 20px;
 		margin-bottom: 3em;
+
+		@include respond-to($phone) {
+			font-size: toRem(14);
+			padding: 15px 5px;
+		}
+
+		span {
+			@include respond-to($phone) {
+				font-size: toRem(14);
+			}
+		}
 	}
 
 	#choose-parking,
@@ -78,9 +147,19 @@ section#eshop-services {
 			align-items: center;
 			margin-bottom: 4em;
 
+			@include respond-to($phone-plus) {
+				flex-wrap: wrap;
+				padding: 0 15px;
+				justify-content: center;
+			}
+
 			h2 {
 				text-align: left;
 				margin: 0;
+
+				@include respond-to($phone-plus) {
+					font-size: toRem(24);
+				}
 			}
 
 			#orderby {
@@ -89,17 +168,34 @@ section#eshop-services {
 				border-radius: 6px;
 				padding: 10px 20px;
 				font-size: toRem(14);
+
+				@include respond-to($phone-plus) {
+					margin-top: 2em;
+				}	
 			}
 		}
 
 		> .row {
+
+			@include respond-to($phone-plus) {
+				flex-wrap: wrap;
+			}
+
 			.col:first-child {
 				flex-basis: 73%;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+				}
 			}
 
 			.col.cart {
 				flex-basis: 22%;
 				margin-top: 45px;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+				}
 
 				> h2,h3,h4 {
 					font-size: 22px;
@@ -208,36 +304,98 @@ section#eshop-services {
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: 60px;
-			
-			.logo {
-				flex-basis: 10%;
 
-				img {
-					width: 100%;
-				}
+			@include respond-to($phone-plus) {
+				flex-wrap: wrap;
 			}
 
-			.content {
-				flex-basis: 60%;
-				padding: 0 5px 0 20px;
+			.inner-info {
+				flex-basis: 71%;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					display: flex;
+					flex-wrap: wrap;
+				}
+
+				.header {
+					display: inherit;
+					margin: 0;
+
+					@include respond-to($phone-plus) {
+						flex-basis: 100%;
+						display: flex;
+						order: 1;
+					}
+	
+					img {
+						width: 85px !important;
+						margin-right: 20px;
+						float: left;
+
+						@include respond-to($phone-plus) {
+							width: 65px !important;
+						}
+					}
+				}
+	
+				.content {
+					flex-basis: 60%;
+					padding: 0 5px 0 55px;
+	
+					@include respond-to($phone-plus) {
+						flex-basis: 100%;
+						padding: 15px;
+						order: 3 !important;
+					}
+	
+					ul {
+						margin: 13px 0;
+	
+						li {
+							padding: 5px 0;
+							list-style: disc;
+						}
+					}
+				}
 
 				h2,h3,h4 {
 					margin: 0;
 					font-size: toRem(22);
 					font-weight: 500;
+
+					@include respond-to($phone-plus) {
+						font-size: toRem(20);
+						flex-basis: 70%;
+					}
 				}
 
 				.offer-type {
 					font-size: toRem(14);
 					line-height: toRem(30);
+
+					@include respond-to($phone-plus) {
+						line-height: toRem(17);
+						margin-top: 20px;
+					}
 				}
 
-				ul {
-					margin: 13px 0;
+				.description {
+					padding-left: 8%;
 
-					li {
-						padding: 5px 0;
-						list-style: disc;
+					@include respond-to($phone-plus) {
+						flex-basis: 100%;
+						background-color: var(--light-gray);
+						margin: 0 15px;
+						padding: 5px !important;
+						font-size: toRem(14);
+					}
+
+					ul {
+						@include respond-to($phone-plus) {
+							font-size: toRem(14);
+							padding-left: 25px;
+						}
 					}
 				}
 			}
@@ -253,10 +411,39 @@ section#eshop-services {
 				text-align: center;
 				border-radius: 6px;
 				height: 100%;
+				min-height: 12em;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					order: 2 !important;
+					margin: 20px;
+					border-radius: 0;
+				}
 
 				.button {
 					padding: 7px 20px;
 				}
+			}
+
+			.availability {
+				font-size: 18px;
+				text-transform: uppercase;
+				font-weight: 500;
+				padding-left: 12%;
+
+				@include respond-to($phone-plus) {
+					padding: 0;
+					flex-basis: 100%;
+				}
+
+				&.ok {
+					color: #34B941;
+				}
+			}
+
+			.button-accordion {
+				font-size: 1rem;
+				font-weight: 400;
 			}
 		}
 
@@ -295,6 +482,10 @@ section#eshop-services {
 				margin-bottom: 40px;
 			}
 
+			img {
+				width: 70px !important;
+			}
+
 			> .button {
 				font-size: 18px;
 				text-transform: uppercase;
@@ -322,6 +513,15 @@ section#eshop-services {
 
 		.service-item:first-of-type {
 			margin-top: 116px;
+		}
+	}
+
+	#choose-parking {
+		> .center-content {
+			@include respond-to($phone-plus) {
+				width: 90%;
+				margin: 10px auto;
+			}
 		}
 	}
 

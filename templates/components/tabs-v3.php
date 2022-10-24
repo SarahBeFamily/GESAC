@@ -19,7 +19,7 @@ if ($include != true)
 		</div>
 
 		<!-- MOBILE TAB TITLE -->
-		<li data-menu-tab="#step1"><a><span class="step">1</span> <?php echo $var2; ?></a></li>
+		<li class="active" data-menu-tab="#step1"><a><span class="step">1</span> <?php echo $var2; ?></a></li>
 
 			<!-- STEP 1 CONTENT MOBILE & DESKTOP -->
 			<div class="tabs-v3-content" id="step1">
