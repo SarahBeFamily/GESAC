@@ -17,7 +17,7 @@
 
 			<div class="internal-login">
 				<input type="text" placeholder="Username" required>
-				<input type="password" placeholder="Password" required>
+				<input type="password" placeholder="Password" value="" class="password" required><i class="icon icon-hide-password toggle-password"></i>
 				<input type="submit" class="submit" value="Accedi">
 				<a href="#" class="button secondary border-only">Registrati</a>
 			</div>
@@ -28,9 +28,9 @@
 				oppure
 
 				<div class="social-login">
-					<a href="#"><span class="google-icon"></span>Continua con Google</a>
-					<a href="#"><span class="facebook-icon"></span>Continua con Facebook</a>
-					<a href="#"><span class="instagram-icon"></span>Continua con Instagram</a>
+					<a href="#"><i class="google-icon"></i>Continua con Google</a>
+					<a href="#"><i class="facebook-icon"></i>Continua con Facebook</a>
+					<a href="#"><i class="instagram-icon"></i>Continua con Instagram</a>
 				</div>
 			</div>
 

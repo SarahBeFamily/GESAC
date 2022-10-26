@@ -166,10 +166,9 @@ body {
 
 		@include respond-to($phone-plus) {
 			width: 100%;
-			margin-right: 0!important;
 		}
 
-		span {
+		i {
 			float: left;
 			transform: translate(-10%, -20%);
 			margin-right: 8px;

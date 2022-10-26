@@ -141,6 +141,7 @@ header {
 
 				.login-header-panel {
 					position: absolute;
+					z-index: 100;
 					top: betterClamp(149,196);
 					background-color: rgba(1, 17, 44, 90%);
 					color: white;

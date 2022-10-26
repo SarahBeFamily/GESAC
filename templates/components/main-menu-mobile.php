@@ -9,13 +9,9 @@
 		</div>
 
 		<div class="col-icons">
-			<a href="#" class="search">
-				<img src="<?php echo img_path('header/cerca.svg'); ?>" alt="">
-			</a>
+			<a href="#" class="search"><i class="icon icon-search"></i></a>
 
-			<a href="#" class="close-menu">
-				<img src="<?php echo img_path('header/close.svg'); ?>" alt="">
-			</a>
+			<a href="#" class="close-menu"><i class="icon icon-close-menu"></i></a>
 		</div>
 	</div>
 

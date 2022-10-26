@@ -2,7 +2,7 @@
 
 input {
 	border: 0;
-	padding: 16px 50px 16px 18px;
+	padding: 16px;
 	border-radius: 6px;
 	font-family: inherit;
 	font-size: toRem(13);
@@ -15,7 +15,7 @@ input {
 	}
 
 	@include respond-to($max-tablet) {
-		padding: 19px 50px 19px 18px;
+		padding: 19px;
 	}
 
 	&::placeholder {
@@ -215,7 +215,7 @@ datalist {
 		&::before {
 			content: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1202_12840)'%3E%3Cpath opacity='0.5' fill-rule='evenodd' clip-rule='evenodd' d='M15.9849 1.6853C14.3404 0.58649 12.407 0 10.4292 0C7.77793 0.0029116 5.23608 1.05742 3.36135 2.93215C1.48661 4.80688 0.432111 7.34873 0.429199 10C0.429199 11.9778 1.01569 13.9112 2.1145 15.5557C3.21332 17.2002 4.7751 18.4819 6.60237 19.2388C8.42963 19.9957 10.4403 20.1937 12.3801 19.8079C14.3199 19.422 16.1017 18.4696 17.5003 17.0711C18.8988 15.6725 19.8512 13.8907 20.2371 11.9509C20.6229 10.0111 20.4249 8.00043 19.668 6.17317C18.9111 4.3459 17.6294 2.78412 15.9849 1.6853ZM5.70484 2.93051C7.10266 1.99652 8.74605 1.498 10.4272 1.498C12.6806 1.50117 14.8407 2.39773 16.4341 3.9911C18.0275 5.58447 18.924 7.74463 18.9272 9.998C18.9272 11.6791 18.4287 13.3225 17.4947 14.7203C16.5607 16.1182 15.2332 17.2076 13.68 17.851C12.1268 18.4943 10.4178 18.6627 8.76892 18.3347C7.12008 18.0067 5.60553 17.1972 4.41678 16.0084C3.22803 14.8197 2.41849 13.3051 2.09051 11.6563C1.76254 10.0074 1.93087 8.29836 2.57421 6.74519C3.21756 5.19202 4.30702 3.8645 5.70484 2.93051Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3Cpath opacity='0.5' d='M11.0742 4C11.2416 4.00052 11.404 4.05701 11.5355 4.16048C11.6671 4.26396 11.7603 4.40846 11.8002 4.571L11.8172 4.658L11.8232 4.749V10.592C11.8227 10.7594 11.7662 10.9218 11.6627 11.0533C11.5593 11.1849 11.4148 11.2781 11.2522 11.318L11.1652 11.335L11.0742 11.341H7.17922C6.99601 11.3415 6.81899 11.2747 6.68173 11.1534C6.54448 11.032 6.45654 10.8645 6.43459 10.6826C6.41264 10.5007 6.45821 10.3171 6.56265 10.1666C6.66709 10.0161 6.82315 9.9091 7.00122 9.866L7.08822 9.849L7.17922 9.843H10.3242V4.749C10.3244 4.58017 10.3816 4.41635 10.4865 4.28405C10.5914 4.15175 10.7379 4.05872 10.9022 4.02L10.9872 4.005L11.0742 4Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1202_12840'%3E%3Crect width='20' height='20' fill='#{url-friendly-colour($primary-dark)}' transform='translate(0.429199)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 			opacity: 0.5;
-			margin-left: 20px;
+			margin-left: 10px;
 
 			@include respond-to($max-tablet) {
 				margin-left: 13px;
@@ -226,7 +226,7 @@ datalist {
 	&.--calendar {
 		&::before {
 			content: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_23_1637)'%3E%3Cpath opacity='0.25' d='M12 18H6C3.175 18 1.757 18 0.878 17.122C-0.000999987 16.244 5.15337e-09 14.824 5.15337e-09 12V7C5.15337e-09 4.175 0 2.758 0.878 1.878C1.547 1.21 2.556 1.056 4.073 1.015C4.238 0.115 4.655 0 5 0C5.509 0 5.793 0.308 5.923 1H12.075C12.205 0.309 12.49 0 12.998 0C13.343 0 13.761 0.115 13.925 1.015C15.442 1.056 16.452 1.215 17.12 1.878C18 2.758 18 4.175 18 7V12C18 14.825 18 16.243 17.122 17.122C16.244 18.001 14.824 18 12 18ZM2 8V12C1.97266 13.0096 2.00337 14.0199 2.092 15.026C2.167 15.581 2.272 15.69 2.292 15.706C2.312 15.722 2.438 15.836 2.974 15.906C3.98003 15.9953 4.99037 16.0267 6 16H12C13.0096 16.0273 14.0199 15.9966 15.026 15.908C15.56 15.836 15.682 15.737 15.706 15.708C15.73 15.679 15.838 15.543 15.906 15.025C15.9953 14.0193 16.0266 13.0093 16 12V8H2ZM4 3.019C3.65729 3.02608 3.31517 3.05078 2.975 3.093C2.42 3.167 2.311 3.272 2.295 3.293C2.279 3.314 2.165 3.439 2.095 3.975C2.02323 4.64752 1.99151 5.32371 2 6H16C16.0103 5.32348 15.9802 4.64694 15.91 3.974C15.838 3.44 15.739 3.318 15.71 3.294C15.681 3.27 15.562 3.164 15.027 3.094C14.6862 3.05138 14.3434 3.02635 14 3.019C14 4.765 13.492 5 13 5C12.508 5 12 4.762 12 3H6C6 4.763 5.494 5 5 5C4.506 5 4 4.765 4 3.019Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_23_1637'%3E%3Crect width='18' height='18' fill='#{url-friendly-colour($white)}'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-			margin-left: 20px;
+			margin-left: 10px;
 
 			@include respond-to($max-tablet) {
 				margin-left: 13px;
@@ -235,8 +235,11 @@ datalist {
 	}
 
 	> input {
+		min-width: 85%;
+		width: 100%;
+
 		@include respond-to($phone) {
-			padding: 19px 45px 19px 13px !important;
+			padding: 19px !important;
 		}
 
 		&:last-child {
@@ -307,7 +310,7 @@ form#search-flight {
 		}
 
 		@include respond-to($desktop) {
-			flex-basis: calc(90% / 5);
+			flex-basis: calc(96% / 5);
 		}
 
 		&:nth-child(2),
@@ -318,8 +321,8 @@ form#search-flight {
 		}
 
 		&:nth-last-child(2) {
-			@include respond-to($phone-plus) {
-				max-width: 79%;
+			@include respond-to($phone) {
+				max-width: 71%;
 			}
 		}
 
@@ -346,6 +349,7 @@ form#search-parking {
 
 	input {
 		flex-basis: calc(100% / 6);
+		max-width: 100%;
 
 		@include respond-to($mini-desktop) {
 			flex-basis: 32%;
@@ -496,7 +500,7 @@ form#quantity {
 		}
 
 		@include respond-to($mid-tablet) {
-			flex-basis: 85%;
+			flex-basis: 87%;
 			margin: 0 !important;
 		}
 	}
@@ -566,7 +570,7 @@ form#insert-data {
 		margin-top: 20px;
 
 		> input, select {
-			flex-basis: calc(98% / 3);
+			flex-basis: calc(98% / 3) !important;
 
 			@include respond-to($phone) {
 				flex-basis: 100% !important;
@@ -584,7 +588,7 @@ form#insert-data {
 		}
 
 		#email-pec, #destinatario {
-			flex-basis: calc(98% / 2) !important;
+			flex-basis: calc(99% / 2) !important;
 
 			@include respond-to($phone) {
 				flex-basis: 100% !important;
@@ -594,10 +598,25 @@ form#insert-data {
 
 		.shipping-fields {
 			@extend .invoice-fields;
+			width: 100%;
 
-			#indirizzo-spedizione,
-			#numero-spedizione {
+			#indirizzo-spedizione {
 				flex-basis: calc(99.5% / 1.5) !important;
+
+				@include respond-to($phone) {
+					flex-basis: 100% !important;
+					max-width: 100% !important;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 49.333% !important;
+					max-width: 50% !important;
+				}
+			}
+
+			
+			#numero-spedizione {
+				flex-basis: calc(98% / 3);
 
 				@include respond-to($phone) {
 					flex-basis: 100% !important;

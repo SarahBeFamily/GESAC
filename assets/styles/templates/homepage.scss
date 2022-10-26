@@ -44,7 +44,7 @@
 		background-color: rgba(1,17,44,10%);
 		backdrop-filter: blur(10px);
 		border-radius: $radius;
-		z-index: 9999;
+		z-index: 99;
 
 		@include respond-to($phone) {
 			margin-bottom: 3em;
@@ -239,7 +239,7 @@
 					height: 85px;
 				}
 
-				> span {
+				> i {
 					@include respond-to($phone) {
 						width: 37px !important;
 						margin: 0;
@@ -517,7 +517,7 @@ section#parking {
 
 			@include respond-to($mini-desktop) {
 				flex-basis: 100%;
-				min-width: 97%;
+				min-width: 100%;
 			}
 
 			@include respond-to($small-desktop) {

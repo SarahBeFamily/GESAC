@@ -172,6 +172,7 @@ section#eshop-services {
 		
 		.internal-login {
 			display: flex;
+			align-items: center;
 
 			@include respond-to($phone-plus) {
 				flex-wrap: wrap;
@@ -189,12 +190,25 @@ section#eshop-services {
 
 			input {
 				margin-right: 10px;
+
+				@include respond-to($min-tablet) {
+					margin-top: 0;
+				}
 			}
 
 			.button.secondary:not(input) {
 	
-				@include respond-to($max-tablet) {
+				@include respond-to($phone) {
 					margin-top: 12px;
+				}
+
+				@include respond-to($mid-tablet) {
+					padding: 18px 25px;
+				}
+
+				@include respond-to($min-desktop) {
+					padding: 14px 15px;
+					margin-left: 10px;
 				}
 			}
 		}
@@ -209,9 +223,8 @@ section#eshop-services {
 		input.submit {
 			@include respond-to($max-tablet) {
 				background-image: none !important;
-				font-size: 1rem !important;
-				padding: 17px !important;
-				margin-bottom: 12px !important;
+				font-size: 1rem;
+				padding: 15px;
 			}
 
 			@include respond-to($min-tablet) {
@@ -235,12 +248,8 @@ section#eshop-services {
 		@include respond-to($phone) {
 			font-size: toRem(14);
 			padding: 15px 5px;
-		}
-
-		span {
-			@include respond-to($phone) {
-				font-size: toRem(14);
-			}
+			display: flex;
+			align-items: center;
 		}
 	}
 
@@ -573,13 +582,24 @@ section#eshop-services {
 			}
 		}
 
+		.parking {
+			@include respond-to($mid-tablet) {
+				margin-top: 60px;
+			}
+		}
+
 		.service {
 			&.open {
 				background-color: var(--light-gray);
 
-				@include respond-to($max-tablet) {
+				@include respond-to($phone) {
 					margin: 0 15px 40px;
 					padding-top: 20px;
+				}
+
+				@include respond-to($mid-tablet) {
+					margin: 0 0 40px;
+					padding: 20px 15px;
 				}
 
 				@include respond-to($min-tablet) {

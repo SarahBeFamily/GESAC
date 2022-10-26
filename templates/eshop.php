@@ -9,7 +9,6 @@
 		<?php get_component('breadcrumbs', 'Acquista servizi', 'dark', true); ?>
 
 		<h1 class="page-title">Acquista servizi</h1>
-
 	</div>
 </section>
 
@@ -115,12 +114,12 @@
 						get_component('tabs-v3', 'form-eshop-parking', 'Scegli quando parcheggiare', true); ?>
 					</div>
 
-					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <span class="icon icon-edit"></span></a>
+					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
 					<div id="choose-parking">
 
 						<div class="center-content">
-							<a href="#" id="lightbox-map" data-dlightbox="resource.mp4" role="button" class="button secondary border-only w-icon">Visualizza immagine mappa in lightbox  <span class="icon icon-map"></span></a>
+							<a href="<?php echo img_path('mappa-parcheggio.png'); ?>" id="lightbox-map" role="button" class="button secondary border-only w-icon btn-icon-map">Visualizza immagine mappa in lightbox</a>
 						</div>
 
 						<div class="row between-content">
@@ -215,15 +214,9 @@
 											<span class="actual-price">7,00€</span>
 
 											<div class="quantity">
-												<div class="minus">
-													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-												</div>
-
+												<div class="minus"><i class="icon icon-minus"></i></div>
 												<div class="qty">1</div>
-
-												<div class="plus">
-													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-												</div>
+												<div class="plus"><i class="icon icon-plus"></i></div>
 											</div>
 
 											<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -310,15 +303,9 @@
 											<span class="actual-price">7,00€</span>
 
 											<div class="quantity">
-												<div class="minus">
-													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-												</div>
-
+												<div class="minus"><i class="icon icon-minus"></i></div>
 												<div class="qty">1</div>
-
-												<div class="plus">
-													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-												</div>
+												<div class="plus"><i class="icon icon-plus"></i></div>
 											</div>
 
 											<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -405,15 +392,9 @@
 											<span class="actual-price">7,00€</span>
 
 											<div class="quantity">
-												<div class="minus">
-													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-												</div>
-
+												<div class="minus"><i class="icon icon-minus"></i></div>
 												<div class="qty">1</div>
-
-												<div class="plus">
-													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-												</div>
+												<div class="plus"><i class="icon icon-plus"></i></div>
 											</div>
 
 											<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -432,7 +413,7 @@
 								<div class="cart">
 									<div class="item">
 										<div class="remove-item">
-											<span class="icon icon-cancel"></span>
+											<i class="icon icon-cancel"></i>
 										</div>
 
 										<h4>Capodichino Parking (Ultra Low Cost)</h4>
@@ -489,7 +470,7 @@
 						get_component('tabs-v3', 'form-eshop-quantity', 'Scegli la quantità', true); ?>
 					</div>
 
-					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <span class="icon icon-edit"></span></a>
+					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
 					<div class="buy-service">
 
@@ -525,15 +506,9 @@
 										<span class="actual-price">7,00€</span>
 
 										<div class="quantity">
-											<div class="minus">
-												<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-											</div>
-
+											<div class="minus"><i class="icon icon-minus"></i></div>
 											<div class="qty">1</div>
-
-											<div class="plus">
-												<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-											</div>
+											<div class="plus"><i class="icon icon-plus"></i></div>
 										</div>
 
 										<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -550,21 +525,15 @@
 								<div class="cart">
 									<div class="item">
 										<div class="remove-item">
-											<span class="icon icon-cancel"></span>
+											<i class="icon icon-cancel"></i>
 										</div>
 
 										<h4>Fast Track</h4>
 
 										<div class="quantity">
-											<div class="minus">
-												<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-											</div>
-
+											<div class="minus"><i class="icon icon-minus"></i></div>
 											<div class="qty">1</div>
-
-											<div class="plus">
-												<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-											</div>
+											<div class="plus"><i class="icon icon-plus"></i></div>
 										</div>
 
 										<span class="actual-price item-price">7,00€</span>
@@ -613,7 +582,7 @@
 						get_component('tabs-v3', 'form-eshop-quantity', 'Scegli la quantità', true); ?>
 					</div>
 
-					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <span class="icon icon-edit"></span></a>
+					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
 					<div id="goldcard">
 						<div class="row between-content">
@@ -660,7 +629,7 @@
 								<div class="cart">
 									<div class="item">
 										<div class="remove-item">
-											<span class="icon icon-cancel"></span>
+											<i class="icon icon-cancel"></i>
 										</div>
 
 										<h4>Status GOLD</h4>
@@ -712,7 +681,7 @@
 						get_component('tabs-v3', 'form-eshop-quantity', 'Scegli la quantità', true); ?>
 					</div>
 
-					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <span class="icon icon-edit"></span></a>
+					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
 					<div class="buy-service">
 
@@ -736,15 +705,9 @@
 											<span class="actual-price">5,00€</span>
 
 											<div class="quantity">
-												<div class="minus">
-													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-												</div>
-
+												<div class="minus"><i class="icon icon-minus"></i></div>
 												<div class="qty">1</div>
-
-												<div class="plus">
-													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-												</div>
+												<div class="plus"><i class="icon icon-plus"></i></div>
 											</div>
 
 											<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -768,15 +731,9 @@
 										<span class="actual-price">5,00€</span>
 
 										<div class="quantity">
-											<div class="minus">
-												<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-											</div>
-
+											<div class="minus"><i class="icon icon-minus"></i></div>
 											<div class="qty">1</div>
-
-											<div class="plus">
-												<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-											</div>
+											<div class="plus"><i class="icon icon-plus"></i></div>
 										</div>
 
 										<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -800,15 +757,9 @@
 											<span class="actual-price">5,00€</span>
 
 											<div class="quantity">
-												<div class="minus">
-													<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-												</div>
-
+												<div class="minus"><i class="icon icon-minus"></i></div>
 												<div class="qty">1</div>
-
-												<div class="plus">
-													<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-												</div>
+												<div class="plus"><i class="icon icon-plus"></i></div>
 											</div>
 
 											<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -832,15 +783,9 @@
 										<span class="actual-price">5,00€</span>
 
 										<div class="quantity">
-											<div class="minus">
-												<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-											</div>
-
+											<div class="minus"><i class="icon icon-minus"></i></div>
 											<div class="qty">1</div>
-
-											<div class="plus">
-												<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-											</div>
+											<div class="plus"><i class="icon icon-plus"></i></div>
 										</div>
 
 										<a href="#" class="button secondary">Aggiungi al carrello</a>
@@ -857,21 +802,15 @@
 								<div class="cart">
 									<div class="item">
 										<div class="remove-item">
-											<span class="icon icon-cancel"></span>
+											<i class="icon icon-cancel"></i>
 										</div>
 
 										<h4>Ticket Alibus</h4>
 
 										<div class="quantity">
-											<div class="minus">
-												<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-											</div>
-
+											<div class="minus"><i class="icon icon-minus"></i></div>
 											<div class="qty">1</div>
-
-											<div class="plus">
-												<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-											</div>
+											<div class="plus"><i class="icon icon-plus"></i></div>
 										</div>
 
 										<span class="actual-price item-price">5,00€</span>
@@ -956,12 +895,12 @@
 	<!-- PARKING ASSISTANCE SECTION -->
 	<div id="parking-help" class="hidden">
 		<div class="col">
-			<h2><span class="icon icon-parking"></span> Richiedi assistenza parcheggi</h2>
+			<h2><i class="icon icon-parking"></i> Richiedi assistenza parcheggi</h2>
 
 			<div class="row">
-				<div><span class="icon-circle-mail"></span> <p><a href="#" class="link white">Scrivici</a></p></div>
+				<div><i class="icon-circle-mail"></i> <p><a href="#" class="link white">Scrivici</a></p></div>
 
-				<div><span class="icon-circle-phone"></span> <p>Telefonaci al <a href="#" class="link">081 789 68 88</a> <span class="orari">(Lun-Ven 9:00-18:00)</span></p></div>
+				<div><i class="icon-circle-phone"></i> <p>Telefonaci al <a href="#" class="link">081 789 68 88</a> <span class="orari">(Lun-Ven 9:00-18:00)</span></p></div>
 			</div>
 		</div>
 	</div>

@@ -143,12 +143,8 @@
 
 			<div class="icons">
 
-				<a href="#" class="disability">
-					<img src="<?php echo img_path('header/disabilita.svg'); ?>" alt="">
-				</a>
-				<a href="#" class="user">
-					<img src="<?php echo img_path('header/utente.svg'); ?>" alt="">
-				</a>
+				<a href="#" class="disability"><i class="icon icon-disability"></i></a>
+				<a href="#" class="user"><i class="icon icon-user"></i></a>
 
 					<!-- LOGIN MENU STARTS -->
 					<div class="login-header-panel hidden">
@@ -156,7 +152,7 @@
 
 						<form id="login" action="">
 							<input type="text" placeholder="Username o Email" required>
-							<input type="password" placeholder="Password" required>
+							<input type="password" placeholder="Password" value="" class="password" required><i class="icon icon-hide-password-secondary toggle-password"></i>
 							<input type="submit" class="submit" value="Accedi">
 						</form>
 
@@ -168,32 +164,26 @@
 
 						<div class="social-login">
 							<a href="#">
-								<span class="google-icon"></span>
+								<i class="google-icon"></i>
 								Continua con Google
 							</a>
 
 							<a href="#">
-								<span class="facebook-icon"></span>
+								<i class="facebook-icon"></i>
 								Continua con Facebook
 							</a>
 
 							<a href="#">
-								<span class="instagram-icon"></span>
+								<i class="instagram-icon"></i>
 								Continua con Instagram
 							</a>
 						</div>
 					</div>
 					<!-- / LOGIN MENU ENDS -->
 
-				<a href="#" class="shopping-bag">
-					<img src="<?php echo img_path('header/shopping-bag.svg'); ?>" alt="">
-				</a>
-				<a href="#" class="search">
-					<img src="<?php echo img_path('header/cerca.svg'); ?>" alt="">
-				</a>
-				<a href="#" class="hamburger">
-					<img src="<?php echo img_path('header/ham.svg'); ?>" alt="">
-				</a>
+				<a href="#" class="shopping-bag"><i class="icon icon-shopping-bag"></i></a>
+				<a href="#" class="search"><i class="icon icon-search"></i></a>
+				<a href="#" class="hamburger"><i class="icon icon-hamburger-menu"></i></a>
 
 				<!-- MENU MOBILE ONLY STARTS -->
 				<?php get_component('main-menu-mobile', '', true); ?>

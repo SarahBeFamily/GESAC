@@ -15,12 +15,12 @@
 
 			<div class="tabs">
 				<div class="active" data-menu-tab="#flight">
-					<span class="icon icon-plane --active"></span>
+					<i class="icon icon-plane --active"></i>
 					Voli in tempo reale
 				</div>
 
 				<div data-menu-tab="#parking">
-					<span class="icon icon-parking"></span>
+					<i class="icon icon-parking"></i>
 					Parcheggi
 				</div>
 			</div>
@@ -28,12 +28,12 @@
 			<!-- COLUMN TWO EXTRA -->
 			<div class="extra">
 				<div class="hour">
-					<span class="icon icon-clock"></span>
+					<i class="icon icon-clock"></i>
 					<span id="hour">12:08</span>
 				</div>
 
 				<div class="meteo">
-					<span class="icon icon-weather --coperto"></span>
+					<i class="icon icon-weather --coperto"></i>
 					<span id="temperature">22°C</span>
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 	<div id="footer-items">
 
 		<div class="col">
-			<span class="icon-circle"><span class="icon icon-parking"></span></span>
+			<span class="icon-circle"><i class="icon icon-parking"></i></span>
 			<p class="content">
 				<span class="title">Info Parcheggio</span>
 				<br>
@@ -62,7 +62,7 @@
 		</div>
 
 		<div class="col">
-			<span class="icon-circle"><span class="icon icon-location"></span></span>
+			<span class="icon-circle"><i class="icon icon-location"></i></span>
 			<p class="content">
 				<span class="title">Come arrivare in Aeroporto</span>
 				<br>
@@ -71,7 +71,7 @@
 		</div>
 
 		<div class="col">
-			<span class="icon-circle"><span class="icon icon-timer"></span></span>
+			<span class="icon-circle"><i class="icon icon-timer"></i></span>
 			<p class="content">
 				<span class="title">FAST Track</span>
 				<br>
@@ -80,7 +80,7 @@
 		</div>
 
 		<div class="col">
-			<span class="icon-circle"><span class="icon icon-plane-2"></span></span>
+			<span class="icon-circle"><i class="icon icon-plane-2"></i></span>
 			<p class="content">
 				<span class="title">Acquista Volo</span>
 				<br>
@@ -164,7 +164,7 @@
 			<p class="title">Prenota la tua sosta in aeroporto</p>
 			<?php get_component('form-parking', 'Calcola Preventivo', true); ?>
 
-			<a href="#"><span class="icon icon-download"></span> Scarica il regolamento</a>
+			<a href="#"><i class="icon icon-download"></i> Scarica il regolamento</a>
 		</div>
 	</div>
 </section>

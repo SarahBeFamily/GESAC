@@ -5,7 +5,7 @@
  */
 
 if ($include != true)
-	$var = 'quatity';
+	$var = 'quantity';
 ?>
 
 <div class="tabs-v3">
@@ -171,7 +171,7 @@ if ($include != true)
 						</div>
 
 						<div class="remove-item">
-							<span class="icon icon-trash-can"></span>
+							<i class="icon icon-trash-can"></i>
 						</div>
 											
 						<p class="item-price">6,00€</p>
@@ -192,19 +192,13 @@ if ($include != true)
 						</div>
 
 						<div class="quantity">
-							<div class="minus">
-								<img src="<?php echo img_path('icons/icon-minus.svg'); ?>" alt="">
-							</div>
-
+							<div class="minus"><i class="icon icon-minus"></i></div>
 							<div class="qty">1</div>
-
-							<div class="plus">
-								<img src="<?php echo img_path('icons/icon-plus.svg'); ?>" alt="">
-							</div>
+							<div class="plus"><i class="icon icon-plus"></i></div>
 						</div>
 
 						<div class="remove-item">
-							<span class="icon icon-trash-can"></span>
+							<i class="icon icon-trash-can"></i>
 						</div>
 
 						<p class="item-price">7,00€</p>			

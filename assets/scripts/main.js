@@ -71,6 +71,13 @@ $(function() {
 		$('#menu-mobile').css('left', '100vw');
 	});
 
+	// Show password in login password input
+	$('.toggle-password').on('click', function() {
+		let passInput = $(this).parent().find('input.password');
+		const type = passInput.attr('type') === 'password' ? 'text' : 'password';
+		passInput.attr('type', type);
+	});
+
 	// Hero tab Homepage
 	$('#tab-voli').on('click', '.tabs div', function() {
 		let $this = $(this);
