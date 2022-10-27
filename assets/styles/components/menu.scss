@@ -97,6 +97,47 @@ ul.menu {
 				background-image: url("../../img/header/flights-bg.jpg");
 			}
 
+			&.parking .megamenu {
+				background-image: url("../../img/header/megamenu/bg-parcheggi.png");
+			}
+
+			&.transport .megamenu {
+				background-image: url("../../img/header/megamenu/bg-trasporti.png");
+			}
+
+			&.shop .megamenu {
+				background-image: url("../../img/header/megamenu/bg-shop.png");
+			}
+
+			&.customercare .megamenu {
+				background-image: url("../../img/header/megamenu/bg-customer-care.png");
+			}
+
+			&.sustainability .megamenu {
+				background-image: url("../../img/header/megamenu/bg-sostenibilita.png");
+			}
+
+			&.hr .megamenu {
+				background-image: url("../../img/header/megamenu/bg-hr.png");
+			}
+
+			&.quality .megamenu {
+				background-image: url("../../img/header/megamenu/bg-qualita.png");
+			}
+
+			&.press .megamenu {
+				background-image: url("../../img/header/megamenu/bg-area-stampa.png");
+			}
+
+			&.sustainability .megamenu {
+				background-image: url("../../img/header/megamenu/bg-sostenibilita.png");
+			}
+
+			&.salerno-corporate .megamenu,
+			&.salerno-info .megamenu {
+				background-image: url("../../img/header/megamenu/bg-AeroportoSalerno.png");
+			}
+
 			> span {
 				text-transform: uppercase;
 				cursor: pointer;
@@ -118,8 +159,11 @@ ul.menu {
 				height: 50vh;
 				flex-wrap: wrap;
 				align-content: space-between;
-				background-size: cover;
-				background-position: right center;
+				// background-size: cover;
+				// background-position: right center;
+				background-size: contain;
+				background-position: right top;
+				background-repeat: no-repeat;
 
 				@include respond-to($small-desktop) {
 					flex-basis: 13%;
@@ -130,7 +174,7 @@ ul.menu {
 				}
 
 				.inner {
-					padding: 0 14.5%;
+					padding: 0 14.5% 4rem;
 					margin-top: 3em;
 					flex-basis: 100%;
 					display: flex;
@@ -197,6 +241,51 @@ ul.menu {
 							}
 						}
 					}
+				}
+			}
+		}
+
+		li.sublink {
+			padding-left: 10px;
+
+			&::before {
+				background-image: url("../../img/header/arrow-sublink.png");
+				content: '';
+				width: 25px;
+				height: 22px;
+				background-size: cover;
+				background-position: center;
+				margin-right: 5px;
+			}
+		}
+
+		&#salerno {
+			justify-content: flex-start !important;
+
+			> li {
+				padding-right: 35px;
+				padding-left: 35px;
+			}
+
+			.inner {
+				justify-content: flex-start;
+
+				.col {
+					flex-basis: 30.5%;
+
+					li.salerno-corporate {
+						padding: 5px 0;
+					}
+				}
+			}
+		}
+
+		&#business {
+			.inner {
+				justify-content: flex-start;
+
+				.col {
+					flex-basis: 30.5%;
 				}
 			}
 		}

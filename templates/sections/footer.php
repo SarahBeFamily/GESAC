@@ -4,6 +4,8 @@
  */
 ?>
 
+<i class="icon icon-accessibility fixed"></i>
+
 <footer>
 	
 	<!-- FOOTER MAIN ROW STARTS -->

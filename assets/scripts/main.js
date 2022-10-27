@@ -113,7 +113,9 @@ $(function() {
 
 			if (tab_v2) {
 				$this.parents('ul.v2').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
-				$this.parents('ul.v2').find('.desk-tabs-title.v2').addClass('hidden');
+				$this.parents('ul.v2:not(.fixed-titles)').find('.desk-tabs-title.v2').addClass('hidden');
+
+				$("ul.v2 .slick-slider").slick("refresh");
 				
 				$this.parents('ul.v2').find('li.mobile-only').addClass('hidden');
 				$('#show-all-services').removeClass('hidden open');

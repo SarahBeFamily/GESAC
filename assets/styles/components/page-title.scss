@@ -90,7 +90,6 @@
 	}
 
 	.button.secondary {
-		color: var(--primary-dark);
 
 		@include respond-to($max-tablet) {
 			color: white;
