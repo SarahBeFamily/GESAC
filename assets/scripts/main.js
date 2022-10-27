@@ -147,7 +147,10 @@ $(function() {
 
 			// Desktop
 			$(this).parent().find('.tabs.v2 > .desk-tabs-title.v2, .tabs.v2 > li').removeClass('hidden');
-			// $(this).parent().find('.tabs.v2 > .tabs-v2-content').addClass('hidden');
+
+			if ($(window).width() < 640) {
+				$(this).parent().find('.tabs.v2 > .tabs-v2-content').addClass('hidden');
+			}
 
 			// Mobile
 			$(this).parent().find('.tabs.v2 > li').removeClass('hidden');
