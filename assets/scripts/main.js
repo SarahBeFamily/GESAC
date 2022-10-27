@@ -1,16 +1,30 @@
 import $ from 'jquery';
+
 require('dragon-lightbox/dist/dragon-lightbox.min');
 require('slick-carousel');
 require('timepicker/jquery.timepicker.min');
 
 $(function() {
 
-	console.log('Hi!');
 	const body = $('body');
 
 	if ($(window).width() < 640) {
 		$('.tabs-v2-content:not(.starter, .hidden)').addClass('hidden');
 	}
+
+	// const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+	// $(window).on('scroll', function(){
+	// var scrollTop     = $(window).scrollTop(),
+	// elementOffset = $('.row.sticky-header-wrap').offset().top,
+	// distance      = (elementOffset - scrollTop);
+	// if(distance < vh){
+	// 	console.log('in view');
+	// 	$('.cart .cart-wrap').css('margin-top', ($(window).height + (scrollTop - elementOffset)));
+	// }
+	// else{
+	// 	console.log('not in view');
+	// }
+	// });
 
 	// General button open to close et viceversa
 	$('.btn-open-close').on('click', function() {
@@ -147,7 +161,7 @@ $(function() {
 
 			// Desktop
 			$(this).parent().find('.tabs.v2 > .desk-tabs-title.v2, .tabs.v2 > li').removeClass('hidden');
-			$(this).parent().find('.tabs.v2 > .tabs-v2-content').addClass('hidden');
+			// $(this).parent().find('.tabs.v2 > .tabs-v2-content').addClass('hidden');
 
 			// Mobile
 			$(this).parent().find('.tabs.v2 > li').removeClass('hidden');
