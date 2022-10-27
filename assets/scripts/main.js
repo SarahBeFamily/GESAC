@@ -12,20 +12,6 @@ $(function() {
 		$('.tabs-v2-content:not(.starter, .hidden)').addClass('hidden');
 	}
 
-	// const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-	// $(window).on('scroll', function(){
-	// var scrollTop     = $(window).scrollTop(),
-	// elementOffset = $('.row.sticky-header-wrap').offset().top,
-	// distance      = (elementOffset - scrollTop);
-	// if(distance < vh){
-	// 	console.log('in view');
-	// 	$('.cart .cart-wrap').css('margin-top', ($(window).height + (scrollTop - elementOffset)));
-	// }
-	// else{
-	// 	console.log('not in view');
-	// }
-	// });
-
 	// General button open to close et viceversa
 	$('.btn-open-close').on('click', function() {
 		if (! $(this).hasClass('open'))

@@ -295,6 +295,7 @@ section#eshop-services {
 		}
 
 		> .row {
+			position: relative;
 
 			@include respond-to($max-tablet) {
 				flex-wrap: wrap;
@@ -319,6 +320,12 @@ section#eshop-services {
 
 				@include respond-to($mid-tablet) {
 					flex-basis: 40%;
+				}
+
+				.cart-wrap {
+					position: sticky;
+					position: -webkit-sticky;
+					top: 45px;
 				}
 
 				> h2,h3,h4 {

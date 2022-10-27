@@ -122,7 +122,7 @@
 							<a href="<?php echo img_path('mappa-parcheggio.png'); ?>" id="lightbox-map" role="button" class="button secondary border-only w-icon btn-icon-map">Visualizza immagine mappa in lightbox</a>
 						</div>
 
-						<div class="row between-content">
+						<div class="row between-content sticky-header-wrap">
 
 							<div class="col">
 
