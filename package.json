@@ -39,6 +39,5 @@
     "server": "node server.js",
     "build": "webpack"
   },
-  "author": "Sarah Pinna @ Be.Family",
   "license": "ISC"
 }
