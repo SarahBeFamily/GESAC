@@ -55,6 +55,10 @@
                 display: flex;
             }
         }
+
+        .icons-#{$name} {
+            content: $content;
+        }
     }
 }
 

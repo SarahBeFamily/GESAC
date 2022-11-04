@@ -56,6 +56,11 @@
 		@include respond-to($min-desktop) {
 			width: 50%;
 		}
+
+		> p {
+			color: white;
+			font-size: toRem(22);
+		}
 	}
 
 	.row.buttons {
@@ -99,6 +104,83 @@
 	.button.border-only {
 		@include respond-to($max-tablet) {
 			color: white;
+		}
+	}
+
+	.forms-tab {
+		padding: 45px 5%;
+
+		@include respond-to($phone) {
+			padding: 45px 0 0;
+		}
+
+		#tab-voli .main-tabs .tabs > div {
+			@include respond-to($phone) {
+				font-size: toRem(18);
+			}
+		}
+
+		input {
+			@include respond-to($small-desktop) {
+				flex-basis: 10%;
+				max-width: 15%;
+			}
+
+			@include respond-to($desktop) {
+				flex-basis: 10%;
+				max-width: 15%;
+			}
+
+			&.departure {
+				@include respond-to($mini-desktop) {
+					flex-basis: 49%;
+					max-width: 49%;
+					margin-right: -10px;
+				}
+
+				@include respond-to($small-desktop) {
+					flex-basis: 25%;
+					max-width: 25%;
+					margin-right: -10px;
+				}
+
+				@include respond-to($desktop) {
+					flex-basis: 25%;
+					max-width: 25%;
+					margin-right: -10px;
+				}
+			}
+
+			&.arrival {
+				@include respond-to($mini-desktop) {
+					flex-basis: 49%;
+					max-width: 49%;
+					margin-left: -6px;
+				}
+
+				@include respond-to($small-desktop) {
+					flex-basis: 25%;
+					max-width: 25%;
+					margin-left: -6px;
+				}
+
+				@include respond-to($desktop) {
+					flex-basis: 25%;
+					max-width: 25%;
+					margin-left: -6px;
+				}
+			}
+
+			&.submit {
+				@include respond-to($small-desktop) {
+					padding: 16px 25px;
+				}
+
+				@include respond-to($desktop) {
+					padding: 16px 30px;
+					flex-basis: 16.2%;
+				}
+			}
 		}
 	}
 }

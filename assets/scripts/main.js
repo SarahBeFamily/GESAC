@@ -90,6 +90,15 @@ $(function() {
 		
 		$this.addClass('active').siblings().removeClass('active');
 		$(tab).removeClass('hidden').siblings('.main-tabs-content div').addClass('hidden');
+
+		// tab in Partenze / Arrivi template
+		if(tab == '#departures') {
+			$('#pt-partenze, #sec-partenze, #footer-items.partenze, .related-links.partenze').removeClass('hidden');
+			$('#pt-arrivi, #sec-arrivi, #footer-items.arrivi, .related-links.arrivi').addClass('hidden');
+		} else if (tab == '#arrivals') {
+			$('#pt-partenze, #sec-partenze, #footer-items.partenze, .related-links.partenze').addClass('hidden');
+			$('#pt-arrivi, #sec-arrivi, #footer-items.arrivi, .related-links.arrivi').removeClass('hidden');
+		}
 	});
 
 	// Tabs v2 / v3 Desktop & Mobile
@@ -354,6 +363,34 @@ $(function() {
 		],
 	});
 
+	// Global component "slider-cards" -> Partenze / Arrivi
+	$('.slider-cards').slick({
+		dots: true,
+		arrows: false,
+		infinite: false,
+		centerMode: false,
+    	variableWidth: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				},
+			},
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	});
+
 	/**
 	 * Show an hidden wrapper of fields on checking a checkbox field
 	 * @param {jquery element} el
@@ -379,5 +416,39 @@ $(function() {
 
 	// Form eshop show request shipping address fields
 	checkbox_show_content($('.shipping'), 'insert-data', 'shipping-fields');
+
+	// Slidee marquee vertical
+	$('.slidee').each(function(i, el) {
+		let slidee = $(el).find('.marqueeElement').length;
+		if (slidee > 0) {
+			$(el).find('.marqueeElement').css("animation", `vertical-slidee-${slidee} 8s infinite ease-in-out;`);
+		}
+	});
+	
+	
+	// Single flight onclick action
+	// Partenze / Arrivi template
+	$('#sec-partenze .flights > .single-flight').attr('data-type', 'departure');
+	$('#sec-arrivi .flights > .single-flight').attr('data-type', 'arrival');
+
+	if ($(window).width() < 1023) {
+		// On mobile the flight details can only be visible by clicking the arrow button
+		$('.single-flight').after().on('click', function() {
+			let type = $(this).attr('data-type');
+
+			$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, #info, .forms-tab').addClass('hidden');
+			$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
+			document.querySelector('body').scroll(0,0);
+		});
+	} else {
+		// On desktop the entire .single-flight row can be clicked
+		$('.single-flight').on('click', function() {
+			let type = $(this).attr('data-type');
+
+			$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, .forms-tab').addClass('hidden');
+			$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
+			document.querySelector('body').scroll(0,0);
+		});
+	}
 
 });

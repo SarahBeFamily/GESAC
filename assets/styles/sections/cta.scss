@@ -360,4 +360,43 @@
 			}
 		}
 	}
+
+	&#posto-auto {
+		@include respond-to($phone-plus) {
+			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/parking-cta-bg-mobile.png");
+			background-size: 100% 70%;
+			background-position: bottom;
+			padding: 25px 9px 50px;
+		}
+
+		@include respond-to($min-phone) {
+			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 70%, #01112C 100%), url("../../img/posto-auto-bg.png");
+		}
+	}
+
+	&#fast-track {
+		@include respond-to($phone-plus) {
+			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 50%, #01112C 100%), url("../../img/fast-track-cta-bg-mobile.png");
+			background-size: 100% 70%;
+			background-position: bottom;
+			padding: 25px 9px 50px;
+		}
+
+		@include respond-to($min-phone) {
+			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 70%, #01112C 100%), url("../../img/fast-track-bg.png");
+		}
+	}
+
+	&#bus-ticket {
+		@include respond-to($phone-plus) {
+			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/bus-ticket-bg-mobile.png");
+			background-size: 100% 70%;
+			background-position: bottom;
+			padding: 25px 9px 50px;
+		}
+
+		@include respond-to($min-phone) {
+			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 70%, #01112C 100%), url("../../img/bus-ticket-bg.png");
+		}
+	}
 }
