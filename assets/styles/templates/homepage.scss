@@ -484,6 +484,10 @@ section#icon-services {
 					@include respond-to($phone) {
 						min-height: 390px;
 					}
+
+					@include respond-to($mini-desktop) {
+						min-height: 450px;
+					}
 				}
 
 				.box-content {

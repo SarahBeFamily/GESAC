@@ -578,6 +578,14 @@ section.link-correlati {
 		padding: 25% 15px;
 	}
 
+	@include respond-to($mid-tablet) {
+		padding: 25% 15px;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 43px 3.5%;
+	}
+
 	h4 {
 		margin: 0;
 		font-size: toRem(26);
@@ -597,6 +605,10 @@ section.link-correlati {
 			justify-content: center;
 			padding: 0 !important;
 			margin-top: 35px;
+		}
+
+		@include respond-to($mid-tablet) {
+			width: 100%;
 		}
 
 		@include respond-to($max-desktop) {

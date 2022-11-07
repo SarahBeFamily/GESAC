@@ -205,15 +205,19 @@ $(function() {
 
 	// Search on datalist on keyup
 	$("input.departure, input.arrival").on('click', function() {
-		$('datalist#airports').attr('input-focus', $(this).attr('class'));
-		$('datalist#airports').toggleClass('open');
+		$('datalist#airports, datalist#directs').attr('input-focus', $(this).attr('class'));
+		$('datalist#airports, datalist#directs').toggleClass('open');
 	});
 
-	$('#airports option').on('click', function() {
+	$('#airports option, #directs option').on('click', function() {
 		let datalist = $(this).parents('datalist'),
 			input = datalist.attr('input-focus');
 
-		$('input.'+input).val($(this).val());
+		if (input == 'drop arrival') {
+			$('input.arrival').val($(this).val());
+		} else {
+			$('input.'+input).val($(this).val());
+		}
 		$('datalist').toggleClass('open');
 		// if ($(window).width() < 768) {
 		// 	$('#change').removeClass('hidden');
@@ -226,7 +230,7 @@ $(function() {
 		// }
 		let filter, datalist, option, title, i, txtValue;
 		filter = $(this).val().toUpperCase();
-		datalist = document.querySelector("#airports");
+		datalist = document.querySelector("#airports, #directs");
 		option = datalist.querySelectorAll('option');
 
 		for (i = 0; i < option.length; i++) {
@@ -433,7 +437,7 @@ $(function() {
 
 	if ($(window).width() < 1023) {
 		// On mobile the flight details can only be visible by clicking the arrow button
-		$('.single-flight').after().on('click', function() {
+		$('.flights .single-flight').after().on('click', function() {
 			let type = $(this).attr('data-type');
 
 			$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, #info, .forms-tab').addClass('hidden');
@@ -442,12 +446,29 @@ $(function() {
 		});
 	} else {
 		// On desktop the entire .single-flight row can be clicked
-		$('.single-flight').on('click', function() {
+		$('.flights .single-flight').on('click', function() {
 			let type = $(this).attr('data-type');
 
 			$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, .forms-tab').addClass('hidden');
 			$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
 			document.querySelector('body').scroll(0,0);
+		});
+	}
+
+	// "Voli Diretti" template
+	// Single flight action on click button
+	if ($(window).width() <= 640) {
+		// mobile only
+		$('.button-open-flight').on('click', function() {
+			let parent = $(this).parents('.single-flight');
+			console.log(parent.attr('class'));
+			parent.removeClass('closed').addClass('opened');
+		});
+
+		$('.col.flight-info > .info > .name').before().on('click', function() {
+			let parent = $(this).parents('.single-flight');
+			console.log(parent.attr('class'));
+			parent.removeClass('opened').addClass('closed');
 		});
 	}
 

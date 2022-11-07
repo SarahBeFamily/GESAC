@@ -423,8 +423,12 @@ ol {
 	width: 80%;
 	margin: auto;
 
-	@include respond-to($phone) {
+	@include respond-to($max-tablet) {
 		width: 95%;
+	}
+
+	@include respond-to($mini-desktop) {
+		width: 90%;
 	}
 
 	.slick-slide {

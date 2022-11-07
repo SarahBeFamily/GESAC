@@ -1211,12 +1211,10 @@
 
 </section>
 
-<section id="acquista-servizi">
-	<h2 class="section-title">Acquista i nostri servizi online</h2>
-
-	<?php get_component('slider-cards', '', false); ?>
-
-</section>
+<?php
+// Include the section "Acquista Servizi"
+include_section('acquista-servizi');
+?>
 
 <section class="link-correlati">
 	<h4>Link correlati</h4>
