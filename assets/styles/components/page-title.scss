@@ -30,6 +30,12 @@
 		}
 	}
 
+	&.info-parcheggi {
+		@include respond-to($min-tablet) {
+			background-image: linear-gradient(90deg, rgba(1,17,44,1) -100%, rgba(1,17,44,0) 60%), url("../../img/posto-auto-bg.png");
+		}
+	}
+
 	&.dark-mode {
 		background-color: var(--primary-dark);
 		padding: 50px 10%;

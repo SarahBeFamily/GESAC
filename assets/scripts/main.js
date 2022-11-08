@@ -1,6 +1,7 @@
 import $ from 'jquery';
+import { Fancybox } from "@fancyapps/ui";
 
-require('dragon-lightbox/dist/dragon-lightbox.min');
+// require('dragon-lightbox/dist/dragon-lightbox.min');
 require('slick-carousel');
 require('timepicker/jquery.timepicker.min');
 
@@ -11,6 +12,18 @@ $(function() {
 	if ($(window).width() < 640) {
 		$('.tabs-v2-content:not(.starter, .hidden)').addClass('hidden');
 	}
+
+	//Fancybox usage
+	Fancybox.bind("[data-fancybox]", {
+		Image: {
+		  Panzoom: {
+			zoomFriction: 0.7,
+			maxScale: function () {
+			  return 5;
+			},
+		  },
+		},
+	  });
 
 	// General button open to close et viceversa
 	$('.btn-open-close').on('click', function() {
@@ -471,5 +484,11 @@ $(function() {
 			parent.removeClass('opened').addClass('closed');
 		});
 	}
+
+	// Faq accordion effect
+	// Info Parcheggi Template
+	$('.faq').on('click', function() {
+		$(this).toggleClass('closed');
+	});
 
 });

@@ -1,0 +1,687 @@
+section#prenota-parcheggio {
+	display: flex;
+	align-items: flex-end;
+	padding: 8rem 0;
+
+	@include respond-to($phone-plus) {
+		flex-wrap: wrap;
+		background: none;
+		align-items: flex-start;
+		padding: 0 15px 4rem;
+	}
+
+	@include respond-to($mid-tablet) {
+		flex-wrap: wrap;
+		width: 70%;
+		margin: auto;
+		padding: 2rem 0;
+	}
+
+	.col {
+		flex-basis: 35%;
+
+		@include respond-to($phone-plus) {
+			flex-basis: 100%;
+		}
+
+		@include respond-to($mid-tablet) {
+			flex-basis: 100% !important;
+			margin-bottom: 3rem;
+		}
+
+		@include respond-to($mini-desktop) {
+			flex-basis: 40%;
+		}
+
+		> h2 {
+			text-align: left;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+			}
+
+			@include respond-to($min-phone) {
+				font-size: betterClamp(45,70);
+			}
+		}
+
+		> p {
+			margin: 0;
+
+			@include respond-to($min-phone) {
+				font-size: toRem(26);
+				line-height: 39px;
+			}
+		}
+
+		&:last-child {
+			flex-basis: 33%;
+
+			@include respond-to($phone-plus) {
+				flex-basis: 100%;
+			}
+
+			> div {
+
+				@include respond-to($min-phone) {
+					border-radius: $radius;
+					background-color: var(--light-gray);
+					padding: 32px;
+				}
+
+				.title {
+					@include respond-to($phone-plus) {
+						font-size: toRem(20);
+						margin-top: 50px;
+					}		
+
+					@include respond-to($min-phone) {
+						font-size: betterClamp(23,26);
+						margin-top: 0;
+					}
+				}
+
+				a:any-link {
+					text-decoration: none;
+					display: flex;
+					color: var(--primary-dark);
+
+					@include respond-to($phone-plus) {
+						color: var(--secondary);
+						margin-top: 35px;
+					}
+
+					@include respond-to($min-phone) {
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	form#search-parking {
+		flex-wrap: wrap;
+
+		.input-wrapper {
+			flex-basis: 49% !important;
+			margin: 8px 0 0;
+
+			@include respond-to($phone) {
+				flex-basis: 48% !important;
+			}
+			
+			@include respond-to($min-phone) {
+				background-color: white;
+			}
+
+			@include respond-to($mid-tablet) {
+				max-width: 100%;
+				flex-basis: 100%;
+			}
+
+			@include respond-to($mini-desktop) {
+				flex-basis: 100%;
+				min-width: 100%;
+			}
+
+			@include respond-to($small-desktop) {
+				width: 50%;
+			}
+
+			input {
+				@include respond-to($phone) {
+					min-width: 75%;
+				}
+
+				@include respond-to($min-phone) {
+					background-color: white;
+				}
+
+				@include respond-to($mini-desktop) {
+					min-width: 88%;
+				}
+
+				&.drop {
+					@include respond-to($mid-tablet) {
+						max-width: 222px;
+					}
+
+					@include respond-to($small-desktop) {
+						max-width: betterClamp(150,160);
+					}
+				}
+			}
+		}
+
+		> input {
+			flex-basis: 100%;
+			margin: 12px 0 0;
+
+			&:not([type="submit"]) {
+
+				@include respond-to($min-phone) {
+					background-color: white;
+				}
+			}
+
+			&[type="submit"] {
+				@include respond-to($phone) {
+					font-size: 1rem;
+					background-image: none !important;
+					padding: 17px;
+				}
+			}
+
+			&:nth-last-child(2) {
+				@include respond-to($max-tablet) {
+					max-width: 100% !important;
+				}
+
+				@include respond-to($tablet-pro) {
+					max-width: 100% !important;
+				}
+			}
+		}
+	}
+}
+
+section#map {
+	width: 80%;
+	margin: auto;
+
+	@include respond-to($max-tablet) {
+		width: 100%;
+	}
+
+	> div,
+	> div a {
+		color: var(--secondary);
+		display: flex;
+		flex-basis: 100%;
+		justify-content: center !important;
+		flex-wrap: wrap;
+		font-size: 18px;
+		font-weight: 500;
+
+		i {
+			width: 15px;
+			margin: 15px 0 35px;
+		}
+	}
+
+	a#lightbox-map {
+		display: flex;
+		cursor: pointer;
+		flex-basis: 100%;
+
+		&::after {
+			content: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1206_44194)'%3E%3Cpath d='M42.4095 39.5592L31.1548 28.3047C33.5168 25.3252 34.9375 21.5659 34.9375 17.4688C34.9375 7.82104 27.1165 0 17.4688 0C7.82104 0 0 7.82104 0 17.4688C0 27.1165 7.82104 34.9375 17.4688 34.9375C21.5659 34.9375 25.3254 33.517 28.3045 31.1549L39.5592 42.4095C39.953 42.8031 40.4686 43 40.9844 43C41.5001 43 42.0158 42.8031 42.4095 42.4095C43.1969 41.6222 43.1969 40.3466 42.4095 39.5592ZM17.4688 30.9062C10.0592 30.9062 4.03125 24.8781 4.03125 17.4688C4.03125 10.0594 10.0592 4.03125 17.4688 4.03125C24.8783 4.03125 30.9062 10.0594 30.9062 17.4688C30.9062 24.8781 24.8783 30.9062 17.4688 30.9062ZM24.1877 15.4531H19.4842V10.75C19.4842 9.6362 18.5822 8.73438 17.4688 8.73438C16.3553 8.73438 15.4533 9.6362 15.4533 10.75V15.4531H10.7498C9.6362 15.4531 8.73438 16.3553 8.73438 17.4688C8.73438 18.5822 9.63553 19.4844 10.7498 19.4844H15.4533V24.1875C15.4533 25.301 16.3546 26.2031 17.4688 26.2031C18.5822 26.2031 19.4842 25.3013 19.4842 24.1875V19.4844H24.1877C25.3013 19.4844 26.2031 18.5822 26.2031 17.4688C26.2031 16.3553 25.3013 15.4531 24.1877 15.4531Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1206_44194'%3E%3Crect width='43' height='43' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			opacity: 0;
+			transition: all 0.3s ease-in;
+		}
+
+		&:hover {
+			background-color: var(--primary-dark);
+			display: block;
+			position: relative;
+
+			&::after {
+				opacity: 1;
+			}
+
+			> img {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+		margin-bottom: -7px;
+		display: flex;
+		transition: all 0.3s ease-in;
+
+		@include respond-to($phone) {
+			width: 700px;
+		}
+	
+		@include respond-to($mid-tablet) {
+			width: 1500px;
+		}
+	}
+}
+
+section#parking-list {
+	margin: 7rem 10%;
+	flex-wrap: wrap;
+
+	@include respond-to($phone) {
+		margin: 7rem 15px;
+	}
+
+	@include respond-to($mid-tablet) {
+		margin: 7rem 3.5%;
+	}
+
+	@include respond-to($mini-desktop) {
+		margin: 7rem 15px;
+	}
+
+	@include respond-to($small-desktop) {
+		margin: 7rem 5%;
+	}
+
+	.col {
+		&.wide {
+			flex-basis: 66%;
+			flex-wrap: wrap;
+
+			@include respond-to($max-tablet) {
+				flex-basis: 100%;
+			}
+
+			.park-type {
+				flex-basis: calc(98% / 2);
+
+				@include respond-to($phone) {
+					flex-basis: 100%;
+				}
+			}
+		}
+
+		&.narrow {
+			flex-basis: 30%;
+
+			@include respond-to($max-tablet) {
+				flex-basis: 100%;
+			}
+		}
+
+		.park-type {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 2rem;
+
+			h3 {
+				font-size: toRem(26);
+				font-weight: 400;
+			}
+
+			.intro {
+				background-color: var(--light-gray);
+				border-radius: $radius $radius 0 0;
+				padding: 0 20px;
+
+				.positions {
+					display: flex;
+					align-items: center;
+				}
+
+				p {
+					margin: 2rem 0 3rem;
+				}
+			}
+
+			.info {
+				flex-basis: 100%;
+				background-color: var(--secondary);
+				color: white;
+				border-radius: 0 0 $radius $radius;
+				padding: 15px 20px;
+				align-content: space-between;
+				display: flex;
+				flex-wrap: wrap;
+
+				.prices {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					padding: 15px 0 45px;
+				}
+
+				.row {
+					flex-basis: 100%;
+					justify-content: space-between;
+					padding: 6px 0;
+
+					&:not(:last-of-type) {
+						border-bottom: 1px solid white;
+					}
+				}
+			}
+
+			&.moto {
+				@include respond-to($mini-desktop) {
+					flex-wrap: nowrap !important;
+				}
+
+				.intro {
+					flex-basis: 45%;
+					border-radius: $radius 0 0 $radius;
+
+					@include respond-to($phone) {
+						flex-basis: 100%;
+						border-radius: $radius $radius 0 0;
+					}
+
+					@include respond-to($mid-tablet) {
+						flex-basis: 50%;
+					}
+
+					.park-pos:first-child {
+						margin-right: 5px;
+					}
+				}
+
+				.info {
+					flex-basis: 55%;
+					border-radius: 0 $radius $radius 0;
+
+					@include respond-to($phone) {
+						flex-basis: 100%;
+						border-radius: 0 0 $radius $radius;
+					}
+
+					@include respond-to($mid-tablet) {
+						flex-basis: 50%;
+					}
+				}
+			}
+
+			&-bus {
+				flex-wrap: wrap;
+				align-items: center;
+				flex-basis: 66%;
+
+				@include respond-to($phone) {
+					flex-basis: 100%;
+					margin-bottom: 2rem;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 50%;
+				}
+
+				h3 {
+					flex-basis: 100%;
+					font-size: toRem(26);
+					font-weight: 400;
+				}
+
+				p {
+					flex-basis: 85%;
+
+					@include respond-to($phone) {
+						flex-basis: 100%;
+					}
+				}
+			}
+
+			&-special {
+				background-color: var(--primary-dark);
+				background-image: url("../../img/parking/bg-parcheggi-dedicati.jpg");
+				background-size: cover;
+				background-position: center;
+				color: white;
+				padding: 25px 20px;
+				border-radius: 12px;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: space-between;
+				justify-content: center;
+				height: 94.5%;
+
+				@include respond-to($max-tablet) {
+					flex-basis: 100%;
+					min-height: 450px;
+					margin-bottom: 2rem;
+				}
+
+				h3 {
+					font-size: toRem(30);
+					font-weight: 400;
+					margin: 1rem 0 2rem;
+				}
+
+				.intro {
+					text-align: center;
+
+					@include respond-to($phone) {
+						margin-bottom: 6rem;
+					}
+				}
+
+				.button {
+					flex-basis: 100%;
+
+					@include respond-to($phone) {
+						padding: 15px;
+					}
+				}
+			}
+
+			.link {
+				text-decoration: none;
+				justify-content: flex-end;
+				display: flex;
+				flex-basis: 100%;
+			}
+		}
+
+		.convenzioni {
+			flex-wrap: wrap;
+			flex-basis: 30%;
+
+			@include respond-to($phone) {
+				flex-basis: 100%;
+			}
+
+			@include respond-to($mid-tablet) {
+				flex-basis: 50%;
+			}
+
+			h3 {
+				flex-basis: 100%;
+				font-size: toRem(26);
+				font-weight: 400;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/*parking types imgs */
+	.park-pos {
+		width: 55px;
+		height: 55px;
+		background-size: cover;
+		background-position: center;
+
+		&:first-child {
+			margin-right: 20px;
+		}
+	}
+
+	.p1 {
+		background-image: url("../../img/parking/p1.png");
+	}
+
+	.p2 {
+		background-image: url("../../img/parking/p2.png");
+	}
+
+	.p3 {
+		background-image: url("../../img/parking/p3.png");
+	}
+
+	.p4 {
+		background-image: url("../../img/parking/p4.png");
+	}
+
+	.p-multi {
+		background-image: url("../../img/parking/p-multi.png");
+	}
+
+	.p-moto {
+		background-image: url("../../img/parking/p-moto.png");
+	}
+
+	.p-bus {
+		background-image: url("../../img/parking/p-bus.png");
+	}
+}
+
+section#prenota-parcheggio-2 {
+	padding: 2rem 10% 4rem;
+
+	@include respond-to($phone) {
+		padding: 2rem 15px 4rem;
+	}
+
+	@include respond-to($mid-tablet) {
+		padding: 2rem 3.5% 4rem;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 2rem 5% 4rem;
+	}
+
+	@include respond-to($small-desktop) {
+		padding: 2rem 5% 4rem;
+	}
+
+	@include respond-to($min-phone) {
+		background-color: var(--light-gray);
+	}
+
+	.title {
+		font-size: toRem(26);
+	}
+
+	.input-wrapper, input:not([type="submit"]) {
+		@include respond-to($min-phone) {
+			background-color: white;
+		}
+	}
+
+	.input-wrapper {
+		@include respond-to($phone) {
+			flex-basis: 48% !important;
+		}
+
+		@include respond-to($mini-desktop) {
+			flex-basis: 24%;
+		}
+
+		input {
+			@include respond-to($phone) {
+				min-width: 75%;
+			}
+		}
+	}
+
+	input {
+		&[name="promocode"] {
+			@include respond-to($phone) {
+				flex-basis: 100% !important;
+				max-width: 100%;
+			}
+
+			@include respond-to($mid-tablet) {
+				margin-top: 12px;
+			}
+
+			@include respond-to($mini-desktop) {
+				flex-basis: 49% !important;
+			}
+		}
+
+		&[type="submit"] {
+			@include respond-to($phone) {
+				flex-basis: 100% !important;
+				font-size: 1rem !important;
+				background-image: none !important;
+				padding: 17px !important;
+			}
+
+			@include respond-to($mini-desktop) {
+				flex-basis: 49% !important;
+			}
+		}
+	}
+
+	a:any-link {
+		color: var(--secondary);
+		display: flex;
+		margin-top: 2rem;
+		text-decoration: none;
+	}
+}
+
+section#faq {
+	margin: 4rem 10%;
+
+	@include respond-to($phone) {
+		margin: 4rem 15px;
+	}
+
+	@include respond-to($mid-tablet) {
+		margin: 4rem 3.5%;
+	}
+
+	@include respond-to($mini-desktop) {
+		margin: 4rem 5%;
+	}
+
+	@include respond-to($small-desktop) {
+		margin: 4rem 5%;
+	}
+
+	h2 {
+		text-align: left;
+		margin-bottom: 4rem;
+		font-size: toRem(40);
+		font-weight: 400;
+	}
+
+	.faq {
+		background-color: var(--light-gray);
+		flex-basis: 100%;
+		margin-bottom: 12px;
+		border-radius: 6px;
+		padding: 1.5rem;
+		flex-wrap: wrap;
+		transition: all 0.5s ease;
+
+		&.closed {
+			align-items: center;
+
+			p:not(.title) {
+				display: none;
+			}
+
+			.title {
+				&::after {
+					content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
+					transform: translateY(-3px);
+				}
+			}
+		}
+
+		.title {
+			font-size: betterClamp(18,26);
+			margin: 0;
+			flex-basis: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&::after {
+				content: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E");
+				transform: rotate(180deg) translateY(-5px);
+			}
+		}
+	}
+}
