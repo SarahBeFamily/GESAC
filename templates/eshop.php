@@ -119,7 +119,7 @@
 					<div id="choose-parking">
 
 						<div class="center-content">
-							<a href="<?php echo img_path('mappa-parcheggio.png'); ?>" id="lightbox-map" role="button" class="button secondary border-only w-icon btn-icon-map">Visualizza immagine mappa in lightbox</a>
+							<a data-fancybox href="<?php echo img_path('parking-map.png'); ?>" id="lightbox-map" role="button" class="button secondary border-only w-icon btn-icon-map">Visualizza immagine mappa in lightbox</a>
 						</div>
 
 						<div class="row between-content sticky-header-wrap">

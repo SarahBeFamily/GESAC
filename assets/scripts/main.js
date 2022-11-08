@@ -380,7 +380,12 @@ $(function() {
 		],
 	});
 
-	// Global component "slider-cards" -> Partenze / Arrivi
+	// Global component "slider-cards"
+	// -> Partenze / Arrivi
+	// -> Voli Diretti
+	// -> Info Parcheggi
+	// -> Ristoranti / Negozi
+
 	$('.slider-cards').slick({
 		dots: true,
 		arrows: false,
@@ -392,7 +397,7 @@ $(function() {
 		cssEase: 'linear',
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 1024,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
@@ -406,6 +411,20 @@ $(function() {
 				},
 			},
 		],
+	});
+
+	// Slideshow gallery -> Negozi / Ristoranti, single shop view
+	$('.slideshow').slick({
+		dots: true,
+		arrows: false,
+		infinite: true,
+		centerMode: true,
+    	variableWidth: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		cssEase: 'linear',
 	});
 
 	/**
@@ -489,6 +508,39 @@ $(function() {
 	// Info Parcheggi Template
 	$('.faq').on('click', function() {
 		$(this).toggleClass('closed');
+	});
+
+	// Single shop view effect
+	// Negozi / Ristoranti Template
+	const pt_title = $('#pagetitle h1').html(),
+		bc_current = $('.breadcrumbs .current').html();
+
+	$('.single-shop.list').on('click', function() {
+		let nome = $(this).find('h2').html();
+
+		if ($(this).hasClass('list')) {
+			document.querySelector('body').scroll(0,0);
+		}
+
+		$(this).siblings().addClass('hidden');
+		$(this).removeClass('list').addClass('single-view');
+		$(this).find('.single').removeClass('hidden');
+		$('#pagetitle h1, .breadcrumbs .current').html(nome);
+
+		if ($(window).width() >= 640) {
+			$(this).find('h2').addClass('hidden');
+		}
+	});
+
+	$('.shop-filter select').on('change', function() {
+		$('.single-shop').removeClass('single-view hidden').addClass('list');
+		$('.single-shop .single').addClass('hidden');
+		$('#pagetitle h1').html(pt_title);
+		$('.breadcrumbs .current').html(bc_current);
+
+		if ($(window).width() >= 640) {
+			$('.single-shop h2').removeClass('hidden');
+		}
 	});
 
 });
