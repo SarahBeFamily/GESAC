@@ -1,11 +1,22 @@
 <IfModule mod_rewrite.c>
 
 	RewriteEngine on
-	RewriteBase /gesac
+	RewriteBase /
+
+	RewriteCond %{ENV:SUBPATH} ^$
+	RewriteRule ^(.*)$ - [ENV=SUBPATH:$1]
+
+	RewriteCond %{ENV:CWD} ^$
+	RewriteCond %{ENV:SUBPATH}::%{REQUEST_URI} ^(.*)::(.*?)\1$
+	RewriteRule ^ - [ENV=CWD:%2]
+
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	#RewriteRule ^([^\.]+)$ /$1.php [NC]
 	#RewriteRule ^([^\.]+)/([^\.]+)$ /$1/?template=$2 [L]
-	RewriteRule (.+) ?template=$1 [QSA]
+	RewriteRule (.+) %{ENV:CWD}?template=$1 [END]
 
 </IfModule>
+
+
+

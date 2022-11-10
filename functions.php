@@ -1,4 +1,10 @@
 <?php
+
+function get_base_url() {
+	$proto = empty($_SERVER['HTTS']) ? "http" : "https";
+	return $proto . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
+}
+
 /**
  * Retrieve template section
  *
@@ -30,7 +36,7 @@ function include_content_page($page) {
  * @return void
  */
 function img_path($img) {
-	$base_url = strpos($_SERVER['HTTP_HOST'], 'localhost') !== false ? 'http://localhost/gesac' : 'http://'.$_SERVER['HTTP_HOST'];
+	$base_url = get_base_url();
 	return $base_url .'/assets/img/'.$img;
 }
 
