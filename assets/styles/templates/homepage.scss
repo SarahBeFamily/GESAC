@@ -42,13 +42,6 @@
 	// Already in global.scss
 	#footer-items {
 		.col {
-			@include respond-to($not-mobile) {
-				background-color: rgba(1,17,44,18%);
-				border: 1px solid rgba(255, 255, 255, 9%);
-				color: rgba(255, 255, 255, 50%);
-				backdrop-filter: blur(30px);
-			}
-
 			&:after {
 				@include respond-to($min-tablet) {
 					content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1123_6093)'%3E%3Cpath opacity='0.09' d='M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12Z' fill='#{url-friendly-colour($white)}'/%3E%3Cpath d='M14.8309 12.3072C14.876 12.2697 14.9123 12.2227 14.9372 12.1696C14.9622 12.1164 14.9751 12.0584 14.9751 11.9997C14.9751 11.9411 14.9622 11.8831 14.9372 11.8299C14.9123 11.7768 14.876 11.7298 14.8309 11.6922L11.0559 8.54725C10.9975 8.49862 10.9265 8.46762 10.8511 8.45789C10.7758 8.44816 10.6992 8.4601 10.6304 8.49231C10.5615 8.52452 10.5033 8.57566 10.4625 8.63976C10.4217 8.70386 10.4 8.77826 10.3999 8.85425V15.1462C10.4 15.2222 10.4217 15.2966 10.4625 15.3607C10.5033 15.4248 10.5615 15.476 10.6304 15.5082C10.6992 15.5404 10.7758 15.5523 10.8511 15.5426C10.9265 15.5329 10.9975 15.5019 11.0559 15.4532L14.8309 12.3072Z' fill='#{url-friendly-colour($white)}'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1123_6093'%3E%3Crect width='24' height='24' fill='#{url-friendly-colour($white)}'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
@@ -80,11 +73,19 @@ section#services {
 		width: 100%;
 	}
 
+	@include respond-to($mini-desktop) {
+		width: 95%;
+	}
+
 	.quote {
 		text-align: center;
 		margin: 120px 0;
 
 		@include respond-to($mid-tablet) {
+			margin: 120px 5%;
+		}
+
+		@include respond-to($mini-desktop) {
 			margin: 120px 5%;
 		}
 
@@ -162,22 +163,15 @@ section#services {
 				background-size: 100% 100%;
 				background-position: center;
 				padding: 53px 15px;
+				min-height: 570px;
 				transition: background-size 0.3s ease-in-out;
-				
-				@include respond-to($phone-plus) {
-					min-height: 140vw;
+
+				@include respond-to($mini-desktop) {
+					min-height: 460px;
 				}
 
-				@include respond-to($tablet) {
-					min-height: 63vw;
-				}
-
-				@include respond-to($tablet-pro) {
-					min-height: 23vh !important;
-				}
-
-				@include respond-to($min-tablet) {
-					min-height: 60vh;
+				@include respond-to($min-desktop) {
+					min-height: 30vw;
 				}
 
 				&:hover {
@@ -217,8 +211,16 @@ section#parking {
 	.col {
 		flex-basis: 35%;
 
-		@include respond-to($phone-plus) {
+		@include respond-to($phone) {
 			flex-basis: 100%;
+		}
+
+		@include respond-to($small-tablet) {
+			flex-basis: 75%;
+		}
+
+		@include respond-to($tablet) {
+			flex-basis: 37%;
 		}
 
 		@include respond-to($mini-desktop) {
@@ -253,8 +255,12 @@ section#parking {
 		&:last-child {
 			flex-basis: 33%;
 
-			@include respond-to($phone-plus) {
+			@include respond-to($phone) {
 				flex-basis: 100%;
+			}
+
+			@include respond-to($small-tablet) {
+				flex-basis: 75%;
 			}
 
 			> div {
@@ -304,9 +310,9 @@ section#parking {
 			flex-basis: 49% !important;
 			margin: 8px 0 0;
 
-			@include respond-to($mid-tablet) {
+			@include respond-to($tablet) {
 				max-width: 100%;
-				flex-basis: 100%;
+				flex-basis: 100% !important;
 			}
 
 			@include respond-to($mini-desktop) {
@@ -339,13 +345,18 @@ section#parking {
 			flex-basis: 100%;
 			margin: 12px 0 0;
 
+			@include respond-to($mini-desktop) {
+				flex-basis: 100% !important;
+			}
+
 			&:nth-last-child(2) {
 				@include respond-to($max-tablet) {
 					max-width: 100% !important;
 				}
 
-				@include respond-to($tablet-pro) {
+				@include respond-to($tablet) {
 					max-width: 100% !important;
+					flex-basis: 100% !important;
 				}
 			}
 		}
@@ -382,182 +393,6 @@ section#icon-services {
 	.item-icon {
 		.img-wrap {
 			background-color: white;
-		}
-	}
-}
-
-#blog {
-	background-color: var(--primary-dark);
-	padding: 128px 0 128px 9.5%;
-	max-width: 100vw;
-	overflow: hidden;
-
-	@include respond-to($phone-plus) {
-		padding: 70px 0;
-	}
-
-	@include respond-to($min-tablet) {
-		display: flex;
-	}
-
-	.col {
-		@include respond-to($phone-plus) {
-			flex-basis: 100%;
-		}
-
-		&:first-child {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-
-			@include respond-to($phone) {
-				padding-left: 15px;
-			}
-
-			@include respond-to($min-phone) {
-				min-height: 27em;
-			}
-
-			.text {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				padding-right: 2em;
-
-				p {
-					color: white;
-					margin: 0 0 32px;
-					font-weight: 300;
-					line-height: 25px;
-				}
-			}
-
-			h2 {
-				color: white;
-
-				@include respond-to($phone-plus) {
-					margin: 0 0 25px;
-				}
-			}
-
-			a.link:any-link {
-				color: var(--secondary);
-				text-decoration: none;
-				font-size: toRem(18);
-
-				@include respond-to($phone-plus) {
-					display: none;
-				}
-			}
-		}
-
-		&:last-child {
-			@include respond-to($min-phone) {
-				max-width: 65vw;
-			}
-
-			.slick-track {
-				display: flex !important;
-			}
-
-			.slick-slide {
-				margin-right: 12px;
-			}
-
-			.slide {
-				@include respond-to($phone) {
-					margin: 38px 0 38px 20px;
-				}
-
-				> div {
-					min-height: 70vh;
-					display: flex;
-					align-items: flex-end;
-					padding: 15px;
-					border-radius: $radius;
-					background-size: cover;
-
-					@include respond-to($small-phone) {
-						padding: 3px;
-					}
-
-					@include respond-to($phone) {
-						min-height: 390px;
-					}
-
-					@include respond-to($mini-desktop) {
-						min-height: 450px;
-					}
-				}
-
-				.box-content {
-					background-color: rgba(255, 255, 255, 0.8);
-					backdrop-filter: blur(25px);
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: space-between;
-					align-content: space-between;
-					border-radius: 8px;
-					padding: 24px;
-					min-height: 45%;
-
-					@include respond-to($small-phone) {
-						padding: 15px;
-					}
-
-					h3 {
-						font-size: betterClamp(20,26);
-						font-weight: 500;
-						width: 100%;
-						margin-top: 0;
-
-						@include respond-to($phone) {
-							font-size: toRem(15);
-						}
-					}
-
-					.meta {
-						font-size: toRem(13);
-						display: flex;
-						justify-content: space-between;
-						width: 100%;
-
-						@include respond-to($phone) {
-							margin-top: 2em;
-						}
-
-						span {
-							flex: 1;
-
-							&.date {
-								text-transform: uppercase;
-							}
-						}
-
-						a:any-link {
-							color: var(--primary-dark);
-							text-decoration: none;
-
-							@include respond-to($phone) {
-								font-size: toRem(12);
-								margin: 0;
-							}
-						}
-					}
-				}
-			}
-
-			a.link:any-link {
-				color: var(--secondary);
-				text-decoration: none;
-				font-size: toRem(18);
-				margin-top: 2em;
-				margin-left: 25px;
-
-				@include respond-to($min-phone) {
-					display: none;
-				}
-			}
 		}
 	}
 }

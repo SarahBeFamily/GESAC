@@ -1,0 +1,100 @@
+/**
+ * Section Link Correlati
+ * - Partenze / Arrivi Template
+ * - Voli Diretti Template
+ */
+
+section.link-correlati {
+	background-color: var(--light-gray);
+	display: flex;
+	margin: 128px 0;
+	padding: 43px 10%;
+
+	@include respond-to($phone) {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 128px 0 0;
+		padding: 25% 15px;
+	}
+
+	@include respond-to($mid-tablet) {
+		padding: 25% 15px;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 43px 3.5%;
+	}
+
+	h4 {
+		margin: 0;
+		font-size: toRem(26);
+		font-weight: 400;
+	}
+
+	ul.related-links {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 85%;
+		padding-left: 12%;
+
+		@include respond-to($phone) {
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0 !important;
+			margin-top: 35px;
+		}
+
+		@include respond-to($mid-tablet) {
+			width: 100%;
+		}
+
+		@include respond-to($max-desktop) {
+			padding-left: 5%;
+		}
+
+		li {
+			display: flex;
+			font-weight: 300;
+			transition: all 0.4s ease;
+			// flex-basis: calc(90% / 3);
+			align-items: center;
+
+			@include respond-to($phone) {
+				flex-basis: 100%;
+				justify-content: center;
+				padding: 30px 0;
+			}
+
+			&::after {
+				@include respond-to($min-phone) {
+					content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12H19' stroke='#{url-friendly-colour($primary-dark)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 5L19 12L12 19' stroke='#{url-friendly-colour($primary-dark)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+					opacity: 0;
+					margin-top: 5px;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+
+			&:hover {
+				&::after {
+					@include respond-to($min-phone) {
+						opacity: 1;
+						margin-left: 6px;
+					}
+				}
+
+				> a:any-link {
+					color: col-alpha('primary', 1);
+				}
+			}
+
+			a:any-link {
+				color: col-alpha('primary', 0.5);
+				text-decoration: none;
+				transition: all 0.2s ease;
+				font-size: toRem(18);
+			}
+		}
+	}
+}

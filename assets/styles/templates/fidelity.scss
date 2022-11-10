@@ -223,6 +223,7 @@ section#howto {
 
 		@include respond-to($mini-desktop) {
 			padding: 0 betterClamp(16,105,1024,1280);
+			justify-content: space-evenly;
 		}
 
 		@include respond-to($small-desktop) {
@@ -421,6 +422,12 @@ section#howto {
 			.col {
 				@include respond-to($min-tablet) {
 					flex-basis: 49%;
+				}
+
+				&:last-child {
+					@include respond-to($mini-desktop) {
+						padding: 0;
+					}
 				}
 			}
 		}

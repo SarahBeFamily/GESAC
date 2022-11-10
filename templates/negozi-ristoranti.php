@@ -1,9 +1,6 @@
 <?php
 /**
  * Negozi / Ristoranti template
- *
- * NB: l'area dedicata al singolo negozio costituisce template a parte (negozio-singolo.php)
- * ma il foglio di stile di riferimento sarà il medesimo (negozi.scss)
  */
 ?>
 

@@ -259,7 +259,7 @@ section#parking-list {
 	flex-wrap: wrap;
 
 	@include respond-to($phone) {
-		margin: 7rem 15px;
+		margin: 7rem 15px 3rem;
 	}
 
 	@include respond-to($mid-tablet) {
@@ -537,7 +537,8 @@ section#prenota-parcheggio-2 {
 	padding: 2rem 10% 4rem;
 
 	@include respond-to($phone) {
-		padding: 2rem 15px 4rem;
+		padding: 2rem 15px;
+		border-top: 1px solid var(--medium-gray);
 	}
 
 	@include respond-to($mid-tablet) {

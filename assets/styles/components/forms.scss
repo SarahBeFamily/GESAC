@@ -77,12 +77,12 @@ input {
 			max-width: 87px !important;
 		}
 
-		@include respond-to($phone) {
+		@include respond-to($phone-plus) {
 			max-width: 110px;
 		}
 
-		@include respond-to($mid-tablet) {
-			max-width: 150px;
+		@include respond-to($tablet) {
+			max-width: betterClamp(115,173);
 		}
 		
 		&::placeholder {
@@ -202,13 +202,28 @@ datalist {
 	margin-right: 10px;
 
 	@include respond-to($phone) {
-		max-width: 49% !important;
-	}
-
-	@include respond-to($max-tablet) {
+		max-width: 49%;
+		flex-basis: 48.5%;
 		margin-right: 0;
 		margin-top: 12px;
-		max-width: 50%;
+	}
+
+	@include respond-to($small-tablet) {
+		flex-basis: 49% !important;
+		margin-right: 0;
+		margin-top: 12px;
+	}
+
+	@include respond-to($odd-tablet) {
+		flex-basis: 23% !important;
+		margin-right: 0;
+		margin-top: 12px;
+	}
+
+	@include respond-to($tablet) {
+		width: betterClamp(182, 208) !important;
+		margin-right: 0;
+		margin-top: 12px;
 	}
 
 	&.--time {
@@ -240,6 +255,7 @@ datalist {
 
 		@include respond-to($phone) {
 			padding: 19px !important;
+			min-width: 78% !important;
 		}
 
 		&:last-child {
@@ -285,8 +301,13 @@ form#search-flight {
 			margin-top: -20px;
 		}
 
+		@include respond-to($tc) {
+			left: 0;
+			margin-top: -10px;
+		}
+
 		@include respond-to($mid-tablet) {
-			margin-top: 13px;
+			margin-top: 1px;
 		}
 	}
 
@@ -302,7 +323,7 @@ form#search-flight {
 		}
 
 		@include respond-to($mini-desktop) {
-			flex-basis: 32%;
+			flex-basis: 31.8%;
 		}
 
 		@include respond-to($small-desktop) {
@@ -321,18 +342,65 @@ form#search-flight {
 		}
 
 		&:nth-last-child(2) {
-			@include respond-to($phone) {
+			@include respond-to($small-phone) {
 				max-width: 71%;
+			}
+
+			@include respond-to($mid-phone) {
+				max-width: 78%;
+				flex-basis: 88%;
 			}
 		}
 
 		&:last-child:not(:only-child) {
+			@include respond-to($phone-plus) {
+				padding: 27px;
+			}
+
+			@include respond-to($mid-tablet) {
+				padding: 26px;
+			}
+
 			@include respond-to($max-tablet) {
 				flex-basis: 10%;
 				font-size: 0;
-				padding: 27px;
 				background-image: url('../../img/header/cerca.svg');
 				background-position: center;
+			}
+		}
+
+		&[name="airline"] {
+			@include respond-to($tc) {
+				flex-basis: 59% !important;
+			}
+
+			@include respond-to($small-tablet) {
+				margin-top: 12px;
+			}
+
+			@include respond-to($tablet) {
+				margin-top: 12px;
+			}
+		}
+
+		&[name="flight"] {
+			@include respond-to($tc) {
+				flex-basis: 27% !important;
+				max-width: 27% !important;
+			}
+
+			@include respond-to($small-tablet) {
+				margin-top: 12px;
+			}
+
+			@include respond-to($tablet) {
+				margin-top: 12px;
+			}
+		}
+
+		&.submit {
+			@include respond-to($mini-desktop) {
+				flex-basis: 65.8%;
 			}
 		}
 	}
@@ -352,7 +420,7 @@ form#search-parking {
 		max-width: 100%;
 
 		@include respond-to($mini-desktop) {
-			flex-basis: 32%;
+			flex-basis: 48.8% !important;
 		}
 
 		@include respond-to($small-desktop) {
@@ -367,13 +435,20 @@ form#search-parking {
 			@include respond-to($mid-tablet) {
 				flex-basis: 89%;
 				max-width: 100%;
+				margin-top: 12px;
 			}
 		}
 
 		&.drop {
-			@include respond-to($mid-tablet) {
-				max-width: 125px;
+			@include respond-to($tablet) {
+				max-width: betterClamp(115,173);
 			}
+		}
+	}
+
+	.input-wrapper {
+		@include respond-to($mini-desktop) {
+			flex-basis: 23.8%;
 		}
 	}
 }
@@ -509,6 +584,13 @@ form#quantity {
 		@include respond-to($mid-tablet) {
 			flex-basis: 87%;
 			margin: 0 !important;
+		}
+
+		&:nth-last-child(2) {
+			@include respond-to($mid-phone) {
+				max-width: 71% !important;
+				flex-basis: 78%;
+			}
 		}
 	}
 }

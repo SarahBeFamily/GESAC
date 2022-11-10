@@ -1,7 +1,6 @@
-import $ from 'jquery';
+import $ from "jquery";
 import { Fancybox } from "@fancyapps/ui";
 
-// require('dragon-lightbox/dist/dragon-lightbox.min');
 require('slick-carousel');
 require('timepicker/jquery.timepicker.min');
 
@@ -24,6 +23,22 @@ $(function() {
 		  },
 		},
 	  });
+
+	// Header sticky on mobile
+	body.on('scroll', function() {
+		let scrollTop = $(this).scrollTop();
+
+		if (scrollTop > 57 && $(window).width() < 1024 )  {
+			$('header > .row-main').addClass("sticky");
+		} else {
+			$('header > .row-main').removeClass("sticky");
+		}
+	});
+
+	// Breaking news effect
+	$('.row-news').on('click', function() {
+		$(this).toggleClass('open');
+	})
 
 	// General button open to close et viceversa
 	$('.btn-open-close').on('click', function() {
@@ -78,7 +93,7 @@ $(function() {
 	});
 
 	$('a.hamburger').on('click', function() {
-		$('#menu-mobile').css('left', '0');
+		$('#menu-mobile').css('left', '-35vw');
 	});
 	$('a.close-menu').on('click', function() {
 		$('#menu-mobile').css('left', '100vw');
@@ -141,8 +156,14 @@ $(function() {
 				
 				$this.parents('ul.v2').find('li.mobile-only').addClass('hidden');
 				$('#show-all-services').removeClass('hidden open');
-				$('#parking-help').removeClass('hidden');
 				$('.cta#vantaggi').addClass('hidden');
+
+				if (tab == '#parcheggio') {
+					$('#parking-help').removeClass('hidden');
+				} else {
+					$('#parking-help').addClass('hidden');
+				}
+
 			} else if (tab_fidelity) {
 				$this.parents('ul.v2-b').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
 
@@ -314,6 +335,13 @@ $(function() {
 			},
 			{
 				breakpoint: 768,
+				settings: {
+					slidesToShow: 1.5,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 430,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -489,7 +517,8 @@ $(function() {
 
 	// "Voli Diretti" template
 	// Single flight action on click button
-	if ($(window).width() <= 640) {
+	if ($(window).width() < 641) {
+		console.log('mobile');
 		// mobile only
 		$('.button-open-flight').on('click', function() {
 			let parent = $(this).parents('.single-flight');

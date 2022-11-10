@@ -91,6 +91,28 @@ body {
 	}
 }
 
+.mobile-only {
+	@include respond-to($not-mobile2) {
+		display: none !important;
+	}
+}
+
+.no-mobile {
+	@include respond-to($phone) {
+		display: none !important;
+	}
+}
+
+.sticky {
+	position: fixed !important;
+	top: 0 !important;
+	width: 100%
+}
+
+.sticky + section {
+	padding-top: 50px;
+}
+
 .center-content {
 	width: 70%;
 	margin: 32px auto;
@@ -174,18 +196,6 @@ body {
 
 .vw-narrow {
 	justify-content: space-evenly;
-}
-
-.mobile-only {
-	@include respond-to($not-mobile) {
-		display: none !important;
-	}
-}
-
-.no-mobile {
-	@include respond-to($phone) {
-		display: none !important;
-	}
 }
 
 /** global elements **/
@@ -352,7 +362,7 @@ ol {
 			margin-bottom: 16px;
 		}
 
-		@include respond-to($not-mobile) {
+		@include respond-to($not-mobile2) {
 			background-color: rgba(1,17,44,18%);
 			border: 1px solid rgba(255, 255, 255, 9%);
 			color: rgba(255, 255, 255, 50%);
@@ -434,12 +444,12 @@ ol {
 	.slick-slide {
 		display: flex;
 		justify-content: center;
+		margin: 0 25px;
 	}
 
 	.card {
 		display: flex;
 		flex-wrap: wrap;
-		max-width: 350px;
 
 		.img {
 			flex-basis: 100%;

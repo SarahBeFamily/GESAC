@@ -139,6 +139,16 @@
 		}
 
 		input {
+			@include respond-to($tablet) {
+				flex-basis: 43%;
+			}
+
+			@include respond-to($mini-desktop) {
+				// flex-basis: 47.9%;
+				flex-basis: 31.3%;
+				margin-top: 12px;
+			}
+
 			@include respond-to($small-desktop) {
 				flex-basis: 10%;
 				max-width: 15%;
@@ -190,6 +200,15 @@
 			}
 
 			&.submit {
+				@include respond-to($tablet) {
+					flex-basis: 98.5%;
+					margin-top: 12px;
+				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 32.8%;
+				}
+
 				@include respond-to($small-desktop) {
 					padding: 16px 25px;
 				}

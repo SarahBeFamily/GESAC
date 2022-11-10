@@ -3,16 +3,20 @@
 	color: white;
 	display: flex;
 
-	@include respond-to($max-tablet) {
+	@include respond-to($phone) {
 		flex-wrap: wrap;
 		justify-content: center;
 		text-align: center;
 	}
 
 	&.bg-img {
-		background-size: 70% 100%;
+		background-size: 55% 100%;
 		background-repeat: no-repeat;
 		background-position: right center;
+
+		@include respond-to($max-desktop) {
+			background-size: 70% 100%;
+		}
 	}
 
 	&.white {
@@ -68,12 +72,12 @@
 	}
 
 	&#campania {
-		@include respond-to($max-tablet) {
+		@include respond-to($phone) {
 			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/homepage/cta-bg-campania-mobile.jpg");
 			background-size: 100% 100% !important;
 		}
 
-		@include respond-to($min-tablet) {
+		@include respond-to($not-mobile) {
 			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/homepage/cta-bg.jpg");
 		}
 	}
@@ -115,7 +119,11 @@
 					margin-top: 3em;
 				}
 
-				@include respond-to($mid-tablet) {
+				@include respond-to($small-tablet) {
+					flex-basis: 45%;
+				}
+
+				@include respond-to($tablet) {
 					flex-basis: 25%;
 				}
 

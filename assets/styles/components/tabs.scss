@@ -18,6 +18,10 @@
 			@include respond-to($phone) {
 				display: none;
 			}
+
+			@include respond-to($small-tablet) {
+				width: 80%;
+			}
 		}
 
 		> li,
@@ -60,6 +64,10 @@
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+				}
+
+				@include respond-to($small-tablet) {
+					justify-content: center !important;
 				}
 
 				&::after {
@@ -366,6 +374,10 @@
 				flex-basis: 100%;
 			}
 
+			@include respond-to($small-tablet) {
+				flex-basis: 60%;
+			}
+
 			> div {
 				display: flex;
 				align-items: center;
@@ -433,7 +445,7 @@
 			}
 
 			@include respond-to($mid-tablet) {
-				flex-basis: 40%;
+				flex-basis: 46%;
 			}
 
 			> div {

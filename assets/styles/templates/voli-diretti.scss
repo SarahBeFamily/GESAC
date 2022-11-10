@@ -236,8 +236,9 @@ section#flights-filter {
 									border-radius: 50%;
 									position: absolute;
 									margin-top: 42px;
-									left: 45%;
+									left: 50%;
 									pointer-events: all !important;
+									transform: translate(-50%,0);
 								}
 							}
 

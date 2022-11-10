@@ -961,6 +961,10 @@ section#eshop-services {
 		margin: 64px 5px;
 	}
 
+	@include respond-to($mini-desktop) {
+		margin: 64px auto;
+	}
+
 	@include respond-to($not-mobile) {
 		background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 40%), url("../../img/eshop/parking-cta-bg.png");
 	}
