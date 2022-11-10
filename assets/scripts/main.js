@@ -6,7 +6,8 @@ require('timepicker/jquery.timepicker.min');
 
 $(function() {
 
-	const body = $('body');
+	let body = $('body'),
+		ww = $(window).width();
 
 	if ($(window).width() < 640) {
 		$('.tabs-v2-content:not(.starter, .hidden)').addClass('hidden');
@@ -92,9 +93,12 @@ $(function() {
 		}
 	});
 
+	let close_menu = (ww > 640 && ww < 1023) ? '-25vw' : '-35vw';
+
 	$('a.hamburger').on('click', function() {
-		$('#menu-mobile').css('left', '-35vw');
+		$('#menu-mobile').css('left', close_menu);
 	});
+
 	$('a.close-menu').on('click', function() {
 		$('#menu-mobile').css('left', '100vw');
 	});
@@ -535,7 +539,8 @@ $(function() {
 
 	// Faq accordion effect
 	// Info Parcheggi Template
-	$('.faq').on('click', function() {
+	// Fatturazione / Telepass effect in Registrazione / Login Template
+	$('.faq, .section-form').on('click', function() {
 		$(this).toggleClass('closed');
 	});
 
@@ -570,6 +575,37 @@ $(function() {
 		if ($(window).width() >= 640) {
 			$('.single-shop h2').removeClass('hidden');
 		}
+	});
+
+	// Registrazione / Login effect to show and hide sections
+	$('a#login').on('click', function() {
+		$('#form-register').addClass('hidden');
+		$('section#login').removeClass('hidden');
+		$('#pagetitle h1, .breadcrumbs .current').html('Login');
+	});
+
+	$('a#remember-password').on('click', function() {
+		$('#form-register, section#login').addClass('hidden');
+		$('section#recupera-password').removeClass('hidden');
+		$('#pagetitle h1, .breadcrumbs .current').html('Recupera Password');
+	});
+
+	$('#register').on('submit', function(e) {
+		e.preventDefault();
+		$('#register-ok').removeClass('hidden');
+		$('#form-register').addClass('hidden');
+		$('section#login').removeClass('hidden');
+		$('#pagetitle h1, .breadcrumbs .current').html('Login');
+	});
+
+	$('a#close-popup').on('click', function() {
+		$(this).parents('.popup').addClass('hidden');
+	});
+
+	$('#go-register').on('click', function() {
+		$('#form-register').removeClass('hidden');
+		$('section#login').addClass('hidden');
+		$('#pagetitle h1, .breadcrumbs .current').html('Registrazione');
 	});
 
 });
