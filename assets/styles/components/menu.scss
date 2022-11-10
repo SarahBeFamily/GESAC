@@ -304,6 +304,10 @@ ul.menu {
 	transition: all 0.3s ease-in-out;
 	overflow: scroll;
 
+	@include respond-to($mid-tablet) {
+		margin-top: -53px;
+	}
+
 	.row-main {
 		justify-content: space-between;
 		align-items: center;

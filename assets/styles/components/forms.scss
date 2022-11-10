@@ -134,11 +134,15 @@ input {
 select {
 	border: 0;
 	background-color: white;
-	padding: 10px 20px;
 	color: col-alpha('primary', 0.5);
+	padding: 10px 20px;
 	font-size: 13px;
 	font-weight: 500;
 	font-family: inherit;
+
+	&:valid {
+		color: var(--primary-dark);
+	}
 }
 
 datalist {

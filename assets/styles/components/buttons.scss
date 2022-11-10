@@ -23,6 +23,13 @@
 		}
 	}
 
+	&.primary {
+		background-color: var(--primary-dark);
+		border: 2px solid var(--primary-dark);
+		color: white;
+		padding: 15px 25px;
+	}
+
 	&.border-only {
 		background-color: transparent !important;
 		color: var(--primary-dark);
