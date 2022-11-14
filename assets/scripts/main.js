@@ -202,6 +202,7 @@ $(function() {
 		}
 
 		if (tab_reserved) {
+			console.log('click');
 			if (ww < 641) {
 				console.log('mobile click');
 
@@ -223,6 +224,10 @@ $(function() {
 					$this.addClass('active open').removeClass('open-menu');
 					$this.siblings('li').removeClass('active open').addClass('open-menu');
 				}
+			} else {
+				$this.parents('ul.v2-c').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
+				$this.parents('ul.v2-c').find(`.tabs-v2-content${tab}`).removeClass('hidden');
+				$this.addClass('active').siblings().removeClass('active');
 			}
 		}
 	});
