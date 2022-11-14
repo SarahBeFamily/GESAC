@@ -129,7 +129,7 @@
 								<div class="row between-content header">
 									<h2>Scegli il tuo parcheggio</h2>
 
-									<select name="orderby" id="orderby">
+									<select name="orderby" id="orderby" class="chevron-down">
 										<option value="lower-price">Prezzo crescente</option>
 										<option value="higher-price">Prezzo decrescente</option>
 									</select>

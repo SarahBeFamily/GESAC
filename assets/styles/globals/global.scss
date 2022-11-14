@@ -367,6 +367,7 @@ ol {
 			border: 1px solid rgba(255, 255, 255, 9%);
 			color: rgba(255, 255, 255, 50%);
 			backdrop-filter: blur(30px);
+			-webkit-backdrop-filter: blur(30px);
 			border-radius: $radius;
 		}
 
@@ -493,5 +494,6 @@ ol {
 	top: 0;
 	left: 0;
 	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
 	z-index: 999;
 }

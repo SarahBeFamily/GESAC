@@ -25,7 +25,8 @@
 		}
 
 		> li,
-		> .desk-tabs-title > li {
+		> .desk-tabs-title > li,
+		.ul-mobile li {
 			flex-basis: 100%;
 			text-align: center;
 			border-bottom: 3px solid var(--primary-dark);
@@ -161,6 +162,7 @@
 			border-radius: 50%;
 			padding: 15px 16px 10px;
 			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
 			position: absolute;
 			z-index: 9;
 			top: 35%;
@@ -255,6 +257,10 @@
 			background-color: var(--light-gray);
 			padding: 12px 12px 10px;
 
+			@include respond-to($tc) {
+				margin: 10px 0 0;
+			}
+
 			@include respond-to($not-mobile) {
 				display: none;
 			}
@@ -341,6 +347,7 @@
 	flex-basis: 80%;
 	background-color: rgba(1,17,44,10%);
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	border-radius: $radius;
 	z-index: 99;
 
@@ -456,6 +463,18 @@
 			.hour {
 				display: flex;
 				align-items: center;
+
+				@include respond-to($small-tablet) {
+					padding-right: 20px;
+				}
+
+				@include respond-to($mini-desktop) {
+					padding-right: 20px;
+				}
+
+				@include respond-to($small-desktop) {
+					padding-right: 20px;
+				}
 			}
 
 			.meteo {
@@ -481,6 +500,10 @@
 
 		> div {
 			padding: 24px;
+
+			@include respond-to($phone) {
+				padding: 24px 15px;
+			}
 		}
 	}
 }

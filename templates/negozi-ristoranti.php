@@ -16,13 +16,13 @@
 
 <section id="shop-list">
 	<div class="shop-filter">
-		<select name="area" id="area">
+		<select name="area" id="area" class="double-chevron gray" required>
 			<option value="">Area</option>
 			<option value="before-controls">Prima dei controlli</option>
 			<option value="after-controls">Dopo i controlli</option>
 		</select>
 
-		<select name="category" id="category">
+		<select name="category" id="category" class="double-chevron gray" required>
 			<option value="">Categoria</option>
 			<option value="food">Ristoro</option>
 			<option value="shop">Shopping</option>

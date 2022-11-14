@@ -17,6 +17,10 @@
 		@include respond-to($max-desktop) {
 			background-size: 70% 100%;
 		}
+
+		@include respond-to($tablet) {
+			background-size: 100% 100% !important;
+		}
 	}
 
 	&.white {

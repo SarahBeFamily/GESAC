@@ -44,11 +44,11 @@
 	<input class="airline" type="text" name="airline" value="" placeholder="Compagnia">
 	
 	<div class="input-wrapper --calendar">
-		<input class="drop calendar" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" pattern="\d{4}-\d{2}-\d{2}" name="from" placeholder="Dal" required>
+		<input class="drop calendar" type="text" name="from" placeholder="Dal" required>
 	</div>
 
 	<div class="input-wrapper --calendar">
-		<input class="drop calendar" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" pattern="\d{4}-\d{2}-\d{2}" name="to" placeholder="Al" required>
+		<input class="drop calendar" type="text" name="to" placeholder="Al" required>
 	</div>
 
 	<input class="submit" type="submit" value="Cerca Volo">

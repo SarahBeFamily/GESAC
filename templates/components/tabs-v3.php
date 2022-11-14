@@ -38,13 +38,13 @@ if ($include != true)
 					<input type="text" name="nome" id="nome" placeholder="Nome*" required>
 					<input type="text" name="cognome" id="cognome" placeholder="Cognome*" required>
 					<input type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo">
-					<select name="paese" id="paese">
+					<select name="paese" id="paese" class="double-chevron" required>
 						<option value="">Paese</option>
 						<option value="italia">Italia</option>
 					</select>
 					<input type="text" name="cap" id="cap" placeholder="CAP*" required>
 					<input type="text" name="citta" id="citta" placeholder="Città">
-					<select name="provincia" id="provincia">
+					<select name="provincia" id="provincia" class="double-chevron" required>
 						<option value="">Provincia</option>
 						<option value="PD">Padova</option>
 						<option value="CA">Cagliari</option>
@@ -60,7 +60,7 @@ if ($include != true)
 
 						<div class="invoice-fields hidden">
 							<input type="text" name="azienda" id="azienda" placeholder="Ragione sociale o Nome e Cognome*" required>
-							<select name="paese" id="paese">
+							<select name="paese" id="paese" class="double-chevron" required>
 								<option value="">Paese</option>
 								<option value="italia">Italia</option>
 							</select>
@@ -77,7 +77,7 @@ if ($include != true)
 							</label>
 
 							<div class="shipping-fields hidden">
-								<select name="paese-spedizione" id="paese-spedizione">
+								<select name="paese-spedizione" id="paese-spedizione" class="double-chevron" required>
 									<option value="">Paese</option>
 									<option value="italia">Italia</option>
 								</select>

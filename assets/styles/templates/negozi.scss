@@ -68,6 +68,10 @@ section#shop-list {
 
 			&.list {
 				cursor: pointer;
+				height: 100%;
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
 			}
 
 			&.single-view {
@@ -98,6 +102,7 @@ section#shop-list {
 				align-items: center;
 				padding: 15px;
 				height: 250px;
+				width: 100%;
 
 				@include respond-to($phone) {
 					border-width: 1px 0 0 !important;
@@ -114,13 +119,18 @@ section#shop-list {
 				}
 
 				img {
-					@include respond-to($phone) {
-						width: 100%;
-					}
+					max-width: 100%;
+					// @include respond-to($phone) {
+					// 	width: 100%;
+					// }
 
-					@include respond-to($mid-tablet) {
-						width: 70%;
-					}
+					// @include respond-to($mid-tablet) {
+					// 	width: 70%;
+					// }
+
+					// @include respond-to($mini-desktop) {
+						
+					// }
 				}
 			}
 
@@ -128,10 +138,23 @@ section#shop-list {
 				background-color: var(--light-gray);
 				border-radius: 0 0 $radius $radius;
 				padding: 30px 20px;
+				min-height: 18rem;
 
 				@include respond-to($phone) {
 					border-radius: 0 !important;
 					flex-basis: 100% !important;
+				}
+
+				@include respond-to($tablet) {
+					min-height: 23rem;
+				}
+
+				@include respond-to($mini-desktop) {
+					min-height: 23rem;
+				}
+
+				@include respond-to($small-desktop) {
+					min-height: 20rem;
 				}
 
 				h2 {

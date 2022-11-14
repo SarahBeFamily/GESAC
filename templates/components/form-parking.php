@@ -6,7 +6,7 @@ if ($include != true)
 <form action="" id="search-parking">
 
 	<div class="input-wrapper --calendar">
-		<input class="drop calendar" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" pattern="\d{4}-\d{2}-\d{2}" name="entrance" placeholder="Entrata" required>
+		<input class="drop calendar" type="text" name="entrance" placeholder="Entrata" required>
 	</div>
 
 	<div class="input-wrapper --time">
@@ -14,7 +14,7 @@ if ($include != true)
 	</div>
 
 	<div class="input-wrapper --calendar">
-		<input class="drop calendar" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" pattern="\d{4}-\d{2}-\d{2}" name="exit" placeholder="Uscita" required>
+		<input class="drop calendar" type="text" name="exit" placeholder="Uscita" required>
 	</div>
 	
 	<div class="input-wrapper --time">

@@ -17,19 +17,46 @@ ul.menu {
 		background-color: var(--primary-dark);
 		display: flex;
 
+		@include respond-to($retina1) {
+			justify-content: space-between;
+		}
+
 		li {
 			background-color: var(--primary-gesac);
 			color: white;
 			text-transform: uppercase;
 			font-size: betterClamp(13,18);
-			padding: 12.5px betterClamp(22.7, 75.6);
+			// padding: 12.5px betterClamp(24.5, 75.3);
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			cursor: pointer;
 
+			@include respond-to($mini-desktop) {
+				padding: 12.5px betterClamp(20.5, 40.1, 1024, 1280);
+			}
+
+			@include respond-to($small-desktop) {
+				padding: 12.5px betterClamp(37.8, 47.2, 1281, 1440);
+			}
+
+			@include respond-to($desktop) {
+				padding: 12.5px betterClamp(44.2, 72.3, 1440, 1921);
+			}
+
+			@include respond-to($retina1) {
+				flex-basis: 35%;
+				padding: 12.5px;
+			}
+
 			&:not(:first-child) {
 				border-left: 1px solid var(--primary-dark);
+			}
+
+			&:last-child {
+				@include respond-to($retina1) {
+					flex-basis: 55% !important;
+				}
 			}
 
 			&.active {
@@ -40,7 +67,7 @@ ul.menu {
 
 	.menu-tab-content {
 		background-color: var(--primary-dark);
-		padding: 0 betterClamp(17,40);
+		padding: 1px betterClamp(17,40);
 		color: white;
 		display: flex;
 		justify-content: space-between;
@@ -151,6 +178,7 @@ ul.menu {
 				width: 100%;
 				display: none;
 				backdrop-filter: blur(15px);
+				-webkit-backdrop-filter: blur(15px);
 			}
 
 			.megamenu {
@@ -296,16 +324,27 @@ ul.menu {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	// top: 0;
 	margin-top: -31px;
 	left: 100vw;
 	background-color: var(--primary-dark);
-	z-index: 9999999;
+	z-index: 888;
 	transition: all 0.3s ease-in-out;
 	overflow: scroll;
 
-	@include respond-to($mid-tablet) {
-		margin-top: -53px;
+	@include respond-to($small-phone) {
+		margin-top: -15px;
+	}
+
+	@include respond-to($mid-phone) {
+		margin-top: -20px;
+	}
+
+	@include respond-to($small-tablet) {
+		margin-top: -37px;
+	}
+
+	@include respond-to($tablet) {
+		margin-top: -45px;
 	}
 
 	.row-main {
