@@ -36,9 +36,9 @@
 
 	</datalist>
 
-	<input class="departure" type="text" name="departure" list="airports" value="Napoli Internazionale (NAP)" placeholder="Partenze" required>
+	<input class="departure" type="text" name="departure" list="airports" value="" placeholder="Partenze" required>
 	<a id="change" role="button"></a>
-	<input class="arrival" type="text" name="arrival" list="airports" value="" placeholder="Arrivi" required>
+	<input class="arrival" type="text" name="arrival" list="airports" value="Napoli Internazionale (NAP)" placeholder="Arrivi" required>
 
 	<input type="text" name="airline" value="" placeholder="Compagnia">
 	<input type="text" name="flight" value="" placeholder="Numbero Volo">

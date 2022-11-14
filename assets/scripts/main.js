@@ -93,10 +93,16 @@ $(function() {
 		}
 	});
 
-	let close_menu = (ww > 640 && ww < 1023) ? '-25vw' : '-35vw';
+	let close_menu = '-35vw';
+	if (ww > 640 && ww < 767) {
+		close_menu = '-25vw';
+	} else if (ww > 767 && ww < 1024) {
+		close_menu = '-32vw';
+	}
 
 	$('a.hamburger').on('click', function() {
 		$('#menu-mobile').css('left', close_menu);
+		$('.row-news').removeClass('open');
 	});
 
 	$('a.close-menu').on('click', function() {
@@ -108,6 +114,23 @@ $(function() {
 		let passInput = $(this).parent().find('input.password');
 		const type = passInput.attr('type') === 'password' ? 'text' : 'password';
 		passInput.attr('type', type);
+	});
+
+	// Manage date input with placeholder
+	$('input.calendar').on('focus', function() {
+		let input = $(this);
+
+		input.removeAttr('readonly');
+		input.attr('type', 'date');
+	});
+
+	$('input.calendar').on('change', function() {
+		let input = $(this);
+
+		if (input.val() == '') {
+			input.attr('readonly', 'true');
+			input.attr('type', 'text');
+		}
 	});
 
 	// Hero tab Homepage
@@ -134,17 +157,18 @@ $(function() {
 	});
 
 	// Tabs v2 / v3 Desktop & Mobile
-	$('.desk-tabs-title, ul.tabs').on('click', '> li', function() {
+	$('.desk-tabs-title, ul.tabs, .ul-mobile div').on('click', '> li', function() {
 		let $this = $(this),
 			tab = $this.attr('data-menu-tab'),
 			tab_v2 = $this.parent().hasClass('v2'),
 			tab_fidelity = $this.parent().hasClass('v2-b'),
+			tab_reserved = $this.parents('ul').hasClass('v2-c'),
 			tab_v3 = $this.parent().hasClass('v3');
 
-		if ($this.parent('.tabs').length > 0 && $this.hasClass('active')) {
+		if (!tab_reserved && $this.parent('.tabs').length > 0 && $this.hasClass('active')) {
 			$this.removeClass('active');
 			$this.parents('ul').find(tab).addClass('hidden');
-		} else if (! $this.hasClass('active')) {
+		} else if (!tab_reserved && !$this.hasClass('active')) {
 			
 			if (! $this.hasClass('mobile-only')) {
 				$this.addClass('active').siblings().removeClass('active');
@@ -173,6 +197,31 @@ $(function() {
 
 			} else if (tab_v3) {
 				$this.parents('ul.v3').find(`.tabs-v3-content:not(${tab})`).addClass('hidden');
+			}
+		}
+
+		if (tab_reserved) {
+			if (ww < 641) {
+				console.log('mobile click');
+
+				if ($this.hasClass('active')) {
+					console.log($this);
+					if ($this.hasClass('open')) {
+
+						$this.parents('ul.v2-c').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
+						$this.parents('ul.v2-c').find(`.tabs-v2-content${tab}`).removeClass('hidden');
+						$this.parents('ul.v2-c').removeClass('open-menu');
+						$this.siblings('li').removeClass('open-menu');
+						$this.removeClass('open');
+					} else {
+						$this.addClass('open');
+						$this.parents('ul.v2-c').addClass('open-menu');
+						$this.siblings('li').addClass('open-menu');
+					}
+				} else {
+					$this.addClass('active open').removeClass('open-menu');
+					$this.siblings('li').removeClass('active open').addClass('open-menu');
+				}
 			}
 		}
 	});
@@ -499,25 +548,33 @@ $(function() {
 	$('#sec-partenze .flights > .single-flight').attr('data-type', 'departure');
 	$('#sec-arrivi .flights > .single-flight').attr('data-type', 'arrival');
 
-	if ($(window).width() < 1023) {
-		// On mobile the flight details can only be visible by clicking the arrow button
-		$('.flights .single-flight').after().on('click', function() {
-			let type = $(this).attr('data-type');
+	$('.flights .single-flight .icon-arrow-circle-sec').on('click', function() {
+		let type = $(this).parent().attr('data-type');
 
-			$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, #info, .forms-tab').addClass('hidden');
-			$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
-			document.querySelector('body').scroll(0,0);
-		});
-	} else {
-		// On desktop the entire .single-flight row can be clicked
-		$('.flights .single-flight').on('click', function() {
-			let type = $(this).attr('data-type');
+		$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, #info, .forms-tab').addClass('hidden');
+		$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
 
-			$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, .forms-tab').addClass('hidden');
-			$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
-			document.querySelector('body').scroll(0,0);
-		});
-	}
+	// if ($(window).width() < 1023) {
+	// 	// On mobile the flight details can only be visible by clicking the arrow button
+	// 	$('.flights .single-flight').after().on('click', function() {
+	// 		let type = $(this).attr('data-type');
+
+	// 		$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, #info, .forms-tab').addClass('hidden');
+	// 		$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
+	// 		document.querySelector('body').scroll(0,0);
+	// 	});
+	// } else {
+	// 	// On desktop the entire .single-flight row can be clicked
+	// 	$('.flights .single-flight').on('click', function() {
+	// 		let type = $(this).attr('data-type');
+
+	// 		$('#pt-partenze, #sec-partenze, #pt-arrivi, #sec-arrivi, .forms-tab').addClass('hidden');
+	// 		$(`#pt-single-flight, .single-flight-details.${type}`).removeClass('hidden');
+	// 		document.querySelector('body').scroll(0,0);
+	// 	});
+	// }
 
 	// "Voli Diretti" template
 	// Single flight action on click button

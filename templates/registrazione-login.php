@@ -38,14 +38,14 @@
 			<input type="text" name="nome" placeholder="Nome*" required>
 			<input type="text" name="cognome" id="cognome" placeholder="Cognome*" required>
 			<input type="text" name="azienda" id="azienda" placeholder="Azienda">
-			<select name="sesso" id="sesso" required>
+			<select name="sesso" id="sesso" class="double-chevron" required>
 				<option value="">Sesso</option>
 				<option value="maschile">Maschile</option>
 				<option value="femminile">Femminile</option>
 				<option value="non-binario">Non Binario</option>
 				<option value="non-definito">Preferisco non dirlo</option>
 			</select>
-			<input type="text" name="nascita" id="nascita" placeholder="Data di nascita*" required>
+			<input type="text" class="calendar" name="nascita" id="nascita" placeholder="Data di nascita*" required>
 		</div>
 
 		<h2>Recapiti</h2>
@@ -55,12 +55,12 @@
 			<input type="text" name="civico" id="civico" placeholder="Civico">
 			<input type="text" name="cap" id="cap" placeholder="CAP">
 			<input type="text" name="citta" id="citta" placeholder="Città">
-			<select name="provincia" id="provincia" required>
+			<select name="provincia" id="provincia" class="double-chevron" required>
 				<option value="">Provincia</option>
 				<option value="PD">Padova</option>
 				<option value="CA">Cagliari</option>
 			</select>
-			<select name="paese" id="paese" required>
+			<select name="paese" id="paese" class="double-chevron" required>
 				<option value="">Nazione</option>
 				<option value="italia">Italia</option>
 			</select>
@@ -72,17 +72,37 @@
 		<div class="row wrap">
 			<div class="section-form closed">
 				<p class="title">Fatturazione</p>
-				<p>
-					Contenuto scheda fatturazione
-				</p>
+				
+				<div class="fields">
+					<input type="text" name="ragione-sociale" id="ragione-sociale" placeholder="Ragione sociale">
+					<input type="text" name="iva-cf" id="iva-cf" placeholder="P.IVA/Cod.Fiscale">
+					<input type="text" name="indirizzo-fatturazione" id="indirizzo-fatturazione" placeholder="Indirizzo di fatturazione">
+					<input type="text" name="numero-fatturazione" id="numero-fatturazione" placeholder="Civico*">
+					<input type="text" name="cap-fatturazione" id="cap-fatturazione" placeholder="CAP">
+					<input type="text" name="citta-fatturazione" id="citta-fatturazione" placeholder="Città">
+					<select name="provincia-fatturazione" id="provincia-fatturazione" class="double-chevron gray">
+						<option value="">Provincia</option>
+						<option value="FI">FI</option>
+						<option value="PD">PD</option>
+						<option value="CA">CA</option>
+					</select>
+					<select name="paese-fatturazione" id="paese-fatturazione" class="double-chevron gray">
+						<option value="">Nazione</option>
+						<option value="italia">Italia</option>
+					</select>
+					<input type="email" name="email-pec" id="email-pec" placeholder="Indirizzo email PEC">
+					<input type="text" name="cod-destinatario" id="cod-destinatario" placeholder="Codice destinatario">
+				</div>
 			</div>
 
 			<div class="section-form closed">
 				<p class="title">Telepass</p>
-				<p>
-					Contenuto scheda telepass
-				</p>
-			</div>			
+				
+				<div class="fields">
+					<input type="text" name="targa" id="targa" placeholder="Targa">
+					<input type="text" name="targa" id="targa" placeholder="Numero apparato Telepass">
+				</div>
+			</div>	
 		</div>
 
 		<div class="privacy">

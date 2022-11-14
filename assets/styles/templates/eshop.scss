@@ -191,8 +191,20 @@ section#eshop-services {
 			input {
 				margin-right: 10px;
 
+				@include respond-to($small-tablet) {
+					margin-bottom: 12px;
+				}
+
 				@include respond-to($min-tablet) {
 					margin-top: 0;
+				}
+			}
+
+			i {
+				@include respond-to($small-tablet) {
+					position: absolute;
+					right: 25px;
+					margin-top: -78px;
 				}
 			}
 
@@ -203,12 +215,18 @@ section#eshop-services {
 				}
 
 				@include respond-to($mid-tablet) {
-					padding: 18px 25px;
+					padding: 16px 25px;
 				}
 
 				@include respond-to($min-desktop) {
 					padding: 14px 15px;
 					margin-left: 10px;
+				}
+			}
+
+			.submit {
+				@include respond-to($tablet) {
+					margin-top: 0;
 				}
 			}
 		}

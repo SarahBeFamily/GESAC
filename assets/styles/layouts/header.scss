@@ -1,6 +1,6 @@
 header {
 	position: relative;
-	z-index: 999;
+	z-index: 777;
 	
 	.row-news {
 		background-color: var(--primary-gesac);
@@ -23,8 +23,9 @@ header {
 
 			&::after {
 				position: absolute;
-				right: 5%;
-				top: 19px;
+				right: 15px;
+				top: 20px;
+				transform: rotate(-180deg);
 			}
 
 			.title {
@@ -54,18 +55,23 @@ header {
 				flex-basis: 35% !important;
 			}
 
-			@include respond-to($phone) {
-				flex-basis: 50%;
-				font-size: toRem(14);
+			@include respond-to($mid-phone) {
+				flex-basis: 25%;
 			}
 
-			@include respond-to($mid-tablet) {
+			@include respond-to($small-tablet) {
+				flex-basis: 24%;
+			}
+
+			@include respond-to($tablet) {
 				flex-basis: 20%;
-				font-size: toRem(14);
 			}
 
 			@include respond-to($mini-desktop) {
 				flex-basis: 12%;
+			}
+
+			@include respond-to($max-mini-desktop) {
 				font-size: toRem(14);
 			}
 
@@ -98,18 +104,35 @@ header {
 			flex-basis: 14%;
 			text-align: center;
 
-			@include respond-to($max-tablet) {
+			@include respond-to($phone) {
 				flex-basis: 35%;
 			}
 
-			@include respond-to($mid-tablet) {
-				flex-basis: 25% !important;
+			@include respond-to($small-tablet) {
+				flex-basis: 25%;
+			}
+
+			@include respond-to($tablet) {
+				flex-basis: 35%;
+			}
+
+			@include respond-to($mini-desktop) {
+				flex-basis: 14% !important;
 			}
 
 			img {
 				padding: 19px 0;
 				width: 70%;
 				height: auto;
+
+				@include respond-to($phone) {
+					padding: 10px 0;
+					width: 59%;
+				}
+
+				@include respond-to($tablet) {
+					width: 49%;
+				}
 
 				@include respond-to($retina1) {
 					width: auto;
@@ -127,13 +150,17 @@ header {
 			@include respond-to($max-tablet) {
 				display: none;
 			}
+
+			@include respond-to($mini-desktop) {
+				flex-basis: 80%;
+			}
 		}
 
 		.menu-icons {
 			flex-basis: 16%;
 			background-color: var(--primary-dark);
 
-			@include respond-to($max-tablet) {
+			@include respond-to($phone) {
 				flex-basis: 65%;
 				align-items: center;
 				display: flex;
@@ -141,7 +168,15 @@ header {
 			}
 
 			@include respond-to($mid-tablet) {
-				flex-basis: 75% !important;
+				flex-basis: 75%;
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			@include respond-to($mini-desktop) {
+				flex-basis: 18%;
+				flex-wrap: wrap;
 			}
 
 			.row-lang {
@@ -174,6 +209,7 @@ header {
 					padding: 0 30px 30px;
 					text-align: center;
 					backdrop-filter: blur(7px);
+					-webkit-backdrop-filter: blur(7px);
 
 					@include respond-to($max-tablet) {
 						right: 8%;

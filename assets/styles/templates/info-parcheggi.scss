@@ -138,7 +138,7 @@ section#prenota-parcheggio {
 				}
 
 				@include respond-to($mini-desktop) {
-					min-width: 88%;
+					min-width: 85%;
 				}
 
 				&.drop {
@@ -154,7 +154,7 @@ section#prenota-parcheggio {
 		}
 
 		> input {
-			flex-basis: 100%;
+			flex-basis: 100% !important;
 			margin: 12px 0 0;
 
 			&:not([type="submit"]) {
@@ -572,6 +572,10 @@ section#prenota-parcheggio-2 {
 			flex-basis: 48% !important;
 		}
 
+		@include respond-to($ipad-large) {
+			flex-basis: 23.8% !important;
+		}
+
 		@include respond-to($mini-desktop) {
 			flex-basis: 24%;
 		}
@@ -579,6 +583,11 @@ section#prenota-parcheggio-2 {
 		input {
 			@include respond-to($phone) {
 				min-width: 75%;
+			}
+
+			@include respond-to($mini-desktop) {
+				min-width: 85%;
+				flex-basis: 100% !important;
 			}
 		}
 	}

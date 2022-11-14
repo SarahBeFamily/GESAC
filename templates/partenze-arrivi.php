@@ -71,7 +71,7 @@
 				</div>
 
 				<div id="arrivals" class="hidden">
-					<?php get_component('form-flight', '', false); ?>
+					<?php get_component('form-flight-arrivi', '', false); ?>
 				</div>
 			</div>
 		</div>
@@ -145,6 +145,7 @@
 				<i class="icon icons-status-closed"></i> <span class="status-label">Chiuso</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -190,6 +191,7 @@
 				<i class="icon icons-status-lastcall"></i> <span class="status-label">Ultima Chiamata</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -235,6 +237,7 @@
 				<i class="icon icons-status-now-boarding"></i> <span class="status-label">Imbarco</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -285,6 +288,7 @@
 				<i class="icon icons-status-boarding"></i> <span class="status-label">Imbarco</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -330,6 +334,7 @@
 				<i class="icon icons-status-closed"></i> <span class="status-label">Chiuso</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -375,6 +380,7 @@
 				<i class="icon icons-status-closed"></i> <span class="status-label">Chiuso</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -420,6 +426,7 @@
 				<span class="status-label">Partito</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -470,6 +477,7 @@
 				<span class="status-label">Partito</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -515,6 +523,7 @@
 				<span class="status-label">Partito</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -560,6 +569,7 @@
 				<span class="status-label">Partito</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -630,6 +640,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -671,6 +682,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -712,6 +724,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -758,6 +771,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -799,6 +813,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -840,6 +855,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -881,6 +897,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -927,6 +944,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -968,6 +986,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 
@@ -1009,6 +1028,7 @@
 				<i class="icon icons-status-landed"></i> <span class="status-label">Atterrato</span>
 			</div>
 
+			<i class="icon icon-arrow-circle-sec"></i>
 		</div>
 		<!-- / SINGLE FLIGHT ROW ENDS -->
 

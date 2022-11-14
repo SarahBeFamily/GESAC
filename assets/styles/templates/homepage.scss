@@ -269,6 +269,7 @@ section#parking {
 					border-radius: $radius;
 					background-color: rgba(1,17,44,18%);
 					backdrop-filter: blur(30px);
+					-webkit-backdrop-filter: blur(30px);
 					padding: 32px;
 				}
 
