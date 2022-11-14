@@ -99,6 +99,14 @@ header {
 	.row-main {
 		display: flex;
 
+		&.sticky {
+			.login-header-panel {
+				@include respond-to($max-tablet) {
+					top: 60px;
+				}
+			}
+		}
+
 		.logo-wrap {
 			background-color: var(--primary-gesac);
 			flex-basis: 14%;

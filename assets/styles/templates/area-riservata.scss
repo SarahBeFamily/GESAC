@@ -799,6 +799,7 @@ section#area-riservata {
 							@include respond-to($phone) {
 								flex-basis: 100%;
 								position: relative;
+								align-items: center;
 							}
 				
 							@include respond-to($tc) {
@@ -861,11 +862,6 @@ section#area-riservata {
 									max-width: 23.5%;
 								}
 
-								// @include respond-to($mini-desktop) {
-								// 	flex-basis: 15% !important;
-								// 	max-width: 15%;
-								// }
-
 								input {
 									max-width: 92%;
 
@@ -912,7 +908,7 @@ section#area-riservata {
 							}
 						}
 
-						.submit {
+						.button {
 							width: 25%;
 							text-transform: uppercase !important;
 

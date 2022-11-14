@@ -206,6 +206,7 @@ section#form-register {
 			margin: 2rem 0 1.5rem;
 
 			@include respond-to($phone) {
+				flex-basis: 100% !important;
 				flex-wrap: nowrap !important;
 				align-items: center;
 				margin: 2rem 0 0 !important;

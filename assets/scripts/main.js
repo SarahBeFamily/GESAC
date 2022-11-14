@@ -122,6 +122,7 @@ $(function() {
 
 		input.removeAttr('readonly');
 		input.attr('type', 'date');
+		input.after().trigger('click touchstart');
 	});
 
 	$('input.calendar').on('change', function() {
