@@ -169,7 +169,19 @@ section#eshop-services {
 	}
 
 	.tabs-v3 {
-		
+		li {
+			&:not(.active) {
+				cursor: auto;
+				pointer-events: none;
+			}
+
+			a {
+				@include respond-to($max-tablet) {
+					font-size: toRem(20);
+				}
+			}
+		}
+
 		.internal-login {
 			display: flex;
 			align-items: center;
@@ -274,11 +286,12 @@ section#eshop-services {
 	form#search-parking {
 		input {
 			margin-right: 0;
+			flex-basis: 100%;
 		}
 	}
 
-	#choose-parking,
-	#goldcard,
+	#buy-parking,
+	#buy-gold-card,
 	.buy-service {
 		.header {
 			align-items: center;
@@ -734,10 +747,18 @@ section#eshop-services {
 
 		.service-item:first-of-type {
 			margin-top: 116px;
+
+			@include respond-to($phone) {
+				margin-top: 2rem;
+			}
+	
+			@include respond-to($tc) {
+				margin-top: 2rem;
+			}
 		}
 	}
 
-	#choose-parking {
+	#buy-parking {
 		> .center-content {
 			@include respond-to($phone-plus) {
 				width: 90%;
@@ -746,7 +767,7 @@ section#eshop-services {
 		}
 	}
 
-	#goldcard {
+	#buy-gold-card {
 		.add-to-cart {
 			max-height: 8.5em;
 		}
@@ -786,6 +807,11 @@ section#eshop-services {
 			color: col-alpha('primary', 0.5);
 			font-size: 1rem;
 
+			@include respond-to($phone) {
+				padding: 20px 0 15px;
+				font-size: toRem(14);
+			}
+
 			@include respond-to($max-tablet) {
 				flex-basis: 100%;			  
 			}
@@ -797,11 +823,18 @@ section#eshop-services {
 		}
 	}
 
-	.dati > .row .button {
-		width: 49%;
-
+	.dati {
 		@include respond-to($max-tablet) {
-			width: 100%;
+			padding-top: 1rem;
+			font-size: 18px;
+		}
+
+		> .row .button {
+			width: 49%;
+
+			@include respond-to($max-tablet) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -924,8 +957,23 @@ section#eshop-services {
 		align-items: center;
 		flex-basis: 100%;
 
-		> a, input {
+		@include respond-to($phone) {
+			flex-wrap: wrap;
+		}
+
+		> a {
 			flex-basis: calc(98% / 2);
+
+			@include respond-to($phone) {
+				flex-basis: 100%;
+				margin-bottom: 12px;
+			}
+
+			&:first-child {
+				@include respond-to($phone) {
+					margin-top: 3rem !important;
+				}
+			}
 		}
 	}
 }

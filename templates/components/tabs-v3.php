@@ -35,14 +35,14 @@ if ($include != true)
 			<div class="tabs-v3-content hidden" id="step2">
 				
 				<form id="insert-data" action="">
-					<input type="text" name="nome" id="nome" placeholder="Nome*" required>
-					<input type="text" name="cognome" id="cognome" placeholder="Cognome*" required>
+					<input type="text" name="nome" id="nome" placeholder="Nome*" >
+					<input type="text" name="cognome" id="cognome" placeholder="Cognome*" >
 					<input type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo">
 					<select name="paese" id="paese" class="double-chevron" required>
 						<option value="">Paese</option>
 						<option value="italia">Italia</option>
 					</select>
-					<input type="text" name="cap" id="cap" placeholder="CAP*" required>
+					<input type="text" name="cap" id="cap" placeholder="CAP*" >
 					<input type="text" name="citta" id="citta" placeholder="Città">
 					<select name="provincia" id="provincia" class="double-chevron" required>
 						<option value="">Provincia</option>
@@ -50,8 +50,8 @@ if ($include != true)
 						<option value="CA">Cagliari</option>
 					</select>
 					<input type="text" name="telefono" id="telefono" placeholder="Telefono">
-					<input type="email" name="email" id="email" placeholder="Email*" required>
-					<input type="email" name="conferma-email" id="conferma-email" placeholder="Conferma Email" required>
+					<input type="email" name="email" id="email" placeholder="Email*" >
+					<input type="email" name="conferma-email" id="conferma-email" placeholder="Conferma Email" >
 					
 					<div class="invoice-wrap">
 						<label id="request-invoice">
@@ -59,16 +59,16 @@ if ($include != true)
 						</label>
 
 						<div class="invoice-fields hidden">
-							<input type="text" name="azienda" id="azienda" placeholder="Ragione sociale o Nome e Cognome*" required>
+							<input type="text" name="azienda" id="azienda" placeholder="Ragione sociale o Nome e Cognome*" >
 							<select name="paese" id="paese" class="double-chevron" required>
 								<option value="">Paese</option>
 								<option value="italia">Italia</option>
 							</select>
-							<input type="text" name="cap-fattura" id="cap-fattura" placeholder="CAP*" required>
+							<input type="text" name="cap-fattura" id="cap-fattura" placeholder="CAP*" >
 							<input type="text" name="citta-fattura" id="citta-fattura" placeholder="Città">
-							<input type="text" name="iva-cf" id="iva-cf" placeholder="P.IVA/Cod.Fiscale*" required>
-							<input type="text" name="indirizzo-fatturazione" id="indirizzo-fatturazione" placeholder="Indirizzo di fatturazione*" required>
-							<input type="text" name="numero-fatturazione" id="numero-fatturazione" placeholder="Numero*" required>
+							<input type="text" name="iva-cf" id="iva-cf" placeholder="P.IVA/Cod.Fiscale*" >
+							<input type="text" name="indirizzo-fatturazione" id="indirizzo-fatturazione" placeholder="Indirizzo di fatturazione*" >
+							<input type="text" name="numero-fatturazione" id="numero-fatturazione" placeholder="Numero*" >
 							<input type="email" name="email-pec" id="email-pec" placeholder="Indirizzo email PEC">
 							<input type="text" name="destinatario" id="destinatario" placeholder="Codice destinatario">
 							<label>
@@ -81,10 +81,10 @@ if ($include != true)
 									<option value="">Paese</option>
 									<option value="italia">Italia</option>
 								</select>
-								<input type="text" name="cap-spedizione" id="cap-spedizione" placeholder="CAP*" required>
+								<input type="text" name="cap-spedizione" id="cap-spedizione" placeholder="CAP*" >
 								<input type="text" name="citta-spedizione" id="citta-spedizione" placeholder="Città">
-								<input type="text" name="indirizzo-spedizione" id="indirizzo-spedizione" placeholder="Indirizzo di fatturazione*" required>
-								<input type="text" name="numero-spedizione" id="numero-spedizione" placeholder="Numero*" required>
+								<input type="text" name="indirizzo-spedizione" id="indirizzo-spedizione" placeholder="Indirizzo di fatturazione*" >
+								<input type="text" name="numero-spedizione" id="numero-spedizione" placeholder="Numero*" >
 							</div>
 						</div>
 					</div>
@@ -117,7 +117,7 @@ if ($include != true)
 					</div>
 
 					<div class="buttons">
-						<a href="#" class="button secondary border-only">Torna indietro</a>
+						<a id="back-to-step1" href="#" class="button secondary border-only">Torna indietro</a>
 						<input type="submit" class="submit" value="Continua">
 					</div>
 				</form>
@@ -145,7 +145,7 @@ if ($include != true)
 					</ul>
 
 					<div class="row end-content">
-						<a href="#" class="button secondary w-icon btn-icon-edit-white">Modifica Dati</a>
+						<a href="#" class="edit-data button secondary w-icon btn-icon-edit-white">Modifica Dati</a>
 					</div>
 				</div>
 				
@@ -167,7 +167,7 @@ if ($include != true)
 						</div>
 
 						<div class="edit-btn">
-							<a href="#" class="button secondary border-only w-icon btn-icon-edit">Modifica</a>
+							<a href="#" class="edit-product button secondary border-only w-icon btn-icon-edit">Modifica</a>
 						</div>
 
 						<div class="remove-item">
@@ -211,7 +211,7 @@ if ($include != true)
 				</div>
 
 				<div class="checkout">
-					<a href="#" class="button secondary border-only">Acquista altri prodotti</a>
+					<a href="#" class="continue-shopping button secondary border-only">Acquista altri prodotti</a>
 					<a href="#" class="button secondary">Vai al pagamento</a>
 				</div>
 			</div>

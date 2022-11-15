@@ -51,7 +51,7 @@ input {
 
 	&:not([type="submit"]) {
 		@include respond-to($small-phone) {
-			padding: 19px 25px 19px 9px !important;
+			padding: 19px !important;
 		}
 	}
 
@@ -643,7 +643,7 @@ form#quantity {
 		max-width: 100%;
 
 		@include respond-to($phone) {
-			flex-basis: 100%;
+			flex-basis: 100% !important;
 			margin: 0 !important;
 		}
 
@@ -653,9 +653,30 @@ form#quantity {
 		}
 
 		&:nth-last-child(2) {
-			@include respond-to($mid-phone) {
-				max-width: 71% !important;
-				flex-basis: 78%;
+			@include respond-to($phone) {
+				flex-basis: 100% !important;
+				margin-bottom: 12px !important;
+				max-width: 100%;
+			}
+
+			@include respond-to($tc) {
+				max-width: 82% !important;
+				flex-basis: 82% !important;
+			}
+
+			@include respond-to($td) {
+				flex-basis: 48.8% !important;
+			}
+		}
+
+		&.submit {
+			@include respond-to($mini-desktop) {
+				flex-basis: 48.8% !important;
+			}
+
+			@include respond-to($td) {
+				flex-basis: 48.8% !important;
+				padding: 16px 9px !important;
 			}
 		}
 	}
@@ -676,6 +697,12 @@ form#insert-data {
 		background-color: white;
 
 		@include respond-to($phone) {
+			flex-basis: 100% !important;
+			max-width: 100% !important;
+			margin-bottom: 0;
+		}
+
+		@include respond-to($tc) {
 			flex-basis: 100% !important;
 			max-width: 100% !important;
 			margin-bottom: 0;
@@ -705,16 +732,43 @@ form#insert-data {
 		margin-bottom: 12px;
 		background-color: white;
 		flex-basis: calc(98% / 3);
+		color: rgba(1, 17, 44, 0.5);
 
 		@include respond-to($phone) {
 			border-radius: 6px;
 			margin-top: 12px;
-			padding: 20px 9px;
+			padding: 19px 10px !important;
+			flex-basis: 100% !important;
+			max-width: 100% !important;
+			margin-bottom: 0;
+		}
+
+		@include respond-to($tc) {
+			border-radius: 6px;
+			margin-top: 12px;
+			padding: 19px 10px !important;
+			flex-basis: 100% !important;
+			max-width: 100% !important;
+			margin-bottom: 0;
 		}
 
 		@include respond-to($mid-tablet) {
 			flex-basis: 32.667%;
 			max-width: 32%;
+		}
+
+		&:valid {
+			color: var(--primary-dark) !important;
+		}
+	}
+
+	.invoice-wrap {
+		@include respond-to($phone) {
+			margin-top: 2rem;
+		}
+
+		@include respond-to($tc) {
+			margin-top: 2rem;
 		}
 	}
 
@@ -748,6 +802,16 @@ form#insert-data {
 			@include respond-to($phone) {
 				flex-basis: 100% !important;
 				max-width: 100% !important;
+			}
+		}
+
+		> label {
+			@include respond-to($phone) {
+				margin-top: 2rem;
+			}
+	
+			@include respond-to($tc) {
+				margin-top: 2rem;
 			}
 		}
 
@@ -797,6 +861,10 @@ form#insert-data {
 			@include respond-to($phone) {
 				flex-basis: 100%;
 			}
+
+			@include respond-to($small-tablet) {
+				flex-basis: 48%;
+			}
 		}
 
 		.data-info {
@@ -804,8 +872,20 @@ form#insert-data {
 				font-size: toRem(26);
 			}
 
-			ul li {
-				font-size: toRem(14);
+			ul {
+				@include respond-to($phone) {
+					padding-left: 15px;
+				}
+
+				li {
+					font-size: toRem(14);
+				}
+			}
+
+			.link {
+				@include respond-to($phone) {
+					font-size: toRem(16);
+				}
 			}
 		}
 

@@ -21,7 +21,7 @@
 		<ul class="tabs v2">
 			<!-- DESKTOP TAB TITLES -->
 			<div class="desk-tabs-title v2">
-				<li class="item" data-menu-tab="#parcheggio">
+				<li class="item" data-menu-tab="#parking">
 
 					<div class="item-icon">
 						<div class="img-wrap">
@@ -90,7 +90,7 @@
 			</div>
 
 			<!-- MOBILE TAB TITLE -->
-			<li class="item mobile-only" data-menu-tab="#parcheggio">
+			<li class="item mobile-only" data-menu-tab="#parking">
 				<div class="item-icon">
 					<div class="img-wrap">
 						<img src="<?php echo img_path('icons/Parcheggi.svg'); ?>" alt="">
@@ -101,7 +101,7 @@
 			</li>
 
 				<!-- PARCHEGGIO CONTENT MOBILE & DESKTOP -->
-				<div class="tabs-v2-content hidden" id="parcheggio">
+				<div class="tabs-v2-content hidden" id="parking">
 
 					<div class="content">
 
@@ -116,7 +116,7 @@
 
 					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
-					<div id="choose-parking">
+					<div id="buy-parking" class="buy-service hidden">
 
 						<div class="center-content">
 							<a data-fancybox href="<?php echo img_path('parking-map.png'); ?>" id="lightbox-map" role="button" class="button secondary border-only w-icon btn-icon-map">Visualizza immagine mappa in lightbox</a>
@@ -411,7 +411,7 @@
 									<h3>Riepilogo carrello</h3>
 
 									<!-- CART WITH ITEMS -->
-									<div class="cart">
+									<div class="cart hidden">
 										<div class="item">
 											<div class="remove-item">
 												<i class="icon icon-cancel"></i>
@@ -429,12 +429,12 @@
 											Totale
 											<span id="total-price" class="actual-price">5,50€</span>
 
-											<a href="#" class="button secondary">Vai all'acquisto</a>
+											<a href="#" class="go-to-checkout button secondary">Vai all'acquisto</a>
 										</div>
 									</div>
 
 									<!-- CART EMPTY -->
-									<div class="cart-empty hidden">
+									<div class="cart-empty">
 										Il tuo carrello è vuoto
 									</div>
 								</div>
@@ -474,7 +474,7 @@
 
 					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
-					<div class="buy-service">
+					<div id="buy-fast-track" class="buy-service hidden">
 
 						<div class="row between-content">
 
@@ -525,30 +525,33 @@
 									<h3>Riepilogo carrello</h3>
 
 									<!-- CART WITH ITEMS -->
-									<div class="cart">
+									<div class="cart hidden">
 										<div class="item">
 											<div class="remove-item">
 												<i class="icon icon-cancel"></i>
 											</div>
 
-											<h4>Capodichino Parking (Ultra Low Cost)</h4>
+											<h4>Fast Track</h4>
 
-											<p class="parking-start">dal 21 Set 2022 19:00</p>
-											<p class="parking-end">al 21 Set 2022 21:00</p>
+											<div class="quantity">
+												<div class="minus"><i class="icon icon-minus"></i></div>
+												<div class="qty">1</div>
+												<div class="plus"><i class="icon icon-plus"></i></div>
+											</div>
 
-											<span class="actual-price item-price">5,50€</span>
+											<span class="actual-price item-price">7,00€</span>
 										</div>
 
 										<div class="total">
 											Totale
 											<span id="total-price" class="actual-price">5,50€</span>
 
-											<a href="#" class="button secondary">Vai all'acquisto</a>
+											<a href="#" class="go-to-checkout button secondary">Vai all'acquisto</a>
 										</div>
 									</div>
 
 									<!-- CART EMPTY -->
-									<div class="cart-empty hidden">
+									<div class="cart-empty">
 										Il tuo carrello è vuoto
 									</div>
 								</div>
@@ -585,7 +588,7 @@
 
 					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
-					<div id="goldcard">
+					<div id="buy-gold-card" class="buy-service hidden">
 						<div class="row between-content">
 
 							<div class="col">
@@ -628,30 +631,27 @@
 									<h3>Riepilogo carrello</h3>
 
 									<!-- CART WITH ITEMS -->
-									<div class="cart">
+									<div class="cart hidden">
 										<div class="item">
 											<div class="remove-item">
 												<i class="icon icon-cancel"></i>
 											</div>
 
-											<h4>Capodichino Parking (Ultra Low Cost)</h4>
+											<h4>Status GOLD</h4>
 
-											<p class="parking-start">dal 21 Set 2022 19:00</p>
-											<p class="parking-end">al 21 Set 2022 21:00</p>
-
-											<span class="actual-price item-price">5,50€</span>
+											<span class="actual-price item-price">200€</span>
 										</div>
 
 										<div class="total">
 											Totale
-											<span id="total-price" class="actual-price">5,50€</span>
+											<span id="total-price" class="actual-price">200€</span>
 
-											<a href="#" class="button secondary">Vai all'acquisto</a>
+											<a href="#" class="go-to-checkout button secondary">Vai all'acquisto</a>
 										</div>
 									</div>
 
 									<!-- CART EMPTY -->
-									<div class="cart-empty hidden">
+									<div class="cart-empty">
 										Il tuo carrello è vuoto
 									</div>
 								</div>
@@ -689,7 +689,7 @@
 
 					<a href="#" class="link edit w-icon">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
-					<div class="buy-service">
+					<div id="buy-bus-ticket" class="buy-service hidden">
 
 						<div class="row between-content">
 
@@ -806,30 +806,33 @@
 									<h3>Riepilogo carrello</h3>
 
 									<!-- CART WITH ITEMS -->
-									<div class="cart">
+									<div class="cart hidden">
 										<div class="item">
 											<div class="remove-item">
 												<i class="icon icon-cancel"></i>
 											</div>
 
-											<h4>Capodichino Parking (Ultra Low Cost)</h4>
+											<h4>Ticket Alibus</h4>
 
-											<p class="parking-start">dal 21 Set 2022 19:00</p>
-											<p class="parking-end">al 21 Set 2022 21:00</p>
+											<div class="quantity">
+												<div class="minus"><i class="icon icon-minus"></i></div>
+												<div class="qty">1</div>
+												<div class="plus"><i class="icon icon-plus"></i></div>
+											</div>
 
-											<span class="actual-price item-price">5,50€</span>
+											<span class="actual-price item-price">5,00€</span>
 										</div>
 
 										<div class="total">
 											Totale
-											<span id="total-price" class="actual-price">5,50€</span>
+											<span id="total-price" class="actual-price">5,00€</span>
 
-											<a href="#" class="button secondary">Vai all'acquisto</a>
+											<a href="#" class="go-to-checkout button secondary">Vai all'acquisto</a>
 										</div>
 									</div>
 
 									<!-- CART EMPTY -->
-									<div class="cart-empty hidden">
+									<div class="cart-empty">
 										Il tuo carrello è vuoto
 									</div>
 								</div>
@@ -896,6 +899,8 @@
 				</div>
 		</ul>
 	</div>
+
+	<a href="#" id="edit-order" class="link edit w-icon hidden">Modifica/Cancella il tuo ordine  <i class="icon icon-edit"></i></a>
 
 	<!-- PARKING ASSISTANCE SECTION -->
 	<div id="parking-help" class="hidden">
