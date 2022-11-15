@@ -1,0 +1,263 @@
+section#in-partenza {
+	margin-top: 4rem;
+
+	@include respond-to($phone-plus) {
+		margin-top: 0;
+	}
+
+	.tabs-v2 > .tabs > .desk-tabs-title {
+		@include respond-to($small-tablet) {
+			width: 80%;
+		}
+
+		@include respond-to($tablet) {
+			width: 80%;
+		}
+
+		> li {
+		border-color: var(--secondary);
+		font-size: toRem(22);
+		font-weight: 400;
+
+			&:not(.active) {
+				border: 0;
+			}
+		}
+	}
+
+	.tabs-v2-content {
+		width: 70%;
+
+		@include respond-to($phone) {
+			width: 95%;
+		}
+
+		@include respond-to($small-tablet) {
+			width: 80%;
+		}
+
+		@include respond-to($tablet) {
+			width: 80%;
+		}
+
+		.content {
+			margin-top: 5rem;
+
+			@include respond-to($phone) {
+				margin-top: 0;
+			}
+		}
+
+		h2 {
+			text-align: left;
+			font-size: toRem(40);
+			font-weight: 400;
+
+			@include respond-to($phone) {
+				font-size: toRem(30);
+			}
+		}
+
+		.row {
+			justify-content: space-between;
+			margin: 3rem 0;
+			align-items: flex-start;
+
+			@include respond-to($phone-plus) {
+				flex-wrap: wrap;
+			}
+
+			img, p {
+				flex-basis: 49%;
+				width: 49%;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					width: 100%;
+				}
+			}
+
+			img {
+				@include respond-to($phone-plus) {
+					margin-bottom: 2rem;
+				}
+			}
+
+			p {
+				@include respond-to($not-mobile) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		p {
+			line-height: toRem(30);
+
+			@include respond-to($phone) {
+				font-weight: toRem(18);
+			}
+		}
+
+		ul {
+			list-style: disc;
+			padding-left: 30px;
+
+			li {
+				line-height: toRem(30);
+			}
+		}
+	}
+}
+
+section#cards {
+	margin-top: 7rem;
+
+	@include respond-to($tablet) {
+		margin-top: 11rem;
+	}
+
+	.cards-content {
+		display: flex !important;
+		justify-content: space-between;
+
+		@include respond-to($max-tablet) {
+			flex-basis: 100%;
+			flex-wrap: wrap;
+		}
+
+		.slick-track {
+			display: flex !important;
+			justify-content: space-between;
+			cursor: auto;
+
+			@include respond-to($retina1) {
+				width: 90% !important;
+			}	
+		}
+
+		.slick-slide {
+			width: calc(95% / 3) !important;
+		}
+
+		.card-item {
+			background-color: var(--light-gray);
+			border-radius: $radius;
+			display: flex !important;
+			flex-wrap: wrap !important;
+			justify-content: space-between;
+			padding: 24px;
+
+			@include respond-to($phone) {
+				padding: 20px;
+				min-height: 20rem;
+			}
+
+			@include respond-to($tablet) {
+				min-height: 16rem;
+			}
+
+			@include respond-to($ipad-large) {
+				min-height: 16rem;
+			}
+
+			@include respond-to($mini-desktop) {
+				min-height: 13rem;
+			}
+
+			.info {
+				flex-basis: 83%;
+
+				@include respond-to($phone) {
+					flex-basis: 100%;
+					order: 2;
+				}
+
+				@include respond-to($tablet) {
+					flex-basis: 70%;
+				}
+
+				@include respond-to($ipad-large) {
+					flex-basis: 70%;
+				}
+
+				h3 {
+					font-size: betterClamp(18,26, 320, 1920);
+					font-weight: 500;
+					margin-top: 0;
+
+					@include respond-to($phone) {
+						margin-top: 1.5rem;
+					}
+				}
+
+				p {
+					line-height: toRem(25);
+					color: col-alpha('primary', 0.5);
+					padding-right: 13%;
+					margin-bottom: -10px;
+
+					@include respond-to($phone) {
+						font-size: 1rem;
+						line-height: toRem(20);
+						padding-right: 0;
+						margin-bottom: 1rem;
+					}
+				}
+			}
+
+			.icon-wrap {
+				flex-basis: 14%;
+				display: flex;
+				align-items: center;
+
+				@include respond-to($tablet) {
+					flex-basis: 22%;
+				}
+
+				@include respond-to($ipad-large) {
+					flex-basis: 22%;
+				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 17%;
+				}
+
+				&.icon-circle {
+					justify-content: center;
+					background-color: var(--medium-gray);
+					margin: 0;
+					height: 60px;
+					max-width: 62px;
+
+					@include respond-to($phone) {
+						order: 1;
+						flex-basis: 48%;
+					}
+
+					@include respond-to($tablet) {
+						order: 1;
+					}
+
+					i {
+						margin: 0;
+						width: 25px;
+					}
+				}
+
+				&.icon-arrow {
+					justify-content: flex-end;
+					flex-basis: 100%;
+
+					@include respond-to($phone) {
+						order: 3;
+					}
+
+					i {
+						cursor: pointer;
+						scale: 1.3;
+					}
+				}
+			}
+		}
+	}
+}

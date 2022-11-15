@@ -519,6 +519,34 @@ $(function() {
 		cssEase: 'linear',
 	});
 
+	// in section #cards -> In Partenza
+	$('.cards-content').slick({
+		dots: true,
+		arrows: false,
+		infinite: false,
+		centerMode: false,
+    	variableWidth: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2.5,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1.5,
+					slidesToScroll: 1,
+				},
+			}
+		],
+	});
+
 	/**
 	 * Show an hidden wrapper of fields on checking a checkbox field
 	 * @param {jquery element} el

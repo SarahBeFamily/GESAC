@@ -5,6 +5,8 @@
  * Recalled in
  * - Partenze / Arrivi
  * - Voli Diretti
+ * - Area Riservata
+ * - In Partenza
  */
 ?>
 
