@@ -1,0 +1,134 @@
+/** Categoria A - B styles **/
+
+section#categories {
+	padding: 6rem 10% 2rem;
+
+	@include respond-to($phone) {
+		padding: 2rem 15px;
+	}
+
+	@include respond-to($tablet) {
+		padding: 5rem 5% 2rem;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 5rem 3.5% 2rem;
+	}
+
+	#articles {
+		&.vertical {
+			.single {
+				flex-basis: calc(95% / 3);
+				flex-wrap: wrap;
+
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+				}
+
+				@include respond-to($tablet) {
+					flex-basis: calc(95% / 2);
+				}
+		
+				.img {
+					flex-basis: 100%;
+					height: 225px;
+					border-radius: $radius $radius 0 0;
+				}
+		
+				.cont {
+					border-radius: 0 0 $radius $radius;
+					padding: 20px;
+					flex-basis: 100%;
+				}
+			}
+		}
+
+		&.horizontal {
+			.single {
+				flex-basis: calc(95% / 2);
+
+				@include respond-to($phone-plus) {
+					flex-wrap: wrap;
+				}
+
+				@include respond-to($max-tablet) {
+					flex-basis: 100%;
+				}
+
+				.img {
+					border-radius: $radius 0 0 $radius;
+					flex-basis: 40%;
+
+					@include respond-to($phone-plus) {
+						flex-basis: 100%;
+						height: 225px;
+						border-radius: $radius $radius 0 0;
+					}
+				}
+
+				.cont {
+					flex-basis: 60%;
+					border-radius: 0 $radius $radius 0;
+
+					@include respond-to($phone-plus) {
+						border-radius: 0 0 $radius $radius;
+						padding: 20px;
+						flex-basis: 100%;
+					}
+				}
+			}
+		}
+
+		.single {
+			display: flex;
+			margin-bottom: 2rem;
+	
+			.img {
+				background-size: cover;
+				background-position: center;
+			}
+	
+			.cont {
+				background-color: var(--light-gray);
+				padding: 20px;
+	
+				h3 {
+					font-size: toRem(26);
+					font-weight: 500;
+					margin-top: 0;
+				}
+	
+				.meta {
+					display: flex;
+					justify-content: flex-end;
+					margin-top: 35px;
+	
+					.link:any-link {
+						color: var(--primary-dark);
+						text-decoration: none;
+						font-size: toRem(14);
+					}
+				}
+			}
+		}
+	}
+
+	> .link {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 6rem 33px 33px;
+
+		@include respond-to($phone-plus) {
+			padding: 4rem 33px 33px;
+		}
+	}
+}
+
+section#related-cats {
+	margin: 50px 0;
+
+	@include respond-to($phone-plus) {
+		margin: 0;
+	}
+}

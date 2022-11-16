@@ -9,7 +9,7 @@
  */
 ?>
 
-<section id="blog">
+<section id="blog" class="<?php echo $var; ?>">
 	<div class="col">
 
 		<div class="text">
