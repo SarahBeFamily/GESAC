@@ -797,4 +797,13 @@ $(function() {
 		$('#pagetitle h1, .breadcrumbs .current').html('Registrazione');
 	});
 
+	// News effect on article link
+	// (show single article and related links)
+	$('#news .single-article .link').on('click', function() {
+		$(this).parents('#articles').addClass('hidden');
+		$('#single-article, #related-news').removeClass('hidden');
+		$('#more-news').addClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
+
 });
