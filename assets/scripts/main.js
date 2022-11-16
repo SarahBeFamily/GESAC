@@ -806,4 +806,10 @@ $(function() {
 		document.querySelector('body').scroll(0,0);
 	});
 
+	// Sidebar Accordion effect
+	$('.sidebar.accordion ul.archive').on('click', '> li', function() {
+		$(this).toggleClass('open');
+		$(this).find('.submenu').slideToggle();
+	});
+
 });
