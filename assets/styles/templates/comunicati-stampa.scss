@@ -1,4 +1,9 @@
-section#comunicati {
+/**
+ * Comunicati Stampa & Bandi styles
+ */
+
+section#comunicati,
+section#bandi {
 	padding: 6rem 10% 2rem;
 
 	@include respond-to($phone) {
@@ -60,7 +65,7 @@ section#comunicati {
 					}
 				}
 
-				.button {
+				.button.secondary {
 					width: 250px;
 					display: flex;
 					justify-content: center;
