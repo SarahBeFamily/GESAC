@@ -1,0 +1,106 @@
+section#gallery {
+	padding: 6rem 10% 2rem;
+
+	@include respond-to($phone) {
+		padding: 2rem 15px;
+	}
+
+	@include respond-to($tablet) {
+		padding: 5rem 5% 2rem;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 5rem 3.5% 2rem;
+	}
+
+	.button {
+		flex-basis: 25%;
+
+		@include respond-to($phone-plus) {
+			flex-basis: 100%;
+		}
+
+		&:first-of-type {
+			@include respond-to($phone-plus) {
+				order: 1;
+			}
+
+			@include respond-to($min-phone) {
+				margin-right: 10px;
+			}
+		}
+
+		&:last-of-type {
+			@include respond-to($phone-plus) {
+				order: 3;
+			}
+		}
+	}
+
+	.photos {
+		flex-basis: 100%;
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 20%);
+		grid-gap: 1rem;
+		justify-content: space-between;
+
+		@include respond-to($phone-plus) {
+			order: 2;
+			grid-template-columns: repeat(auto-fill, 46%);
+		}
+
+		@include respond-to($tablet) {
+			grid-template-columns: repeat(auto-fill, 31%);
+		}
+
+		@include respond-to($mini-desktop) {
+			grid-template-columns: repeat(auto-fill, 31%);
+		}
+
+		@include respond-to($min-desktop) {
+			grid-template-columns: repeat(auto-fill, 23%);
+		}
+
+		@include respond-to($anomalia-gallery) {
+			grid-template-columns: repeat(auto-fill, 23%) !important;
+		}
+
+		@include respond-to($min-wide-desktop) {
+			grid-template-columns: repeat(auto-fill, 24%);
+		}
+
+		.image-wrap {
+			margin-bottom: 3rem;
+
+			.img {
+				border-radius: 6px;
+				background-size: cover;
+				background-position: center;
+				height: 250px;
+
+				@include respond-to($phone) {
+					height: 150px;
+				}
+
+				@include respond-to($min-wide-desktop) {
+					height: 320px;
+				}
+
+				@include respond-to($retina1) {
+					height: 380px !important;
+				}
+			}
+
+			p {
+				text-align: center;
+				font-size: toRem(22);
+				padding: 0 5%;
+
+				@include respond-to($phone-plus) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
