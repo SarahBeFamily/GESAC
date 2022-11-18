@@ -34,6 +34,18 @@ $(function() {
 		} else {
 			$('header > .row-main').removeClass("sticky");
 		}
+
+		// Map button sticky on Eshop Template
+		let mapWrap = $('#buy-parking > .center-content'),
+			mapOffset = $('#lightbox-map').offset(),
+			vh = $(window).height();
+
+			console.log(vh);
+		if (scrollTop > (mapOffset.top + (vh - 70)) && mapWrap.is(':visible')) {
+			mapWrap.addClass("sticky");
+		} else {
+			mapWrap.removeClass("sticky");
+		}
 	});
 
 	// Breaking news effect
@@ -93,15 +105,9 @@ $(function() {
 		}
 	});
 
-	let close_menu = '-35vw';
-	if (ww > 640 && ww < 767) {
-		close_menu = '-25vw';
-	} else if (ww > 767 && ww < 1024) {
-		close_menu = '-32vw';
-	}
-
 	$('a.hamburger').on('click', function() {
-		$('#menu-mobile').css('left', close_menu);
+		let logoW = $('.logo-wrap').width();
+		$('#menu-mobile').css('left', `-${logoW}px`);
 		$('.row-news').removeClass('open');
 	});
 

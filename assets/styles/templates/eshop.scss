@@ -260,6 +260,10 @@ section#eshop-services {
 			@include respond-to($min-tablet) {
 				margin-right: 0;
 			}
+
+			@include respond-to($td) {
+				margin-top: 0 !important;
+			}
 		}
 
 		input.drop {
@@ -274,6 +278,7 @@ section#eshop-services {
 		font-size: toRem(22);
 		padding: 20px;
 		margin-bottom: 3em;
+		background-color: white !important;
 
 		@include respond-to($phone) {
 			font-size: toRem(14);
@@ -287,6 +292,12 @@ section#eshop-services {
 		input {
 			margin-right: 0;
 			flex-basis: 100%;
+		}
+
+		.input-wrapper {
+			@include respond-to($td) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -338,6 +349,10 @@ section#eshop-services {
 				@include respond-to($max-tablet) {
 					flex-basis: 100%;
 				}
+
+				@include respond-to($td) {
+					flex-basis: 73%;
+				}
 			}
 
 			.col.cart {
@@ -353,10 +368,18 @@ section#eshop-services {
 					flex-basis: 40%;
 				}
 
+				@include respond-to($td) {
+					flex-basis: 22%;
+				}
+
 				.cart-wrap {
 					position: sticky;
 					position: -webkit-sticky;
 					top: 45px;
+
+					@include respond-to($min-tablet) {
+						top: 125px;
+					}
 				}
 
 				> h2,h3,h4 {
@@ -760,9 +783,27 @@ section#eshop-services {
 
 	#buy-parking {
 		> .center-content {
+			z-index: 99;
+
 			@include respond-to($phone-plus) {
-				width: 90%;
-				margin: 10px auto;
+				width: 94%;
+				margin: 10px;
+			}
+
+			&.sticky {
+				@include respond-to($phone-plus) {
+					top: 60px !important;
+				}
+
+				@include respond-to($min-tablet) {
+					left: 50%;
+					transform: translateX(-50%);
+					width: 54%;
+				}
+
+				@include respond-to($td) {
+					width: 64%;
+				}
 			}
 		}
 	}
