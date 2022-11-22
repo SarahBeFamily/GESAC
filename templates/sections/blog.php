@@ -5,10 +5,11 @@
  * Recalled in
  * - Homepage
  * - Voli Diretti
+ * - In Partenza
  */
 ?>
 
-<section id="blog">
+<section id="blog" class="<?php echo $var; ?>">
 	<div class="col">
 
 		<div class="text">

@@ -98,6 +98,7 @@ header {
 
 	.row-main {
 		display: flex;
+		position: relative;
 
 		&.sticky {
 			.login-header-panel {
@@ -203,6 +204,8 @@ header {
 				justify-content: space-around;
 				padding: betterClamp(14,30) betterClamp(17,35);
 				width: 100%;
+				height: 100%;
+				align-items: center;
 
 				.login-header-panel {
 					position: absolute;

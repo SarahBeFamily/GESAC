@@ -34,6 +34,18 @@ $(function() {
 		} else {
 			$('header > .row-main').removeClass("sticky");
 		}
+
+		// Map button sticky on Eshop Template
+		let mapWrap = $('#buy-parking > .center-content'),
+			mapOffset = $('#lightbox-map').offset(),
+			vh = $(window).height();
+
+			console.log(vh);
+		if (scrollTop > (mapOffset.top + (vh - 70)) && mapWrap.is(':visible')) {
+			mapWrap.addClass("sticky");
+		} else {
+			mapWrap.removeClass("sticky");
+		}
 	});
 
 	// Breaking news effect
@@ -93,15 +105,9 @@ $(function() {
 		}
 	});
 
-	let close_menu = '-35vw';
-	if (ww > 640 && ww < 767) {
-		close_menu = '-25vw';
-	} else if (ww > 767 && ww < 1024) {
-		close_menu = '-32vw';
-	}
-
 	$('a.hamburger').on('click', function() {
-		$('#menu-mobile').css('left', close_menu);
+		let logoW = $('.logo-wrap').width();
+		$('#menu-mobile').css('left', `-${logoW}px`);
 		$('.row-news').removeClass('open');
 	});
 
@@ -178,8 +184,13 @@ $(function() {
 			$this.parents('ul').find(tab).removeClass('hidden');
 
 			if (tab_v2) {
+				let tabname = tab.replace("#", "");
+				$this.parents('ul.v2').find(`.tabs-v2-content${tab}`).attr('current', tabname);
 				$this.parents('ul.v2').find(`.tabs-v2-content:not(${tab})`).addClass('hidden');
 				$this.parents('ul.v2:not(.fixed-titles)').find('.desk-tabs-title.v2').addClass('hidden');
+
+				$(`.tabs-v2-content${tab}`).find('.tabs-v3-content#step1').removeClass('hidden');
+				$('#edit-order').addClass('hidden');
 
 				$("ul.v2 .slick-slider").slick("refresh");
 				
@@ -514,6 +525,34 @@ $(function() {
 		cssEase: 'linear',
 	});
 
+	// in section #cards -> In Partenza
+	$('.cards-content').slick({
+		dots: true,
+		arrows: false,
+		infinite: false,
+		centerMode: false,
+    	variableWidth: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2.5,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1.5,
+					slidesToScroll: 1,
+				},
+			}
+		],
+	});
+
 	/**
 	 * Show an hidden wrapper of fields on checking a checkbox field
 	 * @param {jquery element} el
@@ -539,6 +578,99 @@ $(function() {
 
 	// Form eshop show request shipping address fields
 	checkbox_show_content($('.shipping'), 'insert-data', 'shipping-fields');
+
+	// Eshop Template system
+	// Parking 1st step
+		$('#step1 #search-parking').on('submit', function(e) {
+			e.preventDefault();
+			$('#buy-parking').removeClass('hidden');
+		});
+
+	// General Add to cart
+	$('.add-to-cart > .button').on('click', function() {
+		let parent = $(this).parents('.buy-service');
+		parent.find('.cart-wrap > .cart-empty').addClass('hidden');
+		parent.find('.cart-wrap > .cart').removeClass('hidden');
+	});
+
+	// General Go to step 2
+	$('.go-to-checkout').on('click', function() {
+		let parent = $(this).parents('.buy-service');
+		parent.addClass('hidden');
+
+		$('li[data-menu-tab="#step1"]').removeClass('active');
+		$('li[data-menu-tab="#step2"]').addClass('active');
+		$('.tabs-v3-content#step1').addClass('hidden');
+		$('.tabs-v3-content#step2').removeClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
+
+	// General Back to step 1
+	$('#step2 #insert-data #back-to-step1').on('click', function() {
+		let current = $(this).parents('.tabs-v2-content').attr('current');
+
+		$('li[data-menu-tab="#step2"]').removeClass('active');
+		$('li[data-menu-tab="#step1"]').addClass('active');
+		$('.tabs-v3-content#step2').addClass('hidden');
+		$('.tabs-v3-content#step1').removeClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
+
+	// General Go to step 3
+	$('#step2 #insert-data').on('submit', function(e) {
+		e.preventDefault();
+		$('li[data-menu-tab="#step2"]').removeClass('active');
+		$('li[data-menu-tab="#step3"]').addClass('active');
+		$('.tabs-v3-content#step2').addClass('hidden');
+		$('.tabs-v3-content#step3').removeClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
+
+	// Edit data
+	// General Go back to step 2
+	$('#step3 .edit-data').on('click', function() {
+		$('li[data-menu-tab="#step3"]').removeClass('active');
+		$('li[data-menu-tab="#step2"]').addClass('active');
+		$('.tabs-v3-content#step3').addClass('hidden');
+		$('.tabs-v3-content#step2').removeClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
+
+	// Edit product
+	// General Go back to step 1
+	$('#step3 .edit-product').on('click', function() {
+		let current = $(this).parents('.tabs-v2-content').attr('current');
+		
+		$('li[data-menu-tab="#step3"]').removeClass('active');
+		$('li[data-menu-tab="#step1"]').addClass('active');
+		$('.tabs-v3-content#step3').addClass('hidden');
+		$('.tabs-v3-content#step1').removeClass('hidden');
+		$(`#buy-${current}`).removeClass('hidden');
+		$(`#buy-${current} .cart-wrap > .cart-empty`).removeClass('hidden');
+		$(`#buy-${current} .cart-wrap > .cart`).addClass('hidden');
+	});
+
+	// General Continue shopping
+	$('.continue-shopping').on('click', function() {
+		$(this).parents('.tabs-v2-content').attr('current', '');
+		$('li[data-menu-tab="#step3"]').removeClass('active');
+		$('li[data-menu-tab="#step1"]').addClass('active');
+		$('.tabs-v2-content').addClass('hidden');
+		$('.tabs-v3-content#step3').addClass('hidden');
+		$('#show-all-services').trigger('click');
+		$('#show-all-services, #parcheggio, #parking-help').addClass('hidden');
+		$('.cta#vantaggi, #edit-order').removeClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
+
+	// Other services
+		// * 1st step
+		$('#step1 #quantity').on('submit', function(e) {
+			e.preventDefault();
+			let current = $(this).parents('.tabs-v2-content').attr('current');
+			console.log(current);
+			$(`#buy-${current}`).removeClass('hidden');
+		});
 
 	// Slidee marquee vertical
 	$('.slidee').each(function(i, el) {
@@ -669,6 +801,21 @@ $(function() {
 		$('#form-register').removeClass('hidden');
 		$('section#login').addClass('hidden');
 		$('#pagetitle h1, .breadcrumbs .current').html('Registrazione');
+	});
+
+	// News effect on article link
+	// (show single article and related links)
+	$('#news .single-article .link').on('click', function() {
+		$(this).parents('#articles').addClass('hidden');
+		$('#single-article, #related-news').removeClass('hidden');
+		$('#more-news').addClass('hidden');
+		document.querySelector('body').scroll(0,0);
+	});
+
+	// Sidebar Accordion effect
+	$('.sidebar.accordion ul.archive').on('click', '> li', function() {
+		$(this).toggleClass('open');
+		$(this).find('.submenu').slideToggle();
 	});
 
 });

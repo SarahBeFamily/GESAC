@@ -2,6 +2,7 @@
  * Section Link Correlati
  * - Partenze / Arrivi Template
  * - Voli Diretti Template
+ * - News
  */
 
 section.link-correlati {
@@ -18,7 +19,7 @@ section.link-correlati {
 	}
 
 	@include respond-to($mid-tablet) {
-		padding: 25% 15px;
+		padding: 7rem 15px;
 	}
 
 	@include respond-to($mini-desktop) {

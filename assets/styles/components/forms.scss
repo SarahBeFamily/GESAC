@@ -51,7 +51,7 @@ input {
 
 	&:not([type="submit"]) {
 		@include respond-to($small-phone) {
-			padding: 19px 25px 19px 9px !important;
+			padding: 19px !important;
 		}
 	}
 
@@ -67,27 +67,56 @@ input {
 
 	&.departure {
 		background-image: url("../../img/icons/icon-take-off.svg");
+
+		@include respond-to($not-mobile) {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		@include respond-to($mini-desktop) {
+			margin-right: 0 !important;
+			flex-basis: 33% !important;
+		}
+
+		@include respond-to($small-desktop) {
+			margin-right: 2px !important;
+			flex-basis: 21% !important;
+		}
+
+		@include respond-to($min-wide-desktop) {
+			margin-right: 2px !important;
+			flex-basis: 22% !important;
+		}
 	}
 
 	&.arrival {
 		background-image: url("../../img/icons/icon-landing.svg");
+
+		@include respond-to($not-mobile) {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		@include respond-to($mini-desktop) {
+			margin-left: -7px;
+			padding-left: 25px;
+			flex-basis: 32.5% !important;
+		}
+
+		@include respond-to($small-desktop) {
+			margin-left: -5px;
+			padding-left: 25px;
+		}
+
+		@include respond-to($min-wide-desktop) {
+			margin-left: -5px;
+			padding-left: 25px;
+			flex-basis: 22% !important;
+		}
 	}
 
 	&.drop {
 		background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.64612 5.74428C4.68366 5.7894 4.73067 5.82571 4.78381 5.85063C4.83695 5.87554 4.89493 5.88846 4.95362 5.88846C5.01232 5.88846 5.07029 5.87554 5.12343 5.85063C5.17658 5.82571 5.22358 5.7894 5.26112 5.74428L9.40612 0.769281C9.45475 0.710894 9.48575 0.639861 9.49548 0.564497C9.50521 0.489134 9.49327 0.412559 9.46106 0.343734C9.42885 0.274909 9.3777 0.216683 9.31361 0.17587C9.24951 0.135058 9.17511 0.113348 9.09912 0.113281H0.807121C0.731132 0.113348 0.656735 0.135058 0.592636 0.17587C0.528538 0.216683 0.47739 0.274909 0.445181 0.343734C0.412972 0.412559 0.401034 0.489134 0.410763 0.564497C0.420493 0.639861 0.451488 0.710894 0.500121 0.769281L4.64612 5.74428Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E%0A");
-		// max-width: betterClamp(124,190);
-
-		// @include respond-to($small-phone) {
-		// 	max-width: 87px !important;
-		// }
-
-		// @include respond-to($phone-plus) {
-		// 	max-width: 110px;
-		// }
-
-		// @include respond-to($tablet) {
-		// 	max-width: betterClamp(115,173);
-		// }
 		
 		&::placeholder {
 			opacity: 1 !important;
@@ -341,12 +370,11 @@ form#search-flight {
 		width: 32px;
 		height: 32px;
 		border-radius: 10px;
-		margin: 0 -12px 0;
+		margin: 0 -10px 0 -14px;
 		position: relative;
 		cursor: pointer;
 
 		@include respond-to($phone) {
-			// position: absolute !important;
 			left: 48%;
 			transform: rotate(90deg);
 			margin-bottom: -25px;
@@ -360,6 +388,14 @@ form#search-flight {
 
 		@include respond-to($mid-tablet) {
 			margin-top: 1px;
+		}
+
+		@include respond-to($mini-desktop) {
+			margin: 0 -13px 0 -20px;
+		}
+
+		@include respond-to($min-wide-desktop) {
+			margin: 0 -7px 0 -15px;
 		}
 	}
 
@@ -411,6 +447,11 @@ form#search-flight {
 
 			@include respond-to($mid-tablet) {
 				padding: 26px;
+			}
+
+			@include respond-to($td) {
+				padding: 15px;
+				margin-top: 12px;
 			}
 
 			@include respond-to($max-tablet) {
@@ -643,7 +684,7 @@ form#quantity {
 		max-width: 100%;
 
 		@include respond-to($phone) {
-			flex-basis: 100%;
+			flex-basis: 100% !important;
 			margin: 0 !important;
 		}
 
@@ -653,9 +694,30 @@ form#quantity {
 		}
 
 		&:nth-last-child(2) {
-			@include respond-to($mid-phone) {
-				max-width: 71% !important;
-				flex-basis: 78%;
+			@include respond-to($phone) {
+				flex-basis: 100% !important;
+				margin-bottom: 12px !important;
+				max-width: 100%;
+			}
+
+			@include respond-to($tc) {
+				max-width: 82% !important;
+				flex-basis: 82% !important;
+			}
+
+			@include respond-to($td) {
+				flex-basis: 48.8% !important;
+			}
+		}
+
+		&.submit {
+			@include respond-to($mini-desktop) {
+				flex-basis: 48.8% !important;
+			}
+
+			@include respond-to($td) {
+				flex-basis: 48.8% !important;
+				padding: 16px 9px !important;
 			}
 		}
 	}
@@ -676,6 +738,12 @@ form#insert-data {
 		background-color: white;
 
 		@include respond-to($phone) {
+			flex-basis: 100% !important;
+			max-width: 100% !important;
+			margin-bottom: 0;
+		}
+
+		@include respond-to($tc) {
 			flex-basis: 100% !important;
 			max-width: 100% !important;
 			margin-bottom: 0;
@@ -705,16 +773,43 @@ form#insert-data {
 		margin-bottom: 12px;
 		background-color: white;
 		flex-basis: calc(98% / 3);
+		color: rgba(1, 17, 44, 0.5);
 
 		@include respond-to($phone) {
 			border-radius: 6px;
 			margin-top: 12px;
-			padding: 20px 9px;
+			padding: 19px 10px !important;
+			flex-basis: 100% !important;
+			max-width: 100% !important;
+			margin-bottom: 0;
+		}
+
+		@include respond-to($tc) {
+			border-radius: 6px;
+			margin-top: 12px;
+			padding: 19px 10px !important;
+			flex-basis: 100% !important;
+			max-width: 100% !important;
+			margin-bottom: 0;
 		}
 
 		@include respond-to($mid-tablet) {
 			flex-basis: 32.667%;
 			max-width: 32%;
+		}
+
+		&:valid {
+			color: var(--primary-dark) !important;
+		}
+	}
+
+	.invoice-wrap {
+		@include respond-to($phone) {
+			margin-top: 2rem;
+		}
+
+		@include respond-to($tc) {
+			margin-top: 2rem;
 		}
 	}
 
@@ -748,6 +843,16 @@ form#insert-data {
 			@include respond-to($phone) {
 				flex-basis: 100% !important;
 				max-width: 100% !important;
+			}
+		}
+
+		> label {
+			@include respond-to($phone) {
+				margin-top: 2rem;
+			}
+	
+			@include respond-to($tc) {
+				margin-top: 2rem;
 			}
 		}
 
@@ -797,6 +902,10 @@ form#insert-data {
 			@include respond-to($phone) {
 				flex-basis: 100%;
 			}
+
+			@include respond-to($small-tablet) {
+				flex-basis: 48%;
+			}
 		}
 
 		.data-info {
@@ -804,8 +913,20 @@ form#insert-data {
 				font-size: toRem(26);
 			}
 
-			ul li {
-				font-size: toRem(14);
+			ul {
+				@include respond-to($phone) {
+					padding-left: 15px;
+				}
+
+				li {
+					font-size: toRem(14);
+				}
+			}
+
+			.link {
+				@include respond-to($phone) {
+					font-size: toRem(16);
+				}
 			}
 		}
 

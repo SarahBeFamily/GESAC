@@ -1,0 +1,160 @@
+/**
+ * Comunicati Stampa & Bandi styles
+ */
+
+section#comunicati,
+section#bandi {
+	padding: 6rem 10% 2rem;
+
+	@include respond-to($phone) {
+		padding: 2rem 15px;
+	}
+
+	@include respond-to($tablet) {
+		padding: 5rem 5% 2rem;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 5rem 3.5% 2rem;
+	}
+
+	.row,
+	#articles {
+		flex-basis: 70%;
+		justify-content: space-between;
+		height: 100%;
+		position: relative;
+
+		@include respond-to($max-tablet) {
+			flex-basis: 100%;
+		}
+
+		@include respond-to($mini-desktop) {
+			flex-basis: 60%;
+		}
+
+		h2 {
+			text-align: left;
+			color: var(--secondary);
+			font-size: toRem(30);
+			font-weight: 500;
+			margin-bottom: 4rem;
+		}
+
+		.single {
+			margin-bottom: 4rem;
+
+			.content {
+				.date {
+					color: col-alpha('primary', 0.5) !important;
+					text-transform: uppercase;
+				}
+		
+				h3 {
+					font-size: toRem(30);
+					font-weight: 400;
+					text-align: left;
+					margin-top: 1rem;
+				}
+	
+				p {
+					line-height: toRem(30);
+					
+					@include respond-to($phone) {
+						font-size: toRem(18);
+					}
+				}
+
+				.button.secondary {
+					width: 250px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-top: 2rem;
+
+					@include respond-to($phone-plus) {
+						width: 100%;
+					}
+
+					i {
+						margin: 0 0 0 8px;
+
+						@include respond-to($phone-plus) {
+							content: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.55813 15.9419C9.68016 16.064 9.84008 16.125 10 16.125C10.1599 16.125 10.3198 16.064 10.4419 15.9419L16.0669 10.3169C16.311 10.0727 16.311 9.67723 16.0669 9.43313C15.8227 9.18902 15.4272 9.18898 15.1831 9.43313L10.625 13.9912V2.375C10.625 2.02953 10.3455 1.75 10 1.75C9.65453 1.75 9.375 2.02953 9.375 2.375V13.9912L4.81687 9.43313C4.57273 9.18898 4.17723 9.18898 3.93313 9.43313C3.68902 9.67727 3.68898 10.0728 3.93313 10.3169L9.55813 15.9419ZM16.875 18H3.125C2.77953 18 2.5 18.2795 2.5 18.625C2.5 18.9705 2.77953 19.25 3.125 19.25H16.875C17.2205 19.25 17.5 18.9705 17.5 18.625C17.5 18.2795 17.2205 18 16.875 18Z' fill='#{url-friendly-colour($white)}'/%3E%3C/svg%3E%0A");
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar {
+		flex-basis: 25%;
+
+		@include respond-to($max-tablet) {
+			flex-basis: 100%;
+			order: 3;
+		}
+
+		> div {
+			position: sticky;
+			position: -webkit-sticky;
+			top: 20px;
+			margin-bottom: 2.8rem;
+
+			.bg {
+				background-color: var(--light-gray);
+				border-radius: $radius;
+				padding: 24px;
+				margin: 2.5rem 0 0 0;
+			}
+
+			p {
+				font-size: toRem(18);
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			h3 {
+				font-size: toRem(22);
+				font-weight: 400;
+				margin-top: 0;
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				
+				li {
+					padding: 4px 0;
+
+					&.current {
+						a {
+							color: var(--secondary) !important;
+							border-bottom: 2px solid var(--secondary);
+						}
+					}
+
+					a:any-link {
+						text-decoration: none;
+						color: var(--primary-dark);
+					}
+				}
+			}
+		}
+	}
+
+	#more-news {
+		display: flex;
+		justify-content: center;
+		flex-basis: 100%;
+		padding: 2rem 0;
+
+		@include respond-to($max-tablet) {
+			order: 2;
+			padding: 0 0 4rem;
+		}
+	}
+}

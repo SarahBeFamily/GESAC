@@ -172,13 +172,17 @@ ul.menu {
 
 			.megamenu-wrap {
 				position: absolute;
-				top: betterClamp(161,196);
+				top: betterClamp(104,138);
 				left: 0;
 				height: 100vh;
 				width: 100%;
 				display: none;
 				backdrop-filter: blur(15px);
 				-webkit-backdrop-filter: blur(15px);
+
+				@include respond-to($retina1) {
+					top: 138px;
+				}
 			}
 
 			.megamenu {
@@ -187,8 +191,6 @@ ul.menu {
 				height: 50vh;
 				flex-wrap: wrap;
 				align-content: space-between;
-				// background-size: cover;
-				// background-position: right center;
 				background-size: contain;
 				background-position: right top;
 				background-repeat: no-repeat;
@@ -324,28 +326,28 @@ ul.menu {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	margin-top: -31px;
+	top: 0;
 	left: 100vw;
 	background-color: var(--primary-dark);
 	z-index: 888;
 	transition: all 0.3s ease-in-out;
 	overflow: scroll;
 
-	@include respond-to($small-phone) {
-		margin-top: -15px;
-	}
+	// @include respond-to($small-phone) {
+	// 	margin-top: -15px;
+	// }
 
-	@include respond-to($mid-phone) {
-		margin-top: -20px;
-	}
+	// @include respond-to($mid-phone) {
+	// 	margin-top: -20px;
+	// }
 
-	@include respond-to($small-tablet) {
-		margin-top: -37px;
-	}
+	// @include respond-to($small-tablet) {
+	// 	margin-top: -37px;
+	// }
 
-	@include respond-to($tablet) {
-		margin-top: -45px;
-	}
+	// @include respond-to($tablet) {
+	// 	margin-top: -45px;
+	// }
 
 	.row-main {
 		justify-content: space-between;

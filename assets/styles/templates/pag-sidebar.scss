@@ -1,0 +1,153 @@
+section#page {
+	padding: 6rem 10% 2rem;
+
+	@include respond-to($phone) {
+		padding: 2rem 15px;
+	}
+
+	@include respond-to($tablet) {
+		padding: 5rem 5% 2rem;
+	}
+
+	@include respond-to($mini-desktop) {
+		padding: 5rem 3.5% 2rem;
+	}
+
+	.row,
+	#content {
+		flex-basis: 70%;
+		justify-content: space-between;
+		height: 100%;
+		position: relative;
+
+		@include respond-to($max-tablet) {
+			flex-basis: 100%;
+		}
+
+		@include respond-to($mini-desktop) {
+			flex-basis: 60%;
+		}
+
+		h2 {
+			text-align: left;
+			font-size: toRem(40);
+			font-weight: 500;
+			margin: 0.5rem 0;
+		}
+	}
+
+	.sidebar {
+		flex-basis: 25%;
+
+		@include respond-to($max-tablet) {
+			flex-basis: 100%;
+			margin-top: 3rem;
+		}
+
+		> div {
+			position: sticky;
+			position: -webkit-sticky;
+			top: 20px;
+			background-color: var(--light-gray);
+			border-radius: $radius;
+			padding: 24px;
+
+			h3 {
+				font-size: toRem(22);
+				font-weight: 400;
+				margin-top: 0;
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				
+				> li {
+					padding: 12px 0 4px;
+					color: col-alpha('primary', 0.5) !important;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					// height: 42px;
+					position: relative;
+					cursor: pointer;
+					transition: all 0.3s ease-in-out;
+
+					&:after {
+						content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1505 18.415C11.1505 18.9947 10.6801 19.465 10.1005 19.465C9.52079 19.465 9.05047 18.9947 9.05047 18.415L9.05047 11.0503L1.68574 11.0503C1.10606 11.0503 0.635743 10.58 0.635743 10.0003C0.635743 9.42063 1.10606 8.95031 1.68574 8.95031L9.05047 8.95031L9.05047 1.58558C9.05047 1.00591 9.52079 0.535588 10.1005 0.535588C10.6801 0.535588 11.1505 1.00591 11.1505 1.58558L11.1505 8.95031L18.5152 8.95031C19.0949 8.95031 19.5652 9.42063 19.5652 10.0003C19.5652 10.58 19.0949 11.0503 18.5152 11.0503L11.1505 11.0503L11.1505 18.415Z' fill='#{url-friendly-colour($primary-dark)}' fill-opacity='0.5'/%3E%3C/svg%3E");
+						margin: 0;
+						position: absolute;
+						right: 0;
+						top: 11px;
+						transition: all 0.1s ease-in;
+					}
+
+					&:last-child {
+						> a {
+							border: 0;
+						}
+					}
+
+					&.open {
+						// height: 100%;
+
+						&:after {
+							content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1505 18.415C11.1505 18.9947 10.6801 19.465 10.1005 19.465C9.52079 19.465 9.05047 18.9947 9.05047 18.415L9.05047 11.0503L1.68574 11.0503C1.10606 11.0503 0.635743 10.58 0.635743 10.0003C0.635743 9.42063 1.10606 8.95031 1.68574 8.95031L9.05047 8.95031L9.05047 1.58558C9.05047 1.00591 9.52079 0.535588 10.1005 0.535588C10.6801 0.535588 11.1505 1.00591 11.1505 1.58558L11.1505 8.95031L18.5152 8.95031C19.0949 8.95031 19.5652 9.42063 19.5652 10.0003C19.5652 10.58 19.0949 11.0503 18.5152 11.0503L11.1505 11.0503L11.1505 18.415Z' fill='#{url-friendly-colour($primary-dark)}' fill-opacity='1'/%3E%3C/svg%3E");
+							transform: rotate(45deg);
+						}
+
+						> a {
+							color: var(--primary-dark) !important;
+							border-color: var(--primary-dark);
+							font-weight: 500;
+						}
+
+						// .submenu {
+						// 	opacity: 1 !important;
+						// }
+					}
+
+					> a {
+						border-bottom: 2px solid var(--medium-gray);
+						flex-basis: 100%;
+						padding-bottom: 4px;
+					}
+
+					.submenu {
+						display: none;
+						flex-basis: 100%;
+						list-style-type: disc;
+						padding-left: 15px;
+						margin-top: 10px;
+
+						li {
+							padding: 7px 0;
+							color: var(--primary-dark) !important;
+							justify-content: flex-start;
+
+							&::before {
+								content: '•';
+								margin-right: 10px;
+							}
+
+							&::after {
+								content: '';
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	> .link {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 6rem 33px 33px;
+
+		@include respond-to($phone-plus) {
+			padding: 4rem 33px 33px;
+		}
+	}
+}
