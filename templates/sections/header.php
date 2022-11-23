@@ -12,7 +12,12 @@
 			Ultime Notizie: 
 		</div>
 		<div class="marquee news">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisi eget dictum lectus enim. Sapien facilisi adipiscing ac aliquam maecenas.    -    Sapien facilisi adipiscing ac aliquam maecenas. 
+			<div class="marquee--inner">
+				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisi eget dictum lectus enim. Sapien facilisi adipiscing ac aliquam maecenas.</span>
+				- 
+				<span>Sapien facilisi adipiscing ac aliquam maecenas. </span> 
+				- 
+			</div>
 		</div>
 	</div>
 	<!-- / ROW NEWS ENDS -->
