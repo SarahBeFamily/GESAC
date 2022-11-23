@@ -50,8 +50,19 @@ $(function() {
 
 	// Breaking news effect
 	$('.row-news').on('click', function() {
-		$(this).toggleClass('open');
+		if ( $(window).width() < 1024 ) {
+			$(this).toggleClass('open');
+		}
 	})
+	// marquee
+	const root = document.documentElement,
+    marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed'),
+    marqueeContent = document.querySelector('.marquee--inner');
+
+	if (marqueeContent) {
+		root.style.setProperty('--marquee-elements', marqueeContent.children.length);
+		for (let i = 0; i < marqueeElementsDisplayed; i++) marqueeContent.appendChild(marqueeContent.children[i].cloneNode(!0));
+	}
 
 	// General button open to close et viceversa
 	$('.btn-open-close').on('click', function() {
