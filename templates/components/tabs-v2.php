@@ -55,6 +55,10 @@
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget feugiat sagittis sagittis eleifend.
 							</p>
 						</div>
+
+						<!-- SLIDE VUOTA PER COMPENSARE LO SPOSTAMENTO INIZIALE A DESTRA DELLE CARD,
+						DIVERSAMENTE L'ULTIMA SLIDE NON RISULTEREBBE MAI PIENAMENTE VISIBILE -->
+						<div class="slide empty"></div>
 					</div>
 				</div>
 
@@ -107,6 +111,10 @@
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget feugiat sagittis sagittis eleifend.
 							</p>
 						</div>
+
+						<!-- SLIDE VUOTA PER COMPENSARE LO SPOSTAMENTO INIZIALE A DESTRA DELLE CARD,
+						DIVERSAMENTE L'ULTIMA SLIDE NON RISULTEREBBE MAI PIENAMENTE VISIBILE -->
+						<div class="slide empty"></div>
 					</div>
 				</div>
 			</div>
@@ -158,6 +166,10 @@
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget feugiat sagittis sagittis eleifend.
 							</p>
 						</div>
+
+						<!-- SLIDE VUOTA PER COMPENSARE LO SPOSTAMENTO INIZIALE A DESTRA DELLE CARD,
+						DIVERSAMENTE L'ULTIMA SLIDE NON RISULTEREBBE MAI PIENAMENTE VISIBILE -->
+						<div class="slide empty"></div>
 					</div>
 				</div>
 			</div>

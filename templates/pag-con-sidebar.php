@@ -27,7 +27,7 @@
 			</p>
 		</div>
 
-		<div class="sidebar accordion mobile-hidden">
+		<div class="sidebar accordion">
 			<div>
 				<h3>Titolo menu</h3>
 

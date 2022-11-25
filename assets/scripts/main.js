@@ -369,12 +369,19 @@ $(function() {
 		infinite: false,
 		centerMode: false,
     	variableWidth: false,
-		slidesToShow: 3.5,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		cssEase: 'linear',
 		prevArrow: '<a class="prev"><img src="./assets/img/arrow-right2.svg" /></a>',
 		nextArrow: '<a class="next"><img src="./assets/img/arrow-right2.svg" /></a>',
 		responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 3.5,
+					slidesToScroll: 1,
+				},
+			},
 			{
 				breakpoint: 1024,
 				settings: {
