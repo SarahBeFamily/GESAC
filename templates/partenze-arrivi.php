@@ -59,7 +59,7 @@
 					</div>
 
 					<div class="meteo">
-						<i class="icon icon-weather --coperto"></i>
+						<i class="icon icon-weather coperto"></i>
 						<span id="temperature">22°C</span>
 					</div>
 				</div>
