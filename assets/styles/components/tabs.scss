@@ -91,35 +91,35 @@
 		margin: 50px auto;
 
 		.slick-track {
-			@include respond-to($max-tablet) {
-				display: flex;
+			margin-left: 14% !important;
+
+			@include respond-to($phone-plus) {
+				margin-left: 0 !important;
 			}
 
-			> div:first-child {
-				margin-left: 15vw;
-
-				@include respond-to($phone-plus) {
-					margin-left: 0;
-				}
+			@include respond-to($mid-tablet) {
+				margin-left: 8% !important;
 			}
 		}
 
 		.slick-slide {
-			background-color: var(--light-blue);
-			border-radius: 12px;
-
-			@include respond-to($phone) {
-				margin-right: 20px;
+			> div {
+				margin: 0 20px;
+				background-color: var(--light-blue);
+				border-radius: 12px;
+				height: 100%;
 			}
 
-			@include respond-to($mid-tablet) {
-				margin-right: 25px;
-				min-width: 16%;
-			}
-
-			@include respond-to($min-tablet) {
-				margin-right: betterClamp(40,70);
-				min-width: 15%;
+			&:last-child {
+				@include respond-to($phone-plus) {
+					display: none;
+				}
+				
+				> div {
+					margin: 0;
+					background-color: transparent;
+					width: 50px;
+				}
 			}
 		}
 

@@ -117,7 +117,7 @@ $anomalia-gallery: '(min-width: 1440px) and (max-width: 1500px)';
 $desktop: '(min-width: 1440.5px) and (max-width: 1920px)';
 $min-wide-desktop: '(min-width: 1440.5px)';
 $max-desktop: '(max-width: 1920px)';
-$retina1: '(min-width: 1919px) and (min-resolution: 1.25dppx)';
+$retina1: '(min-width: 1920.5px)';
 $retina2: '(min-width: 1919px) and (min-resolution: 2dppx)';
 @mixin respond-to($media) {
 	@media only screen and #{$media} {
