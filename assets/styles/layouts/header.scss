@@ -203,6 +203,15 @@ header {
 					backdrop-filter: blur(7px);
 					-webkit-backdrop-filter: blur(7px);
 
+					@include respond-to($small-phone) {
+    					top: 56px !important;
+					}
+
+					@include respond-to($phone) {
+						right: 1%;
+    					top: 65px;
+					}
+
 					@include respond-to($max-tablet) {
 						right: 8%;
 						top: 76px;
