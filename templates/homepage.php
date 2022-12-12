@@ -34,7 +34,25 @@
 
 				<div class="meteo">
 					<i class="icon icon-weather coperto"></i>
-					<span id="temperature">22°C</span>
+					<span class="temperature">22°C</span>
+				</div>
+
+				<div class="meteo-three-days">
+					<div class="today">
+						<span class="day">Today</span>
+						<i class="icon icon-weather coperto"></i>
+						<span class="temperature">22°C</span>
+					</div>
+					<div class="tomorrow">
+						<span class="day">13 Mar.</span>
+						<i class="icon icon-weather coperto"></i>
+						<span class="temperature">22°C</span>
+					</div>
+					<div class="after-tomorrow">
+						<span class="day">14 Mar.</span>
+						<i class="icon icon-weather coperto"></i>
+						<span class="temperature">22°C</span>
+					</div>
 				</div>
 			</div>
 		</div>

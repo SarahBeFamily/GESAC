@@ -174,6 +174,16 @@ $(function() {
 		}
 	});
 
+	// Meteo tab open - close
+	$('.meteo').before().on('click', function() {
+		$('.meteo-three-days').css('display', 'flex');
+	});
+
+	$('.meteo-three-days').before().on('click', function() {
+		$('.meteo-three-days').css('display', 'none');
+	});
+
+
 	// Tabs v2 / v3 Desktop & Mobile
 	$('.desk-tabs-title, ul.tabs, .ul-mobile div').on('click', '> li', function() {
 		let $this = $(this),
