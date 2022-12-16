@@ -70,41 +70,41 @@
 
 	<div id="footer-items">
 
-		<div class="col">
+		<a href="#" class="col link">
 			<span class="icon-circle"><i class="icon icon-parking"></i></span>
 			<p class="content">
 				<span class="title">Info Parcheggio</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link">
 			<span class="icon-circle"><i class="icon icon-location"></i></span>
 			<p class="content">
 				<span class="title">Come arrivare in Aeroporto</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link">
 			<span class="icon-circle"><i class="icon icon-timer"></i></span>
 			<p class="content">
 				<span class="title">FAST Track</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link">
 			<span class="icon-circle"><i class="icon icon-plane-2"></i></span>
 			<p class="content">
 				<span class="title">Acquista Volo</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 	</div>
 </section>
 
