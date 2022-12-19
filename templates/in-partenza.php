@@ -150,7 +150,7 @@
 			</div>
 			
 			<div class="icon-wrap icon-arrow">
-				<i class="icon icon-arrow-right more"></i>
+				<a href="#"><i class="icon icon-arrow-right more"></i></a>
 			</div>
 		</div>
 
@@ -167,7 +167,7 @@
 			</div>
 
 			<div class="icon-wrap icon-arrow">
-				<i class="icon icon-arrow-right more"></i>
+				<a href="#"><i class="icon icon-arrow-right more"></i></a>
 			</div>
 		</div>
 
@@ -184,7 +184,7 @@
 			</div>
 
 			<div class="icon-wrap icon-arrow">
-				<i class="icon icon-arrow-right more"></i>
+				<a href="#"><i class="icon icon-arrow-right more"></i></a>
 			</div>
 		</div>
 	</div>
