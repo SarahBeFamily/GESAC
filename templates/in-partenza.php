@@ -149,9 +149,9 @@
 				<i class="icon icon-camera"></i>
 			</div>
 			
-			<div class="icon-wrap icon-arrow">
+			<a href="#" class="icon-wrap icon-arrow">
 				<i class="icon icon-arrow-right more"></i>
-			</div>
+			</a>
 		</div>
 
 		<div class="card-item">
@@ -166,9 +166,9 @@
 				<i class="icon icon-parking-dark"></i>
 			</div>
 
-			<div class="icon-wrap icon-arrow">
+			<a href="#" class="icon-wrap icon-arrow">
 				<i class="icon icon-arrow-right more"></i>
-			</div>
+			</a>
 		</div>
 
 		<div class="card-item">
@@ -183,9 +183,9 @@
 				<i class="icon icon-wheelchair"></i>
 			</div>
 
-			<div class="icon-wrap icon-arrow">
+			<a href="#" class="icon-wrap icon-arrow">
 				<i class="icon icon-arrow-right more"></i>
-			</div>
+			</a>
 		</div>
 	</div>
 </section>

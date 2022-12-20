@@ -26,6 +26,16 @@ header {
 
 				.marquee--inner {
 					padding: 0 28px 30px;
+
+					@include respond-to($max-tablet) {
+						flex-wrap: wrap;
+					}
+
+					span, p {
+						@include respond-to($max-tablet) {
+							padding: 0;
+						}
+					}
 				}
 			}
 		}
@@ -64,12 +74,22 @@ header {
 				font-size: toRem(14);
 			}
 
-			span {
+			.marquee--inner {
+				display: flex;
+				align-items: center;
+			}
+
+			span, p {
 				padding: 20px;
+				margin: 0;
 
 				&:first-child {
 					padding-left: 0 !important;
 				}
+			}
+
+			a:any-link {
+				color: white;
 			}
 		}
 	}
@@ -191,7 +211,7 @@ header {
 				.login-header-panel {
 					position: absolute;
 					z-index: 100;
-					top: betterClamp(149,196);
+					top: 69px;
 					background-color: rgba(1, 17, 44, 90%);
 					color: white;
 					font-size: toRem(12);
@@ -208,18 +228,18 @@ header {
 					}
 
 					@include respond-to($phone) {
-						right: 1%;
-    					top: 65px;
+						right: 1% !important;
+    					top: 65px !important;
 					}
 
 					@include respond-to($max-tablet) {
 						right: 8%;
-						top: 76px;
+						top: 95px;
 					}
 
 					@include respond-to($mini-desktop) {
 						right: 0;
-						top: 57px;
+						top: 55px;
 					}
 
 					p {
