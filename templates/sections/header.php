@@ -13,9 +13,9 @@
 		</div>
 		<div class="marquee news">
 			<div class="marquee--inner">
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisi eget dictum lectus enim. Sapien facilisi adipiscing ac aliquam maecenas.</span>
+				<p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Egestas facilisi eget dictum lectus enim. Sapien facilisi adipiscing ac aliquam maecenas.</p>
 				- 
-				<span>Sapien facilisi adipiscing ac aliquam maecenas. </span> 
+				<p>Sapien facilisi adipiscing ac aliquam maecenas. </p> 
 				- 
 			</div>
 		</div>

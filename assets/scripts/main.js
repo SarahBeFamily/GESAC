@@ -36,15 +36,17 @@ $(function() {
 		}
 
 		// Map button sticky on Eshop Template
-		let mapWrap = $('#buy-parking > .center-content'),
-			mapOffset = $('#lightbox-map').offset(),
-			vh = $(window).height();
+		if ($('#lightbox-map').length > 0) {
+			let mapWrap = $('#buy-parking > .center-content'),
+				mapOffset = $('#lightbox-map').offset(),
+				vh = $(window).height();
 
-			console.log(vh);
-		if (scrollTop > (mapOffset.top + (vh - 70)) && mapWrap.is(':visible')) {
-			mapWrap.addClass("sticky");
-		} else {
-			mapWrap.removeClass("sticky");
+				console.log(vh);
+			if (scrollTop > (mapOffset.top + (vh - 70)) && mapWrap.is(':visible')) {
+				mapWrap.addClass("sticky");
+			} else {
+				mapWrap.removeClass("sticky");
+			}
 		}
 	});
 
