@@ -8,6 +8,10 @@ function get_base_url()
 
 function get_sections($template)
 {
+    if (empty($template)) {
+        $template =  'homepage';
+    }
+
     $sections = [
         'meta' => 1,
         'header' => 1,
@@ -101,11 +105,7 @@ function include_section($section, $id = null, $title = null, $var = null)
  */
 function include_content_page($page)
 {
-    if (empty($page)) {
-        include 'templates/homepage.php';
-    } else {
-        include 'templates/' . $page . '.php';
-    }
+    include 'templates/' . $page . '.php';
 }
 
 /**
