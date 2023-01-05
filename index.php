@@ -4,7 +4,7 @@
  * it melts all required files and base sections
  */
 if(!empty($_SERVER['REQUEST_URI'])) {
-        $_GET['template'] = trim($_SERVER['REQUEST_URI'], '/');
+        $_GET['template'] = trim(strtok($_SERVER['REQUEST_URI'], '?'), '/');
 }
 
 require_once 'functions.php';

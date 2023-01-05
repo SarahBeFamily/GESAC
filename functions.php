@@ -6,6 +6,30 @@ function get_base_url()
     return $proto . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
 }
 
+function login() {
+
+    $user = 'gesac';
+    $pwd = '2S-Rp73#W$';
+
+    if(empty($_SERVER['PHP_AUTH_USER'])) {
+        return false;
+    }
+
+    if(empty($_SERVER['PHP_AUTH_PW'])) {
+        return false;
+    }
+
+    if(strcmp($_SERVER['PHP_AUTH_USER'], $user) !== 0) {
+        return false;
+    }
+
+    if(strcmp($_SERVER['PHP_AUTH_PW'], $pwd) !== 0) {
+        return false;
+    }
+
+    return true;
+}
+
 function get_sections($template)
 {
     if (empty($template)) {
@@ -13,16 +37,16 @@ function get_sections($template)
     }
 
     $sections = [
+        'login' => 1,
         'meta' => 1,
         'header' => 1,
         'content' => $template,
         'footer' => 1
     ];
 
-    switch ($template) {
-        case 'breaking-news':
-        case 'menu':
-        case 'footer':
+    switch (true) {
+        case strpos($template, 'api/') === 0:
+            $sections['login'] = 0;
             $sections['meta'] = 0;
             $sections['header'] = 0;
             $sections['footer'] = 0;

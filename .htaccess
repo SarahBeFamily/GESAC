@@ -14,7 +14,7 @@
 	RewriteCond %{REQUEST_FILENAME} !-d
 	#RewriteRule ^([^\.]+)$ /$1.php [NC]
 	#RewriteRule ^([^\.]+)/([^\.]+)$ /$1/?template=$2 [L]
-	RewriteRule (.+) %{ENV:CWD}?template=$1 [END]
+	RewriteRule (.+) %{ENV:CWD}?template=$1&%{QUERY_STRING} [END]
 
 </IfModule>
 
