@@ -190,6 +190,10 @@ section#form-register {
 
 			> input, > select {
 				margin-bottom: 10px;
+
+				@include respond-to($phone) {
+					flex-basis: 100%;
+				}
 			}
 
 			> select {
@@ -198,13 +202,22 @@ section#form-register {
 
 			> #ragione-sociale,
 			> #targa {
-				flex-basis: 49.7%;
+				flex-basis: 48.7%;
+
+				@include respond-to($mid-tablet) {
+					margin-top: 0;
+				}
+
+				@include respond-to($retina1) {
+					flex-basis: 49.7%;
+				}
 			}
 
 			> #ragione-sociale,
 			> #provincia-fatturazione,
 			> #targa {
 				margin-right: 10px;
+				margin-top: 0;
 			}
 
 			> #iva-cf,
@@ -214,11 +227,28 @@ section#form-register {
 
 			> #indirizzo-fatturazione {
 				flex-basis: 65.7%;
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 100%;
+				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 57.3%;
+				}
+
+				@include respond-to($small-desktop) {
+					flex-basis: 60.8%;
+				}
 			}
 
 			> #numero-fatturazione,
 			> #cap-fatturazione {
 				flex-basis: 16%;
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 32.5%;
+					margin-right: 10px !important;
+				}
 			}
 
 			> #citta-fatturazione,
@@ -227,6 +257,17 @@ section#form-register {
 			> #email-pec,
 			> #cod-destinatario {
 				flex-basis: 32.55%;
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 32.5%;
+					margin-right: 10px;
+					margin-top: 0;
+				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 32.25%;
+					margin-top: 0;
+				}
 			}
 		}
 	}
