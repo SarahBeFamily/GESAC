@@ -170,6 +170,7 @@ section#form-register {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			cursor: pointer;
 
 			@include respond-to($phone) {
 				font-size: toRem(26);
@@ -186,6 +187,47 @@ section#form-register {
 			margin-top: 2rem;
 			display: flex;
 			flex-wrap: wrap;
+
+			> input, > select {
+				margin-bottom: 10px;
+			}
+
+			> select {
+				color: rgba(1, 17, 44, 0.5);
+			}
+
+			> #ragione-sociale,
+			> #targa {
+				flex-basis: 49.7%;
+			}
+
+			> #ragione-sociale,
+			> #provincia-fatturazione,
+			> #targa {
+				margin-right: 10px;
+			}
+
+			> #iva-cf,
+			> #numero-telepass {
+				flex-basis: 48.7%;
+			}
+
+			> #indirizzo-fatturazione {
+				flex-basis: 65.7%;
+			}
+
+			> #numero-fatturazione,
+			> #cap-fatturazione {
+				flex-basis: 16%;
+			}
+
+			> #citta-fatturazione,
+			> #provincia-fatturazione,
+			> #paese-fatturazione,
+			> #email-pec,
+			> #cod-destinatario {
+				flex-basis: 32.55%;
+			}
 		}
 	}
 

@@ -100,7 +100,7 @@
 				
 				<div class="fields">
 					<input type="text" name="targa" id="targa" placeholder="Targa">
-					<input type="text" name="targa" id="targa" placeholder="Numero apparato Telepass">
+					<input type="text" name="numero-telepass" id="numero-telepass" placeholder="Numero apparato Telepass">
 				</div>
 			</div>	
 		</div>

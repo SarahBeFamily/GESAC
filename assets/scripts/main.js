@@ -765,8 +765,8 @@ $(function() {
 	// Faq accordion effect
 	// Info Parcheggi Template
 	// Fatturazione / Telepass effect in Registrazione / Login Template
-	$('.faq, .section-form').on('click', function() {
-		$(this).toggleClass('closed');
+	$('.faq, .section-form').on('click', '.title', function() {
+		$(this).parent().toggleClass('closed');
 	});
 
 	// Single shop view effect
