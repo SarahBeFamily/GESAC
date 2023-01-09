@@ -170,6 +170,7 @@ section#form-register {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			cursor: pointer;
 
 			@include respond-to($phone) {
 				font-size: toRem(26);
@@ -186,6 +187,88 @@ section#form-register {
 			margin-top: 2rem;
 			display: flex;
 			flex-wrap: wrap;
+
+			> input, > select {
+				margin-bottom: 10px;
+
+				@include respond-to($phone) {
+					flex-basis: 100%;
+				}
+			}
+
+			> select {
+				color: rgba(1, 17, 44, 0.5);
+			}
+
+			> #ragione-sociale,
+			> #targa {
+				flex-basis: 48.7%;
+
+				@include respond-to($mid-tablet) {
+					margin-top: 0;
+				}
+
+				@include respond-to($retina1) {
+					flex-basis: 49.7%;
+				}
+			}
+
+			> #ragione-sociale,
+			> #provincia-fatturazione,
+			> #targa {
+				margin-right: 10px;
+				margin-top: 0;
+			}
+
+			> #iva-cf,
+			> #numero-telepass {
+				flex-basis: 48.7%;
+			}
+
+			> #indirizzo-fatturazione {
+				flex-basis: 65.7%;
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 100%;
+				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 57.3%;
+				}
+
+				@include respond-to($small-desktop) {
+					flex-basis: 60.8%;
+				}
+			}
+
+			> #numero-fatturazione,
+			> #cap-fatturazione {
+				flex-basis: 16%;
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 32.5%;
+					margin-right: 10px !important;
+				}
+			}
+
+			> #citta-fatturazione,
+			> #provincia-fatturazione,
+			> #paese-fatturazione,
+			> #email-pec,
+			> #cod-destinatario {
+				flex-basis: 32.55%;
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 32.5%;
+					margin-right: 10px;
+					margin-top: 0;
+				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 32.25%;
+					margin-top: 0;
+				}
+			}
 		}
 	}
 
