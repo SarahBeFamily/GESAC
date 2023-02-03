@@ -433,6 +433,7 @@ ol {
 
 /** Slider cards, global element 
  *	- Partenze / Arrivi
+ *	- Negozi / Ristoranti
 **/
 
 .slider-cards {
@@ -487,6 +488,11 @@ ol {
 					text-decoration: none;
 					font-size: toRem(14);
 				}
+			}
+
+			p {
+				overflow: auto;
+				max-height: 83px;
 			}
 		}
 	}

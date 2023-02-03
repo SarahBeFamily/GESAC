@@ -775,7 +775,8 @@ $(function() {
 		bc_current = $('.breadcrumbs .current').html();
 
 	$('.single-shop.list').on('click', function() {
-		let nome = $(this).find('h2').html();
+		let nome = $(this).find('h2').html(),
+			parent = $(this).parent('.shop-list');
 
 		if ($(this).hasClass('list')) {
 			document.querySelector('body').scroll(0,0);
@@ -783,6 +784,7 @@ $(function() {
 
 		$(this).siblings().addClass('hidden');
 		$(this).removeClass('list').addClass('single-view');
+		parent.removeClass('grid');
 		$(this).find('.single').removeClass('hidden');
 		$('#pagetitle h1, .breadcrumbs .current').html(nome);
 
@@ -792,6 +794,7 @@ $(function() {
 	});
 
 	$('.shop-filter select').on('change', function() {
+		$('.shop-list').addClass('grid');
 		$('.single-shop').removeClass('single-view hidden').addClass('list');
 		$('.single-shop .single').addClass('hidden');
 		$('#pagetitle h1').html(pt_title);

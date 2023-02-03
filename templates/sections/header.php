@@ -748,7 +748,7 @@
 					<!-- / LOGIN MENU ENDS -->
 
 				<a href="#" class="shopping-bag"><i class="icon icon-shopping-bag"></i></a>
-				<a href="#" class="search"><i class="icon icon-search"></i></a>
+				<a href="#" class="global-search"><i class="icon icon-search"></i></a>
 				<a href="#" class="hamburger"><i class="icon icon-hamburger-menu"></i></a>
 
 				<!-- MENU MOBILE ONLY STARTS -->

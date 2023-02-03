@@ -305,7 +305,7 @@ header {
 					}
 				}
 
-				> .search {
+				> .global-search {
 					@include respond-to($max-tablet) {
 						display: none;
 					}
