@@ -534,6 +534,14 @@ form#search-parking {
 		}
 
 		&.drop {
+			flex-basis: 100% !important;
+
+			@include respond-to($phone) {
+				min-width: 77px !important;
+				padding-left: 0 !important;
+				padding-right: 3px !important;
+			}
+
 			@include respond-to($tablet) {
 				max-width: betterClamp(115,173);
 			}
