@@ -129,6 +129,9 @@ section#prenota-parcheggio {
 			}
 
 			input {
+				flex-basis: 100%;
+				width: 100%;
+				
 				@include respond-to($phone) {
 					min-width: 75%;
 				}
