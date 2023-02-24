@@ -583,6 +583,41 @@ $(function() {
 		],
 	});
 
+	// Global component "Carousel loghi"
+	$('.slideshow-loghi').slick({
+		dots: true,
+		arrows: false,
+		infinite: false,
+		centerMode: false,
+    	variableWidth: false,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2.5,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1.5,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 430,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	});
+
 	/**
 	 * Show an hidden wrapper of fields on checking a checkbox field
 	 * @param {jquery element} el
@@ -765,7 +800,7 @@ $(function() {
 	// Faq accordion effect
 	// Info Parcheggi Template
 	// Fatturazione / Telepass effect in Registrazione / Login Template
-	$('.faq, .section-form').on('click', '.title', function() {
+	$('.faq, .section-form').on('click', '.title, .title-wrap', function() {
 		$(this).parent().toggleClass('closed');
 	});
 

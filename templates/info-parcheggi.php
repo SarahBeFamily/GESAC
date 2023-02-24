@@ -391,38 +391,7 @@
 <section id="faq">
 	<h2>FAQ Parcheggio</h2>
 
-	<div class="row wrap">
-		
-		<div class="faq closed">
-			<p class="title">Titolo informazione/domanda</p>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.</p>
-		</div>
-
-		<div class="faq closed">
-			<p class="title">Titolo informazione/domanda</p>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.</p>
-		</div>
-
-		<div class="faq closed">
-			<p class="title">Titolo informazione/domanda</p>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.</p>
-		</div>
-
-		<div class="faq closed">
-			<p class="title">Titolo informazione/domanda</p>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.</p>
-		</div>
-
-		<div class="faq closed">
-			<p class="title">Titolo informazione/domanda</p>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.</p>
-		</div>
-	</div>
+	<?php get_component('accordion', '', true); ?>
 </section>
 
 <?php
