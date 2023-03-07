@@ -747,6 +747,59 @@
 					</div>
 					<!-- / LOGIN MENU ENDS -->
 
+					<!-- ACCOUNT ALREADY LOGGED MENU STARTS -->
+					<div class="logged-header-panel hidden">
+
+						<div class="col logged-general">
+							<div class="general">
+								<div>
+									<p>Benvenuto</p>
+									<p><span class="user">Nome Cognome</span></p>
+								</div>
+
+								<ul>
+									<li><a href="#">Fidelity card</a></li>
+									<li><a href="#">Vantaggi acquisiti</a></li>
+									<li><a href="#">Riepilogo attività</a></li>
+									<li><a href="#">Il mio profilo</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col logged-resume">
+							<div class="resume">
+								<p>
+									Saldo Punti
+									<span id="resume-points">XXX</span>
+								</p>
+
+								<p>
+									Codice Carta
+									<span id="resume-card-code">XXXXXXXXXXX</span>
+								</p>
+
+								<p>
+									Status
+									<span id="resume-status">Nome tipologia status</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="col logged-cta">
+							<div class="cta-services">
+								<a href="#" class="button secondary">Acquista servizi</a>
+							</div>
+						</div>
+
+						<div class="col logged-logout">
+							<p>
+								<a href="#">Logout</a>
+							</p>
+						</div>
+
+					</div>
+					<!-- / ACCOUNT ALREADY LOGGED MENU ENDS -->
+
 				<a href="#" class="shopping-bag"><i class="icon icon-shopping-bag"></i></a>
 				<a href="#" class="global-search"><i class="icon icon-search"></i></a>
 				<a href="#" class="hamburger"><i class="icon icon-hamburger-menu"></i></a>

@@ -33,7 +33,7 @@ ul.menu {
 			cursor: pointer;
 
 			@include respond-to($mini-desktop) {
-				padding: 12.5px betterClamp(20.5, 40.1, 1024, 1280);
+				padding: 12.5px betterClamp(20.5, 40.1, 1024, 1280.5);
 			}
 
 			@include respond-to($small-desktop) {
