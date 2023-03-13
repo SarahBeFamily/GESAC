@@ -5,6 +5,9 @@
 @import "globals/typography";
 @import "globals/global";
 
+@import "components/accordion";
+@import "components/carousel-grid-loghi";
+@import "components/download-doc-elenco-img.scss";
 @import "components/icons";
 @import "components/buttons";
 @import "components/menu";
@@ -15,6 +18,7 @@
 @import "components/breadcrumbs";
 @import "components/page-title";
 @import "components/fancybox";
+@import "components/tabella-voli";
 
 @import "sections/cta";
 @import "sections/blog";

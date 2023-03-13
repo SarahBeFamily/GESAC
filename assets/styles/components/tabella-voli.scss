@@ -1,0 +1,124 @@
+.tab-wrap {
+	@include respond-to($max-tablet) {
+		width: 100vw;
+		overflow-x: scroll;
+		padding-bottom: 2rem;
+	}
+	.flights-tab {
+		@include respond-to($max-tablet) {
+			width: 1100px;
+			padding: 0 6%;
+		}
+
+		.titles.row {
+			@extend .form-filter;
+			justify-content: space-around;
+			border-bottom: 1px solid var(--primary-dark);
+			text-transform: uppercase;
+			font-size: toRem(14);
+			padding: 10px 0;
+
+			> .col {
+				flex-basis: 10%;
+				text-align: center;
+
+				&.airline {
+					flex-basis: 30%;
+				}
+
+				&.periodo {
+					flex-basis: 20%;
+				}
+			}
+		}
+
+		.single-flight {
+			@extend .form-filter;
+			padding: 33px 0;
+			border-bottom: 1px solid var(--primary-dark);
+			justify-content: space-around;
+
+			@include respond-to($mini-desktop) {
+				margin: 0 3.5%;
+			}
+
+			@include respond-to($small-desktop) {
+				margin: 0 5%;
+			}
+
+			> .col {
+				flex-basis: 10%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: betterClamp(16,22);
+
+				&.flight-info {
+					flex-basis: 30%;
+					align-items: center;
+
+					@include respond-to($mini-desktop) {
+						flex-basis: 32%;
+					}
+
+					.info {
+						> div {
+							padding: 5px 0;
+						}
+
+						.name {
+							font-size: toRem(22);
+						}
+
+						.extra {
+							padding: 0 !important;
+							font-size: 1rem;
+						}
+					}
+				}
+
+				&.periodo,
+				&.orario,
+				&.frequenza {
+					@include respond-to($mid-tablet) {
+						text-align: center;
+					}
+
+					@include respond-to($mini-desktop) {
+						text-align: center;
+					}
+				}
+
+				&.periodo {
+					flex-basis: 20%;
+					font-size: betterClamp(16,18);
+
+					span {
+						color: var(--secondary);
+
+						@include respond-to($max-mini-desktop) {
+							padding: 0 5px;
+						}
+					}
+				}
+
+				.label {
+					text-transform: uppercase;
+					font-size: toRem(18);
+					font-weight: 500;
+					text-align: center;
+					flex-basis: 100%;
+					color: var(--primary-dark) !important;
+					padding-bottom: 12px;
+				}
+			}
+		}
+
+		> .link {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			padding: 33px;
+		}
+	}
+}

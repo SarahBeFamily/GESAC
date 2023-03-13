@@ -57,7 +57,7 @@ section#news {
 				align-content: space-between;
 				border-radius: 8px;
 				padding: 24px;
-				min-height: 45%;
+				max-height: 55%;
 
 				@include respond-to($phone) {
 					padding: 18px;
@@ -68,6 +68,8 @@ section#news {
 					font-weight: 500;
 					width: 100%;
 					margin-top: 0;
+					overflow: auto;
+					height: 90px;
 				}
 		
 				.meta {
@@ -158,7 +160,7 @@ section#news {
 		}
 	}
 
-	.sidebar {
+	.news-sidebar {
 		flex-basis: 25%;
 
 		@include respond-to($max-tablet) {
@@ -175,7 +177,7 @@ section#news {
 			padding: 24px;
 			margin-bottom: 2.8rem;
 
-			.search {
+			.news-search {
 				display: flex;
 
 				input:not([type="submit"]) {

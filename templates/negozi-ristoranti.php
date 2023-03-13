@@ -29,7 +29,7 @@
 		</select>
 	</div>
 
-	<div class="shop-list row between-content wrap">
+	<div class="shop-list row grid between-content wrap">
 
 		<!-- SINGLE SHOP COLUMN -->
 		<div class="single-shop list">
@@ -41,7 +41,14 @@
 				<h2>Air Cafè Ristobar</h2>
 
 				<div class="description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec faucibus massa metus, turpis in arcu tellus. Lorem aliquet eros in eget nec id.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Lorem id vestibulum egestas rhoncus, quam faucibus.
+					Sem at quis integer rhoncus, sit nec adipiscing aenean turpis.
+					Ac at at massa fermentum risus. Tempor semper vulputate blandit tristique vestibulum.
+					Nulla tellus in mattis nunc. Venenatis ornare mauris morbi molestie lectus urna vitae, rhoncus.
+					Lectus sed in etiam sit.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Lorem id vestibulum.
 				</div>
 
 				<div class="meta">
@@ -108,8 +115,8 @@
 
 				<div class="row between-content">
 					<div class="col">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem id vestibulum egestas rhoncus, quam faucibus. Sem at quis integer rhoncus, sit nec adipiscing aenean turpis. Ac at at massa fermentum risus. Tempor semper vulputate blandit tristique vestibulum. Nulla tellus in mattis nunc. Venenatis ornare mauris morbi molestie lectus urna vitae, rhoncus. Lectus sed in etiam sit. Ullamcorper tristique consequat ullamcorper id lobortis lectus. Vestibulum donec turpis sed aenean proin. Amet, eget nunc amet sagittis, commodo. Pulvinar placerat tristique sit in et bibendum facilisi nibh risus. Sit facilisi vitae risus lobortis quisque.
-Accumsan, tortor, ullamcorper tempus elit mauris mauris non. Sem vulputate elementum adipiscing pulvinar sed elementum. Sollicitudin.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem id vestibulum egestas rhoncus, quam faucibus. Sem at quis integer rhoncus, sit nec adipiscing aenean turpis. Ac at at massa fermentum risus. Tempor semper vulputate blandit tristique vestibulum. Nulla tellus in mattis nunc. Venenatis ornare mauris morbi molestie lectus urna vitae, rhoncus. Lectus sed in etiam sit. Ullamcorper tristique consequat ullamcorper id lobortis lectus. Vestibulum donec turpis sed aenean proin. Amet, eget nunc amet sagittis, commodo. Pulvinar placerat tristique sit in et bibendum facilisi nibh risus. Sit facilisi vitae risus lobortis quisque.
+						Accumsan, tortor, ullamcorper tempus elit mauris mauris non. Sem vulputate elementum adipiscing pulvinar sed elementum. Sollicitudin.
 					</div>
 
 					<div class="col">
@@ -309,9 +316,9 @@ Accumsan, tortor, ullamcorper tempus elit mauris mauris non. Sem vulputate eleme
 
 		</div>
 
-		<a href="#" class="link">Mostra di più</a>
-
 	</div>
+
+	<div class="link"><a href="#" class="link">Mostra di più</a></div>
 
 </section>
 

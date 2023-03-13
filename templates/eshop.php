@@ -21,7 +21,7 @@
 		<ul class="tabs v2">
 			<!-- DESKTOP TAB TITLES -->
 			<div class="desk-tabs-title v2">
-				<li class="item" data-menu-tab="#parking">
+				<li class="item" data-menu-tab="#parking-section-tab">
 
 					<div class="item-icon">
 						<div class="img-wrap">
@@ -90,7 +90,7 @@
 			</div>
 
 			<!-- MOBILE TAB TITLE -->
-			<li class="item mobile-only" data-menu-tab="#parking">
+			<li class="item mobile-only" data-menu-tab="#parking-section-tab">
 				<div class="item-icon">
 					<div class="img-wrap">
 						<img src="<?php echo img_path('icons/Parcheggi.svg'); ?>" alt="">
@@ -101,7 +101,7 @@
 			</li>
 
 				<!-- PARCHEGGIO CONTENT MOBILE & DESKTOP -->
-				<div class="tabs-v2-content hidden" id="parking">
+				<div class="tabs-v2-content hidden" id="parking-section-tab">
 
 					<div class="content">
 

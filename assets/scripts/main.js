@@ -104,6 +104,7 @@ $(function() {
 	// Login panel
 	$('.menu-icons a.user').on('click', function() {
 		$('.login-header-panel').toggleClass('hidden');
+		// $('.logged-header-panel').toggleClass('hidden');
 	});
 
 	// Menù mobile classes
@@ -583,6 +584,41 @@ $(function() {
 		],
 	});
 
+	// Global component "Carousel loghi"
+	$('.slideshow-loghi').slick({
+		dots: true,
+		arrows: false,
+		infinite: false,
+		centerMode: false,
+    	variableWidth: false,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2.5,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1.5,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 430,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	});
+
 	/**
 	 * Show an hidden wrapper of fields on checking a checkbox field
 	 * @param {jquery element} el
@@ -765,7 +801,7 @@ $(function() {
 	// Faq accordion effect
 	// Info Parcheggi Template
 	// Fatturazione / Telepass effect in Registrazione / Login Template
-	$('.faq, .section-form').on('click', '.title', function() {
+	$('.faq, .section-form').on('click', '.title, .title-wrap', function() {
 		$(this).parent().toggleClass('closed');
 	});
 
@@ -775,7 +811,8 @@ $(function() {
 		bc_current = $('.breadcrumbs .current').html();
 
 	$('.single-shop.list').on('click', function() {
-		let nome = $(this).find('h2').html();
+		let nome = $(this).find('h2').html(),
+			parent = $(this).parent('.shop-list');
 
 		if ($(this).hasClass('list')) {
 			document.querySelector('body').scroll(0,0);
@@ -783,6 +820,7 @@ $(function() {
 
 		$(this).siblings().addClass('hidden');
 		$(this).removeClass('list').addClass('single-view');
+		parent.removeClass('grid');
 		$(this).find('.single').removeClass('hidden');
 		$('#pagetitle h1, .breadcrumbs .current').html(nome);
 
@@ -792,6 +830,7 @@ $(function() {
 	});
 
 	$('.shop-filter select').on('change', function() {
+		$('.shop-list').addClass('grid');
 		$('.single-shop').removeClass('single-view hidden').addClass('list');
 		$('.single-shop .single').addClass('hidden');
 		$('#pagetitle h1').html(pt_title);

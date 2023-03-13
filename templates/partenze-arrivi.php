@@ -1153,80 +1153,80 @@
 
 	<div id="footer-items" class="partenze">
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-suitcase"></i></span>
 			<p class="content">
 				<span class="title">Bagagli</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-check-ok"></i></span>
 			<p class="content">
 				<span class="title">Check-in</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-policeman"></i></span>
 			<p class="content">
 				<span class="title">Controlli di sicurezza</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-wheelchair"></i></span>
 			<p class="content">
 				<span class="title">Assistenze speciali</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 	</div>
 
 	<div id="footer-items" class="arrivi hidden">
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-bus"></i></span>
 			<p class="content">
 				<span class="title">In Bus</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-taxi"></i></span>
 			<p class="content">
 				<span class="title">In Taxi</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-car-side"></i></span>
 			<p class="content">
 				<span class="title">Noleggia Auto</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 
-		<div class="col">
+		<a href="#" class="col link solid">
 			<span class="icon-circle"><i class="icon icon-camera"></i></span>
 			<p class="content">
 				<span class="title">Viabilità in aeroporto</span>
 				<br>
 				<span class="description">Varius aenean viverra tempor.</span>
 			</p>
-		</div>
+		</a>
 	</div>
 
 </section>

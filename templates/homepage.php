@@ -19,7 +19,7 @@
 					Voli in tempo reale
 				</div>
 
-				<div data-menu-tab="#parking">
+				<div data-menu-tab="#parking-tab">
 					<i class="icon icon-parking"></i>
 					Parcheggi
 				</div>
@@ -62,7 +62,7 @@
 				<?php get_component('form-flight', '', false); ?>
 			</div>
 
-			<div id="parking" class="hidden">
+			<div id="parking-tab" class="hidden">
 				<?php get_component('form-parking', 'Trova Parcheggi', false); ?>
 			</div>
 		</div>

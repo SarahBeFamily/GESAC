@@ -127,7 +127,7 @@
 					align-content: space-between;
 					border-radius: 8px;
 					padding: 24px;
-					min-height: 45%;
+					min-height: 220px;
 
 					@include respond-to($small-phone) {
 						padding: 15px;
@@ -138,9 +138,12 @@
 						font-weight: 500;
 						width: 100%;
 						margin-top: 0;
+						overflow: auto;
+						max-height: 100px;
 
 						@include respond-to($phone) {
-							font-size: toRem(15);
+							font-size: toRem(20);
+							max-height: 133px;
 						}
 					}
 
@@ -148,11 +151,12 @@
 						font-size: toRem(13);
 						display: flex;
 						justify-content: space-between;
+						align-items: flex-end;
 						width: 100%;
 
-						@include respond-to($phone) {
-							margin-top: 2em;
-						}
+						// @include respond-to($phone) {
+						// 	margin-top: 2em;
+						// }
 
 						span {
 							flex: 1;
@@ -178,12 +182,15 @@
 			a.link:any-link {
 				color: var(--secondary);
 				text-decoration: none;
-				font-size: toRem(18);
-				margin-top: 2em;
 				margin-left: 25px;
 
-				@include respond-to($min-phone) {
-					display: none;
+				&:not(.arrow-primary) {
+					margin-top: 2em;
+					font-size: toRem(18);
+
+					@include respond-to($min-phone) {
+						display: none;
+					}
 				}
 			}
 		}

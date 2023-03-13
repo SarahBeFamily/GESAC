@@ -99,7 +99,8 @@ header {
 		position: relative;
 
 		&.sticky {
-			.login-header-panel {
+			.login-header-panel,
+			.logged-header-panel {
 				@include respond-to($max-tablet) {
 					top: 60px;
 				}
@@ -305,7 +306,171 @@ header {
 					}
 				}
 
-				> .search {
+				.logged-header-panel {
+					position: absolute;
+					z-index: 100;
+					top: calc(100% + 4px);
+					color: white;
+					font-size: toRem(17);
+					right: 50px;
+					border-radius: 0 0 12px 12px;
+					width: 680px;
+					display: flex;
+					flex-wrap: wrap;
+
+					@include respond-to($small-phone) {
+    					top: 56px !important;
+					}
+
+					@include respond-to($phone) {
+						right: 50% !important;
+						top: 65px !important;
+						width: 93vw;
+						transform: translateX(30%);
+						overflow: auto;
+						height: 85vh;
+					}
+
+					@include respond-to($max-tablet) {
+						right: 6%;
+						top: 100%;
+					}
+
+					@include respond-to($mini-desktop) {
+						right: 0;
+						top: calc(100% + 2px);
+					}
+
+					.col {
+						flex-basis: 50%;
+
+						@include respond-to($phone-plus) {
+							flex-basis: 100%;
+						}
+
+						&.logged-resume {
+							@include respond-to($phone-plus) {
+								order: 2;
+							}
+						}
+
+						&.logged-cta {
+							@include respond-to($phone-plus) {
+								order: 3;
+								border-radius: 0;
+							}
+						}
+
+						&.logged-logout {
+							background-color: rgba(1, 17, 44, 90%);
+							backdrop-filter: blur(7px);
+							-webkit-backdrop-filter: blur(7px);
+							padding: 0 30px;
+							font-weight: 300 !important;
+							border-bottom-right-radius: 12px;
+							display: flex;
+							align-items: center;
+
+							@include respond-to($phone-plus) {
+								order: 3;
+								border-bottom-left-radius: 12px;
+							}
+
+							a:any-link {
+								color: white;
+								text-decoration: none;
+								font-size: toRem(21);
+							}
+						}
+
+						.general {
+							background-color: var(--primary-gesac);
+							padding: 8px 30px 30px;
+							font-weight: 300 !important;
+							height: 100%;
+							display: flex;
+							flex-wrap: wrap;
+							align-content: space-between;
+
+							.user {
+								font-weight: 400;
+								font-size: 22px;
+							}
+
+							ul {
+								list-style: none;
+								margin: 0;
+								padding: 0;
+								flex-basis: 100%;
+
+								li {
+									font-weight: 300;
+									padding: 3px 0;
+									display: flex;
+									align-items: center;
+									transition: all 0.4s ease;
+
+									&::after {
+										content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12H19' stroke='#{url-friendly-colour($white)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 5L19 12L12 19' stroke='#{url-friendly-colour($white)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+										opacity: 0;
+										transition: all 0.2s ease-in-out;
+									}
+
+									&:hover {
+										&::after {
+											opacity: 1;
+											margin-left: 6px;
+										}
+
+										> a:any-link {
+											color: white;
+										}
+									}
+
+									a:any-link {
+										color: rgba($color: #ffffff, $alpha: 0.5);
+										text-decoration: none;
+										font-size: toRem(18);
+										transition: all 0.2s ease;
+									}
+								}
+							}
+						}
+	
+						.cta-services {
+							background-color: white;
+							border-bottom-left-radius: 12px;
+							padding: 40px 30px;
+							display: flex;
+
+							.button.secondary {
+								color: var(--primary-dark);
+								width: 100%;
+								text-align: center;
+								font-size: 17px;
+								font-weight: 500;
+							}
+						}
+	
+						.resume {
+							background-color: rgba(1, 17, 44, 90%);
+							backdrop-filter: blur(7px);
+							-webkit-backdrop-filter: blur(7px);
+							padding: 8px 30px 0;
+							font-weight: 300 !important;
+							height: 100%;
+
+							span {
+								width: 100%;
+								display: block;
+								margin: 13px 0 30px;
+								font-size: toRem(23);
+							}
+						}
+					}
+				}
+
+				> .global-search {
 					@include respond-to($max-tablet) {
 						display: none;
 					}

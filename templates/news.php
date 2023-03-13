@@ -20,7 +20,7 @@
 
 			<div class="single-article" style="background-image: url(<?php echo img_path('homepage/news1.jpg'); ?>);">
 				<div class="cont">
-					<h2 class="title">Nuova area Pick-up e riattivazione ZTC in aeroporto.</h2>
+					<h2 class="title">Nuova area Pick-up e riattivazione ZTC in aeroporto. Nuova area Pick-up e riattivazione ZTC in aeroporto. Nuova area Pick-up e riattivazione ZTC in aeroporto.</h2>
 
 					<div class="meta">
 						<span class="date">1 Ago</span>
@@ -119,9 +119,9 @@
 			</div>
 		</div>
 
-		<div class="sidebar">
+		<div class="news-sidebar">
 			<div>
-				<div class="search">
+				<div class="news-search">
 					<input type="text" id="search" placeholder="Ricerca News">
 					<input type="submit" value="">
 				</div>
