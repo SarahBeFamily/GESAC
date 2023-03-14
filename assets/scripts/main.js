@@ -90,6 +90,7 @@ $(function() {
 		let tab = $(this).attr('data-menu-tab');
 		$(this).addClass('active').siblings().removeClass('active');
 		$(tab).removeClass('hidden').siblings('.menu-tab-content').addClass('hidden');
+		$(`.menu-tab-content:not(${tab}) li`).removeClass('open').find('.megamenu-wrap').hide();
 	});
 
 	// Open Megamenu
