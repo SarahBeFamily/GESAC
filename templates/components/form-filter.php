@@ -37,18 +37,18 @@
 
 	</datalist>
 
-	<input class="departure" type="text" name="departure" value="Napoli Internazionale (NAP)" placeholder="Partenza" disabled>
+	<input class="departure" type="text" name="departure" value="Napoli Internazionale (NAP)" placeholder="Partenza" disabled readonly>
 
-	<input class="drop arrival" type="text" name="arrival" list="directs" value="" placeholder="Destinazione" required>
+	<input class="drop arrival" type="text" name="arrival" list="directs" value="" placeholder="Destinazione">
 
 	<input class="airline" type="text" name="airline" value="" placeholder="Compagnia">
 	
 	<div class="input-wrapper --calendar">
-		<input class="drop calendar" type="text" name="from" placeholder="Dal" required>
+		<input class="drop calendar" type="text" name="from" placeholder="Dal">
 	</div>
 
 	<div class="input-wrapper --calendar">
-		<input class="drop calendar" type="text" name="to" placeholder="Al" required>
+		<input class="drop calendar" type="text" name="to" placeholder="Al">
 	</div>
 
 	<input class="submit" type="submit" value="Cerca Volo">

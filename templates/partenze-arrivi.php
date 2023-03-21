@@ -1231,6 +1231,8 @@
 
 </section>
 
+<?php get_component('download-file-img', '', true); ?>
+
 <?php
 // Include the section "Acquista Servizi"
 include_section('acquista-servizi');

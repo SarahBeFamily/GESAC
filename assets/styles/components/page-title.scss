@@ -73,7 +73,7 @@
 
 		.col {
 			@include respond-to($mini-desktop) {
-				width: 90%;
+				width: 100%;
 			}
 		}
 	}

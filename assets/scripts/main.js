@@ -104,8 +104,8 @@ $(function() {
 
 	// Login panel
 	$('.menu-icons a.user').on('click', function() {
-		$('.login-header-panel').toggleClass('hidden');
-		// $('.logged-header-panel').toggleClass('hidden');
+		$('.login-header-panel-wrap').toggleClass('hidden');
+		// $('.logged-header-panel-wrap').toggleClass('hidden');
 	});
 
 	// Menù mobile classes

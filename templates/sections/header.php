@@ -713,90 +713,94 @@
 				<a href="#" class="user"><i class="icon icon-user"></i></a>
 
 					<!-- LOGIN MENU STARTS -->
-					<div class="login-header-panel hidden">
-						<p>Login area riservata fidelity</p>
+					<div class="login-header-panel-wrap hidden">
+						<div class="login-header-panel">
+							<p>Login area riservata fidelity</p>
 
-						<form id="login" action="">
-							<input type="text" placeholder="Username o Email" required>
-							<input type="password" placeholder="Password" value="" class="password" required><i class="icon icon-hide-password-secondary toggle-password"></i>
-							<input type="submit" class="submit" value="Accedi">
-						</form>
+							<form id="login" action="">
+								<input type="text" placeholder="Username o Email" required>
+								<input type="password" placeholder="Password" value="" class="password" required><i class="icon icon-hide-password-secondary toggle-password"></i>
+								<input type="submit" class="submit" value="Accedi">
+							</form>
 
-						<a href="#" class="button register">Registrati</a>
+							<a href="#" class="button register">Registrati</a>
 
-						<a href="#" class="pass-recovery">Non ricordo la password</a>
+							<a href="#" class="pass-recovery">Non ricordo la password</a>
 
-						oppure
+							oppure
 
-						<div class="social-login">
-							<a href="#">
-								<i class="google-icon"></i>
-								Continua con Google
-							</a>
+							<div class="social-login">
+								<a href="#">
+									<i class="google-icon"></i>
+									Continua con Google
+								</a>
 
-							<a href="#">
-								<i class="facebook-icon"></i>
-								Continua con Facebook
-							</a>
+								<a href="#">
+									<i class="facebook-icon"></i>
+									Continua con Facebook
+								</a>
 
-							<a href="#">
-								<i class="instagram-icon"></i>
-								Continua con Instagram
-							</a>
+								<a href="#">
+									<i class="instagram-icon"></i>
+									Continua con Instagram
+								</a>
+							</div>
 						</div>
 					</div>
 					<!-- / LOGIN MENU ENDS -->
 
 					<!-- ACCOUNT ALREADY LOGGED MENU STARTS -->
-					<div class="logged-header-panel hidden">
+					<div class="logged-header-panel-wrap hidden">
+						<div class="logged-header-panel">
 
-						<div class="col logged-general">
-							<div class="general">
-								<div>
-									<p>Benvenuto</p>
-									<p><span class="user">Nome Cognome</span></p>
+							<div class="col logged-general">
+								<div class="general">
+									<div>
+										<p>Benvenuto</p>
+										<p><span class="user">Nome Cognome</span></p>
+									</div>
+
+									<ul>
+										<li><a href="#">Fidelity card</a></li>
+										<li><a href="#">Vantaggi acquisiti</a></li>
+										<li><a href="#">Riepilogo attività</a></li>
+										<li><a href="#">Il mio profilo</a></li>
+									</ul>
 								</div>
-
-								<ul>
-									<li><a href="#">Fidelity card</a></li>
-									<li><a href="#">Vantaggi acquisiti</a></li>
-									<li><a href="#">Riepilogo attività</a></li>
-									<li><a href="#">Il mio profilo</a></li>
-								</ul>
 							</div>
-						</div>
 
-						<div class="col logged-resume">
-							<div class="resume">
-								<p>
-									Saldo Punti
-									<span id="resume-points">XXX</span>
-								</p>
+							<div class="col logged-resume">
+								<div class="resume">
+									<p>
+										Saldo Punti
+										<span id="resume-points">XXX</span>
+									</p>
 
-								<p>
-									Codice Carta
-									<span id="resume-card-code">XXXXXXXXXXX</span>
-								</p>
+									<p>
+										Codice Carta
+										<span id="resume-card-code">XXXXXXXXXXX</span>
+									</p>
 
+									<p>
+										Status
+										<span id="resume-status">Nome tipologia status</span>
+									</p>
+								</div>
+							</div>
+
+							<div class="col logged-cta">
+								<div class="cta-services">
+									<a href="#" class="button secondary">Acquista servizi</a>
+								</div>
+							</div>
+
+							<div class="col logged-logout">
 								<p>
-									Status
-									<span id="resume-status">Nome tipologia status</span>
+									<a href="#">Logout</a>
 								</p>
 							</div>
-						</div>
 
-						<div class="col logged-cta">
-							<div class="cta-services">
-								<a href="#" class="button secondary">Acquista servizi</a>
-							</div>
 						</div>
-
-						<div class="col logged-logout">
-							<p>
-								<a href="#">Logout</a>
-							</p>
-						</div>
-
 					</div>
 					<!-- / ACCOUNT ALREADY LOGGED MENU ENDS -->
 

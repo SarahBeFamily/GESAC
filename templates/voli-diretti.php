@@ -1,6 +1,6 @@
 <?php
 /**
- * Partenze / arrivi template
+ * Voli Diretti template
  */
 ?>
 

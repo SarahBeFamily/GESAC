@@ -32,7 +32,7 @@
 			align-items: center;
 			flex-basis: calc(90% / 3);
 			padding-left: 13%;
-			margin: 7px 0;
+			margin: 18px 0;
 
 			@include respond-to($phone-plus) {
 				flex-basis: 100%;
@@ -60,7 +60,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	.img-wrap {
+	.image-wrap {
 		flex-basis: calc(90% / 4);
 		display: flex;
 		flex-wrap: wrap;
