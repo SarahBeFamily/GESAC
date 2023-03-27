@@ -16,6 +16,10 @@
 		@include respond-to($phone) {
 			background-position: right bottom !important;
 		}
+
+		@include respond-to($not-mobile) {
+			background-size: cover;
+		}
 	}
 
 	&.white {
