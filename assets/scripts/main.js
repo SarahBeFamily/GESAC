@@ -146,6 +146,7 @@ $(function() {
 		input.after().trigger('click touchstart');
 	});
 
+
 	$('input.calendar').on('change', function() {
 		let input = $(this);
 
