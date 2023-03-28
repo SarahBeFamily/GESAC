@@ -317,6 +317,7 @@ section#parking-list {
 				background-color: var(--light-gray);
 				border-radius: $radius $radius 0 0;
 				padding: 0 20px;
+				width: 100%;
 
 				.positions {
 					display: flex;

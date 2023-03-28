@@ -13,7 +13,10 @@
 
 		<!-- FIRST COLUMN -->
 		<div id="info">
-			<img src="<?php echo img_path('gesac-logo-w.png'); ?>" alt="Logo">
+			<div class="loghi">
+				<img src="<?php echo img_path('gesac-logo-w.png'); ?>" alt="Logo">
+				<img src="<?php echo img_path('ACA_level_4_logo_transition_white.png'); ?>" alt="Certificazione">
+			</div>
 
 			<p>
 				Per motivi di sicurezza e in accordo con disposizioni E.N.A.C. <br>

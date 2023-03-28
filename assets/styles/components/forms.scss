@@ -214,7 +214,7 @@ datalist {
 	overflow-y: auto;
 	top: 125px;
 	width: 39.7%;
-	z-index: 997;
+	z-index: 9999;
 
 	@include respond-to($phone) {
 		width: 86%;
@@ -635,6 +635,10 @@ form#search-parking {
 
 	p {
 		text-align: center;
+
+		&.privacy {
+			margin: 30px 0 20px;
+		}
 	}
 
 	a:any-link {

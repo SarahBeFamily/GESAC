@@ -12,6 +12,8 @@ footer {
 
 		#info {
 			flex-basis: 17%;
+			display: flex;
+			flex-direction: column;
 
 			@include respond-to($max-tablet) {
 				flex-basis: 100%;
@@ -23,6 +25,22 @@ footer {
 
 			@include respond-to($mini-desktop) {
 				flex-basis: 26%;
+			}
+
+			.loghi {
+				display: inline-flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include respond-to($max-tablet) {
+					justify-content: center;
+				}
+
+				img {
+					max-width: 160px;
+					width: 80%;
+					margin-right: 20px;
+				}
 			}
 
 			p {

@@ -355,6 +355,7 @@ ol {
 		display: flex;
 		align-items: center;
 		padding: 24px 10px;
+		min-width: 300px;
 
 		@include respond-to($phone) {
 			flex-wrap: wrap;
@@ -365,6 +366,10 @@ ol {
 		@include respond-to($mid-tablet) {
 			flex-basis: calc(90% / 2);
 			margin-bottom: 16px;
+		}
+
+		@include respond-to($mini-desktop) {
+			min-width: 200px;
 		}
 
 		@include respond-to($not-mobile2) {
@@ -414,6 +419,7 @@ ol {
 			display: flex;
 			flex-wrap: wrap;
 			margin: 0;
+			flex-basis: 100%;
 
 			@include respond-to($phone) {
 				font-weight: 500;

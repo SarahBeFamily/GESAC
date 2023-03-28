@@ -14,32 +14,55 @@ section#gallery {
 	}
 
 	.button {
-		flex-basis: 25%;
+		// flex-basis: 25%;
+		min-width: calc(100% / 4 - 20px);
+		margin-bottom: 20px;
 
 		@include respond-to($phone-plus) {
 			flex-basis: 100%;
+			margin-bottom: 10px;
 		}
 
 		&:first-of-type {
 			@include respond-to($phone-plus) {
 				order: 1;
 			}
+		}
 
-			@include respond-to($min-phone) {
-				margin-right: 10px;
+		&:nth-of-type(2) {
+			@include respond-to($phone-plus) {
+				order: 3;
 			}
 		}
 
-		&:last-of-type {
+		&:nth-of-type(3) {
 			@include respond-to($phone-plus) {
-				order: 3;
+				order: 4;
+			}
+		}
+
+		&:nth-of-type(4) {
+			@include respond-to($phone-plus) {
+				order: 5;
+			}
+		}
+
+		&:nth-of-type(5) {
+			@include respond-to($phone-plus) {
+				order: 6;
+			}
+		}
+
+		&:not(:last-of-type) {
+			@include respond-to($min-phone) {
+				margin-right: 20px;
 			}
 		}
 	}
 
 	.photos {
 		flex-basis: 100%;
-		margin-top: 2rem;
+		margin-top: 12px;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, 20%);
 		grid-gap: 1rem;

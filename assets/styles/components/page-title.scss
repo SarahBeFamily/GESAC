@@ -73,7 +73,7 @@
 
 		.col {
 			@include respond-to($mini-desktop) {
-				width: 90%;
+				width: 100%;
 			}
 		}
 	}
@@ -85,13 +85,13 @@
 	}
 
 	.col {
-		@include respond-to($mini-desktop) {
-			width: 55%;
-		}
+		// @include respond-to($mini-desktop) {
+		// 	width: 55%;
+		// }
 
-		@include respond-to($min-desktop) {
-			width: 50%;
-		}
+		// @include respond-to($min-desktop) {
+		// 	width: 50%;
+		// }
 
 		> p {
 			color: white;

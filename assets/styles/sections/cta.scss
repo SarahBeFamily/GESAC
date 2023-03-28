@@ -10,16 +10,15 @@
 	}
 
 	&.bg-img {
-		background-size: 55% 100%;
 		background-repeat: no-repeat;
-		background-position: right center;
+		background-position: right top;
 
-		@include respond-to($max-desktop) {
-			background-size: 70% 100%;
+		@include respond-to($phone) {
+			background-position: right bottom !important;
 		}
 
-		@include respond-to($tablet) {
-			background-size: 100% 100% !important;
+		@include respond-to($not-mobile) {
+			background-size: cover;
 		}
 	}
 
@@ -77,12 +76,11 @@
 
 	&#campania {
 		@include respond-to($phone) {
-			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/homepage/cta-bg-campania-mobile.jpg");
-			background-size: 100% 100% !important;
+			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 70%), url("../../img/napoli-test.jpg");
 		}
 
 		@include respond-to($not-mobile) {
-			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 100%), url("../../img/homepage/cta-bg.jpg");
+			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 50%), url("../../img/napoli-test.jpg");
 		}
 	}
 

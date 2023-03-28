@@ -90,6 +90,7 @@ $(function() {
 		let tab = $(this).attr('data-menu-tab');
 		$(this).addClass('active').siblings().removeClass('active');
 		$(tab).removeClass('hidden').siblings('.menu-tab-content').addClass('hidden');
+		$(`.menu-tab-content:not(${tab}) li`).removeClass('open').find('.megamenu-wrap').hide();
 	});
 
 	// Open Megamenu
@@ -103,8 +104,8 @@ $(function() {
 
 	// Login panel
 	$('.menu-icons a.user').on('click', function() {
-		$('.login-header-panel').toggleClass('hidden');
-		// $('.logged-header-panel').toggleClass('hidden');
+		$('.login-header-panel-wrap').toggleClass('hidden');
+		// $('.logged-header-panel-wrap').toggleClass('hidden');
 	});
 
 	// Menù mobile classes
