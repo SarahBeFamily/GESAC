@@ -334,33 +334,30 @@ $(function() {
 	});
 
 	// Search on datalist on keyup
-	$("input.departure, input.arrival").on('click', function() {
-		$('datalist#airports, datalist#directs').attr('input-focus', $(this).attr('class'));
-		$('datalist#airports, datalist#directs').toggleClass('open');
+	$("input[list]").on('click', function() {
+		let list = $(this).attr('data-list-id'),
+			thisclass = $(this).attr('class'),
+			inputClass = thisclass.replace('drop ', '');
+
+		$(`datalist#${list}`).attr('input-focus', inputClass);
+		$(`datalist#${list}`).toggleClass('open');
 	});
 
-	$('#airports option, #directs option').on('click', function() {
+	$('datalist option').on('click', function() {
 		let datalist = $(this).parents('datalist'),
 			input = datalist.attr('input-focus');
 
-		if (input == 'drop arrival') {
-			$('input.arrival').val($(this).val());
-		} else {
-			$('input.'+input).val($(this).val());
-		}
-		$('datalist').toggleClass('open');
-		// if ($(window).width() < 768) {
-		// 	$('#change').removeClass('hidden');
-		// }
+		$(`input.${input}`).val($(this).val());
+		datalist.toggleClass('open');
 	});
 
-	$("input.departure, input.arrival").on("keyup focus blur change", function(){
-		// if ($(window).width() < 768) {
-		// 	$('#change').addClass('hidden');
-		// }
-		let filter, datalist, option, title, i, txtValue;
+	$("input[list]").on("keyup focus blur change", function(){
+
+		let list = $(this).attr('data-list-id'),
+			filter, datalist, option, title, i, txtValue;
+
 		filter = $(this).val().toUpperCase();
-		datalist = document.querySelector("#airports, #directs");
+		datalist = document.querySelector(`#${list}`);
 		option = datalist.querySelectorAll('option');
 
 		for (i = 0; i < option.length; i++) {
