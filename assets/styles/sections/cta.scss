@@ -76,11 +76,12 @@
 
 	&#campania {
 		@include respond-to($phone) {
-			background-image: linear-gradient(0deg,rgba(1,17,44,0.3) 0%, #01112C 70%), url("../../img/napoli-test.jpg");
+			background-image: linear-gradient(0deg,rgba(1,17,44,0) 20%, #01112C 45%), url("../../img/banner_aca.jpeg");
+			padding-bottom: 32%;
 		}
 
 		@include respond-to($not-mobile) {
-			background-image: linear-gradient(-90deg,rgba(1,17,44,0.3) 0%, #01112C 50%), url("../../img/napoli-test.jpg");
+			background-image: linear-gradient(-90deg,rgba(1,17,44,0) 0%, #01112C 50%), url("../../img/banner_aca.jpeg");
 		}
 	}
 

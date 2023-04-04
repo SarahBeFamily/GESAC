@@ -37,11 +37,31 @@
 
 	</datalist>
 
+	<datalist id="airlines">
+		
+		<option value="Ryanair">
+			<div>
+				<p class="titlelist">Ryanair</p>
+				<p class="location">Napoli, Italia</p>
+			</div>
+			CDC
+		</option>
+
+		<option value="Volotea">
+			<div>
+				<p class="titlelist">Volotea</p>
+				<p class="location">Padova, Italia</p>
+			</div>
+			CDC
+		</option>
+
+	</datalist>
+
 	<input class="departure" type="text" name="departure" value="Napoli Internazionale (NAP)" placeholder="Partenza" disabled readonly>
 
-	<input class="drop arrival" type="text" name="arrival" list="directs" value="" placeholder="Destinazione">
+	<input class="drop arrival" type="text" name="arrival" list="" data-list-id="directs" value="" placeholder="Destinazione">
 
-	<input class="airline" type="text" name="airline" value="" placeholder="Compagnia">
+	<input class="airline" type="text" name="airline" list="" data-list-id="airlines" value="" placeholder="Compagnia">
 	
 	<div class="input-wrapper --calendar">
 		<input class="drop calendar" type="text" name="from" placeholder="Dal">

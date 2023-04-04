@@ -36,11 +36,31 @@
 
 	</datalist>
 
-	<input class="departure" type="text" name="departure" list="airports" value="Napoli Internazionale (NAP)" placeholder="Partenze" required>
-	<a id="change" role="button"></a>
-	<input class="arrival" type="text" name="arrival" list="airports" value="" placeholder="Arrivi" required>
+	<datalist id="airlines">
+		
+		<option value="Ryanair">
+			<div>
+				<p class="titlelist">Ryanair</p>
+				<p class="location">Napoli, Italia</p>
+			</div>
+			CDC
+		</option>
 
-	<input type="text" name="airline" value="" placeholder="Compagnia">
+		<option value="Volotea">
+			<div>
+				<p class="titlelist">Volotea</p>
+				<p class="location">Padova, Italia</p>
+			</div>
+			CDC
+		</option>
+
+	</datalist>
+
+	<input class="departure" role="combobox" type="text" name="departure" list="" data-list-id="airports" value="Napoli Internazionale (NAP)" placeholder="Partenze" required autocomplete="off">
+	<a id="change" role="button"></a>
+	<input class="arrival" role="combobox" type="text" name="arrival" list="" data-list-id="airports" value="" placeholder="Arrivi" required autocomplete="off">
+
+	<input class="airline" role="combobox" type="text" name="airline" list="" data-list-id="airlines" value="" placeholder="Compagnia">
 	<input type="text" name="flight" value="" placeholder="Numbero Volo">
 
 	<input class="submit" type="submit" value="Cerca Volo">

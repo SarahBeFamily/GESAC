@@ -153,8 +153,22 @@ input {
 
 	&[type="date"].drop.calendar {
 		background: none;
-		padding-top: 19px;
-		padding-bottom: 19px;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		width: 100%;
+		min-width: 205px;
+
+		@include respond-to($mini-desktop) {
+			min-width: 100px;
+		}
+
+		@include respond-to($small-desktop) {
+			min-width: 130px;
+		}
+
+		@include respond-to($anomalia-gallery) {
+			min-width: 170px;
+		}
 
 		&::after {
 			// content: attr(placeholder);
@@ -164,6 +178,14 @@ input {
 		&::-webkit-date-and-time-value {
 			text-align: left !important;
 			width: 93% !important;
+		}
+		&::-webkit-calendar-picker-indicator{
+			display:block;
+			top:0;
+			left:0;
+			background: #0000;
+			position:absolute;
+			transform: scale(12)
 		}
 	}
 
@@ -223,6 +245,37 @@ datalist {
 
 	&.open {
 		display: block;
+	}
+
+	&#airlines {
+		left: 42.5%;
+		width: 18%;
+
+		@include respond-to($phone) {
+			left: 4.5%;
+			top: 79%;
+		}
+
+		@include respond-to($tablet) {
+			left: 3%;
+			width: 40.5%;
+			top: 89%;
+		}
+
+		@include respond-to($mini-desktop) {
+			left: 67.5%;
+			width: 30.1%;
+		}
+
+		@include respond-to($small-desktop) {
+			left: 43.5%;
+			width: 17.5%;
+		}
+
+		@include respond-to($anomalia-select) {
+			left: 43.5%;
+			width: 17.7%;
+		}
 	}
 
 	option {

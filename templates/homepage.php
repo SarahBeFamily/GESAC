@@ -258,7 +258,7 @@
 
 <?php 
 // Include the cta section "General"
-include_section('cta-general', 'campania', 'Campania Divina', 'Scopri le attrazioni');
+include_section('cta-general', 'campania', 'Sostenibilità e connettità, le ali di Napoli.', 'Scopri di più');
 
 // Include the cta section "Blog" with latest news carousel
 include_section('blog');
