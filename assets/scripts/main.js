@@ -340,7 +340,8 @@ $(function() {
 			inputClass = thisclass.replace('drop ', '');
 
 		$(`datalist#${list}`).attr('input-focus', inputClass);
-		$(`datalist#${list}`).toggleClass('open');
+		$(`datalist`).removeClass('open');
+		$(`datalist#${list}`).addClass('open');
 	});
 
 	$('datalist option').on('click', function() {
