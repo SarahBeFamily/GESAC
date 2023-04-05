@@ -85,14 +85,6 @@
 	}
 
 	.col {
-		// @include respond-to($mini-desktop) {
-		// 	width: 55%;
-		// }
-
-		// @include respond-to($min-desktop) {
-		// 	width: 50%;
-		// }
-
 		> p {
 			color: white;
 			font-size: toRem(22);
@@ -156,7 +148,7 @@
 			}
 		}
 
-		input {
+		> input {
 			@include respond-to($tablet) {
 				flex-basis: 43%;
 			}

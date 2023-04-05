@@ -337,11 +337,16 @@ $(function() {
 	$("input[list]").on('click', function() {
 		let list = $(this).attr('data-list-id'),
 			thisclass = $(this).attr('class'),
-			inputClass = thisclass.replace('drop ', '');
+			inputClass = thisclass.replace('drop ', ''),
+			listOpen = $(`datalist#${list}`).hasClass('open');
 
 		$(`datalist#${list}`).attr('input-focus', inputClass);
 		$(`datalist`).removeClass('open');
-		$(`datalist#${list}`).addClass('open');
+
+		if (listOpen)
+			$(`datalist#${list}`).removeClass('open');
+		else
+			$(`datalist#${list}`).addClass('open');
 	});
 
 	$('datalist option').on('click', function() {

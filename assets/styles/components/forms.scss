@@ -55,7 +55,7 @@ input {
 		}
 	}
 
-	&:nth-last-child(2) {
+	&:nth-last-of-type(2) {
 		@include respond-to($mini-desktop) {
 			margin-top: 16px;
 		}
@@ -75,17 +75,17 @@ input {
 
 		@include respond-to($mini-desktop) {
 			margin-right: 0 !important;
-			flex-basis: 33% !important;
+			// flex-basis: 33% !important;
 		}
 
 		@include respond-to($small-desktop) {
 			margin-right: 2px !important;
-			flex-basis: 21% !important;
+			// flex-basis: 21% !important;
 		}
 
 		@include respond-to($min-wide-desktop) {
 			margin-right: 2px !important;
-			flex-basis: 22% !important;
+			// flex-basis: 22% !important;
 		}
 	}
 
@@ -100,7 +100,7 @@ input {
 		@include respond-to($mini-desktop) {
 			margin-left: -7px;
 			padding-left: 25px;
-			flex-basis: 32.5% !important;
+			// flex-basis: 32.5% !important;
 		}
 
 		@include respond-to($small-desktop) {
@@ -111,7 +111,7 @@ input {
 		@include respond-to($min-wide-desktop) {
 			margin-left: -5px;
 			padding-left: 25px;
-			flex-basis: 22% !important;
+			// flex-basis: 22% !important;
 		}
 	}
 
@@ -234,54 +234,43 @@ datalist {
 	border: 0 none;
 	overflow-x: hidden;
 	overflow-y: auto;
-	top: 125px;
-	width: 39.7%;
+	// top: 125px;
+	// width: 39.7%;
+	top: 52px;
+	width: 162%;
 	z-index: 9999;
 
-	@include respond-to($phone) {
-		width: 86%;
-		top: 205px;
+	@include respond-to($phone-plus) {
+		width: 100%;
+		// top: 205px;
+	}
+
+	@include respond-to($small-tablet) {
+		width: 100%;
 	}
 
 	&.open {
 		display: block;
 	}
 
-	&#airlines {
-		left: 42.5%;
-		width: 18%;
+	&[input-focus="arrival"] {
+		left: 105%;
 
-		@include respond-to($phone) {
-			left: 4.5%;
-			top: 79%;
+		@include respond-to($phone-plus) {
+			left: 0;
+			top: 220%;
 		}
+	}
 
-		@include respond-to($tablet) {
-			left: 3%;
-			width: 40.5%;
-			top: 89%;
-		}
-
-		@include respond-to($mini-desktop) {
-			left: 67.5%;
-			width: 30.1%;
-		}
-
-		@include respond-to($small-desktop) {
-			left: 43.5%;
-			width: 17.5%;
-		}
-
-		@include respond-to($anomalia-select) {
-			left: 43.5%;
-			width: 17.7%;
-		}
+	&#directs {
+		left: -6px;
 	}
 
 	option {
 		font-size: toRem(14);
 		padding: 12px 26px;
 		background-color: #f3f3f3;
+		color: var(--primary-dark);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -414,6 +403,37 @@ form#search-flight {
 		flex-wrap: wrap;
 	}
 
+	.relative {
+		flex-basis: 20%;
+		margin-right: 10px;
+
+		@include respond-to($phone) {
+			margin-top: 10px;
+		}
+
+		@include respond-to($phone-plus) {
+			flex-basis: 100%;
+			margin-right: 0;
+		}
+
+		@include respond-to($tablet) {
+			flex-basis: 45%;
+		}
+
+		@include respond-to($mini-desktop) {
+			flex-basis: 31%;
+
+		}
+
+		@include respond-to($small-desktop) {
+			flex-basis: 32%;
+		}
+
+		input {
+			width: 100%;
+		}
+	}
+
 	#change {
 		background-image: url("../../img/arrows-change-flight.svg");
 		background-repeat: no-repeat;
@@ -423,15 +443,28 @@ form#search-flight {
 		width: 32px;
 		height: 32px;
 		border-radius: 10px;
-		margin: 0 -10px 0 -14px;
+		margin: 0 auto;
 		position: relative;
 		cursor: pointer;
+		z-index: 9;
 
 		@include respond-to($phone) {
-			left: 48%;
+			// left: 48%;
 			transform: rotate(90deg);
 			margin-bottom: -25px;
 			margin-top: -20px;
+		}
+
+		@include respond-to($mid-phone) {
+			margin-bottom: -17px;
+			margin-top: -14px !important;
+			transform: rotate(90deg);
+		}
+
+		@include respond-to($small-tablet) {
+			margin-bottom: -10px;
+			margin-top: -10px !important;
+			transform: rotate(90deg);
 		}
 
 		@include respond-to($tc) {
@@ -445,6 +478,11 @@ form#search-flight {
 
 		@include respond-to($mini-desktop) {
 			margin: 0 -13px 0 -20px;
+		}
+
+		@include respond-to($small-desktop) {
+			margin: 0 -6px 0 -20px;
+			width: 60px;
 		}
 
 		@include respond-to($min-wide-desktop) {
@@ -464,7 +502,7 @@ form#search-flight {
 		}
 
 		@include respond-to($mini-desktop) {
-			flex-basis: 31.8%;
+			flex-basis: 30.8%;
 		}
 
 		@include respond-to($small-desktop) {
@@ -475,14 +513,14 @@ form#search-flight {
 			flex-basis: calc(96% / 5);
 		}
 
-		&:nth-child(2),
-		&:nth-child(4) {
+		&:nth-of-type(2),
+		&:nth-of-type(4) {
 			@include respond-to($mid-tablet) {
 				flex-basis: 49%;
 			}
 		}
 
-		&:nth-last-child(2) {
+		&:nth-last-of-type(2) {
 			@include respond-to($small-phone) {
 				max-width: 71%;
 			}
@@ -537,6 +575,7 @@ form#search-flight {
 
 			@include respond-to($small-tablet) {
 				margin-top: 12px;
+				width: 22%;
 			}
 
 			@include respond-to($tablet) {
@@ -547,6 +586,10 @@ form#search-flight {
 		&.submit {
 			@include respond-to($mini-desktop) {
 				flex-basis: 65.8%;
+			}
+
+			@include respond-to($small-desktop) {
+				padding: 14px;
 			}
 		}
 	}

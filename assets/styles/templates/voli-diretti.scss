@@ -42,82 +42,50 @@ section#flights-filter {
 					}
 				}
 
-				&.departure {
-					flex-basis: 22%;
-
-					@include respond-to($mid-tablet) {
-						flex-basis: 49.5% !important;
-						max-width: 49.5% !important;
-					}
-
-					@include respond-to($mini-desktop) {
-						flex-basis: 20%;
-					}
-
-					@include respond-to($small-desktop) {
-						flex-basis: 20%;
-					}
-
-					@include respond-to($desktop) {
-						flex-basis: 20%;
-					}
-
-					&:disabled {
-						@include respond-to($max-tablet) {
-							color: col-alpha('primary', 0.5);
-						}
+				&.departure:disabled {
+					@include respond-to($max-tablet) {
+						color: col-alpha('primary', 0.5);
 					}
 				}
 
-				&.arrival {
-					flex-basis: 22%;
-					max-width: 20% !important;
-
-					@include respond-to($phone) {
-						flex-basis: 100% !important;
-						max-width: 100% !important;
-					}
-
-					@include respond-to($mid-tablet) {
-						flex-basis: 49.5% !important;
-						max-width: 49.5% !important;
-					}
-
-					@include respond-to($mini-desktop) {
-						flex-basis: 20%;
-						max-width: 18% !important;
-					}
-
-					@include respond-to($small-desktop) {
-						flex-basis: 20%;
-						max-width: 18% !important;
-					}
-
-					@include respond-to($desktop) {
-						flex-basis: 20%;
-						max-width: 18% !important;
-					}
-				}
-
-				&.airline {
-					flex-basis: 12%;
-					max-width: 12%;
-
-					@include respond-to($mid-tablet) {
-						flex-basis: calc(100% / 3) !important;
-						max-width: 33% !important;
-						margin-top: 12px;
-					}
-
-					&::placeholder {
-						color: col-alpha('primary', 0.9) !important;
-					}
+				&.airline::placeholder {
+					color: col-alpha('primary', 0.9) !important;
 				}
 
 				&.submit {
+					@include respond-to($mid-tablet) {
+						width: 32%;
+					}
+
 					@include respond-to($mini-desktop) {
 						padding: 0 8px;
 						margin: 0;
+					}
+				}
+			}
+
+			.relative {
+				@include respond-to($phone-plus) {
+					flex-basis: 100%;
+					max-width: 100%;
+					margin-top: 10px;
+				}
+
+				@include respond-to($mid-tablet) {
+					flex-basis: 32.5%;
+				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 32.5%;
+					margin-bottom: 10px;
+				}
+
+				input {
+					flex-basis: 100% !important;
+					width: 100% !important;
+
+					@include respond-to($min-desktop) {
+						max-width: 97% !important;
 					}
 				}
 			}
@@ -132,12 +100,17 @@ section#flights-filter {
 					flex-basis: calc(100% / 3) !important;
 					max-width: 33% !important;
 				}
+
+				@include respond-to($mini-desktop) {
+					flex-basis: 43%;
+				}
 			}
 
 			datalist {
-				top: auto;
-				width: 30.7%;
-				margin-top: 3.5rem;
+				@include respond-to($phone-plus) {
+					left: 0;
+					top: auto;
+				}
 			}
 		}
 	}
