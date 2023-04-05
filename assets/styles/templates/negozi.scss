@@ -87,6 +87,10 @@ section#shop-list {
 				flex-basis: calc(97% / 2);
 			}
 
+			@include respond-to($mini-desktop) {
+				flex-basis: calc(97% / 2);
+			}
+
 			&.list {
 				cursor: pointer;
 				height: 100%;
@@ -104,12 +108,13 @@ section#shop-list {
 
 				.logo {
 					border: 0;
-					flex-basis: 30%;
+					flex-basis: 33%;
+					margin-left: 10px;
 				}
 
 				.info {
 					border-radius: $radius;
-					flex-basis: 65%;
+					flex-basis: 60%;
 				}
 			}
 
@@ -121,15 +126,21 @@ section#shop-list {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				padding: 15px;
-				height: 250px;
+				// padding: 15px;
+				// height: 250px;
 				width: 100%;
+				padding: 0;
+				height: 15vw;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
 
 				@include respond-to($phone) {
 					border-width: 1px 0 0 !important;
 					border-radius: 0;
-					height: auto;
-					padding: 50px 20px;
+					// height: auto;
+					// padding: 50px 20px;
+					height: 57vw;
 					flex-basis: 100% !important;
 					border-style: solid !important;
 					border-color: var(--medium-gray) !important;
@@ -137,6 +148,14 @@ section#shop-list {
 
 				@include respond-to($mid-tablet) {
 					height: 300px;
+				}
+
+				@include respond-to($mini-desktop) {
+					height: 17vw;
+				}
+
+				@include respond-to($small-desktop) {
+					height: 17vw;
 				}
 
 				img {
