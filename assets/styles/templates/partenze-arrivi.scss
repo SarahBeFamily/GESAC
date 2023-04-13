@@ -34,12 +34,30 @@
 					justify-content: space-around;
 
 					.col:first-child {
-						flex-basis: 38%;
+						// flex-basis: 38%;
+						/* mod staging */
+						flex-basis: 49.5%;
+						flex-grow: 0;
+						padding: 0;
+
+						@include respond-to($tablet) {
+							/* mod staging */
+							flex-basis: 39.5%;
+						}
 					}
 
 					.col:last-child {
-						flex-basis: 44%;
-						padding-left: 12px;
+						// flex-basis: 44%;
+						// padding-left: 12px;
+						/* mod staging */
+						flex-basis: 42.1%;
+						flex-grow: 0;
+						padding: 0;
+
+						@include respond-to($tablet) {
+							/* mod staging */
+							flex-basis: 36.1%;
+						}
 					}
 				}
 
@@ -53,7 +71,10 @@
 
 				&.status {
 					text-align: left;
-					padding-left: 15px;
+					// padding-left: 15px;
+					/* mod staging */
+					padding-left: 36px;
+					flex-basis: 15.5%;
 				}
 			}
 		}
@@ -128,6 +149,7 @@
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						padding: 0;
 
 						@include respond-to($small-phone) {
 							flex-basis: 40% !important;
@@ -203,8 +225,10 @@
 				}
 
 				&.flight-info {
-					flex-basis: 34%;
+					// flex-basis: 34%;
 					align-items: center;
+					/* mod staging */
+					flex-basis: 33.3%;
 
 					@include respond-to($phone) {
 						display: block;
@@ -232,7 +256,8 @@
 						}
 
 						.name {
-							font-size: toRem(22);
+							// font-size: toRem(22);
+							font-size: clamp(22px, 1.3vw, 26px);
 	
 							.acronym {
 								color: var(--secondary);
@@ -246,6 +271,10 @@
 									}
 								}
 							}
+						}
+
+						.flight-n {
+							font-size: clamp(16px, 1vw, 20px);
 						}
 	
 						.slidee {
@@ -266,6 +295,9 @@
 					justify-content: center;
 					align-items: center;
 					font-size: toRem(22);
+					/* mod staging */
+					flex-basis: 13%;
+					padding-right: 26px;
 
 					@include respond-to($phone) {
 						flex-basis: 100%;
@@ -279,13 +311,31 @@
 						display: flex;
 						flex-wrap: wrap;
 					}
+
+					@include respond-to($tablet) {
+						/* mod staging */
+						flex-basis: 15%;
+						padding-right: 0;
+					}
 				}
 
 				&.gate {
-					@extend .check-in;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: toRem(22);
+					/*mod staging */
+					padding-left: 3px;
+					padding-right: 36px;
 
 					@include respond-to($phone) {
 						display: none !important;
+					}
+
+					@include respond-to($tablet) {
+						/* mod staging */
+						flex-basis: 12%;
+						padding-right: 15px;
 					}
 				}
 
