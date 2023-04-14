@@ -90,7 +90,7 @@
 				<div class="col">Previsto</div>
 				<div class="col">Partenza</div>
 			</div>
-			<div class="col flights-info">Partito da | N° Volo | Compagnia Aerea</div>
+			<div class="col flights-info">Destinazione | N° Volo | Compagnia Aerea</div>
 			<div class="col">Check-in</div>
 			<div class="col">Gate</div>
 			<div class="col status">Status</div>
@@ -180,15 +180,15 @@
 
 			<div class="col check-in">
 				<div class="label mobile-only">Check-in</div>
-				722-684
+				01-02-03-04-05-06
 			</div>
 
 			<div class="col gate">
-				B8
+				B15
 			</div>
 
-			<div class="col status lastcall">
-				<i class="icon icons-status-lastcall"></i> <span class="status-label">Ultima Chiamata</span>
+			<div class="col status departed">
+				<span class="status-label">Partito</span>
 			</div>
 
 			<i class="icon icon-arrow-circle-sec"></i>
@@ -376,8 +376,8 @@
 				B6
 			</div>
 
-			<div class="col status closed">
-				<i class="icon icons-status-closed"></i> <span class="status-label">Chiuso</span>
+			<div class="col status lastcall">
+				<i class="icon icons-status-lastcall"></i> <span class="status-label">Ultima Chiamata</span>
 			</div>
 
 			<i class="icon icon-arrow-circle-sec"></i>
@@ -590,7 +590,7 @@
 				<div class="col">Previsto</div>
 				<div class="col">Arrivo</div>
 			</div>
-			<div class="col flights-info">Partito da | N° Volo | Compagnia Aerea</div>
+			<div class="col flights-info">Destinazione | N° Volo | Compagnia Aerea</div>
 			<div class="col nastro">Nastro bagagli</div>
 			<div class="col status">Status</div>
 		</div>
