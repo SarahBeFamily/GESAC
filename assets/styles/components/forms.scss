@@ -581,6 +581,10 @@ form#search-flight {
 			@include respond-to($tablet) {
 				margin-top: 12px;
 			}
+			@include respond-to($small-desktop) {
+				flex-basis: 16% !important;
+				width: 20%;
+			}
 		}
 
 		&.submit {

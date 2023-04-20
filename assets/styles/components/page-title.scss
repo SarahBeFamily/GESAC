@@ -142,6 +142,10 @@
 			padding: 45px 0 0;
 		}
 
+		@include respond-to($small-desktop) {
+			padding: 45px 0;
+		}
+
 		#tab-voli .main-tabs .tabs > div {
 			@include respond-to($phone) {
 				font-size: toRem(18);
