@@ -807,7 +807,13 @@ $(function() {
 	// Info Parcheggi Template
 	// Fatturazione / Telepass effect in Registrazione / Login Template
 	$('.faq, .section-form').on('click', '.title, .title-wrap', function() {
-		$(this).parent().toggleClass('closed');
+		let parent = $(this).parent();
+		if (parent.hasClass('closed')) {
+			parent.removeClass('closed');
+			parent.siblings().addClass('closed');
+		} else {
+			parent.addClass('closed');
+		}
 	});
 
 	// Single shop view effect

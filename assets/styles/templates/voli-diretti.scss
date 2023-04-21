@@ -42,9 +42,27 @@ section#flights-filter {
 					}
 				}
 
-				&.departure:disabled {
-					@include respond-to($max-tablet) {
-						color: col-alpha('primary', 0.5);
+				&.departure {
+					margin-top: 0 !important;
+
+					@include respond-to($min-desktop) {
+						flex-basis: 25%;
+						margin-right: 15px !important;
+					}
+
+					@include respond-to($tablet) {
+						flex-basis: 31%;
+						margin: 0 0 10px 0;
+					}
+
+					@include respond-to($mini-desktop) {
+						margin: 0 15px 10px 0;
+					}
+
+					&:disabled {
+						@include respond-to($max-tablet) {
+							color: col-alpha('primary', 0.5);
+						}
 					}
 				}
 
@@ -61,10 +79,16 @@ section#flights-filter {
 						padding: 0 8px;
 						margin: 0;
 					}
+
+					@include respond-to($small-desktop) {
+						padding: 16px 25px;
+					}
 				}
 			}
 
 			.relative {
+				flex-basis: 20%;
+
 				@include respond-to($phone-plus) {
 					flex-basis: 100%;
 					max-width: 100%;
@@ -72,11 +96,11 @@ section#flights-filter {
 				}
 
 				@include respond-to($mid-tablet) {
-					flex-basis: 32.5%;
+					flex-basis: 33.5%;
 				}
 
 				@include respond-to($mini-desktop) {
-					flex-basis: 32.5%;
+					flex-basis: 36.5%;
 					margin-bottom: 10px;
 				}
 
@@ -91,6 +115,8 @@ section#flights-filter {
 			}
 
 			.input-wrapper {
+				flex-basis: 20%;
+				
 				@include respond-to($phone) {
 					flex-basis: 100% !important;
 					max-width: 100% !important;

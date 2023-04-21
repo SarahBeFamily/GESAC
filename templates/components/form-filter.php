@@ -1,9 +1,7 @@
 <form action="" id="filter-flight">
 
 	
-	<div class="relative">
-		<input class="departure" type="text" name="departure" value="Napoli Internazionale (NAP)" placeholder="Partenza" disabled readonly>
-	</div>
+	<input class="departure" type="text" name="departure" value="Napoli Internazionale (NAP)" placeholder="Partenza" disabled readonly>
 
 	<div class="relative">
 		<input class="arrival" role="combobox" type="text" name="arrival" list="" data-list-id="directs" value="" placeholder="Arrivi" required autocomplete="off">
@@ -71,10 +69,12 @@
 	</div>
 
 	<div class="input-wrapper --calendar">
+		<!-- <i class="icon icon-calendar"></i> -->
 		<input class="drop calendar" type="text" name="from" placeholder="Dal">
 	</div>
 
 	<div class="input-wrapper --calendar">
+		<!-- <i class="icon icon-calendar"></i> -->
 		<input class="drop calendar" type="text" name="to" placeholder="Al">
 	</div>
 
