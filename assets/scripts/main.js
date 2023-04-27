@@ -807,13 +807,22 @@ $(function() {
 	// Faq accordion effect
 	// Info Parcheggi Template
 	// Fatturazione / Telepass effect in Registrazione / Login Template
-	$('.faq, .section-form').on('click', '.title, .title-wrap', function() {
+	$('.section-form').on('click', '.title, .title-wrap', function() {
 		let parent = $(this).parent();
 		if (parent.hasClass('closed')) {
 			parent.removeClass('closed');
 			parent.siblings().addClass('closed');
 		} else {
 			parent.addClass('closed');
+		}
+	});
+
+	$('.faq').on('click', function() {
+		if ($(this).hasClass('closed')) {
+			$(this).removeClass('closed');
+			$(this).siblings().addClass('closed');
+		} else {
+			$(this).addClass('closed');
 		}
 	});
 
