@@ -105,7 +105,8 @@ input {
 
 		@include respond-to($small-desktop) {
 			margin-left: -5px;
-			padding-left: 25px;
+			padding-left: 18px;
+			flex-basis: 32% !important;
 		}
 
 		@include respond-to($min-wide-desktop) {
@@ -148,6 +149,11 @@ input {
 		@include respond-to($mini-desktop) {
 			margin-top: 16px;
 			margin-right: 10px;
+		}
+
+		@include respond-to($small-desktop) {
+			padding: 14px 0;
+			flex-basis: 13% !important;
 		}
 	}
 

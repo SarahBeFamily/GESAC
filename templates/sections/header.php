@@ -12,11 +12,8 @@
 			Ultime Notizie: 
 		</div>
 		<div class="marquee news">
-			<div class="marquee--inner">
-				<p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Egestas facilisi eget dictum lectus enim. Sapien facilisi adipiscing ac aliquam maecenas.</p>
-				- 
-				<p>Sapien facilisi adipiscing ac aliquam maecenas. </p> 
-				- 
+			<div class="marquee--inner loop-container">
+			<p><a href="https://www-staging.aeroportodinapoli.it/web/gesac/-/dal-3-aprile-nuovo-volo-per-riyadh">Dal 3 aprile parte il nuovo volo per Riyadh, la più grande metropoli della Penisola Arabica dal grandioso patrimonio storico. Per info voli&nbsp;wizzair.com </a> </p>
 			</div>
 		</div>
 	</div>
