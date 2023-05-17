@@ -20,20 +20,22 @@ header {
 			}
 
 			.marquee.news {
-				// white-space: initial !important;
-				// animation: none;
-				// position: relative;
+				white-space: initial !important;
+				position: relative;
 
 				.marquee--inner {
 					padding: 0 28px 30px;
+					animation: none;
 
 					@include respond-to($max-tablet) {
 						flex-wrap: wrap;
+						width: 107%;
 					}
 
 					span, p {
 						@include respond-to($max-tablet) {
 							padding: 0;
+							flex-basis: 100%;
 						}
 					}
 				}
@@ -64,20 +66,33 @@ header {
 		}
 
 		.marquee.news {
+			display: flex;
 			position: relative;
 			overflow: hidden;
 			white-space: nowrap;
 			font-weight: 300;
 			width: 90%;
-			// animation: marquee 15s linear infinite;
+			user-select: none;
+  			gap: var(--gap);
 
 			@include respond-to($mini-desktop) {
 				font-size: toRem(14);
 			}
 
 			.marquee--inner {
+				flex-shrink: 0;
 				display: flex;
 				align-items: center;
+				justify-content: space-around;
+				gap: var(--gap);
+				min-width: 100%;
+
+
+				animation: scroll-x var(--duration) linear infinite;
+
+				&:hover {
+					animation-play-state: paused;
+				}
 			}
 
 			span, p {

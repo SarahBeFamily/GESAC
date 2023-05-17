@@ -69,9 +69,13 @@ body {
 	}
 }
 
-@keyframes marquee {
-	0% { left: 0; }
-	100% { left: -100%; }
+@keyframes scroll-x {
+	from {
+	  transform: translateX(var(--scroll-start));
+	}
+	to {
+	  transform: translateX(var(--scroll-end));
+	}
 }
 
 

@@ -499,12 +499,12 @@ form#search-flight {
 	input {
 		flex-basis: calc(100% / 5);
 
-		@include respond-to($phone) {
+		@include respond-to($phone-plus) {
 			flex-basis: 100%;
 		}
 
-		@include respond-to($mid-tablet) {
-			flex-basis: 43%;
+		@include respond-to($tablet) {
+			flex-basis: 49%;
 		}
 
 		@include respond-to($mini-desktop) {
@@ -517,6 +517,12 @@ form#search-flight {
 
 		@include respond-to($desktop) {
 			flex-basis: calc(96% / 5);
+		}
+
+		&:first-of-type {
+			@include respond-to($phone-plus) {
+				margin-bottom: 10px;
+			}
 		}
 
 		&:nth-of-type(2),
@@ -542,8 +548,9 @@ form#search-flight {
 				padding: 25px 27px;
 			}
 
-			@include respond-to($mid-tablet) {
-				padding: 26px;
+			@include respond-to($tablet) {
+				padding: 20px;
+				flex-basis: 100%;
 			}
 
 			@include respond-to($td) {
@@ -551,8 +558,9 @@ form#search-flight {
 				margin-top: 12px;
 			}
 
-			@include respond-to($max-tablet) {
+			@include respond-to($phone-plus) {
 				flex-basis: 10%;
+				margin-top: 0 !important;
 				font-size: 0;
 				background-image: url('../../img/header/cerca.svg');
 				background-position: center;
@@ -581,7 +589,7 @@ form#search-flight {
 
 			@include respond-to($small-tablet) {
 				margin-top: 12px;
-				width: 22%;
+				flex-basis: 85%;
 			}
 
 			@include respond-to($tablet) {
@@ -617,7 +625,6 @@ form#search-parking {
 
 	input {
 		flex-basis: calc(100% / 6);
-		// max-width: 100%;
 
 		@include respond-to($mini-desktop) {
 			flex-basis: 48.8% !important;

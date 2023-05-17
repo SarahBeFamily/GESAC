@@ -56,56 +56,6 @@ $(function() {
 			$(this).toggleClass('open');
 		}
 	})
-	// marquee
-	const root = document.documentElement,
-    marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed'),
-    marqueeContent = document.querySelector('.marquee--inner');
-
-	if (marqueeContent) {
-		root.style.setProperty('--marquee-elements', marqueeContent.children.length);
-		for (let i = 0; i < marqueeElementsDisplayed; i++) marqueeContent.appendChild(marqueeContent.children[i].cloneNode(!0));
-	
-		const lerp = (current, target, factor) => current * (1 - factor) + target * factor;
-		class LoopingText {
-			constructor(el) {
-				this.el = el;
-				this.lerp = {current: 0, target: 0};
-				this.interpolationFactor = 0.1;
-				this.speed = 0.01;
-				this.direction = -1; // -1 (to-left), 1 (to-right) 
-				
-				// Init
-				this.el.style.cssText = `position: relative; display: inline-flex; white-space: nowrap;`;
-				this.el.children[20].style.cssText = `position: absolute; left: ${100 * -this.direction}%;`;
-				this.events();
-				this.render();
-			}
-
-			events() {
-				window.addEventListener("scroll", () => this.lerp.target += this.speed * 5);
-			}
-
-			animate() {
-				this.lerp.target += this.speed;
-				this.lerp.current = lerp(this.lerp.current, this.lerp.target, this.interpolationFactor);
-				
-				if (this.lerp.target > 100) {
-				this.lerp.current -= this.lerp.target;
-				this.lerp.target = 0;
-				}
-
-				const x = this.lerp.current * this.direction;
-				this.el.style.transform = `translateX(${x}%)`;
-			}
-
-			render() {
-				this.animate();
-				window.requestAnimationFrame(() => this.render());
-			}
-		}
-
-		document.querySelectorAll(".loop-container").forEach(el => new LoopingText(el));
-	}
 
 	// General button open to close et viceversa
 	$('.btn-open-close').on('click', function() {
