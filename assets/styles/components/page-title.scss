@@ -136,14 +136,14 @@
 	}
 
 	.forms-tab {
-		padding: 45px 5%;
+		padding: 45px 0;
 
 		@include respond-to($phone) {
 			padding: 45px 0 0;
 		}
 
-		@include respond-to($small-desktop) {
-			padding: 45px 0;
+		@include respond-to($min-wide-desktop2) {
+			padding: 45px 5%;
 		}
 
 		#tab-voli .main-tabs .tabs > div {
