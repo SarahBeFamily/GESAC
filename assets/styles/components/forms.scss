@@ -234,7 +234,8 @@ select {
 	}
 }
 
-datalist {
+datalist,
+.safari-datalist {
 	position: absolute;
 	max-height: 20em;
 	border: 0 none;
@@ -257,6 +258,10 @@ datalist {
 
 	&.open {
 		display: block;
+
+		.option {
+			display: flex;
+		}
 	}
 
 	&[input-focus="arrival"] {
@@ -272,7 +277,8 @@ datalist {
 		left: -6px;
 	}
 
-	option {
+	option,
+	.option {
 		font-size: toRem(14);
 		padding: 12px 26px;
 		background-color: #f3f3f3;

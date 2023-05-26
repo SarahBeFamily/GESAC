@@ -3,6 +3,32 @@
 	<div class="relative">
 		<input class="departure" role="combobox" type="text" name="departure" list="" data-list-id="airports" value="Napoli Internazionale (NAP)" placeholder="Partenze" required autocomplete="off">
 
+		<div id="datalist-airports" class="safari-only safari-datalist">
+			<div class="option" value="San Diego">
+				<div>
+					<p class="titlelist">San Diego</p>
+					<p class="location">California, USA</p>
+				</div>
+				SAN
+			</div>
+
+			<div class="option" value="Thera">
+				<div>
+					<p class="titlelist">Thera</p>
+					<p class="location">Santorini, Grecia</p>
+				</div>
+				JTR
+			</div>
+
+			<div class="option" value="Tenerife">
+				<div>
+					<p class="titlelist">Santa Cruz de Tenerife</p>
+					<p class="location">Isole Canarie, Spagna</p>
+				</div>
+				TCI
+			</div>
+		</div>
+
 		<datalist id="airports">
 		
 			<option value="Napoli Internazionale (NAP)">

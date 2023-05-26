@@ -7,7 +7,8 @@ require('timepicker/jquery.timepicker.min');
 $(function() {
 
 	let body = $('body'),
-		ww = $(window).width();
+		ww = $(window).width(),
+		isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 	if ($(window).width() < 640) {
 		$('.tabs-v2-content:not(.starter, .hidden)').addClass('hidden');
@@ -325,13 +326,19 @@ $(function() {
 		arrival.val(arrival.attr('departure-val'));
 	});
 
+	if (isSafari == false) {
+		$('.safari-only').remove();
+	}
+
 	// Search on datalist on keyup
 	$("input[list]").on('click', function() {
 		let list = $(this).attr('data-list-id'),
 			thisclass = $(this).attr('class'),
 			inputClass = thisclass.replace('drop ', ''),
-			listOpen = $(`datalist#${list}`).hasClass('open');
+			listOpen = $(`datalist#${list}`).hasClass('open'),
+			safari_listOpen = $(`.safari-datalist#datalist-${list}`).hasClass('open');
 
+		$(`.safari-datalist#datalist-${list}`).attr('input-focus', inputClass);
 		$(`datalist#${list}`).attr('input-focus', inputClass);
 		$(`datalist`).removeClass('open');
 
@@ -339,6 +346,12 @@ $(function() {
 			$(`datalist#${list}`).removeClass('open');
 		else
 			$(`datalist#${list}`).addClass('open');
+
+		/*Safari*/
+		if (safari_listOpen)
+			$(`.safari-datalist#datalist-${list}`).removeClass('open');
+		else
+			$(`.safari-datalist#datalist-${list}`).addClass('open');
 	});
 
 	$('datalist option').on('click', function() {
@@ -346,6 +359,15 @@ $(function() {
 			input = datalist.attr('input-focus');
 
 		$(`input.${input}`).val($(this).val());
+		datalist.toggleClass('open');
+	});
+
+	/*Safari datalist fake*/
+	$('.safari-datalist .option').on('click', function() {
+		let datalist = $(this).parents('.safari-datalist'),
+			input = datalist.attr('input-focus');
+
+		$(`input.${input}`).val($(this).attr('value'));
 		datalist.toggleClass('open');
 	});
 
