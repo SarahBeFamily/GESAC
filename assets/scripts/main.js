@@ -3,6 +3,7 @@ import { Fancybox } from "@fancyapps/ui";
 
 require('slick-carousel');
 require('timepicker/jquery.timepicker.min');
+require('jquery-ui-dist/jquery-ui.min');
 
 $(function() {
 
@@ -131,23 +132,25 @@ $(function() {
 	});
 
 	// Manage date input with placeholder
-	$('input.calendar').on('focus', function() {
-		let input = $(this);
+	$( "input.calendar" ).datepicker();
+	
+	// $('input.calendar').on('focus', function() {
+	// 	let input = $(this);
 
-		input.removeAttr('readonly');
-		input.attr('type', 'date');
-		input.after().trigger('click touchstart');
-	});
+	// 	input.removeAttr('readonly');
+	// 	input.attr('type', 'date');
+	// 	input.after().trigger('click touchstart');
+	// });
 
 
-	$('input.calendar').on('change', function() {
-		let input = $(this);
+	// $('input.calendar').on('change', function() {
+	// 	let input = $(this);
 
-		if (input.val() == '') {
-			input.attr('readonly', 'true');
-			input.attr('type', 'text');
-		}
-	});
+	// 	if (input.val() == '') {
+	// 		input.attr('readonly', 'true');
+	// 		input.attr('type', 'text');
+	// 	}
+	// });
 
 	// Hero tab Homepage
 	$('#tab-voli').on('click', '.tabs div', function() {

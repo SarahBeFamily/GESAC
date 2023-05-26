@@ -405,7 +405,7 @@ ol {
 		}
 
 		.icon-circle {
-			justify-content: flex-start;
+			justify-content: center;
 
 			@include respond-to($phone) {
 				margin: 0;
@@ -530,4 +530,8 @@ ol {
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	z-index: 999;
+}
+
+#ui-datepicker-div {
+	z-index: 99 !important;
 }

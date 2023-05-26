@@ -119,6 +119,10 @@ input {
 	&.drop {
 		background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.64612 5.74428C4.68366 5.7894 4.73067 5.82571 4.78381 5.85063C4.83695 5.87554 4.89493 5.88846 4.95362 5.88846C5.01232 5.88846 5.07029 5.87554 5.12343 5.85063C5.17658 5.82571 5.22358 5.7894 5.26112 5.74428L9.40612 0.769281C9.45475 0.710894 9.48575 0.639861 9.49548 0.564497C9.50521 0.489134 9.49327 0.412559 9.46106 0.343734C9.42885 0.274909 9.3777 0.216683 9.31361 0.17587C9.24951 0.135058 9.17511 0.113348 9.09912 0.113281H0.807121C0.731132 0.113348 0.656735 0.135058 0.592636 0.17587C0.528538 0.216683 0.47739 0.274909 0.445181 0.343734C0.412972 0.412559 0.401034 0.489134 0.410763 0.564497C0.420493 0.639861 0.451488 0.710894 0.500121 0.769281L4.64612 5.74428Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E%0A");
 		
+		@include respond-to($max-tablet) {
+			margin-bottom: 0 !important;
+		}
+		
 		&::placeholder {
 			opacity: 1 !important;
 		}
@@ -157,43 +161,43 @@ input {
 		}
 	}
 
-	&[type="date"].drop.calendar {
-		background: none;
-		padding-top: 17px;
-		padding-bottom: 17px;
-		width: 100%;
-		min-width: 205px;
+	// &[type="date"].drop.calendar {
+	// 	background: none;
+	// 	padding-top: 17px;
+	// 	padding-bottom: 17px;
+	// 	width: 100%;
+	// 	min-width: 205px;
 
-		@include respond-to($mini-desktop) {
-			min-width: 100px;
-		}
+	// 	@include respond-to($mini-desktop) {
+	// 		min-width: 100px;
+	// 	}
 
-		@include respond-to($small-desktop) {
-			min-width: 130px;
-		}
+	// 	@include respond-to($small-desktop) {
+	// 		min-width: 130px;
+	// 	}
 
-		@include respond-to($anomalia-gallery) {
-			min-width: 170px;
-		}
+	// 	@include respond-to($anomalia-gallery) {
+	// 		min-width: 170px;
+	// 	}
 
-		&::after {
-			// content: attr(placeholder);
-			content: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.64612 5.74428C4.68366 5.7894 4.73067 5.82571 4.78381 5.85063C4.83695 5.87554 4.89493 5.88846 4.95362 5.88846C5.01232 5.88846 5.07029 5.87554 5.12343 5.85063C5.17658 5.82571 5.22358 5.7894 5.26112 5.74428L9.40612 0.769281C9.45475 0.710894 9.48575 0.639861 9.49548 0.564497C9.50521 0.489134 9.49327 0.412559 9.46106 0.343734C9.42885 0.274909 9.3777 0.216683 9.31361 0.17587C9.24951 0.135058 9.17511 0.113348 9.09912 0.113281H0.807121C0.731132 0.113348 0.656735 0.135058 0.592636 0.17587C0.528538 0.216683 0.47739 0.274909 0.445181 0.343734C0.412972 0.412559 0.401034 0.489134 0.410763 0.564497C0.420493 0.639861 0.451488 0.710894 0.500121 0.769281L4.64612 5.74428Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E%0A");
-		}
+	// 	&::after {
+	// 		// content: attr(placeholder);
+	// 		content: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.64612 5.74428C4.68366 5.7894 4.73067 5.82571 4.78381 5.85063C4.83695 5.87554 4.89493 5.88846 4.95362 5.88846C5.01232 5.88846 5.07029 5.87554 5.12343 5.85063C5.17658 5.82571 5.22358 5.7894 5.26112 5.74428L9.40612 0.769281C9.45475 0.710894 9.48575 0.639861 9.49548 0.564497C9.50521 0.489134 9.49327 0.412559 9.46106 0.343734C9.42885 0.274909 9.3777 0.216683 9.31361 0.17587C9.24951 0.135058 9.17511 0.113348 9.09912 0.113281H0.807121C0.731132 0.113348 0.656735 0.135058 0.592636 0.17587C0.528538 0.216683 0.47739 0.274909 0.445181 0.343734C0.412972 0.412559 0.401034 0.489134 0.410763 0.564497C0.420493 0.639861 0.451488 0.710894 0.500121 0.769281L4.64612 5.74428Z' fill='#{url-friendly-colour($primary-dark)}'/%3E%3C/svg%3E%0A");
+	// 	}
 
-		&::-webkit-date-and-time-value {
-			text-align: left !important;
-			width: 93% !important;
-		}
-		&::-webkit-calendar-picker-indicator{
-			display:block;
-			top:0;
-			left:0;
-			background: #0000;
-			position:absolute;
-			transform: scale(12)
-		}
-	}
+	// 	&::-webkit-date-and-time-value {
+	// 		text-align: left !important;
+	// 		width: 93% !important;
+	// 	}
+	// 	&::-webkit-calendar-picker-indicator{
+	// 		display:block;
+	// 		top:0;
+	// 		left:0;
+	// 		background: #0000;
+	// 		position:absolute;
+	// 		transform: scale(12)
+	// 	}
+	// }
 
 	&[type="submit"] {
 		appearance: none;
