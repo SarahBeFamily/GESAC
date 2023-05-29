@@ -132,7 +132,25 @@ $(function() {
 	});
 
 	// Manage date input with placeholder
-	$( "input.calendar" ).datepicker();
+	$('input.calendar').each(function() {
+		$(this).uniqueId();
+		let ID = $(this).attr('id');
+
+		$(`#${ID}`).datepicker({
+			beforeShow: function(input, inst) {
+				setTimeout(function () {
+					
+					let offsets = $(input).offset(),
+						top = (offsets.top + body.scrollTop()) + 55;
+
+					inst.dpDiv.css({
+						top: top,
+						left: offsets.left,
+					});
+				});
+			}
+		  });
+	});
 	
 	// $('input.calendar').on('focus', function() {
 	// 	let input = $(this);
