@@ -30,7 +30,7 @@ function include_content_page($page) {
  * @return void
  */
 function img_path($img) {
-	$base_url = strpos($_SERVER['HTTP_HOST'], 'localhost') !== false ? 'http://localhost/gesac' : 'http://'.$_SERVER['HTTP_HOST'];
+	$base_url = strpos($_SERVER['HTTP_HOST'], 'localhost') !== false ? 'http://localhost/gesac' : 'http://'.$_SERVER['HTTP_HOST'].'/gesac';
 	return $base_url .'/assets/img/'.$img;
 }
 
