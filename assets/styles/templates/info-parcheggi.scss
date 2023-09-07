@@ -196,6 +196,10 @@ section#map {
 		width: 100%;
 	}
 
+	@include respond-to($mini-desktop) {
+		width: 93%;
+	}
+
 	> div,
 	> div a {
 		color: var(--secondary);
@@ -270,7 +274,7 @@ section#parking-list {
 	}
 
 	@include respond-to($mini-desktop) {
-		margin: 7rem 15px;
+		margin: 7rem 4%;
 	}
 
 	@include respond-to($small-desktop) {
@@ -291,6 +295,53 @@ section#parking-list {
 
 				@include respond-to($phone) {
 					flex-basis: 100%;
+				}
+
+				@include respond-to($tablet) {
+					margin-bottom: 5rem;
+				}
+
+				@include respond-to($not-mobile) {
+					flex-direction: column;
+  					flex-wrap: nowrap !important;
+				}
+
+				@include respond-to($min-wide-desktop) {
+					margin-bottom: 4rem;
+				}
+
+				.intro {
+					@include respond-to($tablet) {
+						min-height: 44%;
+					}
+
+					@include respond-to($mini-desktop) {
+						min-height: 48%;
+					}
+
+					@include respond-to($small-desktop) {
+						min-height: 43%;
+					}
+
+					@include respond-to($desktop) {
+						min-height: 45%;
+					}
+				}
+
+				.info {
+					@include respond-to($tablet) {
+						min-height:62%;
+					}
+
+					@include respond-to($desktop) {
+						min-height: 61%;
+						margin-bottom: 55px;
+					}
+
+					@include respond-to($retina1) {
+						min-height: 61%;
+						margin-bottom: 55px;
+					}
 				}
 			}
 		}
