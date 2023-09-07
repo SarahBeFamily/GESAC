@@ -347,7 +347,7 @@ ol {
 
 	@include respond-to($phone) {
 		background-color: white;
-		padding-top: 3em;
+		padding: 3em 5px;
 		flex-wrap: wrap;
 		align-items: flex-start;
 	}
