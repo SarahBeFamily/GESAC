@@ -272,6 +272,12 @@
 					}
 
 					.info {
+						@include respond-to($min-desktop) {
+							display: flex;
+							flex-wrap: wrap;
+							align-items: center;
+						}
+						
 						> div {
 							padding: 5px 0;
 							@include respond-to($min-phone) {
