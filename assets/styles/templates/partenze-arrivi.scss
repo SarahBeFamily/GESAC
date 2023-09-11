@@ -95,13 +95,15 @@
 
 		.single-flight {
 			margin: 0 10%;
-			padding: 33px 0;
+			// padding: 33px 0;
+			padding: 5px 0;
 			border-bottom: 1px solid var(--primary-dark);
 
 			@include respond-to($phone) {
 				flex-wrap: wrap;
 				margin: 0 15px;
-				padding: 25px 0;
+				// padding: 25px 0;
+				padding: 25px 0 0;
 				border: 0;
 				position: relative;
 			}
@@ -124,7 +126,8 @@
 
 				@include respond-to($phone) {
 					position: absolute;
-					bottom: 45px;
+					// bottom: 45px;
+					bottom: 18px;
 					right: 20px;
 					z-index: 99;
 				}
@@ -260,6 +263,8 @@
 					}
 
 					.airline-logo {
+						display: none;
+
 						@include respond-to($phone) {
 							float: left;
 							margin-right: 15px;
@@ -277,6 +282,10 @@
 						.name {
 							// font-size: toRem(22);
 							font-size: clamp(22px, 1.3vw, 26px);
+
+							@include respond-to($phone) {
+								display: flex;
+							}
 	
 							.acronym {
 								color: var(--secondary);
@@ -284,9 +293,10 @@
 
 								&.mobile-only {
 									@include respond-to($phone) {
-										width: 100%;
+										// width: 100%;
 										display: block;
-										margin-bottom: 5px;
+										// margin-bottom: 5px;
+										margin-right: 5px;
 									}
 								}
 							}
@@ -320,7 +330,8 @@
 
 					@include respond-to($phone) {
 						flex-basis: 100%;
-						padding: 13px 13px 75px;
+						// padding: 13px 13px 75px;
+						padding: 0 13px 13px;
 						border-radius: 0 0 $radius $radius;
 						border-width: 0 1px 1px 1px;
 						border-style: solid;
