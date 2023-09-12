@@ -36,6 +36,8 @@
 			> .col {
 				flex-basis: 14%;
 				text-align: center;
+				/* mod staging 09-23 */
+				padding: 0 !important;
 
 				@include respond-to($phone) {
 					text-align: left;
@@ -99,7 +101,8 @@
 				}
 
 				&.flights-info {
-					flex-basis: 38%;
+					/* mod staging 09-23 */
+					flex-basis: 30%;
 
 					@include respond-to($phone) {
 						flex-basis: 42%;
@@ -114,11 +117,17 @@
 					text-align: left;
 					/* mod staging */
 					padding-left: 1.2%;
-					flex-basis: 15.5%;
+					/* mod staging 09-23 */
+					flex-basis: 13.5%;
 
 					@include respond-to($small-desktop) {
 						/* mod staging */
 						padding-left: 1%;
+					}
+
+					@include respond-to($retina1) {
+						/* mod staging 09-23 */
+						flex-basis: 15.5%;
 					}
 				}
 			}
@@ -183,14 +192,16 @@
 					@include respond-to($small-phone) {
 						// padding-left: 25px !important;
 						/* new style 09-23 */
-						flex-basis: 26%;
-    					margin-right: -22px;
+						flex-basis: 22%;
+						margin-right: -40px;
+						margin-left: 0px;
 					}
 
 					@include respond-to($mid-phone) {
 						/* new style 09-23 */
-						flex-basis: 23%;
-    					margin-right: -15px;
+						flex-basis: 21%;
+						margin-right: -40px;
+						margin-left: 6px;
 					}
 
 					@include respond-to($phone) {
@@ -308,7 +319,7 @@
 
 						&:not(.on-late) {
 							@include respond-to($small-phone) {
-								margin-top: 40px !important;
+								// margin-top: 40px !important;
 								margin-left: 13px !important;
 							}
 
