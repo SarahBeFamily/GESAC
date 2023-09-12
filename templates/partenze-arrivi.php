@@ -97,6 +97,15 @@
 		</div>
 		<!-- / TITLES ROW ENDS - DESKTOP ONLY -->
 
+		<!-- TITLES ROW STARTS - MOBILE ONLY -->
+		<div class="titles row mobile-only">
+			<div class="col timetables row">Partenza</div>
+			<div class="col flights-info">Destinazione</div>
+			<div class="col">Gate</div>
+			<div class="col status">Status</div>
+		</div>
+		<!-- / TITLES ROW ENDS - MOBILE ONLY -->
+
 		<!-- SINGLE FLIGHT ROW STARTS -->
 		<div id="" class="single-flight row">
 

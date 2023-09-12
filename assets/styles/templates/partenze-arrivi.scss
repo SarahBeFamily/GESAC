@@ -10,7 +10,9 @@
 			padding: 10px;
 
 			@include respond-to($phone) {
-				display: none;
+				margin: 50px 15px 0;
+  				font-size: 12px;
+				padding: 10px 3px;
 			}
 
 			@include respond-to($mid-tablet) {
@@ -25,9 +27,34 @@
 				margin: 50px 5% 0;
 			}
 
+			&:not(.mobile-only) {
+				@include respond-to($phone) {
+					display: none;
+				}	
+			}
+
 			> .col {
 				flex-basis: 14%;
 				text-align: center;
+
+				@include respond-to($phone) {
+					text-align: left;
+				}
+
+				&:nth-child(3) {
+					@include respond-to($small-tablet) {
+						/* new style 09-23 */
+						display: none;
+					}
+
+					@include respond-to($tablet) {
+						/* mod staging */
+						flex-basis: 15%;
+						padding-right: 0;
+						/* new style 09-23 */
+						display: none;
+					}
+				}
 
 				&.timetables {
 					flex-basis: 26.2%;
@@ -73,6 +100,10 @@
 
 				&.flights-info {
 					flex-basis: 38%;
+
+					@include respond-to($phone) {
+						flex-basis: 42%;
+					}
 				}
 
 				&.nastro {
@@ -96,16 +127,17 @@
 		.single-flight {
 			margin: 0 10%;
 			// padding: 33px 0;
-			padding: 5px 0;
+			padding: 15px 0;
 			border-bottom: 1px solid var(--primary-dark);
 
 			@include respond-to($phone) {
 				flex-wrap: wrap;
 				margin: 0 15px;
 				// padding: 25px 0;
-				padding: 25px 0 0;
-				border: 0;
+				// border: 0;
 				position: relative;
+				/* new style 09-23 */
+				padding: 8px 0;
 			}
 
 			@include respond-to($mid-tablet) {
@@ -127,9 +159,11 @@
 				@include respond-to($phone) {
 					position: absolute;
 					// bottom: 45px;
-					bottom: 18px;
-					right: 20px;
+					// right: 20px;
 					z-index: 99;
+					/* new style 09-23 */
+					bottom: 10px;
+					right: -2px;
 				}
 
 				@include respond-to($min-phone) {
@@ -147,23 +181,38 @@
 					padding: 0;
 
 					@include respond-to($small-phone) {
-						padding-left: 25px !important;
+						// padding-left: 25px !important;
+						/* new style 09-23 */
+						flex-basis: 26%;
+    					margin-right: -22px;
+					}
+
+					@include respond-to($mid-phone) {
+						/* new style 09-23 */
+						flex-basis: 23%;
+    					margin-right: -15px;
 					}
 
 					@include respond-to($phone) {
-						//flex-basis: 50%;
-						background-color: var(--light-gray);
-						border-radius: $radius 0 0 0;
+						// flex-basis: 50%;
+						// background-color: var(--light-gray);
+						// border-radius: $radius 0 0 0;
+						// padding-bottom: 18px;
+						// padding-left: 27px;
+						// margin: 0 -10px 0 0;
 						flex-wrap: wrap;
-						padding-bottom: 18px;
 						justify-content: flex-start;
-						padding-left: 27px;
-						margin: 0 -10px 0 0;
+					}
+
+					@include respond-to($mid-phone2) {
+						/* new style 09-23 */
+						flex-basis: 15%;
+						margin-right: 10px;
 					}
 
 					.expected,
 					.actual {
-						font-size: toRem(22);
+						font-size: toRem(18);
 						flex-basis: 33%;
 						display: flex;
 						justify-content: center;
@@ -176,6 +225,8 @@
 
 						@include respond-to($phone) {
 							flex-basis: 30%;
+							/* new style 09-23 */
+							line-height: 1.5;
 						}
 					}
 
@@ -190,6 +241,9 @@
 							order: 3;
 							justify-content: flex-start;
 							flex-basis: 77%;
+							/* new style 09-23 */
+							line-height: 0.5;
+    						margin-top: -25px;
 						}
 					}
 
@@ -199,11 +253,23 @@
 						flex-basis: 17%;
 						padding: 0;
 
+						@include respond-to($small-phone) {
+							/* new style 09-23 */
+							margin-left: 1px;
+						}
+
+						@include respond-to($mid-phone) {
+							margin-left: 13px;
+						}
+
 						@include respond-to($phone) {
 							order: 2;
 							display: flex !important;
-							margin-top: 35px;
-							margin-left: 13px;
+							// margin-top: 35px;
+							/* new style 09-23 */
+							font-size: toRem(13);
+							margin-top: -2px;
+							margin-bottom: 23px;
 						}
 
 						@include respond-to($mid-tablet) {
@@ -219,15 +285,24 @@
 							opacity: 1 !important;
 
 							@include respond-to($small-phone) {
-								margin-left: 13px !important;
+								// margin-left: 13px !important;
+								/* new style 09-23 */
+								height: 22px !important;
 							}
 
 							@include respond-to($phone) {
-								margin-left: 22px;
+								// margin-left: 22px;
+								/* new style 09-23 */
+								height: 17px;
 							}
 
 							i {
 								margin-right: 5px;
+
+								@include respond-to($phone) {
+									margin-right: 1px;
+  									scale: 0.7;
+								}
 							}
 						}
 
@@ -252,22 +327,39 @@
 
 					@include respond-to($phone) {
 						display: block;
-						flex-basis: 100%;
-						padding: 25px 20px 15px;
-						border-width: 0 1px 0 1px; 
-						border-style: solid;
-						border-color: var(--medium-gray);
+						// flex-basis: 100%;
+						// padding: 25px 20px 15px;
+						// border-width: 0 1px 0 1px; 
+						// border-style: solid;
+						// border-color: var(--medium-gray);
 						order: 3;
 						/* mod staging */
-						margin: auto;
+						// margin: auto;
+						margin: 0;
+						/* new style 09-23 */
+						padding: 7px 0;
+						flex-basis: 48%;
+					}
+
+					@include respond-to($small-tablet) {
+						/* new style 09-23 */
+						flex-basis: 43.3%;
+					}
+
+					@include respond-to($tablet) {
+						/* new style 09-23 */
+						flex-basis: 43.3%;
 					}
 
 					.airline-logo {
-						display: none;
-
 						@include respond-to($phone) {
 							float: left;
 							margin-right: 15px;
+						}
+
+						@include respond-to($max-tablet) {
+							/* new style 09-23 */
+							display: none;
 						}
 					}
 
@@ -280,17 +372,31 @@
 						
 						> div {
 							padding: 5px 0;
+
+							@include respond-to($phone) {
+								/* new style 09-23 */
+								padding: 0 0 5px;
+							}
+
 							@include respond-to($min-phone) {
 								margin-left: 20px;
 							}
 						}
 
 						.name {
-							// font-size: toRem(22);
 							font-size: clamp(22px, 1.3vw, 26px);
+							/* new style 09-23 */
+							flex-basis: 100%;
+
+							@include respond-to($small-phone) {
+								/* new style 09-23 */
+								font-size: 15px;
+							}
 
 							@include respond-to($phone) {
 								display: flex;
+								/* new style 09-23 */
+								font-size: 17px;
 							}
 	
 							.acronym {
@@ -310,6 +416,11 @@
 
 						.flight-n {
 							font-size: clamp(16px, 1vw, 20px);
+
+							@include respond-to($phone) {
+								/* new style 09-23 */
+								font-size: 10px;
+							}
 						}
 	
 						.slidee {
@@ -317,6 +428,10 @@
 							overflow: hidden;
 							height: 25px;
 							position: relative;
+
+							@include respond-to($phone) {
+								display: none;
+							}
 							
 							> div {
 								animation: vertical-slidee-3 8s infinite linear;
@@ -335,23 +450,32 @@
 					padding: 0;
 
 					@include respond-to($phone) {
-						flex-basis: 100%;
+						// flex-basis: 100%;
 						// padding: 13px 13px 75px;
-						padding: 0 13px 13px;
-						border-radius: 0 0 $radius $radius;
-						border-width: 0 1px 1px 1px;
-						border-style: solid;
-						border-color: var(--medium-gray);
-						order: 4;
-						font-size: 1rem;
-						display: flex;
-						flex-wrap: wrap;
+						// padding: 0 13px 13px;
+						// border-radius: 0 0 $radius $radius;
+						// border-width: 0 1px 1px 1px;
+						// border-style: solid;
+						// border-color: var(--medium-gray);
+						// order: 4;
+						// font-size: 1rem;
+						// display: flex;
+						// flex-wrap: wrap;
+						/* new style 09-23 */
+						display: none;
+					}
+
+					@include respond-to($small-tablet) {
+						/* new style 09-23 */
+						display: none;
 					}
 
 					@include respond-to($tablet) {
 						/* mod staging */
 						flex-basis: 15%;
 						padding-right: 0;
+						/* new style 09-23 */
+						display: none;
 					}
 				}
 
@@ -363,7 +487,12 @@
 					padding: 0;
 
 					@include respond-to($phone) {
-						display: none !important;
+						// display: none !important;
+						/* new style 09-23 */
+						order: 4;
+						padding: 8px 0 0;
+						flex-basis: 15%;
+						align-items: flex-start;
 					}
 
 					@include respond-to($tablet) {
@@ -378,15 +507,17 @@
 					flex-basis: 20%;
 
 					@include respond-to($phone) {
-						flex-basis: 100%;
-						border-radius: 0 0 $radius $radius;
-						border-width: 0 1px 1px 1px;
-						border-style: solid;
-						border-color: var(--medium-gray);
-						order: 4;
-						font-size: 1rem;
-						display: flex;
-						flex-wrap: wrap;
+						// flex-basis: 100%;
+						// border-radius: 0 0 $radius $radius;
+						// border-width: 0 1px 1px 1px;
+						// border-style: solid;
+						// border-color: var(--medium-gray);
+						// order: 4;
+						// font-size: 1rem;
+						// display: flex;
+						// flex-wrap: wrap;
+						/* new style 09-23 */
+						display: none;
 					}
 				}
 
@@ -411,12 +542,18 @@
 					align-items: center;
 
 					@include respond-to($phone) {
-						flex-basis: 30%;
-						background-color: var(--light-gray);
-						border-radius: 0 $radius 0 0;
-						order: 2;
-						justify-content: center;
-						padding: 10px;
+						// flex-basis: 30%;
+						// background-color: var(--light-gray);
+						// border-radius: 0 $radius 0 0;
+						// order: 2;
+						// justify-content: center;
+						// padding: 10px;
+						/* new style 09-23 */
+						order: 5;
+						align-items: flex-start;
+  						padding-top: 9px;
+						font-size: 13px;
+						flex-direction: column;
 					}
 				}
 			}
