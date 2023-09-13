@@ -260,6 +260,10 @@
 							line-height: 0.5;
     						margin-top: -25px;
 						}
+
+						&:not(.on-late) {
+							opacity: 0;
+						}
 					}
 
 					.clock {
@@ -569,9 +573,10 @@
 						order: 5;
 						align-items: flex-start;
   						padding-top: 9px;
-						font-size: 13px;
+						font-size: 11px;
 						justify-content: flex-end;
     					flex-basis: 100%;
+						padding-right: 22px;
 					}
 				}
 			}
