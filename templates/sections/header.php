@@ -12,11 +12,11 @@
 			Ultime Notizie: 
 		</div>
 		<div class="marquee news">
-			<div class="marquee--inner">
-				<p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Egestas facilisi eget dictum lectus enim. Sapien facilisi adipiscing ac aliquam maecenas.</p>
-				- 
-				<p>Sapien facilisi adipiscing ac aliquam maecenas. </p> 
-				- 
+			<div class="marquee--inner loop-container">
+				<p><a href="https://www-staging.aeroportodinapoli.it/web/gesac/-/sciopero-nazionale-del-personale-delle-societa-di-handling-aeroportuale-19-maggio-2023-4-ore-dalle-12-00-alle-16-00">Sciopero nazionale settore handling 19 maggio 2023 – 24 ore – dalle 12:00 alle 16:00 proclamato da FILT CGIL, FIT CISL, UIL Trasporti e UGL T.A &nbsp; &nbsp; </a></p>
+			</div>
+			<div class="marquee--inner loop-container" aria-hidden="true">
+				<p><a href="https://www-staging.aeroportodinapoli.it/web/gesac/-/sciopero-nazionale-del-personale-delle-societa-di-handling-aeroportuale-19-maggio-2023-4-ore-dalle-12-00-alle-16-00">Sciopero nazionale settore handling 19 maggio 2023 – 24 ore – dalle 12:00 alle 16:00 proclamato da FILT CGIL, FIT CISL, UIL Trasporti e UGL T.A &nbsp; &nbsp; </a></p>
 			</div>
 		</div>
 	</div>

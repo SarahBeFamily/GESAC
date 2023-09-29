@@ -138,8 +138,7 @@ function include_content_page($page)
  * @param [string] $img
  * @return void
  */
-function img_path($img)
-{
+function img_path($img) {
     $base_url = get_base_url();
     return $base_url . '/assets/img/' . $img;
 }

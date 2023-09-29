@@ -112,7 +112,7 @@ footer {
 		}
 
 		#social {
-			flex-basis: 17%;
+			flex-basis: 16.5%;
 			display: flex;
 			align-items: center;
 
@@ -124,7 +124,11 @@ footer {
 			}
 
 			@include respond-to($mini-desktop) {
-				flex-wrap: wrap;
+				flex-basis: 24%;
+			}
+
+			@include respond-to($retina1) {
+				flex-basis: 18.9%;
 			}
 
 			a {
@@ -147,7 +151,7 @@ footer {
 			}
 		}
 
-		#copy-menu {
+		#copy-menu, .portlet {
 			display: flex;
 			align-items: center;
 			flex-basis: 43%;
@@ -159,12 +163,20 @@ footer {
 				text-align: center;
 			}
 
+			@include respond-to($mini-desktop) {
+				padding-left: 5%;
+			}
+
 			@include respond-to($small-desktop) {
-				flex-basis: 48%;
+				flex-basis: 57%;
 			}
 
 			@include respond-to($desktop) {
-				flex-basis: 50%;
+				flex-basis: 57%;
+			}
+
+			@include respond-to($retina1) {
+				flex-basis: 55%;
 			}
 
 			ul.menu {
@@ -211,7 +223,7 @@ footer {
 		}
 
 		#copyright {
-			flex-basis: 40%;
+			flex-basis: 25%;
 			font-size: toRem(12);
 			color: rgba(255, 255, 255, 50%);
 
@@ -225,10 +237,11 @@ footer {
 
 			@include respond-to($mini-desktop) {
 				flex-basis: 59%;
+				align-self: center;
 			}
 
 			@include respond-to($small-desktop) {
-				flex-basis: 34%;
+				flex-basis: 25%;
 			}
 
 			p {

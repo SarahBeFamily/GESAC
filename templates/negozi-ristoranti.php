@@ -33,8 +33,8 @@
 
 		<!-- SINGLE SHOP COLUMN -->
 		<div class="single-shop list">
-			<div class="logo">
-				<img src="<?php echo img_path('negozi/logo1.png'); ?>" alt="">
+			<div class="logo" style="background-image: url(<?php echo img_path('negozi/img_grid_big-700x420px.jpg'); ?>);">
+				<!-- <img src="<?php echo img_path('negozi/logo1.png'); ?>" alt=""> -->
 			</div>
 
 			<div class="info">
@@ -87,8 +87,8 @@
 
 		<!-- SINGLE SHOP COLUMN -->
 		<div class="single-shop list">
-			<div class="logo">
-				<img src="<?php echo img_path('negozi/logo2.png'); ?>" alt="">
+			<div class="logo" style="background-image: url(<?php echo img_path('negozi/img_grid_big-700x420px.jpg'); ?>);">
+				<!-- <img src="<?php echo img_path('negozi/logo2.png'); ?>" alt=""> -->
 			</div>
 
 			<div class="info">
@@ -130,8 +130,8 @@
 
 		<!-- SINGLE SHOP COLUMN -->
 		<div class="single-shop list">
-			<div class="logo">
-				<img src="<?php echo img_path('negozi/logo3.png'); ?>" alt="">
+			<div class="logo" style="background-image: url(<?php echo img_path('negozi/img_grid_big-700x420px.jpg'); ?>);">
+				<!-- <img src="<?php echo img_path('negozi/logo3.png'); ?>" alt=""> -->
 			</div>
 
 			<div class="info">
@@ -177,8 +177,8 @@
 
 		<!-- SINGLE SHOP COLUMN -->
 		<div class="single-shop list">
-			<div class="logo">
-				<img src="<?php echo img_path('negozi/logo4.png'); ?>" alt="">
+			<div class="logo" style="background-image: url(<?php echo img_path('negozi/img_grid_big-700x420px.jpg'); ?>);">
+				<!-- <img src="<?php echo img_path('negozi/logo4.png'); ?>" alt=""> -->
 			</div>
 
 			<div class="info">
@@ -224,8 +224,8 @@
 
 		<!-- SINGLE SHOP COLUMN -->
 		<div class="single-shop list">
-			<div class="logo">
-				<img src="<?php echo img_path('negozi/logo5.png'); ?>" alt="">
+			<div class="logo" style="background-image: url(<?php echo img_path('negozi/img_grid_big-700x420px.jpg'); ?>);">
+				<!-- <img src="<?php echo img_path('negozi/logo5.png'); ?>" alt=""> -->
 			</div>
 
 			<div class="info">
@@ -271,8 +271,8 @@
 
 		<!-- SINGLE SHOP COLUMN -->
 		<div class="single-shop list">
-			<div class="logo">
-				<img src="<?php echo img_path('negozi/logo6.png'); ?>" alt="">
+			<div class="logo" style="background-image: url(<?php echo img_path('negozi/img_grid_big-700x420px.jpg'); ?>);">
+				<!-- <img src="<?php echo img_path('negozi/logo6.png'); ?>" alt=""> -->
 			</div>
 
 			<div class="info">

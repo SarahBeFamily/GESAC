@@ -3,11 +3,13 @@ import { Fancybox } from "@fancyapps/ui";
 
 require('slick-carousel');
 require('timepicker/jquery.timepicker.min');
+require('jquery-ui-dist/jquery-ui.min');
 
 $(function() {
 
 	let body = $('body'),
-		ww = $(window).width();
+		ww = $(window).width(),
+		isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 	if ($(window).width() < 640) {
 		$('.tabs-v2-content:not(.starter, .hidden)').addClass('hidden');
@@ -56,15 +58,6 @@ $(function() {
 			$(this).toggleClass('open');
 		}
 	})
-	// marquee
-	const root = document.documentElement,
-    marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue('--marquee-elements-displayed'),
-    marqueeContent = document.querySelector('.marquee--inner');
-
-	if (marqueeContent) {
-		root.style.setProperty('--marquee-elements', marqueeContent.children.length);
-		for (let i = 0; i < marqueeElementsDisplayed; i++) marqueeContent.appendChild(marqueeContent.children[i].cloneNode(!0));
-	}
 
 	// General button open to close et viceversa
 	$('.btn-open-close').on('click', function() {
@@ -88,6 +81,7 @@ $(function() {
 	// Menù tab
 	$('#primary-menu-tab').on('click', '.menu-tabs li', function() {
 		let tab = $(this).attr('data-menu-tab');
+		console.log(tab);
 		$(this).addClass('active').siblings().removeClass('active');
 		$(tab).removeClass('hidden').siblings('.menu-tab-content').addClass('hidden');
 		$(`.menu-tab-content:not(${tab}) li`).removeClass('open').find('.megamenu-wrap').hide();
@@ -138,23 +132,43 @@ $(function() {
 	});
 
 	// Manage date input with placeholder
-	$('input.calendar').on('focus', function() {
-		let input = $(this);
+	$('input.calendar').each(function() {
+		$(this).uniqueId();
+		let ID = $(this).attr('id');
 
-		input.removeAttr('readonly');
-		input.attr('type', 'date');
-		input.after().trigger('click touchstart');
+		$(`#${ID}`).datepicker({
+			beforeShow: function(input, inst) {
+				setTimeout(function () {
+					
+					let offsets = $(input).offset(),
+						top = (offsets.top + body.scrollTop()) + 55;
+
+					inst.dpDiv.css({
+						top: top,
+						left: offsets.left,
+					});
+				});
+			}
+		  });
 	});
+	
+	// $('input.calendar').on('focus', function() {
+	// 	let input = $(this);
+
+	// 	input.removeAttr('readonly');
+	// 	input.attr('type', 'date');
+	// 	input.after().trigger('click touchstart');
+	// });
 
 
-	$('input.calendar').on('change', function() {
-		let input = $(this);
+	// $('input.calendar').on('change', function() {
+	// 	let input = $(this);
 
-		if (input.val() == '') {
-			input.attr('readonly', 'true');
-			input.attr('type', 'text');
-		}
-	});
+	// 	if (input.val() == '') {
+	// 		input.attr('readonly', 'true');
+	// 		input.attr('type', 'text');
+	// 	}
+	// });
 
 	// Hero tab Homepage
 	$('#tab-voli').on('click', '.tabs div', function() {
@@ -333,15 +347,32 @@ $(function() {
 		arrival.val(arrival.attr('departure-val'));
 	});
 
+	if (isSafari == false) {
+		$('.safari-only').remove();
+	}
+
 	// Search on datalist on keyup
 	$("input[list]").on('click', function() {
 		let list = $(this).attr('data-list-id'),
 			thisclass = $(this).attr('class'),
-			inputClass = thisclass.replace('drop ', '');
+			inputClass = thisclass.replace('drop ', ''),
+			listOpen = $(`datalist#${list}`).hasClass('open'),
+			safari_listOpen = $(`.safari-datalist#datalist-${list}`).hasClass('open');
 
+		$(`.safari-datalist#datalist-${list}`).attr('input-focus', inputClass);
 		$(`datalist#${list}`).attr('input-focus', inputClass);
 		$(`datalist`).removeClass('open');
-		$(`datalist#${list}`).addClass('open');
+
+		if (listOpen)
+			$(`datalist#${list}`).removeClass('open');
+		else
+			$(`datalist#${list}`).addClass('open');
+
+		/*Safari*/
+		if (safari_listOpen)
+			$(`.safari-datalist#datalist-${list}`).removeClass('open');
+		else
+			$(`.safari-datalist#datalist-${list}`).addClass('open');
 	});
 
 	$('datalist option').on('click', function() {
@@ -349,6 +380,15 @@ $(function() {
 			input = datalist.attr('input-focus');
 
 		$(`input.${input}`).val($(this).val());
+		datalist.toggleClass('open');
+	});
+
+	/*Safari datalist fake*/
+	$('.safari-datalist .option').on('click', function() {
+		let datalist = $(this).parents('.safari-datalist'),
+			input = datalist.attr('input-focus');
+
+		$(`input.${input}`).val($(this).attr('value'));
 		datalist.toggleClass('open');
 	});
 
@@ -801,8 +841,23 @@ $(function() {
 	// Faq accordion effect
 	// Info Parcheggi Template
 	// Fatturazione / Telepass effect in Registrazione / Login Template
-	$('.faq, .section-form').on('click', '.title, .title-wrap', function() {
-		$(this).parent().toggleClass('closed');
+	$('.section-form').on('click', '.title, .title-wrap', function() {
+		let parent = $(this).parent();
+		if (parent.hasClass('closed')) {
+			parent.removeClass('closed');
+			parent.siblings().addClass('closed');
+		} else {
+			parent.addClass('closed');
+		}
+	});
+
+	$('.faq').on('click', function() {
+		if ($(this).hasClass('closed')) {
+			$(this).removeClass('closed');
+			$(this).siblings().addClass('closed');
+		} else {
+			$(this).addClass('closed');
+		}
 	});
 
 	// Single shop view effect

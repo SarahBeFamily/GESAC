@@ -15,7 +15,13 @@
 	--status-executive: #E38763;
 	--status-privilege: #25C8B3;
 
-	--marquee-elements-displayed: 2;
+	--marquee-elements-displayed: 20;
+	// --size: clamp(10rem, 1rem + 40vmin, 30rem);
+	--size: clamp(5rem, 1rem + 30vmin, 15rem);
+	--gap: calc(var(--size) / 20);
+	--duration: 30s;
+	--scroll-start: 0;
+	--scroll-end: calc(-100% - var(--gap));
 
 	touch-action: pan-x pan-y;
   	height: 100% 

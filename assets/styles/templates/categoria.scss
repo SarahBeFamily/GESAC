@@ -17,9 +17,24 @@ section#categories {
 
 	#articles {
 		&.vertical {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+
 			.single {
 				flex-basis: calc(95% / 3);
 				flex-wrap: wrap;
+
+				&:not(:nth-child(3n+3)) {
+					@include respond-to($min-tablet) {
+						margin-right: 2.4%;
+					}
+				}
+
+				&:not(:nth-child(2n+2)) {
+					@include respond-to($tablet) {
+						margin-right: 2.4%;
+					}
+				}
 
 				@include respond-to($phone-plus) {
 					flex-basis: 100%;

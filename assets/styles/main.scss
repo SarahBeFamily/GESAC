@@ -1,10 +1,12 @@
 @import "~slick-carousel/slick/slick";
+@import "~jquery-ui-dist/jquery-ui.min";
 
 @import "globals/variables";
 @import "globals/mixins";
 @import "globals/typography";
 @import "globals/global";
 
+@import "components/datepicker";
 @import "components/accordion";
 @import "components/carousel-grid-loghi";
 @import "components/download-doc-elenco-img.scss";

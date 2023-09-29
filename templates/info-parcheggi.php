@@ -56,30 +56,33 @@
 				<div class="positions">
 					<!-- with class p1, p2, p3, p4, p-multi, p-bus and p-moto can recall its img -->
 					<div class="park-pos p2"></div>
-					<div class="park-pos p3"></div>
+					<div class="park-pos p4"></div>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.
-				</p>
+				<p>I parcheggi sosta breve scoperti P2 e P4 sono situati in prossimità delle partenze</p>
 			</div>
 
 			<div class="info">
 
 				<div class="prices">
 					<div class="row">
-						<div class="label">ORA o frazione</div>
-						<div class="value"><span class="price">10</span>€</div>
+						<div class="label">ORA o FRAZIONE P2</div>
+						<div class="value"><span class="price">3,50</span>€</div>
+					</div>
+
+					<div class="row">
+						<div class="label">ORA o FRAZIONE P4</div>
+						<div class="value"><span class="price">4,00</span>€</div>
 					</div>
 
 					<div class="row">
 						<div class="label">MAX GIORNO</div>
-						<div class="value"><span class="price">20</span>€</div>
+						<div class="value"><span class="price">36,00</span>€</div>
 					</div>
 
 					<div class="row">
 						<div class="label">GIORNI SUCCESSIVI <br> ogni 12 ore o frazione</div>
-						<div class="value"><span class="price">5</span>€</div>
+						<div class="value"><span class="price">18,00</span>€</div>
 					</div>
 				</div>
 
@@ -91,16 +94,14 @@
 		<div class="park-type">
 
 			<div class="intro">
-				<h3>Auto - Sosta Breve</h3>
+				<h3>Auto - Sosta Breve Car Valet</h3>
 
 				<div class="positions">
 					<!-- with class p1, p2, p3, p4, p-multi, p-bus and p-moto can recall its img -->
-					<div class="park-pos p4"></div>
+					<div class="park-pos p3"></div>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.
-				</p>
+				<p>Il Parcheggio P3 coperto è situato in prossimità delle partenze e offre il servizio di Car Valet</p>
 			</div>
 		
 			<div class="info">
@@ -120,6 +121,16 @@
 						<div class="label">GIORNI SUCCESSIVI <br> ogni 12 ore o frazione</div>
 						<div class="value"><span class="price">5</span>€</div>
 					</div>
+
+					<div class="row">
+						<div class="label">Fino a 7 giorni</div>
+						<div class="value"><span class="price">140</span>€</div>
+					</div>
+
+					<div class="row">
+						<div class="label">Tariffa week end (dal venerdì al lunedì)</div>
+						<div class="value"><span class="price">75</span>€</div>
+					</div>
 				</div>
 
 				<a href="<?php echo img_path('parking-map.png'); ?>" class="link white arrow-white">Guarda la mappa</a>
@@ -133,11 +144,9 @@
 		<div class="park-type-special">
 
 			<div class="intro">
-				<h3>Parcheggi dedicati</h3>
+				<h3>Per passeggeri con disabilità</h3>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. A ultrices volutpat at in quisque vel. Ut cum id.
-				</p>
+				<p>45 stalli gratuiti all'interno del Parcheggio Multipiano</p>
 			</div>
 
 			<a href="#" class="button secondary arrow">Passeggeri a ridotta mobilità</a>
@@ -151,7 +160,7 @@
 		<div class="park-type">
 
 			<div class="intro">
-				<h3>Auto - Sosta Lunga</h3>
+				<h3>Auto - Low cost</h3>
 
 				<div class="positions">
 					<!-- with class p1, p2, p3, p4, p-multi, p-bus and p-moto can recall its img -->
@@ -159,14 +168,27 @@
 					<div class="park-pos-desc">Low cost</div>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.
-				</p>
+				<p>ll P1 è il parcheggio low cost con gratuità della sosta per i primi 45 minuti. Dista 300 metri dalle partenze ed è acquistabile online</p>
 			</div>
 
 			<div class="info">
 
 				<div class="prices">
+					<div class="row">
+						<div class="label">Lorem ipsum</div>
+						<div class="value"><span class="price">Gratis</span></div>
+					</div>
+
+					<div class="row">
+						<div class="label">Lorem ipsum</div>
+						<div class="value"><span class="price">10</span>€</div>
+					</div>
+
+					<div class="row">
+						<div class="label">Lorem ipsum</div>
+						<div class="value"><span class="price">10</span>€</div>
+					</div>
+
 					<div class="row">
 						<div class="label">Lorem ipsum</div>
 						<div class="value"><span class="price">10</span>€</div>
@@ -219,14 +241,17 @@
 					<div class="park-pos-desc">Comfort</div>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar donec mauris vel vitae eget sed. Sed tempor porttitor iaculis cras.
-				</p>
+				<p>Il parcheggio Multipiano coperto è situato accanto all’area arrivi ed è acquistabile online</p>
 			</div>
 
 			<div class="info">
 
 				<div class="prices">
+					<div class="row">
+						<div class="label">Lorem ipsum</div>
+						<div class="value"><span class="price">10</span>€</div>
+					</div>
+
 					<div class="row">
 						<div class="label">Lorem ipsum</div>
 						<div class="value"><span class="price">10</span>€</div>
@@ -275,16 +300,14 @@
 		<div class="park-type moto">
 
 			<div class="intro">
-				<h3>Motocicli</h3>
+				<h3>Motocicli - Area coperta</h3>
 
 				<div class="positions">
 					<!-- with class p1, p2, p3, p4, p-multi, p-bus and p-moto can recall its img -->
 					<div class="park-pos p-moto"></div>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo neque risus amet sapien.
-				</p>
+				<p>Il Parcheggio Multipiano  dispone al piano terra di un'area al coperto riservata ai motocicli</p>
 			</div>
 
 			<div class="info">
@@ -301,7 +324,12 @@
 					</div>
 
 					<div class="row">
-						<div class="label">GIORNI SUCCESSIVI <br> ogni 12 ore o frazione</div>
+						<div class="label"><div>GIORNI SUCCESSIVI ogni 12 ore o frazione</div></div>
+						<div class="value"><span class="price">10</span>€</div>
+					</div>
+
+					<div class="row">
+						<div class="label">MAX Settimana</div>
 						<div class="value"><span class="price">10</span>€</div>
 					</div>
 				</div>
@@ -319,12 +347,10 @@
 				<div class="positions">
 					<!-- with class p1, p2, p3, p4, p-multi, p-bus and p-moto can recall its img -->
 					<div class="park-pos p-moto"></div>
-					<div class="park-pos-desc">Comfort</div>
+					<div class="park-pos-desc"></div>
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo neque risus amet sapien.
-				</p>
+				<p>In prossimità del terminal, è presente un'area parcheggio all’aperto riservata ai motocicli</p>
 			</div>
 
 			<div class="info">
@@ -341,7 +367,12 @@
 					</div>
 
 					<div class="row">
-						<div class="label">GIORNI SUCCESSIVI <br> ogni 12 ore o frazione</div>
+						<div class="label">MAX Settimana</div>
+						<div class="value"><span class="price">10</span>€</div>
+					</div>
+
+					<div class="row">
+						<div class="label">Dall' 8° giorno per ogni giorno</div>
 						<div class="value"><span class="price">10</span>€</div>
 					</div>
 				</div>
@@ -365,7 +396,9 @@
 			</div>
 
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi tellus mauris gravida in amet, vitae nisi, sagittis, dui. Condimentum cum tortor.
+			Nei pressi del Parcheggio P1 è disponibile un’area parcheggio dedicata agli  autobus turistici. <br>
+			Tariffa oraria 7 € <br>
+			Tariffa giornaliera 35 €
 			</p>
 		</div>
 
@@ -373,7 +406,7 @@
 			<h3>Convenzioni NCC</h3>
 
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi tellus mauris gravida in amet, vitae nisi, sagittis, dui. Condimentum cum tortor.
+			Per informazioni sulle tariffe parcheggio in convenzione riservate agli operatori NCC contattare l'Info point Parcheggi ubicato al piano terra del Parcheggio Multipiano.
 			</p>
 		</div>
 

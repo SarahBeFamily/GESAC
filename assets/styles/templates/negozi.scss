@@ -70,7 +70,7 @@ section#shop-list {
 			.list {
 				@include respond-to($min-phone) {
 					display: grid;
-					grid-template-rows: 0fr 2fr;
+					grid-template-rows: 0fr 1fr;
 				}
 			}
 		}
@@ -84,6 +84,10 @@ section#shop-list {
 			}
 
 			@include respond-to($mid-tablet) {
+				flex-basis: calc(97% / 2);
+			}
+
+			@include respond-to($mini-desktop) {
 				flex-basis: calc(97% / 2);
 			}
 
@@ -104,12 +108,13 @@ section#shop-list {
 
 				.logo {
 					border: 0;
-					flex-basis: 30%;
+					flex-basis: 33%;
+					margin-left: 10px;
 				}
 
 				.info {
 					border-radius: $radius;
-					flex-basis: 65%;
+					flex-basis: 60%;
 				}
 			}
 
@@ -121,15 +126,21 @@ section#shop-list {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				padding: 15px;
-				height: 250px;
+				// padding: 15px;
+				// height: 250px;
 				width: 100%;
+				padding: 0;
+				height: 15vw;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
 
 				@include respond-to($phone) {
 					border-width: 1px 0 0 !important;
 					border-radius: 0;
-					height: auto;
-					padding: 50px 20px;
+					// height: auto;
+					// padding: 50px 20px;
+					height: 57vw;
 					flex-basis: 100% !important;
 					border-style: solid !important;
 					border-color: var(--medium-gray) !important;
@@ -139,19 +150,16 @@ section#shop-list {
 					height: 300px;
 				}
 
+				@include respond-to($mini-desktop) {
+					height: 17vw;
+				}
+
+				@include respond-to($small-desktop) {
+					height: 17vw;
+				}
+
 				img {
 					max-width: 100%;
-					// @include respond-to($phone) {
-					// 	width: 100%;
-					// }
-
-					// @include respond-to($mid-tablet) {
-					// 	width: 70%;
-					// }
-
-					// @include respond-to($mini-desktop) {
-						
-					// }
 				}
 			}
 
@@ -160,6 +168,8 @@ section#shop-list {
 				border-radius: 0 0 $radius $radius;
 				padding: 30px 20px;
 				min-height: 18rem;
+				/* mod staging */
+				min-width: calc(77vw / 3);
 
 				@include respond-to($phone) {
 					border-radius: 0 !important;
@@ -168,6 +178,8 @@ section#shop-list {
 
 				@include respond-to($tablet) {
 					min-height: 23rem;
+					/* mod staging */
+					min-width: calc(90vw / 2);
 				}
 
 				@include respond-to($mini-desktop) {

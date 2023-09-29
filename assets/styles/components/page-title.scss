@@ -56,10 +56,15 @@
 
 	&.dark-mode {
 		background-color: var(--primary-dark);
-		padding: 50px 10%;
+		// padding: 50px 10%;
 
 		@include respond-to($max-tablet) {
-			padding: 30px 5%;
+			padding: 30px 5% 0;
+		}
+
+		/*new style liferay hack 09-23*/
+		@include respond-to($min-tablet) {
+			padding: 22px 10% 0;
 		}
 
 		h1 {
@@ -85,14 +90,6 @@
 	}
 
 	.col {
-		// @include respond-to($mini-desktop) {
-		// 	width: 55%;
-		// }
-
-		// @include respond-to($min-desktop) {
-		// 	width: 50%;
-		// }
-
 		> p {
 			color: white;
 			font-size: toRem(22);
@@ -130,6 +127,13 @@
 		}
 	}
 
+	/*new style liferay hack 09-23*/
+	#pt-partenze {
+		@include respond-to($max-tablet) {
+			padding: 0;
+		}
+	}
+
 	.button.secondary {
 
 		@include respond-to($max-tablet) {
@@ -144,10 +148,14 @@
 	}
 
 	.forms-tab {
-		padding: 45px 5%;
+		padding: 45px 0;
 
 		@include respond-to($phone) {
 			padding: 45px 0 0;
+		}
+
+		@include respond-to($min-wide-desktop2) {
+			padding: 45px 5%;
 		}
 
 		#tab-voli .main-tabs .tabs > div {
@@ -156,7 +164,7 @@
 			}
 		}
 
-		input {
+		> input {
 			@include respond-to($tablet) {
 				flex-basis: 43%;
 			}
