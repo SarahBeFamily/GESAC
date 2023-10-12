@@ -8,6 +8,10 @@ function get_base_url()
 
 function login() {
 
+    if(empty($_ENV['PHP_AUTH_NO'])) {
+        return true;
+    }
+
     $user = 'gesac';
     $pwd = '2S-Rp73#W$';
 

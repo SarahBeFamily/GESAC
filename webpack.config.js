@@ -8,7 +8,7 @@ module.exports = {
 	mode: 'development',
 	devtool: 'inline-source-map',
     entry: {
-		app: ['./assets/scripts/main.js', './assets/styles/main.scss']
+		app: ['./assets/scripts/main.js', './assets/scripts/landing.js', './assets/styles/main.scss']
 	},
 	output: {
         filename: devMode ? '[name].dev.js' : '[name].bundle.js',
