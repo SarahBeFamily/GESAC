@@ -104,7 +104,7 @@
 
 		.slick-slide {
 			> div {
-				margin: 0 20px;
+				margin: 0 25px 0 0;
 				background-color: var(--light-blue);
 				border-radius: 12px;
 				height: 100%;
@@ -184,6 +184,14 @@
 
 			&.slick-disabled {
 				opacity: 0;
+			}
+		}
+
+		.slick-dots {
+			li:last-child {
+				@include respond-to($phone-plus) {
+					display: none;
+				}
 			}
 		}
 	}
