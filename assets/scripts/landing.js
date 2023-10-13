@@ -34,6 +34,7 @@ function initSelect2() {
                 minimumInputLength: 0,
                 minimumResultsForSearch: $e.data('mini-mum-results') !== undefined ? $e.data('mini-mum-results') : false,
                 language: 'it',
+                dropdownParent: $e.closest('.relative'),
                 templateResult: formatState,
                 ajax: {
                     url: function (params) {
