@@ -8,7 +8,7 @@ function get_base_url()
 
 function login() {
 
-    if(empty($_ENV['PHP_AUTH_NO'])) {
+    if(!empty(getenv('PHP_AUTH_NO'))) {
         return true;
     }
 

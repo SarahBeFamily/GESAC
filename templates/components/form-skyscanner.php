@@ -1,7 +1,5 @@
 <?php
 
-// https://www.skyscanner.net/g/autosuggest-search/api/v1/search-flight/IT/it-IT/Na?isDestination=false
-
 $aeroporti = [
         [
             'title' => 'Napoli Internazionale (NAP)',
@@ -30,68 +28,62 @@ $aeroporti = [
         ],
 ];
 
+$ssDefaultParams = [
+    'associateid' => 'AFF_TRA_19354_00001',
+    'locale' => 'it-IT',
+    'currency' => 'EUR',
+    'utm_term' => 'cta_landing',
+    'adults' => '1',
+];
 
 $defaultPartenza = $aeroporti[0];
 ?>
 
 <form action="" id="search-flight">
 
-    <input type="hidden" name="associateid" value="AFF_TRA_19354_00001">
-    <input type="hidden" name="locale" value="it-IT">
-    <input type="hidden" name="currency" value="EUR">
-    <input type="hidden" name="utm_term" value="cta_landing">
+    <?php
+    foreach ($ssDefaultParams as $key => $ssDefaultParam) {
+        echo sprintf('<input type="hidden" name="%s" value="%s" />', $key, $ssDefaultParam);
+    }
+    ?>
 
-	<div class="relative">
-		<input class="origin-tmp" role="combobox" type="text" list="" data-list-id="airports" placeholder="Da" required autocomplete="off" />
-        <input class="origin hidden" type="text" name="origin" />
-
-		<div id="datalist-airports" class="safari-only safari-datalist">
+    <div class="relative">
+        <select class="select2-input origin" name="origin" data-placeholder="Da" required>
 
             <?php
             foreach ($aeroporti as $aeroporto) {
                 ?>
 
-                <div class="option" value="<?php echo $aeroporto['text'] ?>" value="<?php echo $aeroporto['value'] ?>">
-                    <div>
-                        <p class="titlelist"><?php echo $aeroporto['title'] ?></p>
-                        <p class="location"><?php echo $aeroporto['subtitle'] ?></p>
-                    </div>
-                    MILA
-                </div>
+                <option value="<?php echo $aeroporto['value'] ?>">
+                    <?php echo $aeroporto['title'] ?>
+                </option>
 
                 <?php
             }
             ?>
 
-		</div>
-
-		<datalist id="airports">
-
-            <?php
-            foreach ($aeroporti as $aeroporto) {
-            ?>
-
-                <option value="<?php echo $aeroporto['value'] ?>">
-                    <div>
-                        <p class="titlelist"><?php echo $aeroporto['title'] ?></p>
-                        <p class="location"><?php echo $aeroporto['subtitle'] ?></p>
-                    </div>
-                    <?php echo $aeroporto['value'] ?>
-                </option>
-
-            <?php
-            }
-            ?>
-
-		</datalist>
+        </select>
 	</div>
 
 	<a id="change" role="button"></a>
 
-	<div class="relative">
-        <input class="destination-tmp" role="combobox" type="text" list="" data-list-id="airports" placeholder="A" required autocomplete="off">
-        <input class="destination hidden" type="text" name="destination">
-	</div>
+    <div class="relative">
+        <select class="select2-input destination" name="destination" data-placeholder="A" required>
+
+            <?php
+            foreach ($aeroporti as $aeroporto) {
+                ?>
+
+                <option value="<?php echo $aeroporto['value'] ?>">
+                    <?php echo $aeroporto['title'] ?>
+                </option>
+
+                <?php
+            }
+            ?>
+
+        </select>
+    </div>
 
 	<div class="relative">
         <input class="drop calendar from" type="text" name="from" placeholder="Dal" required>
@@ -102,5 +94,15 @@ $defaultPartenza = $aeroporti[0];
     </div>
 
 	<input class="submit" type="submit" value="Cerca Volo">
+
+    <div class="option-template hidden">
+        <div>
+            <div>
+                <p class="titlelist"></p>
+                <p class="location"></p>
+            </div>
+            <span class="code"></span>
+        </div>
+    </div>
 
 </form>
