@@ -377,20 +377,18 @@ $(function() {
 
 	$('datalist option').on('click', function() {
 		let datalist = $(this).parents('datalist'),
-			input = datalist.attr('input-focus'), mainInput = input.replace('-tmp', '');
+			input = datalist.attr('input-focus');
 
-		$(`input.${input}`).val($(this).find('.titlelist').text());
-		$(`input.${mainInput}`).val($(this).val());
+		$(`input.${input}`).val($(this).val());
 		datalist.toggleClass('open');
 	});
 
 	/*Safari datalist fake*/
 	$('.safari-datalist .option').on('click', function() {
 		let datalist = $(this).parents('.safari-datalist'),
-			input = datalist.attr('input-focus'), mainInput = input.replace('-tmp', '');;
+			input = datalist.attr('input-focus');
 
-		$(`input.${input}`).val($(this).attr('text'));
-		$(`input.${mainInput}`).val($(this).attr('value'));
+		$(`input.${input}`).val($(this).attr('value'));
 		datalist.toggleClass('open');
 	});
 
