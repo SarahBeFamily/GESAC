@@ -1,0 +1,9 @@
+$dir: "/assets/fonts/Morganite/";
+$morganite: "Morganite";
+
+@include fface('#{$dir}#{$morganite}', 'Morganite', '-Thin', 100);
+@include fface('#{$dir}#{$morganite}', 'Morganite', '-ExtraLight', 200);
+@include fface('#{$dir}#{$morganite}', 'Morganite', '-Light', 300);
+@include fface('#{$dir}#{$morganite}', 'Morganite', '-Medium', 300);
+@include fface('#{$dir}#{$morganite}', 'Morganite', '-Book', 'normal');
+@include fface('#{$dir}#{$morganite}', 'Morganite', '-SemiBold', 600);
