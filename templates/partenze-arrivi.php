@@ -133,9 +133,9 @@
 					</div>
 
 					<div class="slidee">
-						<div class="marqueeElement">V701732</div>
-						<div class="marqueeElement">AF01579</div>
-						<div class="marqueeElement">W601749</div>
+						<div class="marqueeElement">V7 01732 | Volotea</div>
+						<div class="marqueeElement">AF 01579 | Aegean Airlines</div>
+						<div class="marqueeElement">W6 01749 | Very Long Name Company</div>
 					</div>
 
 				</div>
