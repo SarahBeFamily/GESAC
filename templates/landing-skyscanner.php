@@ -23,6 +23,14 @@
 					<i class="icon icon-parking"></i>
 					Parcheggi
 				</div>
+                <div onclick="window.location='/partenze-arrivi'">
+                    <i class="icon icon-takeoff"></i>
+                    Partenze
+                </div>
+                <div onclick="window.location='/partenze-arrivi'">
+                    <i class="icon icon-landing"></i>
+                    Arrivi
+                </div>
 			</div>
 
 			<!-- COLUMN TWO EXTRA -->
