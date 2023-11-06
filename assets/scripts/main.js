@@ -137,6 +137,7 @@ $(function() {
 		let ID = $(this).attr('id');
 
 		$(`#${ID}`).datepicker({
+			dateFormat: 'dd/mm/yy',
 			beforeShow: function(input, inst) {
 				setTimeout(function () {
 					

@@ -14,8 +14,13 @@
 		<div class="main-tabs">
 
 			<div class="tabs">
-				<div class="active" data-menu-tab="#flight">
-					<i class="icon icon-plane --active"></i>
+                <div class="active" data-menu-tab="#flight">
+                    <i class="icon icon-plane --active"></i>
+                    Voli in tempo reale
+                </div>
+
+				<div data-menu-tab="#buy">
+					<i class="icon fa fa-ticket"></i>
 					Acquista voli
 				</div>
 
@@ -23,11 +28,12 @@
 					<i class="icon icon-parking"></i>
 					Parcheggi
 				</div>
-                <div onclick="window.location='/partenze-arrivi'">
+                <div class="hidden" onclick="window.location='/partenze-arrivi'">
                     <i class="icon icon-takeoff"></i>
                     Partenze
                 </div>
-                <div onclick="window.location='/partenze-arrivi'">
+
+                <div class="hidden" onclick="window.location='/partenze-arrivi'">
                     <i class="icon icon-landing"></i>
                     Arrivi
                 </div>
@@ -66,7 +72,11 @@
 		</div>
 
 		<div class="main-tabs-content">
-			<div id="flight">
+            <div id="flight">
+                <?php get_component('form-flight', '', false); ?>
+            </div>
+
+			<div id="buy" class="hidden">
 				<?php get_component('form-skyscanner', '', false); ?>
 			</div>
 

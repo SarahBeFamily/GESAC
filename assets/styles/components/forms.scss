@@ -709,6 +709,23 @@ form#search-parking {
 }
 
 
+form#search-skyscanner {
+	@extend #search-flight;
+
+	.input.submit {
+		flex-basis: 10%;
+	}
+
+	.powered-by {
+		color: #d2d2d2;
+		padding: 0 20px;
+		flex-basis: 10%;
+	}
+
+	.change {
+		@extend #change
+	}
+}
 
 /**
  * Form newsletter:

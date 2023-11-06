@@ -81,9 +81,22 @@ function initSelect2() {
 
 $(document).ready(function () {
     initSelect2();
+
+    // Change inputs button
+    $('#search-skyscanner .change').on('click', function() {
+        let form = $(this).parents('form'),
+            departure = form.find('select.origin'),
+            arrival = form.find('select.destination');
+
+        const tmp = departure.val();
+        departure.val(arrival.val());
+        departure.trigger('change');
+        arrival.val(tmp);
+        arrival.trigger('change');
+    });
 });
 
-$('#search-flight').submit(function (e) {
+$('#search-skyscanner').submit(function (e) {
     e.preventDefault();
 
     const $this = $(this);
