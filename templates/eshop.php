@@ -408,21 +408,29 @@
 							<!-- CART ROW -->
 							<div class="col cart">
 								<div class="cart-wrap">
-									<h3>Riepilogo carrello</h3>
+									<h3>
+										Riepilogo carrello 
+										<span>0</span>
+
+										<a class="open-cart mobile-only"></a>
+									</h3>
 
 									<!-- CART WITH ITEMS -->
 									<div class="cart hidden">
-										<div class="item">
-											<div class="remove-item">
-												<i class="icon icon-cancel"></i>
+										<!-- items container added -->
+										<div class="items-wrap">
+											<div class="item">
+												<div class="remove-item">
+													<i class="icon icon-cancel"></i>
+												</div>
+
+												<h4>Capodichino Parking (Ultra Low Cost)</h4>
+
+												<p class="parking-start">dal 21 Set 2022 19:00</p>
+												<p class="parking-end">al 21 Set 2022 21:00</p>
+
+												<span class="actual-price item-price">5,50€</span>
 											</div>
-
-											<h4>Capodichino Parking (Ultra Low Cost)</h4>
-
-											<p class="parking-start">dal 21 Set 2022 19:00</p>
-											<p class="parking-end">al 21 Set 2022 21:00</p>
-
-											<span class="actual-price item-price">5,50€</span>
 										</div>
 
 										<div class="total">
@@ -522,24 +530,32 @@
 							<!-- CART ROW -->
 							<div class="col cart">
 								<div class="cart-wrap">
-									<h3>Riepilogo carrello</h3>
+									<h3>
+										Riepilogo carrello 
+										<span>0</span>
+
+										<a class="open-cart mobile-only"></a>
+									</h3>
 
 									<!-- CART WITH ITEMS -->
 									<div class="cart hidden">
-										<div class="item">
-											<div class="remove-item">
-												<i class="icon icon-cancel"></i>
+										<!-- container items added -->
+										<div class="items-wrap">
+											<div class="item">
+												<div class="remove-item">
+													<i class="icon icon-cancel"></i>
+												</div>
+
+												<h4>Fast Track</h4>
+
+												<div class="quantity">
+													<div class="minus"><i class="icon icon-minus"></i></div>
+													<div class="qty">1</div>
+													<div class="plus"><i class="icon icon-plus"></i></div>
+												</div>
+
+												<span class="actual-price item-price">7,00€</span>
 											</div>
-
-											<h4>Fast Track</h4>
-
-											<div class="quantity">
-												<div class="minus"><i class="icon icon-minus"></i></div>
-												<div class="qty">1</div>
-												<div class="plus"><i class="icon icon-plus"></i></div>
-											</div>
-
-											<span class="actual-price item-price">7,00€</span>
 										</div>
 
 										<div class="total">
@@ -628,18 +644,26 @@
 							<!-- CART ROW -->
 							<div class="col cart">
 								<div class="cart-wrap">
-									<h3>Riepilogo carrello</h3>
+									<h3>
+										Riepilogo carrello 
+										<span>0</span>
+
+										<a class="open-cart mobile-only"></a>
+									</h3>
 
 									<!-- CART WITH ITEMS -->
 									<div class="cart hidden">
-										<div class="item">
-											<div class="remove-item">
-												<i class="icon icon-cancel"></i>
+										<!-- items container added -->
+										<div class="items-wrap">
+											<div class="item">
+												<div class="remove-item">
+													<i class="icon icon-cancel"></i>
+												</div>
+
+												<h4>Status GOLD</h4>
+
+												<span class="actual-price item-price">200€</span>
 											</div>
-
-											<h4>Status GOLD</h4>
-
-											<span class="actual-price item-price">200€</span>
 										</div>
 
 										<div class="total">
@@ -803,25 +827,34 @@
 							<!-- CART ROW -->
 							<div class="col cart">
 								<div class="cart-wrap">
-									<h3>Riepilogo carrello</h3>
+									<h3>
+										Riepilogo carrello 
+										<span>0</span>
+
+										<a class="open-cart mobile-only"></a>
+									</h3>
 
 									<!-- CART WITH ITEMS -->
 									<div class="cart hidden">
-										<div class="item">
-											<div class="remove-item">
-												<i class="icon icon-cancel"></i>
+										<!-- items container added -->
+										<div class="items-wrap">
+											<div class="item">
+												<div class="remove-item">
+													<i class="icon icon-cancel"></i>
+												</div>
+
+												<h4>Ticket Alibus</h4>
+
+												<div class="quantity">
+													<div class="minus"><i class="icon icon-minus"></i></div>
+													<div class="qty">1</div>
+													<div class="plus"><i class="icon icon-plus"></i></div>
+												</div>
+
+												<span class="actual-price item-price">5,00€</span>
 											</div>
-
-											<h4>Ticket Alibus</h4>
-
-											<div class="quantity">
-												<div class="minus"><i class="icon icon-minus"></i></div>
-												<div class="qty">1</div>
-												<div class="plus"><i class="icon icon-plus"></i></div>
-											</div>
-
-											<span class="actual-price item-price">5,00€</span>
 										</div>
+										
 
 										<div class="total">
 											Totale

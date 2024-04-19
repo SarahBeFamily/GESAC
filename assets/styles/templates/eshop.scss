@@ -361,7 +361,11 @@ section#eshop-services {
 
 				@include respond-to($phone-plus) {
 					flex-basis: 100%;
-					margin: 15px;
+					position: fixed;
+					bottom: 0;
+					background: #fff;
+					width: 100%;
+					z-index: 9999999;
 				}
 
 				@include respond-to($mid-tablet) {
@@ -380,6 +384,41 @@ section#eshop-services {
 					@include respond-to($min-tablet) {
 						top: 125px;
 					}
+
+					> h3 {
+						margin: 13px 0px;
+
+						@include respond-to($phone-plus) {
+							margin: 13px 30px;
+						}
+	
+						span {
+							margin-left: 12px;
+							background: var(--secondary);
+							color: white;
+							width: 27px;
+							border-radius: 50%;
+							display: flex;
+							justify-content: center;
+							font-size: 13px;
+							height: 27px;
+							align-items: center;
+						}
+
+						.open-cart {
+							@include respond-to($phone-plus) {
+								content: url("data:image/svg+xml,%3Csvg width=%2712%27 height=%2710%27 viewBox=%270 0 10 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z%27 fill=%27%2301112C%27/%3E%3C/svg%3E");
+								position: absolute;
+								right: 20px;
+							}
+
+							&.open {
+								@include respond-to($phone-plus) {
+									scale: -1;
+								}
+							}
+						}
+					}
 				}
 
 				> h2,h3,h4 {
@@ -387,6 +426,13 @@ section#eshop-services {
 					justify-content: center;
 					color: var(--secondary);
 					font-weight: 500;
+				}
+
+				.items-wrap {
+					@include respond-to($phone-plus) {
+						overflow: auto;
+						max-height: 222px;
+					}
 				}
 
 				.cart {
@@ -464,6 +510,10 @@ section#eshop-services {
 					padding: 32px 20px;
 					background-color: var(--light-gray);
 					border-radius: 6px;
+
+					@include respond-to($phone-plus) {
+						display: none;
+					}
 				}
 			}
 		}

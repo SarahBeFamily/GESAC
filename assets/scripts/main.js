@@ -699,6 +699,15 @@ $(function() {
 		parent.find('.cart-wrap > .cart').removeClass('hidden');
 	});
 
+	// Open cart (mobile only)
+	if ($(window).width() < 768) {
+		$('.open-cart').on('click', function() {
+			let parent = $(this).parents('.buy-service');
+			parent.find('.cart-wrap > .cart').toggleClass('hidden open');
+			$(this).toggleClass('open');
+		});
+	}
+
 	// General Go to step 2
 	$('.go-to-checkout').on('click', function() {
 		let parent = $(this).parents('.buy-service');
