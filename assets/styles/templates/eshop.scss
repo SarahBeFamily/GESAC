@@ -359,18 +359,19 @@ section#eshop-services {
 				flex-basis: 22%;
 				margin-top: 45px;
 
-				@include respond-to($phone-plus) {
+				@include respond-to($max-tablet) {
 					flex-basis: 100%;
 					position: fixed;
 					bottom: 0;
+					left: 0;
 					background: #fff;
 					width: 100%;
 					z-index: 9999999;
 				}
 
-				@include respond-to($mid-tablet) {
-					flex-basis: 40%;
-				}
+				// @include respond-to($mid-tablet) {
+				// 	flex-basis: 40%;
+				// }
 
 				@include respond-to($td) {
 					flex-basis: 22%;
@@ -388,7 +389,7 @@ section#eshop-services {
 					> h3 {
 						margin: 13px 0px;
 
-						@include respond-to($phone-plus) {
+						@include respond-to($max-tablet) {
 							margin: 13px 30px;
 						}
 	
@@ -406,14 +407,14 @@ section#eshop-services {
 						}
 
 						.open-cart {
-							@include respond-to($phone-plus) {
+							@include respond-to($max-tablet) {
 								content: url("data:image/svg+xml,%3Csvg width=%2712%27 height=%2710%27 viewBox=%270 0 10 8%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M5.043 3.82849L8.477 0.875492L10 2.35349L5.061 7.21349L0 2.33949L1.6 0.785492L5.043 3.82849Z%27 fill=%27%2301112C%27/%3E%3C/svg%3E");
 								position: absolute;
 								right: 20px;
 							}
 
 							&.open {
-								@include respond-to($phone-plus) {
+								@include respond-to($max-tablet) {
 									scale: -1;
 								}
 							}
@@ -429,7 +430,7 @@ section#eshop-services {
 				}
 
 				.items-wrap {
-					@include respond-to($phone-plus) {
+					@include respond-to($max-tablet) {
 						overflow: auto;
 						max-height: 222px;
 					}
@@ -511,7 +512,7 @@ section#eshop-services {
 					background-color: var(--light-gray);
 					border-radius: 6px;
 
-					@include respond-to($phone-plus) {
+					@include respond-to($max-tablet) {
 						display: none;
 					}
 				}

@@ -700,7 +700,7 @@ $(function() {
 	});
 
 	// Open cart (mobile only)
-	if ($(window).width() < 768) {
+	if ($(window).width() < 1024) {
 		$('.open-cart').on('click', function() {
 			let parent = $(this).parents('.buy-service');
 			parent.find('.cart-wrap > .cart').toggleClass('hidden open');

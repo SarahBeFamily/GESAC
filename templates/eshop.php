@@ -412,7 +412,7 @@
 										Riepilogo carrello 
 										<span>0</span>
 
-										<a class="open-cart mobile-only"></a>
+										<a class="open-cart max-tablet-only"></a>
 									</h3>
 
 									<!-- CART WITH ITEMS -->
@@ -534,7 +534,7 @@
 										Riepilogo carrello 
 										<span>0</span>
 
-										<a class="open-cart mobile-only"></a>
+										<a class="open-cart max-tablet-only"></a>
 									</h3>
 
 									<!-- CART WITH ITEMS -->
@@ -648,7 +648,7 @@
 										Riepilogo carrello 
 										<span>0</span>
 
-										<a class="open-cart mobile-only"></a>
+										<a class="open-cart max-tablet-only"></a>
 									</h3>
 
 									<!-- CART WITH ITEMS -->
@@ -831,7 +831,7 @@
 										Riepilogo carrello 
 										<span>0</span>
 
-										<a class="open-cart mobile-only"></a>
+										<a class="open-cart max-tablet-only"></a>
 									</h3>
 
 									<!-- CART WITH ITEMS -->

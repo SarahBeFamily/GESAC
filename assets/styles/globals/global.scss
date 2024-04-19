@@ -112,6 +112,12 @@ body {
 	}
 }
 
+.max-tablet-only {
+	@include respond-to($min-tablet) {
+		display: none !important;
+	}
+}
+
 .sticky {
 	position: fixed !important;
 	top: 0 !important;
